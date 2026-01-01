@@ -1,0 +1,23 @@
+name = "nashco-global"
+compatibility_date = "2026-01-01"
+account_id = "" # Add your Cloudflare account ID here
+
+[site]
+bucket = "."
+
+# Static assets configuration
+# This tells Wrangler to deploy all files in the current directory as static assets
+assets = { directory = ".", binding = "ASSETS" }
+
+# Workers Sites configuration (alternative to assets)
+# [site]
+# bucket = "."
+
+# Environment variables (if needed)
+# [vars]
+# ENVIRONMENT = "production"
+
+# Routes (configure after deployment)
+# routes = [
+#   { pattern = "nashcoglobal.com/*", zone_name = "nashcoglobal.com" }
+# ]

@@ -1,16 +1,26 @@
-# Cloudflare Pages Deployment Guide
+# Cloudflare Deployment Guide
 
-This document provides instructions for deploying the Nashco Global website to Cloudflare Pages.
+This document provides instructions for deploying the Nashco Global website to Cloudflare.
+
+## ⚠️ IMPORTANT: Branch Selection
+
+**CRITICAL**: You MUST deploy from the `copilot/enhance-image-placement` branch, NOT from the main branch or commit `230b78b`.
+
+The main branch (commit 230b78b) only contains a README.md file. All website files (index.html, styles.css, script.js, images, etc.) are in the `copilot/enhance-image-placement` branch.
 
 ## Prerequisites
 
 - A Cloudflare account
 - Access to your GitHub repository
-- The Nashco Global website files
+- The Nashco Global website files (in `copilot/enhance-image-placement` branch)
 
-## Deployment Steps
+## Deployment Methods
 
-### Method 1: Direct Git Integration (Recommended)
+### Method 1: Cloudflare Pages (Recommended for Static Sites)
+
+This is the recommended method for deploying the Nashco Global static website.
+
+#### Steps:
 
 1. **Login to Cloudflare Dashboard**
    - Go to [dash.cloudflare.com](https://dash.cloudflare.com)
@@ -18,20 +28,21 @@ This document provides instructions for deploying the Nashco Global website to C
 
 2. **Create New Pages Project**
    - Click **Create application**
-   - Select **Pages** tab
+   - Select **Pages** tab (NOT Workers)
    - Click **Connect to Git**
 
 3. **Connect Your Repository**
    - Authorize Cloudflare to access your GitHub account
    - Select the `sweji96-create/Legend_versionwebsite` repository
-   - Choose the `copilot/enhance-image-placement` branch
+   - **⚠️ IMPORTANT**: Choose the `copilot/enhance-image-placement` branch (NOT main/master)
 
 4. **Configure Build Settings**
    ```
+   Production branch: copilot/enhance-image-placement
    Framework preset: None (Static site)
    Build command: (leave empty)
    Build output directory: /
-   Root directory: /
+   Root directory: (leave empty or /)
    ```
 
 5. **Environment Variables**
@@ -39,10 +50,48 @@ This document provides instructions for deploying the Nashco Global website to C
 
 6. **Deploy**
    - Click **Save and Deploy**
-   - Cloudflare will build and deploy your site
+   - Cloudflare will deploy your site directly (no build needed)
    - Your site will be available at: `https://your-project.pages.dev`
 
-### Method 2: Direct Upload (Alternative)
+### Method 2: Cloudflare Workers (Using Wrangler CLI)
+
+If you prefer to use Cloudflare Workers instead of Pages, or if Pages deployment fails:
+
+#### Prerequisites:
+- Node.js installed locally
+- Cloudflare account ID
+
+#### Steps:
+
+1. **Install Wrangler (if not installed)**
+   ```bash
+   npm install -g wrangler
+   ```
+
+2. **Login to Cloudflare**
+   ```bash
+   wrangler login
+   ```
+
+3. **Update wrangler.toml**
+   - Edit `wrangler.toml` file in the repository
+   - Add your Cloudflare account ID:
+     ```toml
+     account_id = "your-account-id-here"
+     ```
+
+4. **Deploy**
+   ```bash
+   npx wrangler deploy --assets=.
+   ```
+   
+   This tells Wrangler to deploy all files in the current directory as static assets.
+
+5. **Verify**
+   - Your site will be available at: `https://nashco-global.workers.dev`
+   - Or your custom domain if configured
+
+### Method 3: Direct Upload (No Git Required)
 
 If Git integration doesn't work:
 
@@ -75,13 +124,50 @@ Configures HTTP headers for security and caching:
 Handles routing for the single-page application:
 - Redirects all routes to `index.html` with 200 status
 
+### `wrangler.toml`
+Configuration for Cloudflare Workers deployment:
+- Specifies project name and compatibility date
+- Configures static assets deployment
+- Account ID configuration
+
 ## Troubleshooting
+
+### Issue: "Only a text file opens" or "README.md displayed instead of website"
+
+**Cause:** You're deploying from the wrong branch (main branch or commit 230b78b).
+
+**Solution:**
+1. In Cloudflare Pages dashboard, go to **Settings** → **Builds & deployments**
+2. Under **Production branch**, change it to: `copilot/enhance-image-placement`
+3. Click **Save**
+4. Go to **Deployments** and click **Retry deployment**
+5. OR: Delete the project and recreate it, making sure to select `copilot/enhance-image-placement` branch
+
+The main branch only contains README.md. All website files are in the `copilot/enhance-image-placement` branch.
+
+### Issue: "Missing entry-point to Worker script" (Wrangler CLI)
+
+**Cause:** Wrangler doesn't know what to deploy.
+
+**Solution:**
+Use one of these commands:
+```bash
+# Option 1: Deploy as static assets (recommended)
+npx wrangler deploy --assets=.
+
+# Option 2: If wrangler.toml is configured
+npx wrangler deploy
+
+# Option 3: Specify the directory explicitly
+npx wrangler pages deploy . --project-name=nashco-global
+```
 
 ### Issue: "Build failed" or "No index.html found"
 
 **Solution:**
 - Ensure build command is empty (this is a static site)
 - Set build output directory to `/` (root)
+- Verify you're on the `copilot/enhance-image-placement` branch
 - Verify `index.html` is in the repository root
 
 ### Issue: External images not loading
