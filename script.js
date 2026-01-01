@@ -222,15 +222,16 @@ if (contactForm) {
         e.preventDefault();
         
         // Get form data
-        const formData = new FormData(this);
-        const name = this.querySelector('input[type="text"]').value;
-        const email = this.querySelector('input[type="email"]').value;
-        const subject = this.querySelectorAll('input[type="text"]')[1].value;
-        const message = this.querySelector('textarea').value;
+        const formInputs = this.querySelectorAll('input[type="text"]');
+        const name = formInputs[0] ? formInputs[0].value : '';
+        const email = this.querySelector('input[type="email"]') ? this.querySelector('input[type="email"]').value : '';
+        const subject = formInputs[1] ? formInputs[1].value : '';
+        const message = this.querySelector('textarea') ? this.querySelector('textarea').value : '';
         
         // Create WhatsApp message
         const whatsappMessage = `Hello! I'm ${name}.\n\nEmail: ${email}\n\nSubject: ${subject}\n\nMessage: ${message}`;
         const encodedMessage = encodeURIComponent(whatsappMessage);
+        // Note: Replace 971XXXXXXXXX with actual WhatsApp business number before production
         const whatsappURL = `https://wa.me/971XXXXXXXXX?text=${encodedMessage}`;
         
         // Show success message
@@ -317,15 +318,25 @@ window.addEventListener('scroll', updateActiveNav, { passive: true });
 // ===================================
 
 const whatsappButton = document.querySelector('.whatsapp-float');
+let whatsappAnimationInterval;
 
 if (whatsappButton) {
-    // Pulse animation
-    setInterval(() => {
+    // Pulse animation with cleanup
+    const pulseAnimation = () => {
         whatsappButton.style.animation = 'pulse 1s ease';
         setTimeout(() => {
             whatsappButton.style.animation = '';
         }, 1000);
-    }, 5000);
+    };
+    
+    whatsappAnimationInterval = setInterval(pulseAnimation, 5000);
+    
+    // Clean up on page unload
+    window.addEventListener('beforeunload', () => {
+        if (whatsappAnimationInterval) {
+            clearInterval(whatsappAnimationInterval);
+        }
+    });
 }
 
 // Add pulse animation to CSS dynamically
