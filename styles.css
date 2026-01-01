@@ -110,6 +110,17 @@ ul {
     transform: scale(1.05);
 }
 
+.logo-img {
+    max-width: 180px;
+    height: auto;
+    display: block;
+    transition: var(--transition);
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
+}
+
 .nav {
     flex: 1;
     display: flex;
@@ -677,6 +688,8 @@ ul {
 }
 
 .footer-logo {
+    max-width: 150px;
+    height: auto;
     margin-bottom: 1rem;
 }
 
@@ -709,6 +722,8 @@ ul {
 }
 
 .footer-zahy-logo {
+    max-width: 100px;
+    height: auto;
     margin-bottom: 1rem;
 }
 
@@ -1045,5 +1060,316 @@ body[dir="rtl"] .footer-links a:hover {
     
     .section {
         page-break-inside: avoid;
+    }
+}
+
+/* ============================================
+   ADDITIONAL PAGE STYLES
+   ============================================ */
+
+/* Page Heroes */
+.page-hero {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(13, 71, 161, 0.9), rgba(25, 118, 210, 0.85));
+    color: var(--white);
+    text-align: center;
+    padding: 6rem 2rem 4rem;
+    margin-top: 80px;
+    position: relative;
+}
+
+.page-hero.about-hero,
+.page-hero.automotive-hero,
+.page-hero.manufacturing-hero,
+.page-hero.trading-hero,
+.page-hero.contact-hero {
+    background: linear-gradient(135deg, rgba(13, 71, 161, 0.9), rgba(25, 118, 210, 0.85)),
+                url('https://www.shutterstock.com/image-photo/business-bay-dubai-night-600nw-2476138621.jpg') center/cover no-repeat fixed;
+}
+
+.page-hero.zahy-hero {
+    background: linear-gradient(135deg, rgba(13, 71, 161, 0.85), rgba(25, 118, 210, 0.8)),
+                url('https://economymiddleeast.com/wp-content/uploads/2025/10/Middle-East-chemicals-1200x675.jpg') center/cover no-repeat fixed;
+}
+
+.hero-logo {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 2rem;
+    filter: drop-shadow(0 5px 20px rgba(0, 0, 0, 0.3));
+}
+
+/* Home Page Specific */
+.home-hero {
+    background: linear-gradient(135deg, rgba(13, 71, 161, 0.9), rgba(25, 118, 210, 0.85)),
+                url('https://www.shutterstock.com/image-photo/business-bay-dubai-night-600nw-2476138621.jpg') center/cover no-repeat fixed;
+}
+
+.overview-section {
+    background: var(--white);
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    line-height: 1.9;
+    color: var(--dark-gray);
+    margin-bottom: 2rem;
+}
+
+.key-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.stat-card {
+    text-align: center;
+    padding: 2rem;
+    background: var(--light-gray);
+    border-radius: 10px;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    color: var(--dark-gray);
+}
+
+.divisions-section {
+    background: var(--light-gray);
+}
+
+.divisions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+}
+
+.division-card {
+    background: var(--white);
+    padding: 3rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+    text-align: center;
+}
+
+.division-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.division-icon {
+    color: var(--primary-blue);
+    margin-bottom: 1.5rem;
+}
+
+.division-title {
+    font-size: 1.5rem;
+    color: var(--dark-blue);
+    margin-bottom: 1rem;
+}
+
+.division-description {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--dark-gray);
+    margin-bottom: 1.5rem;
+}
+
+.division-link {
+    color: var(--primary-blue);
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.division-link:hover {
+    color: var(--dark-blue);
+}
+
+.why-choose-section {
+    background: linear-gradient(135deg, rgba(13, 71, 161, 0.95), rgba(25, 118, 210, 0.9));
+    color: var(--white);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+}
+
+.feature-item {
+    text-align: center;
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--gold);
+}
+
+.feature-title {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--white);
+}
+
+.feature-description {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Additional sections */
+.center {
+    text-align: center;
+}
+
+.story-section,
+.mission-section,
+.values-section,
+.leadership-section,
+.commitment-section {
+    background: var(--white);
+}
+
+.story-section:nth-of-type(even),
+.leadership-section {
+    background: var(--light-gray);
+}
+
+.story-content,
+.manufacturing-layout,
+.chemicals-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.story-image img {
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.mission-section {
+    background: var(--light-gray);
+}
+
+.mission-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.mission-card {
+    background: var(--white);
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.mission-icon {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-blue);
+}
+
+.mission-title {
+    font-size: 2rem;
+    color: var(--dark-blue);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.mission-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--dark-gray);
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+}
+
+.value-card {
+    background: var(--light-gray);
+    padding: 2.5rem;
+    border-radius: 12px;
+    transition: var(--transition);
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.value-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    opacity: 0.3;
+    margin-bottom: 1rem;
+}
+
+.value-title {
+    font-size: 1.5rem;
+    color: var(--dark-blue);
+    margin-bottom: 1rem;
+}
+
+.value-description {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--dark-gray);
+}
+
+.commitment-section {
+    background: linear-gradient(135deg, rgba(13, 71, 161, 0.95), rgba(25, 118, 210, 0.9));
+    color: var(--white);
+}
+
+.commitment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+.commitment-item {
+    text-align: center;
+}
+
+.commitment-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--white);
+}
+
+.commitment-item p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .story-content,
+    .mission-grid,
+    .manufacturing-layout,
+    .chemicals-layout {
+        grid-template-columns: 1fr;
     }
 }
