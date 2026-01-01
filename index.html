@@ -52,8 +52,11 @@
         <div class="container">
             <div class="nav-wrapper">
                 <div class="logo">
-                    <h1>Nashco Global</h1>
-                    <p class="tagline" data-en="Excellence Since 1994" data-ar="التميز منذ 1994">Excellence Since 1994</p>
+                    <img src="https://raw.githubusercontent.com/sweji96-create/website-nashcoglobal/main/nashco-global-logo.png" alt="Nashco Global Logo" class="logo-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="logo-fallback" style="display: none;">
+                        <h1>Nashco Global</h1>
+                        <p class="tagline" data-en="Excellence Since 1994" data-ar="التميز منذ 1994">Excellence Since 1994</p>
+                    </div>
                 </div>
                 <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
                     <span></span>
@@ -62,10 +65,12 @@
                 </button>
                 <ul class="nav-menu" id="navMenu">
                     <li><a href="#home" data-en="Home" data-ar="الرئيسية">Home</a></li>
-                    <li><a href="#about" data-en="About" data-ar="من نحن">About</a></li>
-                    <li><a href="#services" data-en="Services" data-ar="الخدمات">Services</a></li>
-                    <li><a href="#vision" data-en="Vision" data-ar="رؤيتنا">Vision</a></li>
-                    <li><a href="#contact" data-en="Contact" data-ar="اتصل بنا">Contact</a></li>
+                    <li><a href="#about" data-en="About Us" data-ar="من نحن">About Us</a></li>
+                    <li><a href="#zahy" data-en="Zahy al Khaleej" data-ar="زاهي الخليج">Zahy al Khaleej</a></li>
+                    <li><a href="#automotive" data-en="Automotive" data-ar="السيارات">Automotive</a></li>
+                    <li><a href="#manufacturing" data-en="Manufacturing" data-ar="التصنيع">Manufacturing</a></li>
+                    <li><a href="#trading" data-en="Trading" data-ar="التجارة">Trading</a></li>
+                    <li><a href="#contact" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</a></li>
                 </ul>
             </div>
         </div>
@@ -73,7 +78,7 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-background"></div>
+        <div class="hero-background" style="background-image: url('https://media.istockphoto.com/id/1309800198/photo/aerial-skyline-of-downtown-dubai-filled-with-modern-skyscrapers-in-the-uae.jpg?s=612x612&w=0&k=20&c=qxZNym6gIJCOA-b79PrCjBP0HynAvdQzlcl699e77Qg=');"></div>
         <div class="container">
             <div class="hero-content">
                 <h2 class="hero-title animate-slide-up" data-en="Leading the GCC with Innovation" data-ar="نقود دول مجلس التعاون الخليجي بالابتكار">
@@ -83,7 +88,7 @@
                     Empowering industries and communities since 1994 through excellence in chemicals, automotive, manufacturing, and trading.
                 </p>
                 <div class="hero-buttons animate-slide-up delay-2">
-                    <a href="#services" class="btn btn-primary" data-en="Our Services" data-ar="خدماتنا">Our Services</a>
+                    <a href="#automotive" class="btn btn-primary" data-en="Our Divisions" data-ar="أقسامنا">Our Divisions</a>
                     <a href="#contact" class="btn btn-secondary" data-en="Get in Touch" data-ar="اتصل بنا">Get in Touch</a>
                 </div>
             </div>
@@ -127,88 +132,140 @@
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
+    <!-- Zahy al Khaleej Section -->
+    <section id="zahy" class="zahy-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title" data-en="Our Services" data-ar="خدماتنا">Our Services</h2>
+                <h2 class="section-title" data-en="Zahy al Khaleej" data-ar="زاهي الخليج">Zahy al Khaleej</h2>
                 <div class="title-underline"></div>
-                <p class="section-subtitle" data-en="Delivering excellence across diversified industries" data-ar="تقديم التميز عبر الصناعات المتنوعة">
-                    Delivering excellence across diversified industries
+                <p class="section-subtitle" data-en="Our Parent Group - A Legacy of Excellence" data-ar="مجموعتنا الأم - إرث من التميز">
+                    Our Parent Group - A Legacy of Excellence
                 </p>
             </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-flask"></i>
-                    </div>
-                    <h3 data-en="Chemicals" data-ar="المواد الكيميائية">Chemicals</h3>
-                    <p data-en="Providing high-quality chemical solutions for various industries, ensuring safety, reliability, and innovation in every product." data-ar="توفير حلول كيميائية عالية الجودة لمختلف الصناعات، مع ضمان السلامة والموثوقية والابتكار في كل منتج.">
-                        Providing high-quality chemical solutions for various industries, ensuring safety, reliability, and innovation in every product.
-                    </p>
+            <div class="zahy-content">
+                <div class="zahy-logo-container">
+                    <img src="https://raw.githubusercontent.com/sweji96-create/website-nashcoglobal/main/zahy-group-logo.png" alt="Zahy Group Logo" class="zahy-logo" onerror="this.style.display='none';">
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-car"></i>
-                    </div>
-                    <h3 data-en="Automotive" data-ar="السيارات">Automotive</h3>
-                    <p data-en="Comprehensive automotive solutions including parts, services, and advanced technologies to keep your fleet running efficiently." data-ar="حلول شاملة للسيارات بما في ذلك قطع الغيار والخدمات والتقنيات المتقدمة للحفاظ على أسطولك يعمل بكفاءة.">
-                        Comprehensive automotive solutions including parts, services, and advanced technologies to keep your fleet running efficiently.
+                <div class="zahy-text">
+                    <p class="lead" data-en="Zahy Group stands as a cornerstone of excellence in the GCC region, representing decades of unwavering commitment to quality and innovation." data-ar="تقف مجموعة زاهي كركيزة للتميز في منطقة دول مجلس التعاون الخليجي، وتمثل عقودًا من الالتزام الثابت بالجودة والابتكار.">
+                        Zahy Group stands as a cornerstone of excellence in the GCC region, representing decades of unwavering commitment to quality and innovation.
                     </p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-industry"></i>
-                    </div>
-                    <h3 data-en="Manufacturing" data-ar="التصنيع">Manufacturing</h3>
-                    <p data-en="State-of-the-art manufacturing facilities delivering precision-engineered products with world-class quality standards." data-ar="مرافق تصنيع حديثة تقدم منتجات مصممة بدقة مع معايير جودة عالمية.">
-                        State-of-the-art manufacturing facilities delivering precision-engineered products with world-class quality standards.
+                    <p data-en="As the parent company of Nashco Global, Zahy Group has been instrumental in shaping the industrial landscape across the Middle East. Our heritage of trust, reliability, and forward-thinking strategies has enabled us to build lasting partnerships and drive sustainable growth across multiple sectors." data-ar="بصفتها الشركة الأم لشركة ناشكو العالمية، لعبت مجموعة زاهي دورًا أساسيًا في تشكيل المشهد الصناعي في جميع أنحاء الشرق الأوسط. لقد مكننا إرثنا من الثقة والموثوقية والاستراتيجيات المستقبلية من بناء شراكات دائمة ودفع النمو المستدام عبر قطاعات متعددة.">
+                        As the parent company of Nashco Global, Zahy Group has been instrumental in shaping the industrial landscape across the Middle East. Our heritage of trust, reliability, and forward-thinking strategies has enabled us to build lasting partnerships and drive sustainable growth across multiple sectors.
                     </p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <h3 data-en="Trading" data-ar="التجارة">Trading</h3>
-                    <p data-en="Global trading expertise connecting markets and businesses, facilitating seamless international commerce and partnerships." data-ar="خبرة تجارية عالمية تربط الأسواق والشركات، وتسهل التجارة والشراكات الدولية السلسة.">
-                        Global trading expertise connecting markets and businesses, facilitating seamless international commerce and partnerships.
+                    <p data-en="Through Nashco Global and our diverse portfolio of businesses, Zahy Group continues to lead with integrity, innovation, and a deep commitment to the communities we serve." data-ar="من خلال ناشكو العالمية ومحفظتنا المتنوعة من الأعمال، تواصل مجموعة زاهي القيادة بنزاهة وابتكار والتزام عميق تجاه المجتمعات التي نخدمها.">
+                        Through Nashco Global and our diverse portfolio of businesses, Zahy Group continues to lead with integrity, innovation, and a deep commitment to the communities we serve.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Vision Section -->
-    <section id="vision" class="vision">
+    <!-- Automotive Division Section -->
+    <section id="automotive" class="division-section automotive-section">
+        <div class="division-hero" style="background-image: url('https://plus.unsplash.com/premium_photo-1682144908294-73a3bda41961?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');" role="img" aria-label="Automotive Division">
+            <div class="division-hero-overlay">
+                <h2 data-en="Automotive Division" data-ar="قسم السيارات">Automotive Division</h2>
+            </div>
+        </div>
         <div class="container">
-            <div class="vision-content">
-                <div class="vision-text">
-                    <h2 data-en="Our Vision" data-ar="رؤيتنا">Our Vision</h2>
-                    <div class="title-underline"></div>
-                    <p data-en="To be the leading force in empowering industries and communities across the GCC and beyond, driving innovation, sustainability, and excellence in everything we do." data-ar="أن نكون القوة الرائدة في تمكين الصناعات والمجتمعات في جميع أنحاء دول مجلس التعاون الخليجي وخارجها، ودفع الابتكار والاستدامة والتميز في كل ما نقوم به.">
-                        To be the leading force in empowering industries and communities across the GCC and beyond, driving innovation, sustainability, and excellence in everything we do.
-                    </p>
+            <div class="division-content">
+                <div class="division-icon">
+                    <i class="fas fa-car"></i>
                 </div>
-                <div class="vision-features">
-                    <div class="feature-item">
-                        <i class="fas fa-lightbulb"></i>
-                        <h4 data-en="Innovation" data-ar="الابتكار">Innovation</h4>
-                        <p data-en="Pioneering new solutions" data-ar="ريادة حلول جديدة">Pioneering new solutions</p>
+                <h3 data-en="Driving Excellence on Every Road" data-ar="قيادة التميز على كل طريق">Driving Excellence on Every Road</h3>
+                <p class="division-description" data-en="Our Automotive Division delivers comprehensive solutions for the modern automotive industry. From high-quality parts and accessories to cutting-edge maintenance services, we ensure your fleet operates at peak performance." data-ar="يقدم قسم السيارات لدينا حلولاً شاملة لصناعة السيارات الحديثة. من قطع الغيار والإكسسوارات عالية الجودة إلى خدمات الصيانة المتطورة، نضمن أن أسطولك يعمل بأقصى أداء.">
+                    Our Automotive Division delivers comprehensive solutions for the modern automotive industry. From high-quality parts and accessories to cutting-edge maintenance services, we ensure your fleet operates at peak performance.
+                </p>
+                <div class="division-features">
+                    <div class="feature-box">
+                        <i class="fas fa-tools"></i>
+                        <h4 data-en="Premium Parts & Accessories" data-ar="قطع غيار وإكسسوارات متميزة">Premium Parts & Accessories</h4>
+                        <p data-en="Genuine OEM and aftermarket parts for all vehicle types" data-ar="قطع غيار أصلية وما بعد البيع لجميع أنواع المركبات">Genuine OEM and aftermarket parts for all vehicle types</p>
                     </div>
-                    <div class="feature-item">
-                        <i class="fas fa-globe"></i>
-                        <h4 data-en="Global Reach" data-ar="الوصول العالمي">Global Reach</h4>
-                        <p data-en="Serving worldwide markets" data-ar="خدمة الأسواق العالمية">Serving worldwide markets</p>
+                    <div class="feature-box">
+                        <i class="fas fa-wrench"></i>
+                        <h4 data-en="Expert Maintenance Services" data-ar="خدمات صيانة متخصصة">Expert Maintenance Services</h4>
+                        <p data-en="Professional servicing by certified technicians" data-ar="خدمة احترافية من قبل فنيين معتمدين">Professional servicing by certified technicians</p>
                     </div>
-                    <div class="feature-item">
-                        <i class="fas fa-award"></i>
-                        <h4 data-en="Excellence" data-ar="التميز">Excellence</h4>
-                        <p data-en="Committed to quality" data-ar="ملتزمون بالجودة">Committed to quality</p>
+                    <div class="feature-box">
+                        <i class="fas fa-shipping-fast"></i>
+                        <h4 data-en="Fleet Management Solutions" data-ar="حلول إدارة الأساطيل">Fleet Management Solutions</h4>
+                        <p data-en="Advanced technologies for optimal fleet efficiency" data-ar="تقنيات متقدمة لتحقيق الكفاءة المثلى للأسطول">Advanced technologies for optimal fleet efficiency</p>
                     </div>
-                    <div class="feature-item">
-                        <i class="fas fa-users"></i>
-                        <h4 data-en="Inclusivity" data-ar="الشمولية">Inclusivity</h4>
-                        <p data-en="Embracing diversity" data-ar="احتضان التنوع">Embracing diversity</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Manufacturing Division Section -->
+    <section id="manufacturing" class="division-section manufacturing-section">
+        <div class="division-hero" style="background-image: url('https://www.automationalley.com/wp-content/uploads/674dfe4f1942a81dba287acb_robotic-arm-modern-industrial-technology-automate-2023-11-27-05-18-54-utc.jpg');" role="img" aria-label="Manufacturing Division">
+            <div class="division-hero-overlay">
+                <h2 data-en="Manufacturing Division" data-ar="قسم التصنيع">Manufacturing Division</h2>
+            </div>
+        </div>
+        <div class="container">
+            <div class="division-content">
+                <div class="division-icon">
+                    <i class="fas fa-industry"></i>
+                </div>
+                <h3 data-en="Precision Engineering, World-Class Quality" data-ar="هندسة دقيقة، جودة عالمية">Precision Engineering, World-Class Quality</h3>
+                <p class="division-description" data-en="Our Manufacturing Division operates state-of-the-art facilities equipped with the latest technology. We specialize in precision-engineered products that meet international quality standards, serving diverse industries with reliable, innovative manufacturing solutions." data-ar="يدير قسم التصنيع لدينا منشآت حديثة مجهزة بأحدث التقنيات. نحن متخصصون في المنتجات المصممة بدقة والتي تلبي معايير الجودة الدولية، ونخدم صناعات متنوعة بحلول تصنيع موثوقة ومبتكرة.">
+                    Our Manufacturing Division operates state-of-the-art facilities equipped with the latest technology. We specialize in precision-engineered products that meet international quality standards, serving diverse industries with reliable, innovative manufacturing solutions.
+                </p>
+                <div class="division-features">
+                    <div class="feature-box">
+                        <i class="fas fa-cogs"></i>
+                        <h4 data-en="Advanced Automation" data-ar="أتمتة متقدمة">Advanced Automation</h4>
+                        <p data-en="Cutting-edge robotic systems for precision manufacturing" data-ar="أنظمة روبوتية متطورة للتصنيع الدقيق">Cutting-edge robotic systems for precision manufacturing</p>
+                    </div>
+                    <div class="feature-box">
+                        <i class="fas fa-certificate"></i>
+                        <h4 data-en="Quality Assurance" data-ar="ضمان الجودة">Quality Assurance</h4>
+                        <p data-en="ISO-certified processes ensuring excellence" data-ar="عمليات معتمدة من ISO تضمن التميز">ISO-certified processes ensuring excellence</p>
+                    </div>
+                    <div class="feature-box">
+                        <i class="fas fa-leaf"></i>
+                        <h4 data-en="Sustainable Practices" data-ar="ممارسات مستدامة">Sustainable Practices</h4>
+                        <p data-en="Eco-friendly manufacturing with reduced carbon footprint" data-ar="تصنيع صديق للبيئة مع تقليل البصمة الكربونية">Eco-friendly manufacturing with reduced carbon footprint</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trading Division Section -->
+    <section id="trading" class="division-section trading-section">
+        <div class="division-hero" style="background-image: url('https://thumbs.dreamstime.com/b/aerial-view-busy-shipping-port-cargo-containers-sunset-global-trade-fill-bustling-ready-international-419474181.jpg');" role="img" aria-label="Trading Division">
+            <div class="division-hero-overlay">
+                <h2 data-en="Trading Division" data-ar="قسم التجارة">Trading Division</h2>
+            </div>
+        </div>
+        <div class="container">
+            <div class="division-content">
+                <div class="division-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h3 data-en="Connecting Markets, Building Partnerships" data-ar="ربط الأسواق، بناء الشراكات">Connecting Markets, Building Partnerships</h3>
+                <p class="division-description" data-en="Our Trading Division facilitates seamless international commerce, connecting businesses across continents. With deep market knowledge and a vast network of trusted partners, we enable efficient trade operations, import-export services, and strategic business collaborations." data-ar="يسهل قسم التجارة لدينا التجارة الدولية السلسة، ويربط الشركات عبر القارات. من خلال معرفة عميقة بالسوق وشبكة واسعة من الشركاء الموثوقين، نمكّن عمليات تجارية فعالة وخدمات الاستيراد والتصدير والتعاون التجاري الاستراتيجي.">
+                    Our Trading Division facilitates seamless international commerce, connecting businesses across continents. With deep market knowledge and a vast network of trusted partners, we enable efficient trade operations, import-export services, and strategic business collaborations.
+                </p>
+                <div class="division-features">
+                    <div class="feature-box">
+                        <i class="fas fa-globe-americas"></i>
+                        <h4 data-en="Global Network" data-ar="شبكة عالمية">Global Network</h4>
+                        <p data-en="Established partnerships across 50+ countries" data-ar="شراكات راسخة في أكثر من 50 دولة">Established partnerships across 50+ countries</p>
+                    </div>
+                    <div class="feature-box">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4 data-en="Secure Transactions" data-ar="معاملات آمنة">Secure Transactions</h4>
+                        <p data-en="Reliable, compliant international trade operations" data-ar="عمليات تجارية دولية موثوقة ومتوافقة">Reliable, compliant international trade operations</p>
+                    </div>
+                    <div class="feature-box">
+                        <i class="fas fa-chart-line"></i>
+                        <h4 data-en="Market Intelligence" data-ar="معلومات السوق">Market Intelligence</h4>
+                        <p data-en="Expert insights for strategic business decisions" data-ar="رؤى خبراء للقرارات التجارية الاستراتيجية">Expert insights for strategic business decisions</p>
                     </div>
                 </div>
             </div>
@@ -279,9 +336,12 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
+                    <div class="footer-logo-container">
+                        <img src="https://raw.githubusercontent.com/sweji96-create/website-nashcoglobal/main/zahy-group-logo.png" alt="Zahy Group Logo" class="footer-zahy-logo" onerror="this.style.display='none';">
+                    </div>
                     <h3>Nashco Global</h3>
-                    <p data-en="Excellence in Chemicals, Automotive, Manufacturing & Trading since 1994" data-ar="التميز في المواد الكيميائية والسيارات والتصنيع والتجارة منذ 1994">
-                        Excellence in Chemicals, Automotive, Manufacturing & Trading since 1994
+                    <p data-en="A proud member of Zahy Group - Excellence in Chemicals, Automotive, Manufacturing & Trading since 1994" data-ar="عضو فخور في مجموعة زاهي - التميز في المواد الكيميائية والسيارات والتصنيع والتجارة منذ 1994">
+                        A proud member of Zahy Group - Excellence in Chemicals, Automotive, Manufacturing & Trading since 1994
                     </p>
                     <div class="social-links">
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
@@ -294,18 +354,17 @@
                     <h4 data-en="Quick Links" data-ar="روابط سريعة">Quick Links</h4>
                     <ul>
                         <li><a href="#home" data-en="Home" data-ar="الرئيسية">Home</a></li>
-                        <li><a href="#about" data-en="About" data-ar="من نحن">About</a></li>
-                        <li><a href="#services" data-en="Services" data-ar="الخدمات">Services</a></li>
-                        <li><a href="#contact" data-en="Contact" data-ar="اتصل بنا">Contact</a></li>
+                        <li><a href="#about" data-en="About Us" data-ar="من نحن">About Us</a></li>
+                        <li><a href="#zahy" data-en="Zahy al Khaleej" data-ar="زاهي الخليج">Zahy al Khaleej</a></li>
+                        <li><a href="#contact" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4 data-en="Our Services" data-ar="خدماتنا">Our Services</h4>
+                    <h4 data-en="Our Divisions" data-ar="أقسامنا">Our Divisions</h4>
                     <ul>
-                        <li><a href="#services" data-en="Chemicals" data-ar="المواد الكيميائية">Chemicals</a></li>
-                        <li><a href="#services" data-en="Automotive" data-ar="السيارات">Automotive</a></li>
-                        <li><a href="#services" data-en="Manufacturing" data-ar="التصنيع">Manufacturing</a></li>
-                        <li><a href="#services" data-en="Trading" data-ar="التجارة">Trading</a></li>
+                        <li><a href="#automotive" data-en="Automotive" data-ar="السيارات">Automotive</a></li>
+                        <li><a href="#manufacturing" data-en="Manufacturing" data-ar="التصنيع">Manufacturing</a></li>
+                        <li><a href="#trading" data-en="Trading" data-ar="التجارة">Trading</a></li>
                     </ul>
                 </div>
             </div>
