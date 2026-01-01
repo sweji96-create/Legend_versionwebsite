@@ -92,9 +92,9 @@ button {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, 0.98);
+    background: linear-gradient(135deg, #1a3a5c 0%, #0d2742 100%);
     backdrop-filter: blur(10px);
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
     z-index: 1000;
     transition: var(--transition-smooth);
 }
@@ -134,7 +134,7 @@ button {
     font-size: 0.95rem;
     position: relative;
     padding: 0.5rem 0;
-    color: var(--text-dark);
+    color: var(--text-light);
     transition: var(--transition-smooth);
 }
 
@@ -145,12 +145,12 @@ button {
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--primary-color);
+    background: #4a9eff;
     transition: var(--transition-smooth);
 }
 
 .nav-menu li a:hover {
-    color: var(--primary-color);
+    color: #4a9eff;
 }
 
 .nav-menu li a:hover::after {
@@ -189,7 +189,7 @@ body[dir="rtl"] .nav-menu li a::after {
 .mobile-menu-toggle span {
     width: 25px;
     height: 3px;
-    background: var(--text-dark);
+    background: var(--text-light);
     border-radius: 2px;
     transition: var(--transition-smooth);
 }
