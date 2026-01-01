@@ -52,8 +52,15 @@
         <div class="container">
             <div class="nav-wrapper">
                 <div class="logo">
-                    <h1>Nashco Global</h1>
-                    <p class="tagline" data-en="Excellence Since 1994" data-ar="التميز منذ 1994">Excellence Since 1994</p>
+                    <img src="https://t3.ftcdn.net/jpg/04/42/78/58/360_F_442785872_f9YDbJtF8VHCa2JK13H2cNo6NYKMLhOa.jpg" 
+                         alt="Nashco Global Logo" 
+                         class="logo-img"
+                         data-en="Nashco Global Logo" 
+                         data-ar="شعار ناشكو جلوبال">
+                    <div class="logo-text">
+                        <h1 class="logo-fallback">Nashco Global</h1>
+                        <p class="tagline" data-en="Excellence Since 1994" data-ar="التميز منذ 1994">Excellence Since 1994</p>
+                    </div>
                 </div>
                 <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
                     <span></span>
@@ -73,7 +80,8 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-background"></div>
+        <div class="hero-background" style="background-image: url('https://www.uaefreezones.com/assets/img/dubai-industrial-city-min.png');"></div>
+        <div class="hero-overlay"></div>
         <div class="container">
             <div class="hero-content">
                 <h2 class="hero-title animate-slide-up" data-en="Leading the GCC with Innovation" data-ar="نقود دول مجلس التعاون الخليجي بالابتكار">
@@ -95,6 +103,7 @@
 
     <!-- About Section -->
     <section id="about" class="about">
+        <div class="about-background" style="background-image: url('https://cdn.shortpixel.ai/spai/q_lossless+ret_img+to_webp/thecondorgroup.com/wp-content/uploads/2022/03/Untitled-design-33.jpg');"></div>
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title" data-en="About Nashco Global" data-ar="عن ناشكو العالمية">About Nashco Global</h2>
@@ -139,40 +148,69 @@
             </div>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-flask"></i>
+                    <div class="service-image">
+                        <img src="https://www.nsenergybusiness.com/wp-content/uploads/sites/4/2020/08/refinery-3613526_640-1.jpg" 
+                             alt="Chemicals Division" 
+                             loading="lazy"
+                             data-en="Chemicals Division" 
+                             data-ar="قسم الكيماويات">
                     </div>
-                    <h3 data-en="Chemicals" data-ar="المواد الكيميائية">Chemicals</h3>
-                    <p data-en="Providing high-quality chemical solutions for various industries, ensuring safety, reliability, and innovation in every product." data-ar="توفير حلول كيميائية عالية الجودة لمختلف الصناعات، مع ضمان السلامة والموثوقية والابتكار في كل منتج.">
-                        Providing high-quality chemical solutions for various industries, ensuring safety, reliability, and innovation in every product.
-                    </p>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <h3 data-en="Chemicals" data-ar="المواد الكيميائية">Chemicals</h3>
+                        <p data-en="Providing high-quality chemical solutions for various industries, ensuring safety, reliability, and innovation in every product." data-ar="توفير حلول كيميائية عالية الجودة لمختلف الصناعات، مع ضمان السلامة والموثوقية والابتكار في كل منتج.">
+                            Providing high-quality chemical solutions for various industries, ensuring safety, reliability, and innovation in every product.
+                        </p>
+                    </div>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-car"></i>
+                    <div class="service-image">
+                        <img src="https://douradoautoservice.com/wp-content/uploads/2025/07/Find-Exclusive-Luxury-Car-Parts.jpeg" 
+                             alt="Automotive Division" 
+                             loading="lazy"
+                             data-en="Automotive Division" 
+                             data-ar="قسم السيارات">
                     </div>
-                    <h3 data-en="Automotive" data-ar="السيارات">Automotive</h3>
-                    <p data-en="Comprehensive automotive solutions including parts, services, and advanced technologies to keep your fleet running efficiently." data-ar="حلول شاملة للسيارات بما في ذلك قطع الغيار والخدمات والتقنيات المتقدمة للحفاظ على أسطولك يعمل بكفاءة.">
-                        Comprehensive automotive solutions including parts, services, and advanced technologies to keep your fleet running efficiently.
-                    </p>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h3 data-en="Automotive" data-ar="السيارات">Automotive</h3>
+                        <p data-en="Comprehensive automotive solutions including parts, services, and advanced technologies to keep your fleet running efficiently." data-ar="حلول شاملة للسيارات بما في ذلك قطع الغيار والخدمات والتقنيات المتقدمة للحفاظ على أسطولك يعمل بكفاءة.">
+                            Comprehensive automotive solutions including parts, services, and advanced technologies to keep your fleet running efficiently.
+                        </p>
+                    </div>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-industry"></i>
+                    <div class="service-image">
+                        <img src="https://www.oilandgasmiddleeast.com/cloud/2021/07/27/Petro-web_0.jpg" 
+                             alt="Manufacturing Division" 
+                             loading="lazy"
+                             data-en="Manufacturing Division" 
+                             data-ar="قسم التصنيع">
                     </div>
-                    <h3 data-en="Manufacturing" data-ar="التصنيع">Manufacturing</h3>
-                    <p data-en="State-of-the-art manufacturing facilities delivering precision-engineered products with world-class quality standards." data-ar="مرافق تصنيع حديثة تقدم منتجات مصممة بدقة مع معايير جودة عالمية.">
-                        State-of-the-art manufacturing facilities delivering precision-engineered products with world-class quality standards.
-                    </p>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <h3 data-en="Manufacturing" data-ar="التصنيع">Manufacturing</h3>
+                        <p data-en="State-of-the-art manufacturing facilities delivering precision-engineered products with world-class quality standards." data-ar="مرافق تصنيع حديثة تقدم منتجات مصممة بدقة مع معايير جودة عالمية.">
+                            State-of-the-art manufacturing facilities delivering precision-engineered products with world-class quality standards.
+                        </p>
+                    </div>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-handshake"></i>
+                    <div class="service-content">
+                        <div class="service-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3 data-en="Trading" data-ar="التجارة">Trading</h3>
+                        <p data-en="Global trading expertise connecting markets and businesses, facilitating seamless international commerce and partnerships." data-ar="خبرة تجارية عالمية تربط الأسواق والشركات، وتسهل التجارة والشراكات الدولية السلسة.">
+                            Global trading expertise connecting markets and businesses, facilitating seamless international commerce and partnerships.
+                        </p>
                     </div>
-                    <h3 data-en="Trading" data-ar="التجارة">Trading</h3>
-                    <p data-en="Global trading expertise connecting markets and businesses, facilitating seamless international commerce and partnerships." data-ar="خبرة تجارية عالمية تربط الأسواق والشركات، وتسهل التجارة والشراكات الدولية السلسة.">
-                        Global trading expertise connecting markets and businesses, facilitating seamless international commerce and partnerships.
-                    </p>
                 </div>
             </div>
         </div>

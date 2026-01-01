@@ -137,7 +137,24 @@ body {
     padding: 15px 0;
 }
 
-.logo h1 {
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-img {
+    max-height: 70px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-fallback {
     font-size: 28px;
     font-weight: 700;
     background: var(--gradient-primary);
@@ -145,6 +162,13 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin-bottom: 0;
+    display: none;
+}
+
+/* Show fallback only if image fails */
+.logo-img:not([src]) + .logo-text .logo-fallback,
+.logo-img[src=""] + .logo-text .logo-fallback {
+    display: block;
 }
 
 .logo .tagline {
@@ -214,12 +238,13 @@ body {
 /* Hero Section */
 .hero {
     position: relative;
-    min-height: 100vh;
+    min-height: 85vh;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     margin-top: 70px;
+    padding: 100px 0;
 }
 
 .hero-background {
@@ -228,60 +253,59 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--gradient-overlay);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     z-index: 1;
 }
 
-.hero-background::before {
-    content: '';
+.hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    /* Background gradients using theme colors with low opacity for subtle effect */
-    background: 
-        radial-gradient(circle at 20% 50%, rgba(243, 156, 18, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(41, 128, 185, 0.1) 0%, transparent 50%);
-    animation: backgroundPulse 10s ease-in-out infinite;
-}
-
-@keyframes backgroundPulse {
-    0%, 100% { opacity: 0.5; }
-    50% { opacity: 1; }
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 2;
 }
 
 .hero .container {
     position: relative;
-    z-index: 2;
+    z-index: 3;
 }
 
 .hero-content {
     text-align: center;
     color: var(--white);
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
+    padding: 60px 20px;
 }
 
 .hero-title {
-    font-size: 3.5rem;
+    font-size: 4rem;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
     line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero-subtitle {
-    font-size: 1.3rem;
-    margin-bottom: 40px;
+    font-size: 1.5rem;
+    margin-bottom: 50px;
     opacity: 0.95;
-    line-height: 1.8;
+    line-height: 1.9;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-buttons {
     display: flex;
-    gap: 20px;
+    gap: 25px;
     justify-content: center;
     flex-wrap: wrap;
+    margin-top: 50px;
 }
 
 /* Animations */
@@ -312,7 +336,7 @@ body {
     bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 3;
+    z-index: 4;
     color: var(--white);
     font-size: 24px;
     animation: bounce 2s infinite;
@@ -367,114 +391,169 @@ body {
 
 /* Section Styles */
 section {
-    padding: var(--section-padding);
+    padding: 120px 0;
 }
 
 .section-header {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
 }
 
 .section-title {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 700;
     color: var(--dark-color);
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .title-underline {
-    width: 80px;
-    height: 4px;
+    width: 100px;
+    height: 5px;
     background: var(--gradient-secondary);
-    margin: 0 auto 20px;
+    margin: 0 auto 25px;
     border-radius: 2px;
 }
 
 .section-subtitle {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: var(--text-light);
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
+    line-height: 1.8;
 }
 
 /* About Section */
 .about {
+    position: relative;
     background: var(--light-color);
+    overflow: hidden;
+}
+
+.about-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    opacity: 0.15;
+    z-index: 1;
+}
+
+.about .container {
+    position: relative;
+    z-index: 2;
 }
 
 .about-text {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
+    text-align: center;
 }
 
 .lead {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     font-weight: 500;
     color: var(--primary-color);
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    line-height: 1.8;
 }
 
 .about-text p {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     font-size: 1.1rem;
-    line-height: 1.8;
+    line-height: 1.9;
 }
 
 .stats {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
-    margin-top: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
 }
 
 .stat-item {
     text-align: center;
-    padding: 30px;
+    padding: 40px;
     background: var(--white);
-    border-radius: 15px;
+    border-radius: 20px;
     box-shadow: var(--shadow-sm);
     transition: var(--transition-smooth);
 }
 
 .stat-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
     box-shadow: var(--shadow-md);
 }
 
 .stat-number {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 700;
     background: var(--gradient-primary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .stat-label {
     color: var(--text-light);
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 
 /* Services Section */
+.services {
+    background: var(--white);
+}
+
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
 }
 
 .service-card {
     background: var(--white);
-    padding: 40px 30px;
-    border-radius: 15px;
+    border-radius: 20px;
     box-shadow: var(--shadow-sm);
     transition: var(--transition-smooth);
-    text-align: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .service-card:hover {
     transform: translateY(-10px);
     box-shadow: var(--shadow-lg);
+}
+
+.service-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.service-card:hover .service-image img {
+    transform: scale(1.1);
+}
+
+.service-content {
+    padding: 40px 30px;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .service-icon {
@@ -496,14 +575,16 @@ section {
 }
 
 .service-card h3 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: var(--dark-color);
-    margin-bottom: 15px;
+    margin-bottom: 18px;
+    font-weight: 600;
 }
 
 .service-card p {
     color: var(--text-light);
-    line-height: 1.7;
+    line-height: 1.8;
+    font-size: 1rem;
 }
 
 /* Vision Section */
@@ -816,6 +897,15 @@ section {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    /* Logo */
+    .logo-img {
+        max-height: 55px;
+    }
+    
+    .logo-text {
+        font-size: 0.9rem;
+    }
+    
     /* Navigation */
     .menu-toggle {
         display: flex;
@@ -850,12 +940,21 @@ section {
     }
     
     /* Hero */
+    .hero {
+        min-height: 80vh;
+        padding: 80px 0;
+    }
+    
+    .hero-content {
+        padding: 40px 20px;
+    }
+    
     .hero-title {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
     
     .hero-subtitle {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
     
     .hero-buttons {
@@ -869,8 +968,16 @@ section {
     }
     
     /* Sections */
+    section {
+        padding: 80px 0;
+    }
+    
+    .section-header {
+        margin-bottom: 50px;
+    }
+    
     .section-title {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
     
     .section-subtitle {
