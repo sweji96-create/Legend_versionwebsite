@@ -1,2 +1,2 @@
-# Redirect all paths to index.html for single-page app
-/* /index.html 200
+# Cloudflare Pages automatically serves index.html for all paths
+# No explicit redirects needed for single-page apps

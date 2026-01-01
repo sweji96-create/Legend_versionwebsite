@@ -18,9 +18,12 @@ The main branch only has README.md. All website files are in `copilot/enhance-im
    - Framework preset: **None**
    - Build command: **(leave empty)**
    - Build output directory: **/**
+   - Root directory: **(leave empty)**
 6. Click **Save and Deploy**
 
 ✅ Done! Your site will be at: `https://[your-project].pages.dev`
+
+**Note:** You may see warnings about `wrangler.toml` or `_redirects` in the build logs - these are safe to ignore. Cloudflare Pages automatically handles SPA routing for index.html.
 
 ---
 
