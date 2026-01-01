@@ -1,0 +1,25 @@
+# Development
+node_modules/
+.DS_Store
+*.log
+.env
+.env.local
+
+# Build output
+dist/
+build/
+.cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Testing
+coverage/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
