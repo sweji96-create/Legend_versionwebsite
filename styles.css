@@ -1090,9 +1090,34 @@ body[dir="rtl"] .footer-links a:hover {
                 url('https://www.shutterstock.com/image-photo/business-bay-dubai-night-600nw-2476138621.jpg') center/cover no-repeat fixed;
 }
 
+.page-hero.about-hero {
+    background: linear-gradient(135deg, rgba(13, 71, 161, 0.9), rgba(25, 118, 210, 0.85)),
+                url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070') center/cover no-repeat fixed;
+}
+
+.page-hero.automotive-hero {
+    background: linear-gradient(135deg, rgba(13, 71, 161, 0.9), rgba(25, 118, 210, 0.85)),
+                url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=2083') center/cover no-repeat fixed;
+}
+
+.page-hero.manufacturing-hero {
+    background: linear-gradient(135deg, rgba(13, 71, 161, 0.9), rgba(25, 118, 210, 0.85)),
+                url('https://images.unsplash.com/photo-1565793298595-6a879b1d9492?q=80&w=2071') center/cover no-repeat fixed;
+}
+
+.page-hero.trading-hero {
+    background: linear-gradient(135deg, rgba(13, 71, 161, 0.9), rgba(25, 118, 210, 0.85)),
+                url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2070') center/cover no-repeat fixed;
+}
+
+.page-hero.contact-hero {
+    background: linear-gradient(135deg, rgba(13, 71, 161, 0.9), rgba(25, 118, 210, 0.85)),
+                url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?q=80&w=2074') center/cover no-repeat fixed;
+}
+
 .page-hero.zahy-hero {
     background: linear-gradient(135deg, rgba(13, 71, 161, 0.85), rgba(25, 118, 210, 0.8)),
-                url('https://economymiddleeast.com/wp-content/uploads/2025/10/Middle-East-chemicals-1200x675.jpg') center/cover no-repeat fixed;
+                url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072') center/cover no-repeat fixed;
 }
 
 .hero-logo {
@@ -1104,8 +1129,29 @@ body[dir="rtl"] .footer-links a:hover {
 
 /* Home Page Specific */
 .home-hero {
-    background: linear-gradient(135deg, rgba(13, 71, 161, 0.9), rgba(25, 118, 210, 0.85)),
-                url('https://www.shutterstock.com/image-photo/business-bay-dubai-night-600nw-2476138621.jpg') center/cover no-repeat fixed;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)),
+                url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072') center/cover no-repeat fixed;
+    min-height: 100vh;
+}
+
+.hero-logo-main {
+    max-width: 200px;
+    height: auto;
+    margin: 0 auto 2rem;
+    display: block;
+    filter: drop-shadow(0 5px 20px rgba(0, 0, 0, 0.5));
+    animation: fadeInDown 1s ease;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .overview-section {
