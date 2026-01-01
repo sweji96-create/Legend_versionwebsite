@@ -322,7 +322,11 @@ function init() {
     // Set up event listeners
     languageToggle.addEventListener('click', switchLanguage);
     mobileMenuToggle.addEventListener('click', toggleMobileMenu);
-    contactForm.addEventListener('submit', handleContactForm);
+    
+    // Contact form listener (only on contact page)
+    if (contactForm) {
+        contactForm.addEventListener('submit', handleContactForm);
+    }
     
     // Initialize features
     initSmoothScrolling();
