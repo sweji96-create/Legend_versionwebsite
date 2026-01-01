@@ -26,7 +26,7 @@ const translations = {
 const languageToggle = document.getElementById('language-toggle');
 const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
 const navMenu = document.getElementById('nav-menu');
-const contactForm = document.getElementById('contact-form');
+const contactForm = document.getElementById('contact-form'); // May be null on non-contact pages
 
 // ============================================
 // LANGUAGE SWITCHING
@@ -322,7 +322,9 @@ function init() {
     // Set up event listeners
     languageToggle.addEventListener('click', switchLanguage);
     mobileMenuToggle.addEventListener('click', toggleMobileMenu);
-    contactForm.addEventListener('submit', handleContactForm);
+    if (contactForm) {
+        contactForm.addEventListener('submit', handleContactForm);
+    }
     
     // Initialize features
     initSmoothScrolling();
