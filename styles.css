@@ -1159,3 +1159,57 @@ button:focus {
         height: 30px;
     }
 }
+
+/* Bounce animation for scroll indicator */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) translateX(-50%);
+    }
+    40% {
+        transform: translateY(-20px) translateX(-50%);
+    }
+    60% {
+        transform: translateY(-10px) translateX(-50%);
+    }
+}
+
+/* Hero image responsive styles */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem !important;
+    }
+    .hero p {
+        font-size: 1.2rem !important;
+    }
+    .hero img {
+        max-width: 400px !important;
+    }
+    .page-header h1 {
+        font-size: 2.5rem !important;
+    }
+    .page-header p {
+        font-size: 1.2rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem !important;
+    }
+    .hero p {
+        font-size: 1rem !important;
+    }
+    .hero img {
+        max-width: 300px !important;
+    }
+    .hero .btn {
+        padding: 15px 35px !important;
+        font-size: 1rem !important;
+    }
+    .page-header h1 {
+        font-size: 2rem !important;
+    }
+    .page-header p {
+        font-size: 1rem !important;
+    }
+}

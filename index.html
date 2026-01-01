@@ -83,25 +83,29 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-background" style="background-image: url('https://www.uaefreezones.com/assets/img/dubai-industrial-city-min.png');"></div>
-        <div class="hero-overlay"></div>
-        <div class="container">
-            <div class="hero-content">
-                <h2 class="hero-title animate-slide-up" data-en="Leading the GCC with Innovation & Excellence" data-ar="نقود دول مجلس التعاون الخليجي بالابتكار والتميز">
-                    Leading the GCC with Innovation & Excellence
-                </h2>
-                <p class="hero-subtitle animate-slide-up delay-1" data-en="Empowering industries and communities since 1994 through excellence in chemicals, automotive, manufacturing, and trading across the GCC region and beyond." data-ar="تمكين الصناعات والمجتمعات منذ 1994 من خلال التميز في المواد الكيميائية والسيارات والتصنيع والتجارة في جميع أنحاء منطقة دول مجلس التعاون الخليجي وما بعدها.">
-                    Empowering industries and communities since 1994 through excellence in chemicals, automotive, manufacturing, and trading across the GCC region and beyond.
+    <section id="home" class="hero" style="background: #000; position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 100%); z-index: 1;"></div>
+        <div class="container" style="position: relative; z-index: 2;">
+            <div class="hero-content" style="text-align: center; color: white;">
+                <div style="margin-bottom: 60px;">
+                    <img src="https://github.com/user-attachments/assets/8e36dde1-b2d6-43e5-8f26-759559cbf251" 
+                         alt="Nashco Global - Earth" 
+                         style="max-width: 600px; width: 90%; height: auto; margin: 0 auto; display: block; filter: drop-shadow(0 20px 60px rgba(255,255,255,0.2));"
+                         onerror="this.onerror=null; this.src='https://github.com/user-attachments/assets/721af234-9e35-4575-943a-21c8de632dc7';">
+                </div>
+                <h1 class="hero-title animate-slide-up" style="font-size: 4rem; font-weight: 700; margin-bottom: 20px; line-height: 1.2;" data-en="Welcome to Nashco Global" data-ar="مرحبا بكم في ناشكو العالمية">
+                    Welcome to Nashco Global
+                </h1>
+                <p class="hero-subtitle animate-slide-up delay-1" style="font-size: 1.8rem; margin-bottom: 40px; font-weight: 300; opacity: 0.95;" data-en="Diversified Excellence Across GCC Since 1994" data-ar="التميز المتنوع في دول مجلس التعاون الخليجي منذ 1994">
+                    Diversified Excellence Across GCC Since 1994
                 </p>
                 <div class="hero-buttons animate-slide-up delay-2">
-                    <a href="about.html" class="btn btn-primary" data-en="Learn More About Us" data-ar="اعرف المزيد عنا">Learn More About Us</a>
-                    <a href="contact.html" class="btn btn-secondary" data-en="Get in Touch" data-ar="اتصل بنا">Get in Touch</a>
+                    <a href="about.html" class="btn btn-primary" style="padding: 18px 50px; font-size: 1.2rem; border-radius: 50px; background: white; color: #1a5490; border: 3px solid white; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;" data-en="Discover Our Story" data-ar="اكتشف قصتنا">Discover Our Story</a>
                 </div>
             </div>
         </div>
-        <div class="scroll-indicator">
-            <i class="fas fa-chevron-down"></i>
+        <div class="scroll-indicator" style="position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); z-index: 2;">
+            <i class="fas fa-chevron-down" style="color: white; font-size: 2rem; animation: bounce 2s infinite;"></i>
         </div>
     </section>
 
