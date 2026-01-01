@@ -947,7 +947,7 @@ body {
     }
 }
 
-[dir="rtl"] @keyframes slideIn {
+@keyframes slideInRTL {
     from {
         transform: translateX(-400px);
         opacity: 0;
@@ -958,7 +958,7 @@ body {
     }
 }
 
-[dir="rtl"] @keyframes slideOut {
+@keyframes slideOutRTL {
     from {
         transform: translateX(0);
         opacity: 1;

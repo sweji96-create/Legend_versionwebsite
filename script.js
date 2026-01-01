@@ -312,7 +312,7 @@ function showNotification(message, type) {
         borderRadius: '10px',
         boxShadow: '0 5px 20px rgba(0,0,0,0.2)',
         zIndex: '10000',
-        animation: 'slideIn 0.3s ease',
+        animation: currentLang === 'ar' ? 'slideInRTL 0.3s ease' : 'slideIn 0.3s ease',
         maxWidth: '300px',
         fontSize: '16px',
         fontWeight: '500'
@@ -323,7 +323,7 @@ function showNotification(message, type) {
     
     // Remove after 4 seconds
     setTimeout(() => {
-        notification.style.animation = 'slideOut 0.3s ease';
+        notification.style.animation = currentLang === 'ar' ? 'slideOutRTL 0.3s ease' : 'slideOut 0.3s ease';
         setTimeout(() => {
             notification.remove();
         }, 300);
@@ -432,15 +432,3 @@ if ('IntersectionObserver' in window) {
 console.log('%cNashco Global', 'font-size: 24px; font-weight: bold; color: #1a5490;');
 console.log('%cExcellence Since 1994', 'font-size: 14px; color: #666;');
 console.log('%cWebsite by Nashco Global | Built with modern web technologies', 'font-size: 12px; color: #999;');
-
-// ================================================
-// Export for potential module use
-// ================================================
-
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = {
-        initializeWebsite,
-        toggleLanguage,
-        showNotification
-    };
-}
