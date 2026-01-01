@@ -239,9 +239,10 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
+    /* Background gradients using theme colors with low opacity for subtle effect */
     background: 
         radial-gradient(circle at 20% 50%, rgba(243, 156, 18, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(52, 152, 219, 0.1) 0%, transparent 50%);
+        radial-gradient(circle at 80% 80%, rgba(41, 128, 185, 0.1) 0%, transparent 50%);
     animation: backgroundPulse 10s ease-in-out infinite;
 }
 

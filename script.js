@@ -304,8 +304,8 @@ function showNotification(message, type) {
     Object.assign(notification.style, {
         position: 'fixed',
         top: '100px',
-        right: currentLang === 'rtl' ? 'auto' : '20px',
-        left: currentLang === 'rtl' ? '20px' : 'auto',
+        right: currentLang === 'ar' ? 'auto' : '20px',
+        left: currentLang === 'ar' ? '20px' : 'auto',
         padding: '20px 30px',
         background: type === 'success' ? '#27ae60' : '#e74c3c',
         color: '#fff',
