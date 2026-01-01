@@ -16,15 +16,21 @@
     <meta property="og:description" content="GCC leader since 1994, specializing in chemicals, automotive, manufacturing, and trading solutions.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nashcoglobal.com">
+    <meta property="og:site_name" content="Nashco Global">
+    <meta property="og:image" content="https://nashcoglobal.com/assets/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Nashco Global - Excellence in Chemicals, Automotive, Manufacturing & Trading">
     <meta name="twitter:description" content="GCC leader since 1994, specializing in chemicals, automotive, manufacturing, and trading solutions.">
+    <meta name="twitter:image" content="https://nashcoglobal.com/assets/images/og-image.jpg">
     
     <title>Nashco Global - Excellence in Chemicals, Automotive, Manufacturing & Trading</title>
     
     <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon-placeholder.svg">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     
     <!-- Fonts -->
@@ -288,6 +294,13 @@
                     </div>
                 </div>
                 <div class="contact-form">
+                    <!-- 
+                    TODO: Configure form backend before deployment
+                    Option 1 (Formspree): Add action="https://formspree.io/f/YOUR_FORM_ID" method="POST"
+                    Option 2 (Web3Forms): Add action="https://api.web3forms.com/submit" method="POST"
+                                          and <input type="hidden" name="access_key" value="YOUR_KEY">
+                    See DEPLOYMENT.md for detailed instructions.
+                    -->
                     <form id="contactForm">
                         <div class="form-group">
                             <input type="text" id="name" name="name" required placeholder=" ">
@@ -357,6 +370,15 @@
     <button id="backToTop" class="back-to-top" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </button>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/966XXXXXXXXX" 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Contact us on WhatsApp">
+        <img src="assets/images/whatsapp.svg" alt="WhatsApp" class="whatsapp-icon">
+    </a>
 
     <!-- JavaScript -->
     <script src="script.js"></script>
