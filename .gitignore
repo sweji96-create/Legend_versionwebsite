@@ -40,3 +40,5 @@ logs/
 # Package manager lock files (optional)
 package-lock.json
 yarn.lock
+.gitignore updated to exclude temp files
+*.txt
