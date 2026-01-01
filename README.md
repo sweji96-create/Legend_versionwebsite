@@ -48,18 +48,29 @@ A production-ready bilingual (English/Arabic) single-page corporate website for 
 
 ## 🚀 Getting Started
 
-### Option 1: Simple HTTP Server (Python)
+### Cloudflare Pages Deployment (Recommended)
+For production deployment to Cloudflare Pages, see the **[Cloudflare Deployment Guide](CLOUDFLARE_DEPLOYMENT.md)** for complete step-by-step instructions.
+
+**Quick Start:**
+1. Connect your GitHub repository to Cloudflare Pages
+2. Set build output directory to `/` (root)
+3. Leave build command empty (static site)
+4. Deploy!
+
+### Local Development
+
+#### Option 1: Simple HTTP Server (Python)
 ```bash
 python3 -m http.server 8000
 ```
 Then open http://localhost:8000
 
-### Option 2: Live Server (VS Code)
+#### Option 2: Live Server (VS Code)
 1. Install "Live Server" extension
 2. Right-click on `index.html`
 3. Select "Open with Live Server"
 
-### Option 3: Node.js HTTP Server
+#### Option 3: Node.js HTTP Server
 ```bash
 npx http-server -p 8000
 ```
@@ -68,13 +79,17 @@ npx http-server -p 8000
 
 ```
 Legend_versionwebsite/
-├── index.html          # Main HTML file
-├── styles.css          # All CSS styles
-├── script.js           # JavaScript functionality
+├── index.html               # Main HTML file
+├── styles.css               # All CSS styles
+├── script.js                # JavaScript functionality
 ├── images/
 │   ├── nashco-logo.svg      # Main company logo
 │   └── zahy-group-logo.svg  # Parent group logo
-└── README.md          # This file
+├── _headers                 # Cloudflare headers config
+├── _redirects               # Cloudflare redirects config
+├── .gitignore              # Git ignore rules
+├── README.md               # Main documentation
+└── CLOUDFLARE_DEPLOYMENT.md # Deployment guide
 ```
 
 ## 🎨 Customization
