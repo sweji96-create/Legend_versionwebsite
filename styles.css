@@ -140,41 +140,22 @@ body {
 .logo {
     display: flex;
     align-items: center;
-    gap: 15px;
+}
+
+.logo a {
+    display: block;
+    line-height: 0;
 }
 
 .logo-img {
     max-height: 70px;
     width: auto;
     object-fit: contain;
+    transition: var(--transition-smooth);
 }
 
-.logo-text {
-    display: flex;
-    flex-direction: column;
-}
-
-.logo-fallback {
-    font-size: 28px;
-    font-weight: 700;
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 0;
-    display: none;
-}
-
-/* Show fallback only if image fails */
-.logo-img:not([src]) + .logo-text .logo-fallback,
-.logo-img[src=""] + .logo-text .logo-fallback {
-    display: block;
-}
-
-.logo .tagline {
-    font-size: 12px;
-    color: var(--text-light);
-    margin-top: -5px;
+.logo-img:hover {
+    transform: scale(1.05);
 }
 
 .nav-menu {
@@ -182,6 +163,49 @@ body {
     list-style: none;
     gap: 30px;
     margin: 0;
+}
+
+.nav-menu > li {
+    position: relative;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--white);
+    box-shadow: var(--shadow-lg);
+    border-radius: 8px;
+    padding: 10px 0;
+    min-width: 200px;
+    z-index: 1000;
+    margin-top: 10px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    list-style: none;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 12px 20px;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: var(--transition-smooth);
+}
+
+.dropdown-menu a:hover {
+    background: var(--light-color);
+    color: var(--primary-color);
 }
 
 .nav-menu a {
@@ -1093,5 +1117,258 @@ button:focus {
     body {
         color: #000;
         background: #fff;
+    }
+}
+
+/* Page-Specific Styles */
+.page-header {
+    background: var(--gradient-primary);
+    color: var(--white);
+    padding: 100px 0 60px;
+    margin-top: 70px;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.division-header {
+    padding: 80px 0 50px;
+}
+
+.division-logo-header {
+    margin-bottom: 30px;
+}
+
+.division-logo {
+    max-width: 150px;
+    height: auto;
+}
+
+.division-overview,
+.products-services,
+.why-choose,
+.mission-vision,
+.core-values,
+.stats-section {
+    padding: 80px 0;
+}
+
+.overview-grid,
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.overview-image img,
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: var(--shadow-lg);
+}
+
+.overview-content h2,
+.about-content-text h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: var(--dark-color);
+}
+
+.overview-content p,
+.about-content-text p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+.overview-intro {
+    text-align: center;
+    font-size: 1.2rem;
+    max-width: 900px;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+}
+
+.mv-grid,
+.features-grid,
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.mv-card,
+.feature-item,
+.value-card {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    transition: var(--transition-smooth);
+}
+
+.mv-card:hover,
+.feature-item:hover,
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.mv-icon,
+.feature-icon,
+.value-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    font-size: 35px;
+    color: var(--white);
+}
+
+.mv-card h3,
+.feature-item h4,
+.value-card h4 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+.cta-section {
+    background: var(--gradient-primary);
+    color: var(--white);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.95;
+}
+
+/* Contact Page */
+.contact-page {
+    padding: 80px 0;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.contact-info-section h2,
+.contact-form-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: var(--dark-color);
+}
+
+.info-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+}
+
+.info-card {
+    background: var(--white);
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    transition: var(--transition-smooth);
+}
+
+.info-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.info-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    font-size: 24px;
+    color: var(--white);
+}
+
+.info-card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: var(--dark-color);
+}
+
+.info-card p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+.contact-form {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-submit {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.active {
+    color: var(--primary-color) !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    
+    .overview-grid,
+    .about-grid,
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .mv-grid,
+    .features-grid,
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .division-logo {
+        max-width: 120px;
+    }
+    
+    .info-cards {
+        grid-template-columns: 1fr;
     }
 }

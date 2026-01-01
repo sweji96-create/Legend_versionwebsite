@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Nashco Global</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="language-toggle">
+        <button id="langBtn" class="lang-btn" aria-label="Toggle Language">
+            <i class="fas fa-language"></i>
+            <span id="langText">العربية</span>
+        </button>
+    </div>
+
+    <nav class="navbar" role="navigation">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="https://github.com/user-attachments/assets/9ac29a62-112a-4e0e-b2bf-96051be57756" 
+                             alt="Nashco Global Logo" class="logo-img">
+                    </a>
+                </div>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                    <li><a href="about.html" data-en="About" data-ar="من نحن">About</a></li>
+                    <li class="dropdown">
+                        <a href="#" data-en="Divisions" data-ar="الأقسام">Divisions</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="zahyalkhaleej.html" data-en="Zahy Al Khaleej" data-ar="زاهي الخليج">Zahy Al Khaleej</a></li>
+                            <li><a href="automotive.html" data-en="Automotive" data-ar="السيارات">Automotive</a></li>
+                            <li><a href="manufacturing.html" data-en="Manufacturing" data-ar="التصنيع">Manufacturing</a></li>
+                            <li><a href="trading.html" data-en="Trading" data-ar="التجارة">Trading</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html" class="active" data-en="Contact" data-ar="اتصل بنا">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1 data-en="Get in Touch" data-ar="اتصل بنا">Get in Touch</h1>
+            <p data-en="We're here to help and answer any questions you might have" data-ar="نحن هنا للمساعدة والإجابة على أي أسئلة قد تكون لديك">We're here to help and answer any questions you might have</p>
+        </div>
+    </section>
+
+    <section class="contact-page">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info-section">
+                    <h2 data-en="Contact Information" data-ar="معلومات الاتصال">Contact Information</h2>
+                    <div class="info-cards">
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h4 data-en="Email" data-ar="البريد الإلكتروني">Email</h4>
+                            <p>info@nashcoglobal.com</p>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <h4 data-en="Phone - Oman" data-ar="الهاتف - عمان">Phone - Oman</h4>
+                            <p>+968 94535053</p>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h4 data-en="Phone - UAE" data-ar="الهاتف - الإمارات">Phone - UAE</h4>
+                            <p>+971 508536542</p>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h4 data-en="Location" data-ar="الموقع">Location</h4>
+                            <p data-en="GCC Region, Middle East" data-ar="منطقة دول مجلس التعاون الخليجي، الشرق الأوسط">GCC Region, Middle East</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-section">
+                    <h2 data-en="Send Us a Message" data-ar="أرسل لنا رسالة">Send Us a Message</h2>
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/xanygjyk" method="POST">
+                        <div class="form-group">
+                            <label class="floating-label">
+                                <input type="text" name="name" required placeholder=" ">
+                                <span data-en="Your Name" data-ar="اسمك">Your Name</span>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="floating-label">
+                                <input type="email" name="email" required placeholder=" ">
+                                <span data-en="Your Email" data-ar="بريدك الإلكتروني">Your Email</span>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="floating-label">
+                                <input type="text" name="subject" required placeholder=" ">
+                                <span data-en="Subject" data-ar="الموضوع">Subject</span>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="floating-label">
+                                <textarea name="message" required placeholder=" " rows="5"></textarea>
+                                <span data-en="Message" data-ar="الرسالة">Message</span>
+                            </label>
+                        </div>
+                        <input type="hidden" name="_replyto" value="info@nashcoglobal.com">
+                        <input type="hidden" name="_subject" value="New Contact Form Submission from Nashco Global Website">
+                        <input type="hidden" name="_next" value="thank-you.html">
+                        <button type="submit" class="btn btn-primary btn-submit" data-en="Send Message" data-ar="إرسال رسالة">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Nashco Global</h3>
+                    <p data-en="Excellence in Chemicals, Automotive, Manufacturing & Trading since 1994" data-ar="التميز في المواد الكيميائية والسيارات والتصنيع والتجارة منذ 1994">Excellence in Chemicals, Automotive, Manufacturing & Trading since 1994</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Quick Links" data-ar="روابط سريعة">Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                        <li><a href="about.html" data-en="About" data-ar="من نحن">About</a></li>
+                        <li><a href="contact.html" data-en="Contact" data-ar="اتصل بنا">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Contact Info" data-ar="معلومات الاتصال">Contact Info</h4>
+                    <p>Email: info@nashcoglobal.com</p>
+                    <p>Oman: +968 94535053</p>
+                    <p>UAE: +971 508536542</p>
+                </div>
+            </div>
+            <p class="copyright">© 2026 Nashco Global. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
