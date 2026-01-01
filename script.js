@@ -391,19 +391,6 @@ document.addEventListener('keydown', (e) => {
 // Performance Optimization
 // ================================================
 
-// Debounce function for scroll events
-function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
-}
-
 // ================================================
 // Lazy Loading Images (if any are added)
 // ================================================
