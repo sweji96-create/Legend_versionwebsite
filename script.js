@@ -330,55 +330,6 @@ function showNotification(message, type) {
     }, 4000);
 }
 
-// Add notification animations to CSS dynamically
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes slideIn {
-        from {
-            transform: translateX(400px);
-            opacity: 0;
-        }
-        to {
-            transform: translateX(0);
-            opacity: 1;
-        }
-    }
-    
-    @keyframes slideOut {
-        from {
-            transform: translateX(0);
-            opacity: 1;
-        }
-        to {
-            transform: translateX(400px);
-            opacity: 0;
-        }
-    }
-    
-    [dir="rtl"] @keyframes slideIn {
-        from {
-            transform: translateX(-400px);
-            opacity: 0;
-        }
-        to {
-            transform: translateX(0);
-            opacity: 1;
-        }
-    }
-    
-    [dir="rtl"] @keyframes slideOut {
-        from {
-            transform: translateX(0);
-            opacity: 1;
-        }
-        to {
-            transform: translateX(-400px);
-            opacity: 0;
-        }
-    }
-`;
-document.head.appendChild(style);
-
 // ================================================
 // Back to Top Button
 // ================================================
@@ -452,13 +403,6 @@ function debounce(func, wait) {
         timeout = setTimeout(later, wait);
     };
 }
-
-// Apply debounce to scroll handlers
-const debouncedScrollHandler = debounce(() => {
-    // Any scroll-based operations can go here
-}, 100);
-
-window.addEventListener('scroll', debouncedScrollHandler);
 
 // ================================================
 // Lazy Loading Images (if any are added)
