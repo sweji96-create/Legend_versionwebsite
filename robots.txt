@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /images/
+Disallow: /css/
+Disallow: /js/
+
+Sitemap: https://www.nashcoglobal.com/sitemap.xml
