@@ -49,20 +49,25 @@ function setupNavigation() {
         });
     });
     
-    // Smooth scrolling for navigation links
+    // Smooth scrolling for hash navigation links only (same-page sections)
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetId = link.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
+            const href = link.getAttribute('href');
             
-            if (targetSection) {
-                const offsetTop = targetSection.offsetTop - 70;
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
+            // Only prevent default and smooth scroll if it's a hash link (starts with #)
+            if (href && href.startsWith('#')) {
+                e.preventDefault();
+                const targetSection = document.querySelector(href);
+                
+                if (targetSection) {
+                    const offsetTop = targetSection.offsetTop - 70;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
             }
+            // For other links (page navigation links), let them navigate normally
         });
     });
     
