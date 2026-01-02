@@ -79,7 +79,7 @@ body {
 /* Language Toggle */
 .language-toggle {
     position: fixed;
-    top: 20px;
+    top: 80px;
     right: 20px;
     z-index: 1001;
 }
@@ -135,6 +135,19 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-smooth);
+}
+
+.logo:hover {
+    opacity: 0.8;
 }
 
 .logo h1 {
