@@ -3,12 +3,12 @@
   "name": "Nashco Global: Innovative GCC Partner",
   "icons": [
     {
-      "src": "images/icon-192.png",
+      "src": "Assets/images/icon-192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "images/icon-512.png",
+      "src": "Assets/images/icon-512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
