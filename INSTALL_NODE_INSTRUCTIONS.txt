@@ -1,0 +1,20 @@
+I attempted to download and install Node.js LTS but the installer requires elevation.
+
+Downloaded MSI path (temp):
+C:\Users\sweji\AppData\Local\Temp\nodev24.12.0.msi
+
+Next steps you can take (pick one):
+1) Run the installer manually as Administrator:
+   - Right-click the MSI and choose "Run as administrator" to install.
+
+2) Let me re-run the installer and prompt for elevation (this will show a UAC prompt):
+   - I can run a command that invokes the installer with elevation. Confirm if okay.
+
+3) Install Node manually using the official installer from https://nodejs.org (LTS recommended).
+
+After Node is installed, I can:
+- Run `npm init -y` and install OpenTelemetry deps.
+- Create `tracing.js` and add an npm `trace` script.
+- Delegate follow-up tasks to a cloud agent if you want.
+
+Tell me which option to proceed with, or if you want me to attempt the elevated install now.

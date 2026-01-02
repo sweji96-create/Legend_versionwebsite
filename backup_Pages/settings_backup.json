@@ -1,0 +1,112 @@
+{
+    "editor.formatOnSave": true,
+    "files.autoSave": "onWindowChange",
+    "editor.aiStats.enabled": true,
+    "editor.allowVariableFontsInAccessibilityMode": true,
+    "editor.autoIndentOnPaste": true,
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "editor.codeActions.triggerOnFocusChange": true,
+    "editor.definitionLinkOpensInPeek": true,
+    "editor.experimental.asyncTokenizationLogging": true,
+    "editor.experimental.asyncTokenizationVerification": true,
+    "editor.experimental.preferTreeSitter.css": true,
+    "http.experimental.systemCertificatesV2": true,
+    "http.systemCertificatesNode": true,
+    "keyboard.mapAltGrToCtrlAlt": true,
+    "telemetry.editStats.showDecorations": true,
+    "telemetry.editStats.showStatusBar": true,
+    "git.openRepositoryInParentFolders": "always",
+    "security.workspace.trust.untrustedFiles": "open",
+    "@azure.argTenant": "",
+    "meerkat.meerkatNotification": "ping",
+    "chat.instructionsFilesLocations": {
+        ".github/instructions": true,
+        "/home/codespace/.aitk/instructions/": true,
+        "C:\\Users\\sweji\\.aitk\\instructions\\": true
+    },
+    "workbench.editor.empty.hint": "hidden",
+    "chat.tools.urls.autoApprove": {
+        "https://nashcoglobal.com": {
+            "approveRequest": true
+        }
+    },
+    "chat.agent.maxRequests": 99,
+    "chat.allowAnonymousAccess": true,
+    "chat.checkpoints.showFileChanges": true,
+    "chat.customAgentInSubagent.enabled": true,
+    "chat.editing.confirmEditRequestRemoval": false,
+    "chat.editing.confirmEditRequestRetry": false,
+    "chat.mcp.assisted.nuget.enabled": true,
+    "chat.mcp.discovery.enabled": {
+        "claude-desktop": true,
+        "windsurf": true,
+        "cursor-global": true,
+        "cursor-workspace": true
+    },
+    "redhat.telemetry.enabled": true,
+    "chatgpt.gpt3.responsesAPI.enabled": true,
+    "chatgpt.gpt3.searchGrounding.enabled": true,
+    "chatgpt.promptPrefix.customPrompt1-enabled": true,
+    "chatgpt.promptPrefix.customPrompt2-enabled": true,
+    "chatgpt.response.showNotification": true,
+    "chatgpt.autoAddCurrentFile": true,
+    "chatgpt.gpt3.maxSteps": 99,
+    "chatgpt.promptBasedTools.enabled": true,
+    "clangd.checkUpdates": true,
+    "clangd.onConfigChanged.forceEnable": true,
+    "clangd.useScriptAsExecutable": true,
+    "console-ninja.toolsToEnableSupportAutomaticallyFor": {
+        "live-server-extension": true,
+        "live-preview-extension": true
+    },
+    "console-ninja.installBinToPath": true,
+    "console-ninja.allowConsoleLogToTriggerPredictions": true,
+    "console-ninja.captureFunctions": true,
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "chat.mcp.serverSampling": {
+        "Global in Code - Insiders: microsoft/markitdown": {
+            "allowedModels": [
+                "copilot/claude-sonnet-4.5",
+                "copilot/auto",
+                "copilot/claude-haiku-4.5",
+                "copilot/claude-opus-4.5",
+                "copilot/claude-sonnet-4",
+                "copilot/gemini-2.5-pro",
+                "copilot/gemini-3-flash-preview",
+                "copilot/gemini-3-pro-preview",
+                "copilot/gpt-4.1",
+                "copilot/gpt-4o",
+                "copilot/gpt-5",
+                "copilot/gpt-5-mini",
+                "copilot/gpt-5-codex",
+                "copilot/gpt-5.1",
+                "copilot/gpt-5.1-codex",
+                "copilot/gpt-5.1-codex-max",
+                "copilot/gpt-5.1-codex-mini",
+                "copilot/gpt-5.2",
+                "copilot/grok-code-fast-1",
+                "copilot/oswe-vscode-prime"
+            ]
+        }
+    },
+    "editor.pasteAs.preferences": [],
+    "gitlens.ai.model": "vscode",
+    "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+    "workbench.colorTheme": "Business Central Dark",
+    "mule.homeDirectory": "C:\\Users\\sweji\\AnypointCodeBuilder",
+    "mule.controlPlane": "US Cloud",
+    "python.defaultInterpreterPath": "c:\\Users\\sweji\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+    "gitlens.views.scm.grouped.views": {
+        "commits": true,
+        "branches": true,
+        "remotes": true,
+        "stashes": true,
+        "tags": true,
+        "worktrees": true,
+        "contributors": true,
+        "fileHistory": true,
+        "repositories": true,
+        "searchAndCompare": false,
+        "launchpad": false
+    }
+}
