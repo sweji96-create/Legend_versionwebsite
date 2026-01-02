@@ -1,338 +1,102 @@
 # Nashco Global - Corporate Website
 
-**Production-ready bilingual (English/Arabic) multi-page corporate website**
+A modern, responsive, and SEO-optimized website for Nashco Global, a GCC leader since 1994 specializing in chemicals, automotive, manufacturing, and trading.
 
-[![Deployment Status](https://img.shields.io/badge/deployment-nearly%20ready-yellow)]()
-[![License](https://img.shields.io/badge/license-proprietary-blue)]()
-[![HTML5](https://img.shields.io/badge/HTML-5-orange)]()
-[![CSS3](https://img.shields.io/badge/CSS-3-blue)]()
-[![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow)]()
+## 🌟 Features
 
-## 🌟 Overview
+- **Responsive Design**: Fully responsive layout that works seamlessly on all devices (desktop, tablet, mobile)
+- **Bilingual Support**: Complete English/Arabic language toggle with RTL (Right-to-Left) support
+- **SEO Optimized**: Comprehensive meta tags, Open Graph, and Twitter Card integration
+- **Modern Animations**: Dynamic animations and smooth transitions for enhanced user experience
+- **Interactive Elements**: Engaging UI components including smooth scrolling, stat counters, and form validation
+- **Accessibility**: ARIA labels, semantic HTML5, keyboard navigation, and WCAG compliance
+- **Professional Design**: Clean, modern interface with gradient backgrounds and shadow effects
+- **Cultural Inclusivity**: Full Arabic language support with appropriate fonts and RTL layout
 
-Nashco Global is a GCC leader since 1994, specializing in automotive solutions, manufacturing, and trading. This website showcases our excellence, innovation, and commitment to empowering industries and communities across the region.
+## 🚀 Technologies Used
 
-With the latest updates from **PR #16**, the website has been restructured from a single-page design to a comprehensive multi-page architecture with 7 distinct pages, official brand logos, complete navigation system, and unique professional hero sections for each page.
+- **HTML5**: Semantic markup for better SEO and accessibility
+- **CSS3**: Modern styling with flexbox, grid, custom properties, and animations
+- **JavaScript (ES6+)**: Interactive functionality and dynamic content
+- **Google Fonts**: Poppins (English) and Cairo (Arabic) for optimal readability
+- **Font Awesome**: Professional icons throughout the site
 
-## ✨ Features
+## 📋 Sections
 
-### Core Functionality
-- ✅ **Fully Bilingual**: English and Arabic with perfect RTL support
-- ✅ **100% Responsive**: Flawless on mobile, tablet, and desktop
-- ✅ **Pure Static**: No backend, Node.js, or build process required
-- ✅ **Fast Loading**: Optimized CSS/JS, lazy-loaded images
-- ✅ **Accessible**: WCAG compliant with ARIA labels and keyboard navigation
-- ✅ **SEO Optimized**: Complete meta tags, Open Graph, Twitter Cards
-- ✅ **Multi-Page Architecture**: 7 fully functional HTML pages with unique hero sections
+1. **Hero Section**: Eye-catching introduction with call-to-action buttons
+2. **About Section**: Company overview with animated statistics
+3. **Services Section**: Detailed information about four main business divisions:
+   - Chemicals
+   - Automotive
+   - Manufacturing
+   - Trading
+4. **Vision Section**: Company vision with key values
+5. **Contact Section**: Contact information and functional form
+6. **Footer**: Quick links, social media, and copyright information
 
-### User Experience
-- 🎨 Modern, professional design with smooth animations
-- 🌍 Dynamic language switching (English/Arabic)
-- 📱 Touch-friendly mobile menu
-- 💬 Floating WhatsApp contact button
-- 📧 Contact form (with Formspree integration)
-- ⬆️ Smooth scroll-to-top button
-- ♿ Full accessibility support
+## 🎨 Design Highlights
 
-### Official Branding
-- **Nashco Global Logo**: Displayed on all pages in header and footer
-- **Zahy Group Logo**: Prominently featured on zahyalkhaleej.html with professional circular presentation
-
-## 📁 Project Structure
-
-```
-Legend_versionwebsite/
-├── index.html              # Homepage with company overview and business divisions
-├── about.html              # Complete company history, mission, vision, and values
-├── zahyalkhaleej.html      # Zahy Al Khaleej brand page with logo display
-├── automotive.html         # Automotive division (Nashco Max Car FZE & Zahy Auto Spare)
-├── manufacturing.html      # Manufacturing division (Nashco Plastic Manufacturing Factory)
-├── trading.html            # Trading division (Ajman & India)
-├── contact.html            # Contact form integrated with Formspree
-├── index-old-single-page.html  # Original single-page version (archived)
-├── styles.css              # Complete stylesheet with responsive hero styles
-├── script.js               # Interactive functionality
-├── robots.txt              # SEO directives
-├── sitemap.xml             # Site structure
-├── assets/
-│   └── images/
-│       ├── favicon-placeholder.svg
-│       ├── whatsapp.svg
-│       └── README.md       # Asset documentation
-├── DEPLOYMENT.md           # Comprehensive deployment guide
-├── QUICK-START.md          # 3-step deployment guide
-├── PRE-DEPLOYMENT-REVIEW.md # Technical audit and review
-├── FINAL-SIGN-OFF.md       # Executive summary with deployment checklist
-├── MULTI-PAGE-SUMMARY.md   # Complete documentation of all 7 pages
-└── README.md               # This file
-```
-
-## 🚀 Quick Start
-
-### Local Development
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/sweji96-create/Legend_versionwebsite.git
-   cd Legend_versionwebsite
-   ```
-
-2. **Open in browser**
-   ```bash
-   # Option 1: Direct file open
-   open index.html  # Mac
-   start index.html # Windows
-   
-   # Option 2: Local server (recommended)
-   python3 -m http.server 8080
-   # Then visit: http://localhost:8080
-   ```
-
-3. **Start editing**
-   - Edit HTML files for content
-   - Edit `styles.css` for styling
-   - Edit `script.js` for functionality
-
-### Deployment
-
-**The site is nearly ready to deploy!** Minor post-deployment configuration needed (contact form backend and WhatsApp number). See [DEPLOYMENT.md](DEPLOYMENT.md) or [QUICK-START.md](QUICK-START.md) for detailed instructions.
-
-**Quick deploy to Cloudflare Pages:**
-1. Push to GitHub
-2. Connect repository to Cloudflare Pages
-3. Deploy (no build command needed)
-4. Go live in 5 minutes!
-
-**Supported platforms:**
-- ✅ Cloudflare Pages (recommended)
-- ✅ Netlify
-- ✅ Vercel
-- ✅ GitHub Pages
-- ✅ Any static hosting
-
-## 📋 Pre-Deployment Checklist
-
-See [PRE-DEPLOYMENT-REVIEW.md](PRE-DEPLOYMENT-REVIEW.md) for the complete review.
-
-### Critical (Before Launch)
-- [ ] Configure contact form backend (Formspree/Web3Forms)
-- [ ] Update WhatsApp number in HTML files
-- [ ] Replace placeholder favicon with real Nashco Global favicon
-
-### Important (Soon After)
-- [ ] Replace placeholder logo with official Nashco Global logo (if needed)
-- [ ] Add social preview image (`og-image.jpg`)
-- [ ] Set up analytics (Cloudflare or Google Analytics)
-
-### Optional
-- [ ] Download and host images locally (currently using external URLs)
-- [ ] Create custom 404 page
-- [ ] Optimize images for faster loading
-
-## 🛠️ Technology Stack
-
-- **HTML5**: Semantic markup, accessibility-first
-- **CSS3**: Modern features, CSS Grid, Flexbox, custom properties
-- **JavaScript (ES6+)**: Vanilla JS, no frameworks
-- **Fonts**: Google Fonts (Poppins + Cairo for Arabic)
-- **Icons**: Font Awesome 6.4.0
-
-**Dependencies:** Zero! No npm, no build process, no complexity.
+- **Color Scheme**: Professional blue gradient with gold accents
+- **Typography**: Clear, readable fonts with proper hierarchy
+- **Animations**: Smooth transitions and entrance animations
+- **Layout**: Clean grid-based layouts with optimal spacing
+- **Images**: Placeholder support for company images and logos
 
 ## 🌐 Browser Support
 
-- ✅ Chrome/Edge (latest)
-- ✅ Firefox (latest)
-- ✅ Safari (latest)
-- ✅ Mobile browsers (iOS Safari, Chrome Mobile)
-- ⚠️ IE11 (not tested, likely needs polyfills)
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers (iOS Safari, Chrome Mobile)
 
 ## 📱 Responsive Breakpoints
 
-- **Mobile**: 320px - 767px
-- **Tablet**: 768px - 1199px
-- **Desktop**: 1200px+
+- Desktop: 1200px and above
+- Tablet: 768px to 1199px
+- Mobile: Below 768px
 
-## 🌍 Pages Overview
+## 🔧 Setup and Usage
 
-### 1. index.html - Homepage
-- Full-screen hero with globe image and "Welcome to Nashco Global" heading
-- Company overview and business divisions showcase
-- Statistics (30+ years, 1000+ clients, 50+ countries, 5+ divisions)
-- Links to all division pages
+1. Clone or download the repository
+2. Open `index.html` in a modern web browser
+3. No build process required - pure HTML, CSS, and JavaScript
 
-### 2. about.html - About Us
-- Company history since 1994
-- Mission and Vision statements
-- Core values (Integrity, Excellence, Innovation, Customer Focus, Sustainability, Community)
-- Why choose Nashco Global
+## 🌍 Language Toggle
 
-### 3. zahyalkhaleej.html - Zahy Al Khaleej
-- Dedicated page for Zahy Al Khaleej brand
-- **Zahy Group logo prominently displayed** in page header with white circular background
-- Premium services description
-- Statistics: 500+ projects, 98% satisfaction, 20+ awards
+Click the language button in the top-right corner to switch between English and Arabic. The entire website content, including navigation and text, will update dynamically with proper RTL layout for Arabic.
 
-### 4. automotive.html - Automotive Division
-- **Nashco Max Car FZE**: Premium car trading
-- **Zahy Auto Spare**: Quality spare parts
-- Statistics: 5000+ vehicles sold, 10,000+ parts in stock
+## 📞 Contact Form
 
-### 5. manufacturing.html - Manufacturing Division
-- **Nashco Plastic Manufacturing Factory, Riyadh**
-- Advanced production capabilities
-- Statistics: 50,000+ units monthly, 99% quality pass rate
+The contact form includes:
+- Client-side validation
+- Floating labels for better UX
+- Success/error notifications
+- Required field validation
+- Email format validation
 
-### 6. trading.html - Trading Division
-- **Nashco General Trading LLC, Ajman**
-- **Nashco International Trade Links, India**
-- Global trading expertise
+## ♿ Accessibility Features
 
-### 7. contact.html - Contact Us
-- **Working contact form** integrated with Formspree
-- Form sends to: **info@nashcoglobal.com**
-- Contact details: Oman: +968 94535053, UAE: +971 508536542
-- Business hours and locations
-
-## ♿ Accessibility
-
-- ARIA labels on all interactive elements
 - Semantic HTML5 elements
+- ARIA labels for interactive elements
 - Keyboard navigation support
-- Screen reader friendly
+- Focus indicators
 - High contrast mode support
-- Reduced motion preferences respected
-- Focus indicators on all focusable elements
+- Reduced motion support for users with vestibular disorders
 
-## 🔒 Security
+## 🎯 SEO Features
 
-- No external JavaScript dependencies
-- HTTPS-only external resources
-- No security vulnerabilities (CodeQL verified)
-- Zero dependencies
-
-## 📊 Performance
-
-**Estimated metrics:**
-- First Contentful Paint: < 1s
-- Time to Interactive: < 2s
-- Lighthouse Score: 95+
-
-**Optimization techniques:**
-- Lazy loading images
-- Font display swap
-- Minimal CSS/JS
-- No blocking resources
-
-## 📞 Contact Configuration
-
-### WhatsApp Button
-Update the WhatsApp number in all HTML files:
-```html
-<a href="https://wa.me/96894535053" ...>
-```
-Replace with your actual WhatsApp business number.
-
-### Contact Form
-The contact form is integrated with Formspree. See [DEPLOYMENT.md](DEPLOYMENT.md) section "Contact Form Backend Integration" for:
-- Formspree setup (recommended)
-- Web3Forms setup
-- Cloudflare Workers (advanced)
-
-## 🎨 Customization
-
-### Colors
-Edit CSS variables in `styles.css` (lines 6-40):
-```css
-:root {
-    --primary-color: #1a5490;
-    --secondary-color: #f39c12;
-    --accent-color: #e74c3c;
-    /* ... more colors */
-}
-```
-
-### Content
-All content has bilingual attributes:
-```html
-<h2 data-en="English Text" data-ar="النص العربي">English Text</h2>
-```
-
-### Images
-See `assets/images/README.md` for asset guidelines.
-
-## 🤝 Contributing
-
-This is a proprietary project for Nashco Global.
+- Optimized meta tags
+- Open Graph protocol for social sharing
+- Twitter Card support
+- Descriptive alt texts (when images are added)
+- Semantic HTML structure
+- Clean URL structure
 
 ## 📄 License
 
-Copyright © 1994-2026 Nashco Global. All rights reserved.
+© 2024 Nashco Global. All rights reserved.
 
-## 🆘 Support
+## 🤝 About Nashco Global
 
-For technical issues:
-1. Check [DEPLOYMENT.md](DEPLOYMENT.md) for common solutions
-2. Review [PRE-DEPLOYMENT-REVIEW.md](PRE-DEPLOYMENT-REVIEW.md)
-3. Check browser console for errors
-4. See [MULTI-PAGE-SUMMARY.md](MULTI-PAGE-SUMMARY.md) for page details
-
-## 📈 Roadmap
-
-**Current Features (PR #16):**
-- ✅ Multi-page architecture (7 pages)
-- ✅ Official Nashco Global and Zahy Group logos
-- ✅ Professional hero sections for each page
-- ✅ Bilingual support (English/Arabic)
-- ✅ Working contact form
-- ✅ WhatsApp integration
-- ✅ Full responsive design
-
-**Future Enhancements:**
-- [ ] Blog/news section
-- [ ] Client testimonials
-- [ ] Project showcase/portfolio
-- [ ] Team member profiles
-- [ ] Career opportunities page
-
-## 🎯 Project Status
-
-**Current Version:** 1.0.0  
-**Status:** ✅ Ready for Production  
-**Last Updated:** PR #16  
-**Deployment Readiness:** Nearly ready - minor configuration needed (contact form backend, WhatsApp number)
-
-## 📝 Documentation
-
-- [QUICK-START.md](QUICK-START.md) - 3-step deployment guide
-- [DEPLOYMENT.md](DEPLOYMENT.md) - Comprehensive deployment instructions
-- [PRE-DEPLOYMENT-REVIEW.md](PRE-DEPLOYMENT-REVIEW.md) - Technical audit
-- [FINAL-SIGN-OFF.md](FINAL-SIGN-OFF.md) - Executive summary
-- [MULTI-PAGE-SUMMARY.md](MULTI-PAGE-SUMMARY.md) - Complete page documentation
-
-## 🎉 What's New in PR #16
-
-### Multi-Page Structure
-Restructured from single-page to 7 distinct pages with professional hero sections
-
-### Official Logos
-- **Nashco Global Logo**: Displayed on all pages
-- **Zahy Group Logo**: Featured on zahyalkhaleej.html
-
-### Professional Hero Sections
-- **index.html**: Full-screen hero with globe image and "Welcome to Nashco Global"
-- **about.html**: Corporate office/business environment
-- **zahyalkhaleej.html**: Modern architecture with Zahy Group logo
-- **automotive.html**: Luxury sports car background
-- **manufacturing.html**: Industrial automation/factory setting
-- **trading.html**: Global shipping/logistics imagery
-
-Each hero features high-resolution backgrounds, gradient overlays, enhanced typography, and full responsive design.
-
-### Complete Documentation
-Comprehensive documentation covering deployment, technical review, and multi-page architecture.
-
----
-
-**Built with ❤️ for Nashco Global**  
-*Excellence Since 1994*
+Nashco Global has been a leader in the GCC region since 1994, delivering excellence across diversified industries including chemicals, automotive solutions, manufacturing, and international trading. Our commitment to innovation, professionalism, and cultural inclusivity makes us a trusted partner for industries and communities worldwide.
