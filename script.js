@@ -1,508 +1,502 @@
-// ===================================
-// NASHCO GLOBAL - INTERACTIVE FUNCTIONALITY
-// Bilingual (EN/AR) Website Scripts
-// ===================================
+// ================================================
+// Nashco Global - Interactive Website JavaScript
+// ================================================
 
-// Language State
+// Global state
 let currentLang = 'en';
 
-// DOM Elements
-const langToggle = document.querySelector('.lang-toggle');
-const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-const navMenu = document.querySelector('.nav-menu');
-const html = document.documentElement;
-const body = document.body;
-
-// ===================================
-// LANGUAGE TOGGLE FUNCTIONALITY
-// ===================================
-
-function switchLanguage() {
-    // Toggle language
-    currentLang = currentLang === 'en' ? 'ar' : 'en';
-    
-    // Update HTML attributes
-    html.setAttribute('lang', currentLang);
-    html.setAttribute('dir', currentLang === 'ar' ? 'rtl' : 'ltr');
-    
-    // Update all elements with bilingual content
-    updateBilingualContent();
-    
-    // Update form placeholders
-    updateFormPlaceholders();
-    
-    // Store preference
-    localStorage.setItem('preferredLanguage', currentLang);
-}
-
-function updateBilingualContent() {
-    // Update all elements with data-en and data-ar attributes
-    const bilingualElements = document.querySelectorAll('[data-en][data-ar]');
-    
-    bilingualElements.forEach(element => {
-        const enText = element.getAttribute('data-en');
-        const arText = element.getAttribute('data-ar');
-        const text = currentLang === 'en' ? enText : arText;
-        
-        // Update text content or specific attributes
-        if (element.tagName === 'IMG') {
-            element.setAttribute('alt', text);
-        } else if (element.tagName === 'META') {
-            element.setAttribute('content', text);
-        } else if (element.tagName === 'TITLE') {
-            element.textContent = text;
-        } else {
-            element.textContent = text;
-        }
-    });
-}
-
-function updateFormPlaceholders() {
-    // Update input placeholders
-    const inputs = document.querySelectorAll('input[data-en-placeholder], textarea[data-en-placeholder]');
-    
-    inputs.forEach(input => {
-        const enPlaceholder = input.getAttribute('data-en-placeholder');
-        const arPlaceholder = input.getAttribute('data-ar-placeholder');
-        const placeholder = currentLang === 'en' ? enPlaceholder : arPlaceholder;
-        
-        if (placeholder) {
-            input.setAttribute('placeholder', placeholder);
-        }
-    });
-}
-
-// Language Toggle Event Listener
-if (langToggle) {
-    langToggle.addEventListener('click', switchLanguage);
-}
-
-// ===================================
-// MOBILE MENU TOGGLE
-// ===================================
-
-function toggleMobileMenu() {
-    navMenu.classList.toggle('active');
-    
-    // Animate hamburger icon
-    const spans = mobileMenuToggle.querySelectorAll('span');
-    spans.forEach((span, index) => {
-        if (navMenu.classList.contains('active')) {
-            if (index === 0) span.style.transform = 'rotate(45deg) translateY(10px)';
-            if (index === 1) span.style.opacity = '0';
-            if (index === 2) span.style.transform = 'rotate(-45deg) translateY(-10px)';
-        } else {
-            span.style.transform = '';
-            span.style.opacity = '1';
-        }
-    });
-}
-
-// Mobile Menu Event Listeners
-if (mobileMenuToggle) {
-    mobileMenuToggle.addEventListener('click', toggleMobileMenu);
-}
-
-// Close mobile menu when clicking on a link
-const navLinks = document.querySelectorAll('.nav-menu a');
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        if (window.innerWidth <= 768 && navMenu.classList.contains('active')) {
-            toggleMobileMenu();
-        }
-    });
+// Wait for DOM to load
+document.addEventListener('DOMContentLoaded', function() {
+    initializeWebsite();
 });
 
-// Close mobile menu when clicking outside
-document.addEventListener('click', (e) => {
-    if (window.innerWidth <= 768 && 
-        navMenu.classList.contains('active') && 
-        !navMenu.contains(e.target) && 
-        !mobileMenuToggle.contains(e.target)) {
-        toggleMobileMenu();
-    }
-});
+// Initialize all website functionality
+function initializeWebsite() {
+    setupNavigation();
+    setupLanguageToggle();
+    setupScrollEffects();
+    setupAnimations();
+    setupFormHandler();
+    setupBackToTop();
+    updateCurrentYear();
+    setupStatCounters();
+}
 
-// ===================================
-// SMOOTH SCROLLING
-// ===================================
+// ================================================
+// Navigation
+// ================================================
 
-function smoothScrollTo(target) {
-    const element = document.querySelector(target);
-    if (element) {
-        const headerHeight = document.querySelector('.header').offsetHeight;
-        const targetPosition = element.offsetTop - headerHeight - 20;
-        
-        window.scrollTo({
-            top: targetPosition,
-            behavior: 'smooth'
+function setupNavigation() {
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+    const navLinks = document.querySelectorAll('.nav-menu a');
+    
+    // Mobile menu toggle
+    if (menuToggle) {
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            menuToggle.classList.toggle('active');
         });
     }
-}
-
-// Add smooth scrolling to all anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        const href = this.getAttribute('href');
-        if (href !== '#' && href.length > 1) {
+    
+    // Close menu when clicking on links
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            if (menuToggle) {
+                menuToggle.classList.remove('active');
+            }
+        });
+    });
+    
+    // Smooth scrolling for navigation links
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
             e.preventDefault();
-            smoothScrollTo(href);
+            const targetId = link.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            
+            if (targetSection) {
+                const offsetTop = targetSection.offsetTop - 70;
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // Add scrolled class to navbar
+    window.addEventListener('scroll', () => {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
         }
     });
-});
-
-// ===================================
-// HEADER SCROLL EFFECT
-// ===================================
-
-let lastScroll = 0;
-const header = document.querySelector('.header');
-
-function handleScroll() {
-    const currentScroll = window.pageYOffset;
-    
-    // Add shadow on scroll
-    if (currentScroll > 50) {
-        header.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.15)';
-    } else {
-        header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-    }
-    
-    lastScroll = currentScroll;
 }
 
-window.addEventListener('scroll', handleScroll, { passive: true });
+// ================================================
+// Language Toggle (English/Arabic)
+// ================================================
 
-// ===================================
-// LAZY LOADING IMAGES
-// ===================================
-
-function initLazyLoading() {
-    const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+function setupLanguageToggle() {
+    const langBtn = document.getElementById('langBtn');
+    const langText = document.getElementById('langText');
+    const html = document.documentElement;
     
-    if ('IntersectionObserver' in window) {
-        const imageObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    
-                    // Load the image
-                    if (img.dataset.src) {
-                        img.src = img.dataset.src;
-                    }
-                    
-                    img.classList.add('loaded');
-                    imageObserver.unobserve(img);
-                }
-            });
-        }, {
-            rootMargin: '50px 0px',
-            threshold: 0.01
+    if (langBtn) {
+        langBtn.addEventListener('click', () => {
+            toggleLanguage();
         });
+    }
+    
+    function toggleLanguage() {
+        if (currentLang === 'en') {
+            // Switch to Arabic
+            currentLang = 'ar';
+            html.setAttribute('lang', 'ar');
+            html.setAttribute('dir', 'rtl');
+            langText.textContent = 'English';
+            updateContent('ar');
+        } else {
+            // Switch to English
+            currentLang = 'en';
+            html.setAttribute('lang', 'en');
+            html.setAttribute('dir', 'ltr');
+            langText.textContent = 'العربية';
+            updateContent('en');
+        }
         
-        lazyImages.forEach(img => imageObserver.observe(img));
-    } else {
-        // Fallback for browsers without IntersectionObserver
-        lazyImages.forEach(img => {
-            if (img.dataset.src) {
-                img.src = img.dataset.src;
+        // Add smooth transition effect
+        document.body.style.opacity = '0.8';
+        setTimeout(() => {
+            document.body.style.opacity = '1';
+        }, 150);
+    }
+    
+    function updateContent(lang) {
+        const elements = document.querySelectorAll('[data-en][data-ar]');
+        
+        elements.forEach(element => {
+            const enText = element.getAttribute('data-en');
+            const arText = element.getAttribute('data-ar');
+            
+            if (lang === 'ar' && arText) {
+                element.textContent = arText;
+            } else if (lang === 'en' && enText) {
+                element.textContent = enText;
             }
         });
     }
 }
 
-// ===================================
-// CONTACT FORM HANDLING
-// ===================================
+// ================================================
+// Scroll Effects
+// ================================================
 
-const contactForm = document.querySelector('.contact-form');
-
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Get form data
-        const formInputs = this.querySelectorAll('input[type="text"]');
-        const name = formInputs[0] ? formInputs[0].value : '';
-        const email = this.querySelector('input[type="email"]') ? this.querySelector('input[type="email"]').value : '';
-        const subject = formInputs[1] ? formInputs[1].value : '';
-        const message = this.querySelector('textarea') ? this.querySelector('textarea').value : '';
-        
-        // Create WhatsApp message
-        const whatsappMessage = `Hello! I'm ${name}.\n\nEmail: ${email}\n\nSubject: ${subject}\n\nMessage: ${message}`;
-        const encodedMessage = encodeURIComponent(whatsappMessage);
-        // Note: Replace 971XXXXXXXXX with actual WhatsApp business number before production
-        const whatsappURL = `https://wa.me/971XXXXXXXXX?text=${encodedMessage}`;
-        
-        // Show success message
-        const submitBtn = this.querySelector('.submit-btn');
-        const originalText = submitBtn.textContent;
-        submitBtn.textContent = currentLang === 'en' ? 'Redirecting to WhatsApp...' : 'إعادة التوجيه إلى واتساب...';
-        submitBtn.style.background = '#25d366';
-        
-        // Redirect to WhatsApp after a short delay
-        setTimeout(() => {
-            window.open(whatsappURL, '_blank');
-            
-            // Reset form and button
-            this.reset();
-            setTimeout(() => {
-                submitBtn.textContent = originalText;
-                submitBtn.style.background = '';
-            }, 2000);
-        }, 500);
+function setupScrollEffects() {
+    // Intersection Observer for fade-in animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                
+                // Trigger counter animation for stats
+                if (entry.target.classList.contains('stat-number')) {
+                    animateCounter(entry.target);
+                }
+            }
+        });
+    }, observerOptions);
+    
+    // Observe elements
+    const elementsToObserve = document.querySelectorAll(
+        '.service-card, .stat-item, .feature-item, .info-item'
+    );
+    
+    elementsToObserve.forEach(el => {
+        observer.observe(el);
     });
 }
 
-// ===================================
-// SCROLL ANIMATIONS
-// ===================================
+// ================================================
+// Animations
+// ================================================
 
-function initScrollAnimations() {
-    const animatedElements = document.querySelectorAll('.stat-item, .feature-item, .zahy-content, .chemicals-content');
+function setupAnimations() {
+    // Add stagger animation to service cards
+    const serviceCards = document.querySelectorAll('.service-card');
+    serviceCards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.1}s`;
+    });
     
-    if ('IntersectionObserver' in window) {
-        const animationObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        });
+    // Add parallax effect to hero section
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const heroBackground = document.querySelector('.hero-background');
         
-        animatedElements.forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            animationObserver.observe(el);
+        if (heroBackground && scrolled < window.innerHeight) {
+            heroBackground.style.transform = `translateY(${scrolled * 0.5}px)`;
+        }
+    });
+}
+
+// ================================================
+// Stat Counters
+// ================================================
+
+function setupStatCounters() {
+    const statNumbers = document.querySelectorAll('.stat-number');
+    
+    statNumbers.forEach(stat => {
+        stat.classList.add('counter-ready');
+    });
+}
+
+function animateCounter(element) {
+    if (element.classList.contains('counted')) return;
+    
+    const target = parseInt(element.getAttribute('data-count') || element.textContent);
+    const duration = 2000;
+    const increment = target / (duration / 16);
+    let current = 0;
+    
+    const updateCounter = () => {
+        current += increment;
+        if (current < target) {
+            element.textContent = Math.floor(current) + '+';
+            requestAnimationFrame(updateCounter);
+        } else {
+            element.textContent = target + '+';
+            element.classList.add('counted');
+        }
+    };
+    
+    updateCounter();
+}
+
+// ================================================
+// Form Handler
+// ================================================
+
+function setupFormHandler() {
+    const contactForm = document.getElementById('contactForm');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            handleFormSubmit(contactForm);
         });
     }
 }
 
-// ===================================
-// ACTIVE NAVIGATION HIGHLIGHT
-// ===================================
-
-function updateActiveNav() {
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-menu a[href^="#"]');
-    
-    let currentSection = '';
-    const headerHeight = document.querySelector('.header').offsetHeight;
-    
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop - headerHeight - 100;
-        const sectionHeight = section.offsetHeight;
-        
-        if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionTop + sectionHeight) {
-            currentSection = section.getAttribute('id');
-        }
-    });
-    
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${currentSection}`) {
-            link.classList.add('active');
-        }
-    });
-}
-
-window.addEventListener('scroll', updateActiveNav, { passive: true });
-
-// ===================================
-// WHATSAPP BUTTON ANIMATION
-// ===================================
-
-const whatsappButton = document.querySelector('.whatsapp-float');
-let whatsappAnimationInterval;
-
-if (whatsappButton) {
-    // Pulse animation with cleanup
-    const pulseAnimation = () => {
-        whatsappButton.style.animation = 'pulse 1s ease';
-        setTimeout(() => {
-            whatsappButton.style.animation = '';
-        }, 1000);
+function handleFormSubmit(form) {
+    // Get form data
+    const formData = new FormData(form);
+    const data = {
+        name: formData.get('name'),
+        email: formData.get('email'),
+        subject: formData.get('subject'),
+        message: formData.get('message')
     };
     
-    whatsappAnimationInterval = setInterval(pulseAnimation, 5000);
+    // Validate form
+    if (!validateForm(data)) {
+        return;
+    }
     
-    // Clean up on page unload
-    window.addEventListener('beforeunload', () => {
-        if (whatsappAnimationInterval) {
-            clearInterval(whatsappAnimationInterval);
-        }
-    });
+    // Show success message
+    showNotification(
+        currentLang === 'en' 
+            ? 'Thank you for your message! We will get back to you soon.' 
+            : 'شكراً لرسالتك! سنتواصل معك قريباً.',
+        'success'
+    );
+    
+    // Reset form
+    form.reset();
+    
+    // In a real application, you would send this data to a server
+    console.log('Form submitted:', data);
 }
 
-// Add pulse animation to CSS dynamically
+function validateForm(data) {
+    // Simple validation
+    if (!data.name || !data.email || !data.subject || !data.message) {
+        showNotification(
+            currentLang === 'en' 
+                ? 'Please fill in all fields.' 
+                : 'يرجى ملء جميع الحقول.',
+            'error'
+        );
+        return false;
+    }
+    
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(data.email)) {
+        showNotification(
+            currentLang === 'en' 
+                ? 'Please enter a valid email address.' 
+                : 'يرجى إدخال عنوان بريد إلكتروني صالح.',
+            'error'
+        );
+        return false;
+    }
+    
+    return true;
+}
+
+function showNotification(message, type) {
+    // Create notification element
+    const notification = document.createElement('div');
+    notification.className = `notification ${type}`;
+    notification.textContent = message;
+    
+    // Add styles
+    Object.assign(notification.style, {
+        position: 'fixed',
+        top: '100px',
+        right: currentLang === 'ar' ? 'auto' : '20px',
+        left: currentLang === 'ar' ? '20px' : 'auto',
+        padding: '20px 30px',
+        background: type === 'success' ? '#27ae60' : '#e74c3c',
+        color: '#fff',
+        borderRadius: '10px',
+        boxShadow: '0 5px 20px rgba(0,0,0,0.2)',
+        zIndex: '10000',
+        animation: 'slideIn 0.3s ease',
+        maxWidth: '300px',
+        fontSize: '16px',
+        fontWeight: '500'
+    });
+    
+    // Add to body
+    document.body.appendChild(notification);
+    
+    // Remove after 4 seconds
+    setTimeout(() => {
+        notification.style.animation = 'slideOut 0.3s ease';
+        setTimeout(() => {
+            notification.remove();
+        }, 300);
+    }, 4000);
+}
+
+// Add notification animations to CSS dynamically
 const style = document.createElement('style');
 style.textContent = `
-    @keyframes pulse {
-        0%, 100% {
-            transform: scale(1);
+    @keyframes slideIn {
+        from {
+            transform: translateX(400px);
+            opacity: 0;
         }
-        50% {
-            transform: scale(1.1);
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    
+    @keyframes slideOut {
+        from {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        to {
+            transform: translateX(400px);
+            opacity: 0;
+        }
+    }
+    
+    [dir="rtl"] @keyframes slideIn {
+        from {
+            transform: translateX(-400px);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    
+    [dir="rtl"] @keyframes slideOut {
+        from {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        to {
+            transform: translateX(-400px);
+            opacity: 0;
         }
     }
 `;
 document.head.appendChild(style);
 
-// ===================================
-// INITIALIZE ON PAGE LOAD
-// ===================================
+// ================================================
+// Back to Top Button
+// ================================================
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Check for saved language preference
-    const savedLang = localStorage.getItem('preferredLanguage');
-    if (savedLang && savedLang !== currentLang) {
-        switchLanguage();
+function setupBackToTop() {
+    const backToTopBtn = document.getElementById('backToTop');
+    
+    if (backToTopBtn) {
+        // Show/hide button based on scroll position
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+        
+        // Scroll to top when clicked
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
     }
-    
-    // Initialize lazy loading
-    initLazyLoading();
-    
-    // Initialize scroll animations
-    initScrollAnimations();
-    
-    // Update active nav on load
-    updateActiveNav();
-    
-    // Set current year in footer
-    const yearElement = document.getElementById('year');
+}
+
+// ================================================
+// Utility Functions
+// ================================================
+
+function updateCurrentYear() {
+    const yearElement = document.getElementById('currentYear');
     if (yearElement) {
         yearElement.textContent = new Date().getFullYear();
     }
-    
-    // Add loading complete class to body
-    setTimeout(() => {
-        body.classList.add('loaded');
-    }, 100);
-});
+}
 
-// ===================================
-// WINDOW RESIZE HANDLER
-// ===================================
+// ================================================
+// Keyboard Navigation
+// ================================================
 
-let resizeTimer;
-window.addEventListener('resize', function() {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(function() {
-        // Close mobile menu if window is resized to desktop
-        if (window.innerWidth > 768 && navMenu.classList.contains('active')) {
-            toggleMobileMenu();
+document.addEventListener('keydown', (e) => {
+    // ESC to close mobile menu
+    if (e.key === 'Escape') {
+        const navMenu = document.getElementById('navMenu');
+        const menuToggle = document.getElementById('menuToggle');
+        
+        if (navMenu && navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+            if (menuToggle) {
+                menuToggle.classList.remove('active');
+            }
         }
-    }, 250);
-});
-
-// ===================================
-// KEYBOARD NAVIGATION
-// ===================================
-
-// ESC key closes mobile menu
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && navMenu.classList.contains('active')) {
-        toggleMobileMenu();
     }
 });
 
-// Tab trap for mobile menu
-if (mobileMenuToggle && navMenu) {
-    const focusableElements = navMenu.querySelectorAll('a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])');
-    const firstFocusable = focusableElements[0];
-    const lastFocusable = focusableElements[focusableElements.length - 1];
-    
-    navMenu.addEventListener('keydown', function(e) {
-        if (e.key === 'Tab' && navMenu.classList.contains('active')) {
-            if (e.shiftKey) {
-                if (document.activeElement === firstFocusable) {
-                    e.preventDefault();
-                    lastFocusable.focus();
-                }
-            } else {
-                if (document.activeElement === lastFocusable) {
-                    e.preventDefault();
-                    firstFocusable.focus();
-                }
+// ================================================
+// Performance Optimization
+// ================================================
+
+// Debounce function for scroll events
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// Apply debounce to scroll handlers
+const debouncedScrollHandler = debounce(() => {
+    // Any scroll-based operations can go here
+}, 100);
+
+window.addEventListener('scroll', debouncedScrollHandler);
+
+// ================================================
+// Lazy Loading Images (if any are added)
+// ================================================
+
+if ('IntersectionObserver' in window) {
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.classList.add('loaded');
+                observer.unobserve(img);
             }
-        }
+        });
+    });
+    
+    document.querySelectorAll('img[data-src]').forEach(img => {
+        imageObserver.observe(img);
     });
 }
 
-// ===================================
-// PAGE VISIBILITY HANDLING
-// ===================================
+// ================================================
+// Console Welcome Message
+// ================================================
 
-document.addEventListener('visibilitychange', function() {
-    if (document.hidden) {
-        // Pause any animations or videos when page is hidden
-        console.log('Page hidden - pausing activities');
-    } else {
-        // Resume when page is visible
-        console.log('Page visible - resuming activities');
-    }
-});
+console.log('%cNashco Global', 'font-size: 24px; font-weight: bold; color: #1a5490;');
+console.log('%cExcellence Since 1994', 'font-size: 14px; color: #666;');
+console.log('%cWebsite by Nashco Global | Built with modern web technologies', 'font-size: 12px; color: #999;');
 
-// ===================================
-// PERFORMANCE MONITORING
-// ===================================
-
-if ('PerformanceObserver' in window) {
-    // Monitor long tasks
-    const perfObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-            if (entry.duration > 50) {
-                console.warn('Long task detected:', entry);
-            }
-        }
-    });
-    
-    try {
-        perfObserver.observe({ entryTypes: ['longtask'] });
-    } catch (e) {
-        // Long task API not supported
-    }
-}
-
-// Log page load performance
-window.addEventListener('load', function() {
-    setTimeout(() => {
-        if (window.performance && window.performance.timing) {
-            const perfData = window.performance.timing;
-            const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
-            console.log(`Page loaded in ${pageLoadTime}ms`);
-        }
-    }, 0);
-});
-
-// ===================================
-// ERROR HANDLING
-// ===================================
-
-window.addEventListener('error', function(e) {
-    console.error('JavaScript error:', e.error);
-    // You can send errors to analytics here
-});
-
-window.addEventListener('unhandledrejection', function(e) {
-    console.error('Unhandled promise rejection:', e.reason);
-    // You can send errors to analytics here
-});
-
-// ===================================
-// EXPORT FOR TESTING (if needed)
-// ===================================
+// ================================================
+// Export for potential module use
+// ================================================
 
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
-        switchLanguage,
-        updateBilingualContent,
-        smoothScrollTo,
-        toggleMobileMenu
+        initializeWebsite,
+        toggleLanguage,
+        showNotification
     };
 }
