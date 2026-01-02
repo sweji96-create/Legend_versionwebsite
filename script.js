@@ -67,7 +67,7 @@ function setupNavigation() {
                     });
                 }
             }
-            // For other links (like about.html, automotive.html), let them navigate normally
+            // For other links (page navigation links), let them navigate normally
         });
     });
     
