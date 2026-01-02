@@ -125,37 +125,73 @@
       vertical-align: middle;
     }
   </style>
-  /* About page: typography and layout tweaks */
-  .about-page h2.fw-bold {
-  font-size: 2.4rem;
-  line-height: 1.1;
-  letter-spacing: -0.5px;
-  }
+  <style>
+    /* About page: typography and layout tweaks */
+    .about-page h2.fw-bold {
+      font-size: 2.4rem;
+      line-height: 1.1;
+      letter-spacing: -0.5px;
+    }
 
-  .about-page .about-lead {
-  max-width: 1100px;
-  margin: 0 auto;
-  color: rgba(241,243,247,0.85);
-  font-size: 1.125rem;
-  }
+    .about-page .about-lead {
+      max-width: 1100px;
+      margin: 0 auto;
+      color: rgba(241, 243, 247, 0.85);
+      font-size: 1.125rem;
+    }
 
-  .about-page .list-unstyled {
-  text-align: center;
-  padding-left: 0;
-  }
+    .about-page .list-unstyled {
+      text-align: center;
+      padding-left: 0;
+    }
 
-  .about-page .list-unstyled li {
-  margin-bottom: .5rem;
-  }
+    .about-page .list-unstyled li {
+      margin-bottom: .5rem;
+    }
 
-  .about-page .glass-card {
-  background: rgba(255,255,255,0.02);
-  padding: 1.25rem;
-  border-radius: .5rem;
-  }
+    .about-page .glass-card {
+      background: rgba(255, 255, 255, 0.02);
+      padding: 1.25rem;
+      border-radius: .5rem;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
 
-  /* keep section headings default-aligned; specific blocks may align left */
+    .about-dynamic .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #00A3AD;
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
 
+    .about-dynamic .lead-highlight {
+      color: rgba(241, 243, 247, 0.9);
+      font-size: 1.1rem;
+    }
+
+    .about-dynamic .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 0.65rem 0.9rem;
+      border-radius: 999px;
+      background: rgba(0, 163, 173, 0.08);
+      color: #e9f6f7;
+      font-weight: 600;
+      margin: 0.35rem;
+    }
+
+    .about-dynamic .quote-card {
+      background: linear-gradient(135deg, rgba(0, 163, 173, 0.18), rgba(11, 14, 23, 0.8));
+      border: 1px solid rgba(0, 163, 173, 0.3);
+      box-shadow: 0 15px 40px rgba(0, 163, 173, 0.18);
+    }
+
+    .about-dynamic .leader-card {
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.28);
+    }
   </style>
 
 </head>
@@ -192,42 +228,9 @@
     </div>
   </section>
 
-  <!-- About Content -->
-  <section class="py-5">
-    <div class="container">
-      <div class="row mb-4" data-aos="fade-up">
-        <div class="col text-center">
-          <h2 class="fw-bold mb-3">Our Story</h2>
-          <p class="fs-5 text-muted mb-0">Founded in 1994, Nashco Global has grown into a leading provider of
-            industrial, automotive, manufacturing, and trading solutions across the GCC. Our mission is to deliver
-            precision, reliability, and innovation in every partnership.</p>
-        </div>
-      </div>
-      <div class="row mb-4" data-aos="fade-up">
-        <div class="col-12">
-          <div class="row g-4">
-            <div class="col-md-6">
-              <div class="p-4 glass-card h-100">
-                <h3 class="fw-bold mb-3 text-start">Our Achievements &amp; Goals</h3>
-                <ul class="list-unstyled fs-6 mb-0 text-start">
-                  <li>30+ years of operational excellence</li>
-                  <li>Trusted by leading brands and governments</li>
-                  <li>Commitment to sustainability and innovation</li>
-                  <li>Comprehensive solutions for every sector</li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="p-4 glass-card h-100">
-                <h3 class="fw-bold mb-3 text-start">CSR &amp; Sustainability</h3>
-                <p class="mb-0 text-start">Committed to net-zero by 2030, emission reductions, and community programs in
-                  GCC regions.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <!-- About Content (dynamically rendered) -->
+  <section class="py-5 about-dynamic">
+    <div class="container" id="about-dynamic"></div>
   </section>
 
   <!-- Mission, Vision, Values -->
@@ -370,6 +373,123 @@
   <!-- Swiper JS (optional) -->
   <script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
   <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const aboutContent = {
+        introTitle: 'About Us',
+        introHeading: 'Nashco Global: Diversified Excellence Since 1994',
+        introBody: 'Since 1994, Nashco Global has been a trusted name across the GCC, delivering solutions in Chemicals, Automotive, Manufacturing, and Trading. Headquartered in Muscat, Oman, with strong professional ties to Kerala and the United Arab Emirates, we have grown into a multi-domain enterprise recognized for innovation, operational excellence, and compliance.',
+        journey: 'Our journey began with a vision to empower industries and communities by building systems that are robust, scalable, and future-ready. Today, Nashco Global serves clients in more than 50 countries, supported by a leadership team that combines strategic foresight with practical execution.',
+        leadership: [
+          {
+            role: 'Chairman',
+            name: 'Mr. Nazar K.M',
+            bio: 'Founded Nashco Global with a mission to blend innovation with trust. He has transformed the company into a diversified enterprise serving thousands of clients worldwide while emphasizing sustainable growth, ethics, and compliance.'
+          },
+          {
+            role: 'Director',
+            name: 'Mrs. Shaheeda Nazar',
+            bio: 'Shapes Nashco Global’s identity and values with a people-focused perspective. She ensures inclusive, community-driven growth and strengthens brand presence to foster long-term partnerships.'
+          },
+          {
+            role: 'Chief Operations Officer',
+            name: 'Ms. Swetha Suresh',
+            bio: 'Oversees operations with precision and efficiency across all divisions. Her expertise in workflow optimization and compliance keeps the company agile, scalable, and future-ready.'
+          }
+        ],
+        philosophy: [
+          'Visionary Strategy — anticipating industry shifts and positioning ahead of the curve.',
+          'Compliance & Integrity — aligning every output with GCC and international standards.',
+          'Operational Excellence — building systems that are scalable and maintainable.',
+          'Community Empowerment — fostering inclusivity and contributing to sustainable growth.'
+        ],
+        chairmanMessage: [
+          'At Nashco Global, our journey has always been about more than business—it has been about building trust, empowering industries, and contributing to communities across the GCC. Since 1994, we have worked tirelessly to ensure that every solution we deliver reflects clarity, compliance, and innovation.',
+          'As Chairman, I take pride in the fact that Nashco Global has grown into a multi-domain enterprise serving clients in over 50 countries. This success is not just measured in numbers, but in the confidence our partners place in us.',
+          'Looking ahead, our focus remains on sustainable growth, operational excellence, and inclusivity. We will continue to embrace innovation, strengthen our divisions, and expand our global footprint while staying true to the values that define us.',
+          'Nashco Global is more than a company—it is a promise of excellence. Together, we will keep building solutions that empower businesses and communities to thrive across borders.'
+        ],
+        chairmanSignature: '— Mr. Nazar K.M, Chairman'
+      };
+
+      const aboutRoot = document.getElementById('about-dynamic');
+      if (!aboutRoot) return;
+
+      const leadershipCards = aboutContent.leadership.map((leader, idx) => `
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="${(idx + 1) * 100}">
+          <div class="glass-card leader-card h-100 p-4">
+            <p class="eyebrow mb-2">${leader.role}</p>
+            <h5 class="fw-bold mb-2">${leader.name}</h5>
+            <p class="text-muted mb-0">${leader.bio}</p>
+          </div>
+        </div>
+      `).join('');
+
+      const philosophyPills = aboutContent.philosophy.map((item, idx) => `
+        <span class="pill" data-aos="zoom-in" data-aos-delay="${(idx + 1) * 80}">
+          ${item}
+        </span>
+      `).join('');
+
+      const chairmanMessage = aboutContent.chairmanMessage.map((line, idx) => `
+        <p class="mb-3 fst-italic" data-aos="fade-up" data-aos-delay="${(idx + 1) * 60}">"${line}"</p>
+      `).join('');
+
+      aboutRoot.innerHTML = `
+        <div class="row mb-5" data-aos="fade-up">
+          <div class="col-lg-10 mx-auto text-center">
+            <p class="eyebrow mb-2">${aboutContent.introTitle}</p>
+            <h2 class="fw-bold mb-3">${aboutContent.introHeading}</h2>
+            <p class="lead-highlight mb-3">${aboutContent.introBody}</p>
+            <p class="text-muted mb-0">${aboutContent.journey}</p>
+          </div>
+        </div>
+
+        <div class="row g-4 mb-5">
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="glass-card h-100 p-4">
+              <p class="eyebrow mb-2">Our Leadership</p>
+              <h4 class="fw-bold mb-3">People who drive our promise of excellence</h4>
+              <div class="row g-3">
+                ${leadershipCards}
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="glass-card h-100 p-4">
+              <p class="eyebrow mb-2">Our Philosophy</p>
+              <h4 class="fw-bold mb-3">Principles that keep us future-ready</h4>
+              <div class="d-flex flex-wrap">
+                ${philosophyPills}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+          <div class="col-lg-5" data-aos="fade-up">
+            <div class="glass-card h-100 p-4">
+              <p class="eyebrow mb-2">Our Commitment</p>
+              <h4 class="fw-bold mb-3">Robust, scalable, and compliant systems</h4>
+              <p class="mb-3 text-muted">Rooted in Muscat with deep connections to Kerala and the UAE, we collaborate closely with clients to build resilient solutions tailored to their industries.</p>
+              <ul class="list-unstyled text-muted mb-0">
+                <li class="mb-2">• 30+ years of innovation and operational excellence</li>
+                <li class="mb-2">• Serving partners across 50+ countries</li>
+                <li class="mb-2">• Cross-division expertise in Chemicals, Automotive, Manufacturing, and Trading</li>
+                <li>• Compliance-first mindset aligned with GCC and international standards</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="150">
+            <div class="glass-card quote-card h-100 p-4">
+              <p class="eyebrow mb-2">Chairman’s Message</p>
+              ${chairmanMessage}
+              <p class="fw-semibold mb-0">${aboutContent.chairmanSignature}</p>
+            </div>
+          </div>
+        </div>
+      `;
+    });
+
     AOS.init({ once: true, duration: 900, offset: 60 });
     gsap.from('.hero-section h1', { opacity: 0, y: 60, duration: 1, delay: 0.2 });
     gsap.from('.hero-section p', { opacity: 0, y: 40, duration: 1, delay: 0.5 });
