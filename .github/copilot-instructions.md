@@ -1,38 +1,85 @@
-# Copilot Instructions for Legend_versionwebsite
+# GitHub Copilot Instructions
 
-## Repository Overview
-This is the Legend_versionwebsite repository for Nashcoglobal. This repository is currently in its early stages and serves as a foundation for version management of the website.
+## General Coding Standards
 
-## Project Structure
-The repository currently has a minimal structure:
-- `README.md` - Main documentation file
-- `.github/` - GitHub configuration and Copilot instructions
+- Write clear, descriptive commit messages following conventional commit format
+- Add comprehensive comments for complex logic
+- Follow consistent code formatting and style
+- Ensure all code is properly tested before committing
 
-## Coding Standards and Conventions
-- Follow standard best practices for web development
-- Maintain clean, readable, and well-documented code
-- Use meaningful commit messages that clearly describe changes
-- Keep the repository organized with appropriate directory structure as it grows
+## Code Quality
 
-## Development Workflow
-- Create feature branches for new development
-- Test changes thoroughly before committing
-- Keep commits focused and atomic
-- Update documentation when making significant changes
+- Write clean, maintainable code
+- Use meaningful variable and function names
+- Keep functions small and focused on a single responsibility
+- Avoid code duplication - extract reusable components
 
-## General Guidelines
-- Prioritize code quality and maintainability
-- Follow web accessibility standards (WCAG) when implementing UI components
-- Ensure responsive design for all web pages
-- Optimize for performance and user experience
-- Consider security best practices in all implementations
+## Documentation
 
-## Building and Testing
-As the project evolves, build and test instructions will be added here.
+- Maintain up-to-date README files
+- Document all public APIs and functions
+- Include usage examples where appropriate
+- Keep documentation in sync with code changes
 
-## Future Considerations
-- Define the technology stack (e.g., HTML/CSS/JS framework, backend technology)
-- Set up CI/CD pipelines
-- Establish testing framework
-- Configure linting and formatting tools
-- Define deployment procedures
+## Testing
+
+- Write unit tests for new features
+- Ensure tests are comprehensive and cover edge cases
+- Maintain high test coverage
+- Run all tests before submitting pull requests
+
+## Code Review
+
+- Review code for security vulnerabilities
+- Check for performance issues
+- Ensure code follows project conventions
+- Verify all tests pass before merging
+
+## Git Workflow
+
+- Create descriptive branch names
+- Keep commits atomic and focused
+- Write detailed pull request descriptions
+- Reference related issues in commits and PRs
+
+## Security
+
+- Never commit sensitive data or credentials
+- Sanitize user inputs
+- Follow security best practices
+- Use secure dependencies and keep them updated
+
+## Examples
+
+### Good Commit Message
+```
+feat: add user authentication system
+
+Implement JWT-based authentication with email/password login.
+Includes token refresh mechanism and secure password hashing.
+```
+
+### Good Function Name
+```javascript
+// Good: descriptive and clear
+function calculateTotalPrice(items, taxRate) { }
+
+// Avoid: unclear abbreviations
+function calcTP(i, t) { }
+```
+
+### Good Code Structure
+```javascript
+// Good: single responsibility, well-named
+function validateEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+function sendWelcomeEmail(userEmail) {
+  if (!validateEmail(userEmail)) {
+    throw new Error('Invalid email address');
+  }
+  // Send email logic
+}
+```
