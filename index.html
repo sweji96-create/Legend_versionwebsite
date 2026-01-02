@@ -52,8 +52,14 @@
         <div class="container">
             <div class="nav-wrapper">
                 <div class="logo">
-                    <h1>Nashco Global</h1>
-                    <p class="tagline" data-en="Excellence Since 1994" data-ar="التميز منذ 1994">Excellence Since 1994</p>
+                    <img src="assets/images/logo-nashco.png" 
+                         alt="Nashco Global Logo" 
+                         class="logo-img"
+                         onerror="this.onerror=null; this.src='assets/images/favicon-placeholder.svg';">
+                    <div class="logo-text">
+                        <h1 class="logo-fallback">Nashco Global</h1>
+                        <p class="tagline" data-en="Excellence Since 1994" data-ar="التميز منذ 1994">Excellence Since 1994</p>
+                    </div>
                 </div>
                 <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
                     <span></span>
@@ -401,6 +407,11 @@
     <button id="backToTop" class="back-to-top" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </button>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/96894535053" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
+        <img src="assets/images/whatsapp.svg" alt="WhatsApp" class="whatsapp-icon">
+    </a>
 
     <!-- JavaScript -->
     <script src="script.js"></script>
