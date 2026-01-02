@@ -49,20 +49,25 @@ function setupNavigation() {
         });
     });
     
-    // Smooth scrolling for navigation links
+    // Smooth scrolling for anchor links only (not page navigation)
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
-            e.preventDefault();
             const targetId = link.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
             
-            if (targetSection) {
-                const offsetTop = targetSection.offsetTop - 70;
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
+            // Only apply smooth scrolling to anchor links (starting with #)
+            if (targetId && targetId.startsWith('#')) {
+                e.preventDefault();
+                const targetSection = document.querySelector(targetId);
+                
+                if (targetSection) {
+                    const offsetTop = targetSection.offsetTop - 70;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
             }
+            // For page links (e.g., about.html), let them navigate normally
         });
     });
     
