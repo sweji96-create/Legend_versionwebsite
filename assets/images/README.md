@@ -10,7 +10,7 @@ This directory contains references to the official Nashco Global brand images us
   - Alt Text (AR): "شعار ناشكو جلوبال"
 
 ### Hero Section
-- **Background**: assets/images/Index-hero-earth.JPG
+- **Background**: assets/images/index-hero-earth.jpg
   - Description: Earth view - representing global excellence and worldwide reach
 
 ### About Section

@@ -169,7 +169,7 @@
       display: grid;
       align-items: center;
       color: #fff;
-      background: linear-gradient(120deg, rgba(0, 38, 77, 0.9), rgba(3, 22, 46, 0.92)), url('assets/images/Index-hero-earth.JPG') center/cover no-repeat;
+      background: linear-gradient(120deg, rgba(0, 38, 77, 0.9), rgba(3, 22, 46, 0.92)), url('assets/images/index-hero-earth.jpg') center/cover no-repeat;
       overflow: hidden;
     }
 
@@ -757,7 +757,7 @@
     <div class="footer-grid">
       <div>
         <strong>Nashco Global</strong>
-        <p>© 2026 Nashco Global. Reliability across chemicals, industrial refrigerants GCC, automotive, and trading.</p>
+        <p>© <span id="currentYear">2026</span> Nashco Global. Reliability across chemicals, industrial refrigerants GCC, automotive, and trading.</p>
       </div>
       <div>
         <strong>Quick Links</strong>
@@ -819,7 +819,7 @@
       { src: 'assets/images/Automotive-maxcar.jpg', alt: 'Automotive spare parts GCC showroom' },
       { src: 'assets/images/Automotive1.jpg', alt: 'Automotive distribution GCC hub' },
       { src: 'assets/images/IMG_5597.jpeg', alt: 'Nashco Global team in UAE' },
-      { src: 'assets/images/Index-hero-earth.JPG', alt: 'Global network for Nashco Global' },
+      { src: 'assets/images/index-hero-earth.jpg', alt: 'Global network for Nashco Global' },
       { src: 'assets/images/Logo-Zahy.png', alt: 'Zahy Al Khaleej LLC logo' },
       { src: 'assets/images/Zahy-content-arrangement.jpg', alt: 'Zahy Al Khaleej LLC refrigerants portfolio' },
       { src: 'assets/images/assembly-line.png', alt: 'Industrial manufacturing GCC assembly line' },
@@ -877,7 +877,7 @@
         status.style.color = '#b91c1c';
         return;
       }
-      const emailValid = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email);
+      const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
       if (!emailValid) {
         status.textContent = 'Enter a valid email address.';
         status.style.color = '#b91c1c';
@@ -888,6 +888,11 @@
       status.style.color = '#0f5132';
       e.target.reset();
     });
+
+    const yearEl = document.getElementById('currentYear');
+    if (yearEl) {
+      yearEl.textContent = new Date().getFullYear();
+    }
   </script>
 </body>
 
