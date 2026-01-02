@@ -1,42 +1,25 @@
-# Dependencies
+# Development
 node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+.DS_Store
+*.log
+.env
+.env.local
 
-# Build outputs
+# Build output
 dist/
 build/
-*.min.js
-*.min.css
+.cache/
 
-# IDE and Editor files
+# IDE
 .vscode/
 .idea/
 *.swp
 *.swo
-*~
-.DS_Store
 
-# OS files
-Thumbs.db
-Desktop.ini
+# Testing
+coverage/
 
 # Temporary files
 tmp/
 temp/
 *.tmp
-*.cache
-
-# Log files
-*.log
-logs/
-
-# Environment files
-.env
-.env.local
-.env.*.local
-
-# Package manager lock files (optional)
-package-lock.json
-yarn.lock

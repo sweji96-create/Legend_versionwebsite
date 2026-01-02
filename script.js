@@ -1,94 +1,152 @@
 // ===================================
-// LANGUAGE TOGGLE FUNCTIONALITY
+// NASHCO GLOBAL - INTERACTIVE FUNCTIONALITY
+// Bilingual (EN/AR) Website Scripts
 // ===================================
+
+// Language State
 let currentLang = 'en';
 
-const langToggle = document.getElementById('langToggle');
+// DOM Elements
+const langToggle = document.querySelector('.lang-toggle');
+const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+const navMenu = document.querySelector('.nav-menu');
+const html = document.documentElement;
+const body = document.body;
 
-// Language toggle handler
-langToggle.addEventListener('click', () => {
+// ===================================
+// LANGUAGE TOGGLE FUNCTIONALITY
+// ===================================
+
+function switchLanguage() {
+    // Toggle language
     currentLang = currentLang === 'en' ? 'ar' : 'en';
     
-    // Update HTML direction and lang
-    const html = document.documentElement;
-    html.setAttribute('dir', currentLang === 'ar' ? 'rtl' : 'ltr');
+    // Update HTML attributes
     html.setAttribute('lang', currentLang);
+    html.setAttribute('dir', currentLang === 'ar' ? 'rtl' : 'ltr');
     
-    // Update all translatable elements
-    updateTranslations();
+    // Update all elements with bilingual content
+    updateBilingualContent();
     
-    // Update button text
-    langToggle.querySelector('.lang-text').textContent = currentLang === 'en' ? 'العربية' : 'English';
-});
+    // Update form placeholders
+    updateFormPlaceholders();
+    
+    // Store preference
+    localStorage.setItem('preferredLanguage', currentLang);
+}
 
-// Update all elements with data-en and data-ar attributes
-function updateTranslations() {
-    const elements = document.querySelectorAll('[data-en][data-ar]');
+function updateBilingualContent() {
+    // Update all elements with data-en and data-ar attributes
+    const bilingualElements = document.querySelectorAll('[data-en][data-ar]');
     
-    elements.forEach(element => {
-        const text = element.getAttribute(`data-${currentLang}`);
-        if (text) {
-            // Update text content or alt/title attributes
-            if (element.tagName === 'IMG') {
-                element.setAttribute('alt', text);
-            } else {
-                element.textContent = text;
-            }
+    bilingualElements.forEach(element => {
+        const enText = element.getAttribute('data-en');
+        const arText = element.getAttribute('data-ar');
+        const text = currentLang === 'en' ? enText : arText;
+        
+        // Update text content or specific attributes
+        if (element.tagName === 'IMG') {
+            element.setAttribute('alt', text);
+        } else if (element.tagName === 'META') {
+            element.setAttribute('content', text);
+        } else if (element.tagName === 'TITLE') {
+            element.textContent = text;
+        } else {
+            element.textContent = text;
         }
     });
 }
 
-// ===================================
-// STATS COUNTER ANIMATION
-// ===================================
-function animateCounter(element, target, duration = 2000) {
-    const start = 0;
-    const increment = target / (duration / 16); // 60 FPS
-    let current = start;
+function updateFormPlaceholders() {
+    // Update input placeholders
+    const inputs = document.querySelectorAll('input[data-en-placeholder], textarea[data-en-placeholder]');
     
-    const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-            current = target;
-            clearInterval(timer);
+    inputs.forEach(input => {
+        const enPlaceholder = input.getAttribute('data-en-placeholder');
+        const arPlaceholder = input.getAttribute('data-ar-placeholder');
+        const placeholder = currentLang === 'en' ? enPlaceholder : arPlaceholder;
+        
+        if (placeholder) {
+            input.setAttribute('placeholder', placeholder);
         }
-        element.textContent = Math.floor(current);
-    }, 16);
+    });
 }
 
-// Intersection Observer for stats animation
-const statsObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
-            const target = parseInt(entry.target.getAttribute('data-count'));
-            animateCounter(entry.target, target);
-            entry.target.classList.add('animated');
+// Language Toggle Event Listener
+if (langToggle) {
+    langToggle.addEventListener('click', switchLanguage);
+}
+
+// ===================================
+// MOBILE MENU TOGGLE
+// ===================================
+
+function toggleMobileMenu() {
+    navMenu.classList.toggle('active');
+    
+    // Animate hamburger icon
+    const spans = mobileMenuToggle.querySelectorAll('span');
+    spans.forEach((span, index) => {
+        if (navMenu.classList.contains('active')) {
+            if (index === 0) span.style.transform = 'rotate(45deg) translateY(10px)';
+            if (index === 1) span.style.opacity = '0';
+            if (index === 2) span.style.transform = 'rotate(-45deg) translateY(-10px)';
+        } else {
+            span.style.transform = '';
+            span.style.opacity = '1';
         }
     });
-}, {
-    threshold: 0.5
+}
+
+// Mobile Menu Event Listeners
+if (mobileMenuToggle) {
+    mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+}
+
+// Close mobile menu when clicking on a link
+const navLinks = document.querySelectorAll('.nav-menu a');
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        if (window.innerWidth <= 768 && navMenu.classList.contains('active')) {
+            toggleMobileMenu();
+        }
+    });
 });
 
-// Observe all stat numbers
-document.addEventListener('DOMContentLoaded', () => {
-    const statNumbers = document.querySelectorAll('.stat-number');
-    statNumbers.forEach(stat => {
-        statsObserver.observe(stat);
-    });
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (window.innerWidth <= 768 && 
+        navMenu.classList.contains('active') && 
+        !navMenu.contains(e.target) && 
+        !mobileMenuToggle.contains(e.target)) {
+        toggleMobileMenu();
+    }
 });
 
 // ===================================
 // SMOOTH SCROLLING
 // ===================================
+
+function smoothScrollTo(target) {
+    const element = document.querySelector(target);
+    if (element) {
+        const headerHeight = document.querySelector('.header').offsetHeight;
+        const targetPosition = element.offsetTop - headerHeight - 20;
+        
+        window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+        });
+    }
+}
+
+// Add smooth scrolling to all anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+    anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href !== '#' && href.length > 1) {
+            e.preventDefault();
+            smoothScrollTo(href);
         }
     });
 });
@@ -96,148 +154,355 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // ===================================
 // HEADER SCROLL EFFECT
 // ===================================
+
 let lastScroll = 0;
 const header = document.querySelector('.header');
 
-window.addEventListener('scroll', () => {
+function handleScroll() {
     const currentScroll = window.pageYOffset;
     
     // Add shadow on scroll
     if (currentScroll > 50) {
-        header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.15)';
+        header.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.15)';
     } else {
-        header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+        header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
     }
     
     lastScroll = currentScroll;
-});
+}
+
+window.addEventListener('scroll', handleScroll, { passive: true });
 
 // ===================================
-// LAZY LOADING FALLBACK
+// LAZY LOADING IMAGES
 // ===================================
-// Modern browsers support native lazy loading, but add fallback for older browsers
-if ('loading' in HTMLImageElement.prototype) {
-    // Native lazy loading is supported
-    const images = document.querySelectorAll('img[loading="lazy"]');
-    images.forEach(img => {
-        img.src = img.src;
-    });
-} else {
-    // Fallback for older browsers
-    const script = document.createElement('script');
-    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js';
-    document.body.appendChild(script);
+
+function initLazyLoading() {
+    const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+    
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    
+                    // Load the image
+                    if (img.dataset.src) {
+                        img.src = img.dataset.src;
+                    }
+                    
+                    img.classList.add('loaded');
+                    imageObserver.unobserve(img);
+                }
+            });
+        }, {
+            rootMargin: '50px 0px',
+            threshold: 0.01
+        });
+        
+        lazyImages.forEach(img => imageObserver.observe(img));
+    } else {
+        // Fallback for browsers without IntersectionObserver
+        lazyImages.forEach(img => {
+            if (img.dataset.src) {
+                img.src = img.dataset.src;
+            }
+        });
+    }
 }
 
 // ===================================
-// IMAGE ERROR HANDLING
+// CONTACT FORM HANDLING
 // ===================================
-document.addEventListener('DOMContentLoaded', () => {
-    const images = document.querySelectorAll('img');
-    
-    images.forEach(img => {
-        img.addEventListener('error', function() {
-            // If logo image fails, show text fallback
-            if (this.classList.contains('logo-img')) {
-                this.style.display = 'none';
-                const fallback = this.nextElementSibling;
-                if (fallback && fallback.classList.contains('logo-text-fallback')) {
-                    fallback.style.display = 'block';
-                }
-            }
+
+const contactForm = document.querySelector('.contact-form');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form data
+        const formInputs = this.querySelectorAll('input[type="text"]');
+        const name = formInputs[0] ? formInputs[0].value : '';
+        const email = this.querySelector('input[type="email"]') ? this.querySelector('input[type="email"]').value : '';
+        const subject = formInputs[1] ? formInputs[1].value : '';
+        const message = this.querySelector('textarea') ? this.querySelector('textarea').value : '';
+        
+        // Create WhatsApp message
+        const whatsappMessage = `Hello! I'm ${name}.\n\nEmail: ${email}\n\nSubject: ${subject}\n\nMessage: ${message}`;
+        const encodedMessage = encodeURIComponent(whatsappMessage);
+        // Note: Replace 971XXXXXXXXX with actual WhatsApp business number before production
+        const whatsappURL = `https://wa.me/971XXXXXXXXX?text=${encodedMessage}`;
+        
+        // Show success message
+        const submitBtn = this.querySelector('.submit-btn');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = currentLang === 'en' ? 'Redirecting to WhatsApp...' : 'إعادة التوجيه إلى واتساب...';
+        submitBtn.style.background = '#25d366';
+        
+        // Redirect to WhatsApp after a short delay
+        setTimeout(() => {
+            window.open(whatsappURL, '_blank');
             
-            // For service images, show a placeholder color
-            if (this.closest('.service-image')) {
-                this.closest('.service-image').style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
-                this.style.display = 'none';
-            }
-        });
+            // Reset form and button
+            this.reset();
+            setTimeout(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.style.background = '';
+            }, 2000);
+        }, 500);
     });
+}
+
+// ===================================
+// SCROLL ANIMATIONS
+// ===================================
+
+function initScrollAnimations() {
+    const animatedElements = document.querySelectorAll('.stat-item, .feature-item, .zahy-content, .chemicals-content');
+    
+    if ('IntersectionObserver' in window) {
+        const animationObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+        
+        animatedElements.forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            animationObserver.observe(el);
+        });
+    }
+}
+
+// ===================================
+// ACTIVE NAVIGATION HIGHLIGHT
+// ===================================
+
+function updateActiveNav() {
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-menu a[href^="#"]');
+    
+    let currentSection = '';
+    const headerHeight = document.querySelector('.header').offsetHeight;
+    
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - headerHeight - 100;
+        const sectionHeight = section.offsetHeight;
+        
+        if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionTop + sectionHeight) {
+            currentSection = section.getAttribute('id');
+        }
+    });
+    
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${currentSection}`) {
+            link.classList.add('active');
+        }
+    });
+}
+
+window.addEventListener('scroll', updateActiveNav, { passive: true });
+
+// ===================================
+// WHATSAPP BUTTON ANIMATION
+// ===================================
+
+const whatsappButton = document.querySelector('.whatsapp-float');
+let whatsappAnimationInterval;
+
+if (whatsappButton) {
+    // Pulse animation with cleanup
+    const pulseAnimation = () => {
+        whatsappButton.style.animation = 'pulse 1s ease';
+        setTimeout(() => {
+            whatsappButton.style.animation = '';
+        }, 1000);
+    };
+    
+    whatsappAnimationInterval = setInterval(pulseAnimation, 5000);
+    
+    // Clean up on page unload
+    window.addEventListener('beforeunload', () => {
+        if (whatsappAnimationInterval) {
+            clearInterval(whatsappAnimationInterval);
+        }
+    });
+}
+
+// Add pulse animation to CSS dynamically
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes pulse {
+        0%, 100% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1);
+        }
+    }
+`;
+document.head.appendChild(style);
+
+// ===================================
+// INITIALIZE ON PAGE LOAD
+// ===================================
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Check for saved language preference
+    const savedLang = localStorage.getItem('preferredLanguage');
+    if (savedLang && savedLang !== currentLang) {
+        switchLanguage();
+    }
+    
+    // Initialize lazy loading
+    initLazyLoading();
+    
+    // Initialize scroll animations
+    initScrollAnimations();
+    
+    // Update active nav on load
+    updateActiveNav();
+    
+    // Set current year in footer
+    const yearElement = document.getElementById('year');
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
+    
+    // Add loading complete class to body
+    setTimeout(() => {
+        body.classList.add('loaded');
+    }, 100);
 });
 
 // ===================================
-// PARALLAX EFFECT FOR HERO
+// WINDOW RESIZE HANDLER
 // ===================================
-window.addEventListener('scroll', () => {
-    const hero = document.querySelector('.hero');
-    const scrolled = window.pageYOffset;
-    const rate = scrolled * 0.5;
+
+let resizeTimer;
+window.addEventListener('resize', function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+        // Close mobile menu if window is resized to desktop
+        if (window.innerWidth > 768 && navMenu.classList.contains('active')) {
+            toggleMobileMenu();
+        }
+    }, 250);
+});
+
+// ===================================
+// KEYBOARD NAVIGATION
+// ===================================
+
+// ESC key closes mobile menu
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+        toggleMobileMenu();
+    }
+});
+
+// Tab trap for mobile menu
+if (mobileMenuToggle && navMenu) {
+    const focusableElements = navMenu.querySelectorAll('a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])');
+    const firstFocusable = focusableElements[0];
+    const lastFocusable = focusableElements[focusableElements.length - 1];
     
-    if (hero && scrolled < hero.offsetHeight) {
-        hero.style.backgroundPositionY = `${rate}px`;
+    navMenu.addEventListener('keydown', function(e) {
+        if (e.key === 'Tab' && navMenu.classList.contains('active')) {
+            if (e.shiftKey) {
+                if (document.activeElement === firstFocusable) {
+                    e.preventDefault();
+                    lastFocusable.focus();
+                }
+            } else {
+                if (document.activeElement === lastFocusable) {
+                    e.preventDefault();
+                    firstFocusable.focus();
+                }
+            }
+        }
+    });
+}
+
+// ===================================
+// PAGE VISIBILITY HANDLING
+// ===================================
+
+document.addEventListener('visibilitychange', function() {
+    if (document.hidden) {
+        // Pause any animations or videos when page is hidden
+        console.log('Page hidden - pausing activities');
+    } else {
+        // Resume when page is visible
+        console.log('Page visible - resuming activities');
     }
 });
 
 // ===================================
-// SERVICE CARDS REVEAL ANIMATION
+// PERFORMANCE MONITORING
 // ===================================
-const cardObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry, index) => {
-        if (entry.isIntersecting) {
-            setTimeout(() => {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }, index * 100);
-            cardObserver.unobserve(entry.target);
+
+if ('PerformanceObserver' in window) {
+    // Monitor long tasks
+    const perfObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+            if (entry.duration > 50) {
+                console.warn('Long task detected:', entry);
+            }
         }
     });
-}, {
-    threshold: 0.1
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    const serviceCards = document.querySelectorAll('.service-card');
-    serviceCards.forEach(card => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(30px)';
-        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        cardObserver.observe(card);
-    });
-});
-
-// ===================================
-// ACCESSIBILITY ENHANCEMENTS
-// ===================================
-// Add keyboard navigation support
-document.addEventListener('DOMContentLoaded', () => {
-    // Focus trap for mobile menu if needed in future
-    const focusableElements = document.querySelectorAll(
-        'a[href], button, input, select, textarea, [tabindex]:not([tabindex="-1"])'
-    );
     
-    // Ensure all interactive elements are keyboard accessible
-    focusableElements.forEach(element => {
-        if (!element.hasAttribute('tabindex')) {
-            element.setAttribute('tabindex', '0');
-        }
-    });
-});
-
-// ===================================
-// PERFORMANCE OPTIMIZATION
-// ===================================
-// Debounce function for scroll events
-function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
+    try {
+        perfObserver.observe({ entryTypes: ['longtask'] });
+    } catch (e) {
+        // Long task API not supported
+    }
 }
 
-// Apply debounce to scroll handlers
-const debouncedScroll = debounce(() => {
-    // Scroll handlers here
-}, 10);
-
-window.addEventListener('scroll', debouncedScroll);
+// Log page load performance
+window.addEventListener('load', function() {
+    setTimeout(() => {
+        if (window.performance && window.performance.timing) {
+            const perfData = window.performance.timing;
+            const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
+            console.log(`Page loaded in ${pageLoadTime}ms`);
+        }
+    }, 0);
+});
 
 // ===================================
-// CONSOLE WELCOME MESSAGE
+// ERROR HANDLING
 // ===================================
-console.log('%c🏭 Nashco Global - Industrial Excellence Since 1994', 'color: #1a4d8f; font-size: 20px; font-weight: bold;');
-console.log('%cWelcome to Nashco Global\'s official website. We are the GCC\'s trusted industrial partner.', 'color: #666; font-size: 14px;');
+
+window.addEventListener('error', function(e) {
+    console.error('JavaScript error:', e.error);
+    // You can send errors to analytics here
+});
+
+window.addEventListener('unhandledrejection', function(e) {
+    console.error('Unhandled promise rejection:', e.reason);
+    // You can send errors to analytics here
+});
+
+// ===================================
+// EXPORT FOR TESTING (if needed)
+// ===================================
+
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = {
+        switchLanguage,
+        updateBilingualContent,
+        smoothScrollTo,
+        toggleMobileMenu
+    };
+}
