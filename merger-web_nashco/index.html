@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nashco Global - Home</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0B0E17">
+  <link rel="apple-touch-icon" href="Assets/images/icon-192.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="Assets/css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@9/swiper-bundle.min.css">
+  <style>
+    body {
+      background: linear-gradient(180deg, #0B0E17, #0F1626) !important;
+      color: #FFFFFF;
+    }
+
+    .navbar,
+    .bg-primary {
+      background: #0B0E17 !important;
+      box-shadow: none !important;
+    }
+
+    .navbar .nav-link,
+    .navbar-brand,
+    .navbar .navbar-toggler {
+      color: #f1f3f7 !important;
+    }
+
+    .hero-section {
+      background-image: url('Assets/images/Index-hero.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: #01051f;
+      min-height: 60vh;
+      position: relative;
+    }
+
+    .hero-overlay {
+      background: rgba(11, 14, 23, 0.7) !important;
+    }
+
+    .logo-video-navbar {
+      max-width: 240px;
+      width: 200px;
+      height: 88px;
+      background: transparent !important;
+      margin-bottom: 0;
+      z-index: 3;
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+      object-fit: contain;
+      border-radius: 0;
+      box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.18);
+      mix-blend-mode: normal;
+      transition: height 0.2s, width 0.2s, box-shadow 0.2s;
+    }
+
+    .hero-section h1,
+    .hero-section p {
+      color: #fff !important;
+      text-shadow: 0 2px 16px #000;
+    }
+
+    .bg-light {
+      background: linear-gradient(180deg, rgba(11, 14, 23, 0.6), rgba(15, 22, 38, 0.6)) !important;
+      color: #f1f3f7 !important;
+    }
+
+    .bg-white {
+      background: linear-gradient(180deg, rgba(11, 14, 23, 0.6), rgba(15, 22, 38, 0.6)) !important;
+      color: #f1f3f7 !important;
+    }
+
+    .card,
+    .shadow-sm {
+      background: linear-gradient(180deg, rgba(15, 22, 38, 0.6), rgba(11, 14, 23, 0.6)) !important;
+      color: #f1f3f7 !important;
+    }
+
+    .timeline-content {
+      background: linear-gradient(180deg, rgba(15, 22, 38, 0.6), rgba(11, 14, 23, 0.6)) !important;
+      color: #f1f3f7 !important;
+    }
+
+    .timeline-year {
+      background: #00A3AD !important;
+      color: #fff !important;
+    }
+
+    .btn-primary {
+      background: #00A3AD;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background: #008A95;
+    }
+
+    footer.bg-dark {
+      background: #0B0E17 !important;
+      color: #f1f3f7 !important;
+    }
+
+    .stock-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.2rem;
+      margin-top: 2rem;
+    }
+
+    .stock-gallery img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+      transition: transform 0.2s;
+      background: #23283a;
+    }
+
+    .stock-gallery img:hover {
+      transform: scale(1.04);
+      box-shadow: 0 14px 40px rgba(0, 163, 173, 0.12);
+    }
+
+    .nashco-globe-3d {
+      display: inline-block;
+      vertical-align: middle;
+      animation: globe3dspin 2.5s linear infinite;
+      transform-origin: 50% 50%;
+    }
+
+    @keyframes globe3dspin {
+      0% {
+        transform: rotateY(0deg);
+      }
+
+      100% {
+        transform: rotateY(360deg);
+      }
+    }
+
+    .nashco-logo-text {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    /* Adjust specific AOS-initialized row height in Why section */
+    .why-choose-section .row.mb-4.aos-init.aos-animate {
+      height: 131.98px;
+      max-height: 131.98px;
+      padding-top: 0.5rem;
+      padding-bottom: 0;
+      overflow: visible;
+    }
+
+    /* Remove any vertical partition visuals on the inline body text container */
+    .why-choose-section .row.mb-4,
+    .why-choose-section .row.mb-4 .col {
+      border-right: none !important;
+      box-shadow: none !important;
+      outline: none !important;
+      background-clip: border-box;
+    }
+
+    /* Set Why heading margin: top 0, right 0, bottom 16px, left 0 */
+    .why-choose-section h2.fw-bold.mb-1 {
+      margin: 0 0 16px 0;
+    }
+
+    /* Make the main Why-section intro paragraph a dark neutral for readability */
+    .why-choose-section p.fs-5.text-muted.mb-0 {
+      color: #212529 !important;
+    }
+  </style>
+</head>
+
+<body data-bs-theme="dark" class="index-page">
+  <!-- Navbar (shared) -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top index-navbar">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="zahy-alkhaleej.html">Zahy Al Khaleej LLC</a></li>
+          <li class="nav-item"><a class="nav-link" href="automotive.html">Automotive Industry</a></li>
+          <li class="nav-item"><a class="nav-link" href="manufacturing.html">Industrial Manufacturing</a></li>
+          <li class="nav-item"><a class="nav-link" href="trading.html">Trading Division</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Hero / Executive Summary -->
+  <section class="hero-section d-flex align-items-center position-relative min-vh-60">
+    <div class="hero-animated-gradient"></div>
+    <div class="container-fluid position-relative z-2">
+      <div class="row align-items-center gy-4">
+        <!-- Video on the left (~2/3 width) -->
+        <div class="col-lg-6 col-md-12 d-flex justify-content-start">
+          <video class="hero-video" src="Assets/images/logo-nashco-animation2.mp4" autoplay muted loop
+            playsinline></video>
+        </div>
+        <!-- Text block on the right -->
+        <div class="col-lg-6 col-md-12 d-flex flex-column justify-content-center text-lg-start text-center">
+          <h1 class="mb-2">WELCOME TO NASHCO GLOBAL</h1>
+          <p class="lead mb-3">Diversified Excellence Across GCC Since 1994</p>
+          <div class="d-flex justify-content-center justify-content-lg-start">
+            <a href="about.html" class="btn btn-primary align-self-center">Discover Our Story</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Why Choose Us -->
+  <section class="py-5 bg-light why-choose-section">
+    <div class="container">
+      <div class="row mb-4" data-aos="fade-up">
+        <div class="col text-center">
+          <h2 class="fw-bold mb-1">Why Choose Us?</h2>
+          <p class="fs-5 mb-0">
+            <span class="fs-6 text-dark d-block">Nashco Global is a GCC-based leader in chemicals, automotive,
+              manufacturing, and trading, leveraging 30+ years of expertise, innovation, and sustainability to drive
+              regional growth.</span>
+            <span class="fs-5 text-muted d-block">With over 30 years of experience, we combine deep market knowledge,
+              advanced technology, and a commitment to sustainability. Our divisions serve as pillars of reliability and
+              growth for clients across the Gulf region.</span>
+          </p>
+        </div>
+      </div>
+      <div class="row g-4 text-center mt-0" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-md-3">
+          <div class="p-4 bg-white rounded shadow-sm h-100">
+            <h5 class="fw-bold text-primary mb-2">Zahy Al Khaleej LLC</h5>
+            <p class="mb-0">A leading name in refrigerants and industrial chemicals, Zahy Al Khaleej LLC ensures safe,
+              compliant, and sustainable solutions for diverse industries.</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="p-4 bg-white rounded shadow-sm h-100">
+            <h5 class="fw-bold text-primary mb-2">Automotive</h5>
+            <p class="mb-0">Delivering advanced automotive products, industrial manufacturing support, and logistics for
+              leading brands across the GCC.</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="p-4 bg-white rounded shadow-sm h-100">
+            <h5 class="fw-bold text-primary mb-2">Industrial Manufacturing</h5>
+            <p class="mb-0">World-class manufacturing solutions, process engineering, and automation for diverse
+              industries.</p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="p-4 bg-white rounded shadow-sm h-100">
+            <h5 class="fw-bold text-primary mb-2">Trading</h5>
+            <p class="mb-0">Facilitating global trade, product sourcing, and distribution with reliability and
+              efficiency.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Our Story & Vision -->
+  <section class="py-5 our-story-section">
+    <div class="container">
+      <div class="row mb-4" data-aos="fade-up">
+        <div class="col text-center">
+          <h2 class="fw-bold mb-3">Our Story &amp; Vision</h2>
+          <p class="fs-5 text-muted mb-0">To be the GCC’s most trusted partner for sustainable industrial and commercial
+            progress, driven by innovation, integrity, and a relentless pursuit of quality.</p>
+        </div>
+      </div>
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-8 offset-lg-2 story-text-col">
+          <p class="fs-5">Founded in 1994, Nashco Global has grown from a single-division company into a regional
+            powerhouse. Our journey is marked by strategic expansion, a focus on compliance, and a drive to deliver
+            value at every step. We believe in building lasting partnerships and investing in the future of the GCC.</p>
+          <ul class="fs-6 story-bullets">
+            <li>30+ years of operational excellence</li>
+            <li>Trusted by leading brands and governments</li>
+            <li>Commitment to sustainability and innovation</li>
+            <li>Comprehensive solutions for every sector</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Gallery -->
+  <section class="py-5 bg-light gallery-section">
+    <div class="container">
+      <div class="row mb-4" data-aos="fade-up">
+        <div class="col text-center">
+          <h2 class="fw-bold mb-3">Gallery</h2>
+          <p class="fs-5 text-muted mb-0">A visual journey through Nashco Global’s impact, people, and projects.</p>
+        </div>
+      </div>
+      <div class="row" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-12">
+          <!-- Swiper Gallery -->
+          <div class="swiper myGallerySwiper">
+            <div class="text-center mb-2"><small class="swipe-hint">Swipe to see more →</small></div>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="Assets/images/refrigerant2.jpg" alt="Refrigerant 2"
+                  class="img-fluid gallery-thumb" loading="lazy"></div>
+              <div class="swiper-slide"><img src="Assets/images/automotive-industry-hero.jpeg" alt="Automotive Industry"
+                  class="img-fluid gallery-thumb" loading="lazy"></div>
+              <div class="swiper-slide"><img src="Assets/images/automotive-maxcar.jpg" alt="Automotive MaxCar"
+                  class="img-fluid gallery-thumb" loading="lazy"></div>
+              <div class="swiper-slide"><img src="Assets/images/automotive-stock-image.jpeg" alt="Automotive Stock"
+                  class="img-fluid gallery-thumb" loading="lazy"></div>
+              <div class="swiper-slide"><img src="Assets/images/manufacturing-floor.jpeg" alt="Manufacturing Floor"
+                  class="img-fluid gallery-thumb" loading="lazy"></div>
+              <div class="swiper-slide"><img src="Assets/images/manufacturing-hero.jpg" alt="Manufacturing Hero"
+                  class="img-fluid gallery-thumb" loading="lazy"></div>
+              <div class="swiper-slide"><img src="Assets/images/refrigerant-production-plant.jpeg"
+                  alt="Refrigerant Production Plant" class="img-fluid gallery-thumb" loading="lazy"></div>
+              <div class="swiper-slide"><img src="Assets/images/refrigerant1.jpg" alt="Refrigerant 1"
+                  class="img-fluid gallery-thumb" loading="lazy"></div>
+              <div class="swiper-slide"><img src="Assets/images/trading-shipping-container.jpeg"
+                  alt="Trading Shipping Container" class="img-fluid gallery-thumb" loading="lazy"></div>
+              <div class="swiper-slide"><img src="Assets/images/contact-hero.jpg" alt="Contact Hero"
+                  class="img-fluid gallery-thumb" loading="lazy"></div>
+              <div class="swiper-slide"><img src="Assets/images/IMG_5597.jpeg" alt="Team/People"
+                  class="img-fluid gallery-thumb" loading="lazy"></div>
+            </div>
+            <!-- navigation -->
+            <div class="swiper-button-prev" aria-label="Previous slide">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="swiper-button-next" aria-label="Next slide">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="swiper-pagination"></div>
+            <button class="custom-gallery-nav custom-nav-prev" aria-label="Gallery previous">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+            <button class="custom-gallery-nav custom-nav-next" aria-label="Gallery next">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer (shared) -->
+  <footer class="bg-dark text-white py-3">
+    <div class="container text-center">
+      <p class="mb-0">&copy; 2025 Nashco Global. All Rights Reserved.</p>
+    </div>
+  </footer>
+  <!-- Gallery Modal (Bootstrap) -->
+  <div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-transparent border-0">
+        <div class="modal-body p-0 text-center">
+          <img id="galleryModalImg" src="" alt="" class="img-fluid rounded">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- GSAP and ScrollTrigger -->
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <!-- Swiper JS (optional) -->
+  <script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
+  <!-- Gallery: initialize Swiper and modal behavior -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      try {
+        const gallerySwiper = new Swiper('.myGallerySwiper', {
+          slidesPerView: 3,
+          spaceBetween: 20,
+          grabCursor: true,
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          breakpoints: {
+            0: { slidesPerView: 1 },
+            600: { slidesPerView: 2 },
+            992: { slidesPerView: 3 }
+          }
+        });
+
+        // Lightbox modal on click
+        document.querySelectorAll('.gallery-thumb').forEach(img => {
+          img.addEventListener('click', function (e) {
+            const modalImg = document.getElementById('galleryModalImg');
+            modalImg.src = this.src;
+            const bsModal = new bootstrap.Modal(document.getElementById('galleryModal'));
+            bsModal.show();
+          });
+        });
+
+        // Custom persistent nav buttons: position beside first and third slides and wire to swiper
+        (function attachCustomGalleryNav() {
+          const swiperEl = document.querySelector('.myGallerySwiper');
+          const leftBtn = swiperEl.querySelector('.custom-nav-prev');
+          const rightBtn = swiperEl.querySelector('.custom-nav-next');
+          if (!leftBtn || !rightBtn) return;
+
+          function positionButtons() {
+            const slides = swiperEl.querySelectorAll('.swiper-slide');
+            if (!slides.length) return;
+            const first = slides[0];
+            const third = slides[2] || slides[slides.length - 1];
+            const sRect = swiperEl.getBoundingClientRect();
+            const fRect = first.getBoundingClientRect();
+            const tRect = third.getBoundingClientRect();
+            const btnW = leftBtn.offsetWidth || 56;
+            const btnH = leftBtn.offsetHeight || 56;
+
+            // place left button to the left of first slide
+            leftBtn.style.position = 'absolute';
+            leftBtn.style.top = (fRect.top - sRect.top + fRect.height / 2 - btnH / 2) + 'px';
+            leftBtn.style.left = Math.max(8, (fRect.left - sRect.left - btnW - 8)) + 'px';
+
+            // place right button to the right of third slide
+            rightBtn.style.position = 'absolute';
+            rightBtn.style.top = (tRect.top - sRect.top + tRect.height / 2 - btnH / 2) + 'px';
+            rightBtn.style.left = Math.min(sRect.width - btnW - 8, (tRect.right - sRect.left + 8)) + 'px';
+          }
+
+          // wire navigation
+          leftBtn.addEventListener('click', function (e) { e.stopPropagation(); gallerySwiper.slidePrev(); });
+          rightBtn.addEventListener('click', function (e) { e.stopPropagation(); gallerySwiper.slideNext(); });
+
+          // reposition on resize and when swiper updates
+          window.addEventListener('resize', positionButtons, { passive: true });
+          gallerySwiper.on && gallerySwiper.on('resize', positionButtons);
+          gallerySwiper.on && gallerySwiper.on('update', positionButtons);
+
+          // small delay to ensure layout settled
+          setTimeout(positionButtons, 250);
+        })();
+      } catch (err) {
+        // Swiper or Bootstrap might not be available; fail gracefully
+        console.warn('Gallery init failed', err);
+      }
+    });
+  </script>
+  <script>
+    // AOS Init
+    AOS.init({ once: true, duration: 900, offset: 60 });
+    // GSAP Animations (example for hero headline)
+    gsap.from('.hero-section h1', { opacity: 0, y: 60, duration: 1, delay: 0.2 });
+    gsap.from('.hero-section p', { opacity: 0, y: 40, duration: 1, delay: 0.5 });
+  </script>
+  <script>
+    // Navbar translucency on scroll (index page)
+    (function () {
+      var nav = document.querySelector('.navbar');
+      if (!nav) return;
+      function onScroll() {
+        if (window.scrollY > 60) nav.classList.add('translucent'); else nav.classList.remove('translucent');
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+  </script>
+</body>
+
+</html>

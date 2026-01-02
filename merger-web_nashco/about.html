@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nashco Global - About Us</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0B0E17">
+  <link rel="apple-touch-icon" href="Assets/images/icon-192.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="Assets/css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@9/swiper-bundle.min.css">
+  <style>
+    body {
+      background: linear-gradient(180deg, #0B0E17, #0F1626) !important;
+      color: #FFFFFF;
+    }
+
+    .navbar,
+    .bg-primary {
+      background: #0B0E17 !important;
+      box-shadow: none !important;
+    }
+
+    .navbar .nav-link,
+    .navbar-brand,
+    .navbar .navbar-toggler {
+      color: #f1f3f7 !important;
+    }
+
+    .hero-section {
+      background: linear-gradient(rgba(11, 14, 23, 0.75), rgba(15, 22, 38, 0.75)), url('Assets/images/manufacturing-factory-inside-page.jpg') center/cover no-repeat;
+      min-height: 60vh;
+      position: relative;
+    }
+
+    .hero-overlay {
+      background: rgba(11, 14, 23, 0.7) !important;
+    }
+
+    .logo-video-navbar {
+      max-width: 240px;
+      width: 200px;
+      height: 88px;
+      background: transparent !important;
+      margin-bottom: 0;
+      z-index: 3;
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+      object-fit: contain;
+      border-radius: 0;
+      box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.18);
+      mix-blend-mode: normal;
+      transition: height 0.2s, width 0.2s, box-shadow 0.2s;
+    }
+
+    .hero-section h1,
+    .hero-section p {
+      color: #fff !important;
+      text-shadow: 0 2px 16px #000;
+    }
+
+    .bg-light {
+      background: linear-gradient(180deg, rgba(11, 14, 23, 0.6), rgba(15, 22, 38, 0.6)) !important;
+      color: #f1f3f7 !important;
+    }
+
+    .bg-white {
+      background: linear-gradient(180deg, rgba(11, 14, 23, 0.6), rgba(15, 22, 38, 0.6)) !important;
+      color: #f1f3f7 !important;
+    }
+
+    .card,
+    .shadow-sm {
+      background: linear-gradient(180deg, rgba(15, 22, 38, 0.6), rgba(11, 14, 23, 0.6)) !important;
+      color: #f1f3f7 !important;
+    }
+
+    .timeline-content {
+      background: linear-gradient(180deg, rgba(15, 22, 38, 0.6), rgba(11, 14, 23, 0.6)) !important;
+      color: #f1f3f7 !important;
+    }
+
+    .timeline-year {
+      background: #00A3AD !important;
+      color: #fff !important;
+    }
+
+    .btn-primary {
+      background: #00A3AD;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background: #008A95;
+    }
+
+    footer.bg-dark {
+      background: #0B0E17 !important;
+      color: #f1f3f7 !important;
+    }
+
+    .nashco-globe-3d {
+      display: inline-block;
+      vertical-align: middle;
+      animation: globe3dspin 2.5s linear infinite;
+      transform-origin: 50% 50%;
+    }
+
+    @keyframes globe3dspin {
+      0% {
+        transform: rotateY(0deg);
+      }
+
+      100% {
+        transform: rotateY(360deg);
+      }
+    }
+
+    .nashco-logo-text {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  </style>
+  /* About page: typography and layout tweaks */
+  .about-page h2.fw-bold {
+  font-size: 2.4rem;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  }
+
+  .about-page .about-lead {
+  max-width: 1100px;
+  margin: 0 auto;
+  color: rgba(241,243,247,0.85);
+  font-size: 1.125rem;
+  }
+
+  .about-page .list-unstyled {
+  text-align: center;
+  padding-left: 0;
+  }
+
+  .about-page .list-unstyled li {
+  margin-bottom: .5rem;
+  }
+
+  .about-page .glass-card {
+  background: rgba(255,255,255,0.02);
+  padding: 1.25rem;
+  border-radius: .5rem;
+  }
+
+  /* keep section headings default-aligned; specific blocks may align left */
+
+  </style>
+
+</head>
+
+<body data-bs-theme="dark" class="about-page">
+  <!-- Navbar (shared) -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Nashco Global</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="zahy-alkhaleej.html">Zahy Al Khaleej LLC</a></li>
+          <li class="nav-item"><a class="nav-link" href="automotive.html">Automotive Industry</a></li>
+          <li class="nav-item"><a class="nav-link" href="manufacturing.html">Industrial Manufacturing</a></li>
+          <li class="nav-item"><a class="nav-link" href="trading.html">Trading Division</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section (About) -->
+  <section class="hero-section d-flex align-items-center justify-content-center position-relative min-vh-60"
+    style="background-image:url('Assets/images/headquarters.webp'); background-size:cover; background-position:center;">
+    <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+    <div class="container position-relative z-2 text-center">
+      <h1>About Nashco Global</h1>
+      <p class="lead">Diversified Excellence Across the GCC Since 1994</p>
+    </div>
+  </section>
+
+  <!-- About Content -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row mb-4" data-aos="fade-up">
+        <div class="col text-center">
+          <h2 class="fw-bold mb-3">Our Story</h2>
+          <p class="fs-5 text-muted mb-0">Founded in 1994, Nashco Global has grown into a leading provider of
+            industrial, automotive, manufacturing, and trading solutions across the GCC. Our mission is to deliver
+            precision, reliability, and innovation in every partnership.</p>
+        </div>
+      </div>
+      <div class="row mb-4" data-aos="fade-up">
+        <div class="col-12">
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="p-4 glass-card h-100">
+                <h3 class="fw-bold mb-3 text-start">Our Achievements &amp; Goals</h3>
+                <ul class="list-unstyled fs-6 mb-0 text-start">
+                  <li>30+ years of operational excellence</li>
+                  <li>Trusted by leading brands and governments</li>
+                  <li>Commitment to sustainability and innovation</li>
+                  <li>Comprehensive solutions for every sector</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="p-4 glass-card h-100">
+                <h3 class="fw-bold mb-3 text-start">CSR &amp; Sustainability</h3>
+                <p class="mb-0 text-start">Committed to net-zero by 2030, emission reductions, and community programs in
+                  GCC regions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission, Vision, Values -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row mb-5" data-aos="fade-up">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="fw-bold mb-3">Mission, Vision & Values</h2>
+          <p class="text-muted">We engineer impactful solutions that drive progress and prosperity for our clients and
+            communities.</p>
+        </div>
+      </div>
+      <div class="row g-4 text-center" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-md-4">
+          <div class="p-4 bg-white rounded shadow-sm h-100">
+            <h5 class="fw-bold text-primary mb-2">Mission</h5>
+            <p class="mb-0">To engineer impactful solutions that drive progress and prosperity for our clients and
+              communities.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 bg-white rounded shadow-sm h-100">
+            <h5 class="fw-bold text-primary mb-2">Vision</h5>
+            <p class="mb-0">To be the GCC’s most trusted partner for industrial and commercial excellence.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 bg-white rounded shadow-sm h-100">
+            <h5 class="fw-bold text-primary mb-2">Values</h5>
+            <p class="mb-0">Integrity, innovation, collaboration, and a relentless pursuit of quality.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline/Milestones -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row mb-5" data-aos="fade-up">
+        <div class="col text-center">
+          <h2 class="fw-bold mb-3">Milestones</h2>
+        </div>
+      </div>
+      <div class="timeline position-relative mx-auto" style="max-width:900px;">
+        <div class="timeline-item mb-5" data-aos="fade-right">
+          <div class="timeline-year bg-primary text-white">1994</div>
+          <div class="timeline-content bg-white shadow rounded p-4">
+            <h6 class="fw-bold">Founded</h6>
+            <p class="mb-0">Nashco Global is established in the GCC, focusing on industrial solutions.</p>
+          </div>
+        </div>
+        <div class="timeline-item mb-5" data-aos="fade-left">
+          <div class="timeline-year bg-primary text-white">2005</div>
+          <div class="timeline-content bg-white shadow rounded p-4">
+            <h6 class="fw-bold">Expansion</h6>
+            <p class="mb-0">Launched automotive and manufacturing divisions, expanding our reach and expertise.</p>
+          </div>
+        </div>
+        <div class="timeline-item mb-5" data-aos="fade-right">
+          <div class="timeline-year bg-primary text-white">2015</div>
+          <div class="timeline-content bg-white shadow rounded p-4">
+            <h6 class="fw-bold">Innovation</h6>
+            <p class="mb-0">Introduced advanced trading and supply chain solutions for the GCC market.</p>
+          </div>
+        </div>
+        <div class="timeline-item" data-aos="fade-left">
+          <div class="timeline-year bg-primary text-white">2025</div>
+          <div class="timeline-content bg-white shadow rounded p-4">
+            <h6 class="fw-bold">Today</h6>
+            <p class="mb-0">A trusted partner for excellence, serving clients across the region with integrity and
+              innovation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leadership Team -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row mb-5" data-aos="fade-up">
+        <div class="col text-center">
+          <h2 class="fw-bold mb-3">Leadership Team</h2>
+        </div>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card border-0 shadow-sm text-center">
+            <img src="Assets/images/leader1.webp" alt="Chairman - K M Nazar"
+              class="card-img-top rounded-circle mx-auto mt-3" style="width:100px;height:100px;object-fit:cover;"
+              loading="lazy">
+            <div class="card-body">
+              <h6 class="fw-bold mb-1">Chairman</h6>
+              <p class="text-muted mb-0">K M Nazar</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="card border-0 shadow-sm text-center">
+            <img src="Assets/images/leader2.webp" alt="Director - Shaheeda Nazar"
+              class="card-img-top rounded-circle mx-auto mt-3" style="width:100px;height:100px;object-fit:cover;"
+              loading="lazy">
+            <div class="card-body">
+              <h6 class="fw-bold mb-1">Director</h6>
+              <p class="text-muted mb-0">Shaheeda Nazar</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="card border-0 shadow-sm text-center">
+            <img src="Assets/images/leader3.webp" alt="Chief of Operations - Swetha Suresh"
+              class="card-img-top rounded-circle mx-auto mt-3" style="width:100px;height:100px;object-fit:cover;"
+              loading="lazy">
+            <div class="card-body">
+              <h6 class="fw-bold mb-1">Chief of Operations</h6>
+              <p class="text-muted mb-0">Swetha Suresh</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer (shared) -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+      <!-- licensed-by image removed -->
+      <p>&copy; 2025 Nashco Global. All Rights Reserved.</p>
+    </div>
+  </footer>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- GSAP and ScrollTrigger -->
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <!-- Swiper JS (optional) -->
+  <script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 900, offset: 60 });
+    gsap.from('.hero-section h1', { opacity: 0, y: 60, duration: 1, delay: 0.2 });
+    gsap.from('.hero-section p', { opacity: 0, y: 40, duration: 1, delay: 0.5 });
+  </script>
+</body>
+
+</html>
