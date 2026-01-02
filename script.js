@@ -203,11 +203,7 @@ function setupStatCounters() {
 function animateCounter(element) {
     if (element.classList.contains('counted')) return;
     
-    const targetText = element.getAttribute('data-count') || element.textContent;
-    const target = parseInt(targetText.replace(/\+/g, ''));
-    
-    if (isNaN(target)) return;
-    
+    const target = parseInt(element.getAttribute('data-count') || element.textContent);
     const duration = 2000;
     const increment = target / (duration / 16);
     let current = 0;

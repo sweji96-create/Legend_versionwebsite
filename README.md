@@ -1,65 +1,102 @@
-# Legend Version Website
+# Nashco Global - Corporate Website
 
-## Overview
-Welcome to the Legend Version website. This project encapsulates a comprehensive digital representation of the Legend brand, with meticulously designed features, animations, and a user-friendly navigation structure. The website spans multiple pages, each tailored to showcase distinct aspects of the brand's expertise.
+A modern, responsive, and SEO-optimized website for Nashco Global, a GCC leader since 1994 specializing in chemicals, automotive, manufacturing, and trading.
 
----
+## 🌟 Features
 
-## Website Pages and Structure
+- **Responsive Design**: Fully responsive layout that works seamlessly on all devices (desktop, tablet, mobile)
+- **Bilingual Support**: Complete English/Arabic language toggle with RTL (Right-to-Left) support
+- **SEO Optimized**: Comprehensive meta tags, Open Graph, and Twitter Card integration
+- **Modern Animations**: Dynamic animations and smooth transitions for enhanced user experience
+- **Interactive Elements**: Engaging UI components including smooth scrolling, stat counters, and form validation
+- **Accessibility**: ARIA labels, semantic HTML5, keyboard navigation, and WCAG compliance
+- **Professional Design**: Clean, modern interface with gradient backgrounds and shadow effects
+- **Cultural Inclusivity**: Full Arabic language support with appropriate fonts and RTL layout
 
-### 1. Automotive Page
-- **Purpose:** Highlights the automotive solutions and services provided by Legend.
-- **Content Structure:**
-  - Hero section featuring a background image/video of sleek automotive designs.
-  - Features segment with icons and brief descriptions.
-  - Contact Call-to-Actions (CTAs) spread through the page.
-- **Animations:**
-  - Smooth fadeIn effects on scroll.
-  - Dynamic hover interactions on featured images.
+## 🚀 Technologies Used
 
-### 2. Manufacturing Page
-- **Purpose:** Showcases industry-leading manufacturing capabilities.
-- **Content Structure:**
-  - Introductory hero image aligned with manufacturing tools/technology.
-  - Grid-style showcase of manufacturing solutions.
-  - Testimonials slider.
-- **Animations:**
-  - Entry-scale effects on grids.
-  - Parallax background animations.
+- **HTML5**: Semantic markup for better SEO and accessibility
+- **CSS3**: Modern styling with flexbox, grid, custom properties, and animations
+- **JavaScript (ES6+)**: Interactive functionality and dynamic content
+- **Google Fonts**: Poppins (English) and Cairo (Arabic) for optimal readability
+- **Font Awesome**: Professional icons throughout the site
 
-### 3. Trading Page
-- **Purpose:** Details Legend's trading vertical, promoting transparency and global-market proficiency.
-- **Content Structure:**
-  - Informative sections describing areas Legend trades in.
-  - Downloadable resources aligned within cards (PDFs, datasheets, etc.).
-  - Footer links to Legal and Terms/Privacy integrations.
-- **Animations:**
-  - Smooth transitions between sections.
+## 📋 Sections
 
-### 4. Contact Page
-- **Purpose:** Serves as the primary communication gateway for users.
-- **Content Structure:**
-  - Integrated contact form with validation.
-  - Embedded office location map linked through GMaps.
-- **Animations:**
-  - Subtle highlight on interactive fields and buttons.
+1. **Hero Section**: Eye-catching introduction with call-to-action buttons
+2. **About Section**: Company overview with animated statistics
+3. **Services Section**: Detailed information about four main business divisions:
+   - Chemicals
+   - Automotive
+   - Manufacturing
+   - Trading
+4. **Vision Section**: Company vision with key values
+5. **Contact Section**: Contact information and functional form
+6. **Footer**: Quick links, social media, and copyright information
 
----
+## 🎨 Design Highlights
 
-## Key Features
+- **Color Scheme**: Professional blue gradient with gold accents
+- **Typography**: Clear, readable fonts with proper hierarchy
+- **Animations**: Smooth transitions and entrance animations
+- **Layout**: Clean grid-based layouts with optimal spacing
+- **Images**: Placeholder support for company images and logos
 
-1. **Hero Sections:**
-   - Landing heroes integrated with full-screen video or layered-gradient backgrounds.
-   - "GCC Flag Video" embedded where appropriate to emphasize local partnerships.
+## 🌐 Browser Support
 
-2. **Style and Animations:**
-   - Custom CSS classes structured for consistency across all pages.
-   - JS-powered fadeIn, fadeOut, and parallax triggers.
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers (iOS Safari, Chrome Mobile)
 
-3. **Centralized Resource Pool:**
-   - Modern assets are utilized (illustrations, region-based video intros). Directories divided logically into `/media`, `/docs` and `/stylesheets`.
+## 📱 Responsive Breakpoints
 
-4. **Cross-browser Stability & Responsivity:**
-   - Passed evaluations for major rendering engines (Chromium/Edge <=112).
-   - Grid-aligned responsivity achieving performance >=95% average when deployed.
-- **Fade-tracked consistency** transitioned effects deteriorations cleared.
+- Desktop: 1200px and above
+- Tablet: 768px to 1199px
+- Mobile: Below 768px
+
+## 🔧 Setup and Usage
+
+1. Clone or download the repository
+2. Open `index.html` in a modern web browser
+3. No build process required - pure HTML, CSS, and JavaScript
+
+## 🌍 Language Toggle
+
+Click the language button in the top-right corner to switch between English and Arabic. The entire website content, including navigation and text, will update dynamically with proper RTL layout for Arabic.
+
+## 📞 Contact Form
+
+The contact form includes:
+- Client-side validation
+- Floating labels for better UX
+- Success/error notifications
+- Required field validation
+- Email format validation
+
+## ♿ Accessibility Features
+
+- Semantic HTML5 elements
+- ARIA labels for interactive elements
+- Keyboard navigation support
+- Focus indicators
+- High contrast mode support
+- Reduced motion support for users with vestibular disorders
+
+## 🎯 SEO Features
+
+- Optimized meta tags
+- Open Graph protocol for social sharing
+- Twitter Card support
+- Descriptive alt texts (when images are added)
+- Semantic HTML structure
+- Clean URL structure
+
+## 📄 License
+
+© 2024 Nashco Global. All rights reserved.
+
+## 🤝 About Nashco Global
+
+Nashco Global has been a leader in the GCC region since 1994, delivering excellence across diversified industries including chemicals, automotive solutions, manufacturing, and international trading. Our commitment to innovation, professionalism, and cultural inclusivity makes us a trusted partner for industries and communities worldwide.

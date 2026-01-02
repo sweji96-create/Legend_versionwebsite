@@ -1,0 +1,66 @@
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Circular border with Arabic pattern -->
+  <circle cx="150" cy="150" r="140" fill="#E8E8E8" stroke="#999" stroke-width="3"/>
+  
+  <!-- Islamic/Arabic pattern elements -->
+  <g fill="#B8860B" opacity="0.6">
+    <!-- Top pattern -->
+    <path d="M 150,20 L 155,35 L 145,35 Z"/>
+    <path d="M 120,30 L 125,45 L 115,45 Z"/>
+    <path d="M 180,30 L 185,45 L 175,45 Z"/>
+    
+    <!-- Decorative elements around circle -->
+    <circle cx="150" cy="40" r="4"/>
+    <circle cx="120" cy="50" r="3"/>
+    <circle cx="180" cy="50" r="3"/>
+    <circle cx="90" cy="80" r="3"/>
+    <circle cx="210" cy="80" r="3"/>
+  </g>
+  
+  <!-- Central globe element -->
+  <circle cx="150" cy="150" r="60" fill="#4A5D4A" stroke="#2C3E2C" stroke-width="2"/>
+  <circle cx="150" cy="150" r="50" fill="#5C7A5C"/>
+  
+  <!-- Continents on mini globe -->
+  <g fill="#7C9A7C">
+    <path d="M 135,135 Q 130,145 135,155 L 140,153 Q 138,143 136,135 Z"/>
+    <path d="M 155,140 Q 160,150 155,160 L 165,158 Q 168,148 163,140 Z"/>
+  </g>
+  
+  <!-- Decorative chess pieces -->
+  <g fill="#FFF" stroke="#888" stroke-width="1.5">
+    <!-- King piece left -->
+    <rect x="80" y="160" width="12" height="20" rx="2"/>
+    <path d="M 86,155 L 89,145 L 83,145 Z"/>
+    <line x1="86" y1="143" x2="86" y2="140"/>
+    
+    <!-- Queen piece right -->
+    <rect x="208" y="160" width="12" height="20" rx="2"/>
+    <circle cx="214" cy="150" r="5"/>
+    
+    <!-- Pawns -->
+    <circle cx="110" cy="175" r="6"/>
+    <rect x="107" y="178" width="6" height="10"/>
+    
+    <circle cx="190" cy="175" r="6"/>
+    <rect x="187" y="178" width="6" height="10"/>
+  </g>
+  
+  <!-- Golden decorative elements -->
+  <g fill="#DAA520">
+    <circle cx="70" cy="120" r="3"/>
+    <circle cx="230" cy="120" r="3"/>
+    <circle cx="60" cy="150" r="2"/>
+    <circle cx="240" cy="150" r="2"/>
+    <circle cx="70" cy="180" r="3"/>
+    <circle cx="230" cy="180" r="3"/>
+  </g>
+  
+  <!-- Text "ZAHY GROUP" curved -->
+  <path id="textPath" d="M 50,230 Q 150,250 250,230" fill="none"/>
+  <text font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#444" letter-spacing="8">
+    <textPath href="#textPath" startOffset="50%" text-anchor="middle">
+      ZAHY GROUP
+    </textPath>
+  </text>
+</svg>

@@ -1,0 +1,18 @@
+name = "nashco-global"
+compatibility_date = "2026-01-01"
+# account_id = "" # Add your Cloudflare account ID here if using Workers
+
+# Cloudflare Pages configuration
+# For Pages deployments, use the dashboard or wrangler pages commands
+# This file is primarily for Cloudflare Workers deployments
+
+# For Cloudflare Pages deployment via Wrangler CLI:
+# Use: npx wrangler pages deploy . --project-name=nashco-global
+
+# For static assets deployment via Workers:
+# [site]
+# bucket = "."
+
+# Environment variables (if needed)
+# [vars]
+# ENVIRONMENT = "production"

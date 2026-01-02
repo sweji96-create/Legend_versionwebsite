@@ -1,68 +1,54 @@
-# Assets Needed
+# Image Assets Reference
 
-This file documents the assets that should be added to this directory before or after deployment.
+This directory contains references to the official Nashco Global brand images used throughout the website.
 
-## Required Assets
+## Image URLs
 
-### 1. Nashco Global Logo
-- **Filename:** `logo.png` or `logo.svg`
-- **Current:** Using placeholder from stock site
-- **Location in code:** `index.html` line 55
-- **Specifications:**
-  - Format: PNG or SVG (SVG preferred)
-  - Transparent background
-  - Minimum size: 400px width
-  - Optimized for web
+### Header
+- **Logo**: https://t3.ftcdn.net/jpg/04/42/78/58/360_F_442785872_f9YDbJtF8VHCa2JK13H2cNo6NYKMLhOa.jpg
+  - Alt Text (EN): "Nashco Global Logo"
+  - Alt Text (AR): "شعار ناشكو جلوبال"
 
-### 2. Favicon
-- **Filename:** `favicon.ico` (root) or replace `favicon-placeholder.svg`
-- **Current:** SVG placeholder provided
-- **Specifications:**
-  - Multiple sizes: 16x16, 32x32, 48x48
-  - ICO format for `favicon.ico`
-  - SVG for modern browsers
+### Hero Section
+- **Background**: https://www.uaefreezones.com/assets/img/dubai-industrial-city-min.png
+  - Description: Dubai Industrial City - representing GCC industrial excellence
 
-### 3. Social Media Preview Image (OG Image)
-- **Filename:** `og-image.jpg`
-- **Current:** Not provided (referenced in meta tags)
-- **Location in code:** `index.html` lines 20, 27
-- **Specifications:**
-  - Dimensions: 1200 x 630 pixels
-  - Format: JPG or PNG
-  - File size: < 1MB
-  - Content: Nashco Global branding + tagline
+### About Section
+- **Background**: https://cdn.shortpixel.ai/spai/q_lossless+ret_img+to_webp/thecondorgroup.com/wp-content/uploads/2022/03/Untitled-design-33.jpg
+  - Description: Industrial facility background for stats section
 
-## Optional Assets
+### Services Section
 
-### 4. Zahy Group Logo (if applicable)
-- **Filename:** `zahy-group-logo.png`
-- **Current:** Not included
-- **Needed if:** Nashco Global is part of Zahy Group
-- **Usage:** Footer, "Part of" section
+#### Chemicals Division
+- **Image**: https://www.nsenergybusiness.com/wp-content/uploads/sites/4/2020/08/refinery-3613526_640-1.jpg
+  - Alt Text (EN): "Chemicals Division"
+  - Alt Text (AR): "قسم الكيماويات"
 
-### 5. Local Copies of Service Images
-Currently using external URLs. Consider downloading:
-- `hero-background.png` (1920x1080)
-- `about-background.jpg` (1920x1080)
-- `chemicals-service.jpg` (800x600)
-- `automotive-service.jpg` (800x600)
-- `manufacturing-service.jpg` (800x600)
+#### Automotive Division
+- **Image**: https://douradoautoservice.com/wp-content/uploads/2025/07/Find-Exclusive-Luxury-Car-Parts.jpeg
+  - Alt Text (EN): "Automotive Division"
+  - Alt Text (AR): "قسم السيارات"
 
-## Image Optimization Guidelines
+#### Manufacturing Division
+- **Image**: https://www.oilandgasmiddleeast.com/cloud/2021/07/27/Petro-web_0.jpg
+  - Alt Text (EN): "Manufacturing Division"
+  - Alt Text (AR): "قسم التصنيع"
 
-Before adding any image:
-1. Compress using TinyPNG, ImageOptim, or similar
-2. Use WebP format with JPG/PNG fallback
-3. Generate responsive sizes (1x, 2x for retina)
-4. Add appropriate alt text in HTML
+#### Trading Division
+- **Image**: https://static.zawya.com/view/acePublic/alias/contentid/MTA3ZTI5MTgtMDVjYi00/2/518368534.webp?f=3%3A2&q=0.75&w=3840
+  - Alt Text (EN): "Trading Division"
+  - Alt Text (AR): "قسم التجارة"
 
-## Current External Images
+## Usage Guidelines
 
-These work fine but could be replaced with owned/licensed images:
+1. All images use `loading="lazy"` for performance optimization
+2. Bilingual alt text is provided via `data-en` and `data-ar` attributes
+3. Images are responsive and optimized for different screen sizes
+4. RTL support ensures images display correctly in Arabic mode
+5. Fallback mechanisms are in place for failed image loads
 
-1. Logo: `https://t3.ftcdn.net/jpg/04/42/78/58/360_F_442785872_f9YDbJtF8VHCa2JK13H2cNo6NYKMLhOa.jpg`
-2. Hero BG: `https://www.uaefreezones.com/assets/img/dubai-industrial-city-min.png`
-3. About BG: `https://cdn.shortpixel.ai/spai/q_lossless+ret_img+to_webp/thecondorgroup.com/wp-content/uploads/2022/03/Untitled-design-33.jpg`
-4. Chemicals: `https://www.nsenergybusiness.com/wp-content/uploads/sites/4/2020/08/refinery-3613526_640-1.jpg`
-5. Automotive: `https://douradoautoservice.com/wp-content/uploads/2025/07/Find-Exclusive-Luxury-Car-Parts.jpeg`
-6. Manufacturing: `https://www.oilandgasmiddleeast.com/cloud/2021/07/27/Petro-web_0.jpg`
+## Performance
+
+- Native lazy loading is implemented
+- Images use `object-fit: cover` for consistent sizing
+- Proper alt text ensures SEO and accessibility compliance
