@@ -3,329 +3,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Nashco Global - A GCC leader since 1994, specializing in chemicals, automotive, manufacturing, and trading. Delivering excellence across diversified industries with innovation and professionalism.">
-    <meta name="keywords" content="Nashco Global, GCC chemicals, automotive solutions, manufacturing, trading, industrial excellence, Middle East business">
-    <meta name="author" content="Nashco Global">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Nashco Global - Excellence in Chemicals, Automotive, Manufacturing & Trading">
-    <meta property="og:description" content="GCC leader since 1994, specializing in chemicals, automotive, manufacturing, and trading solutions.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://nashcoglobal.com">
-    
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Nashco Global - Excellence in Chemicals, Automotive, Manufacturing & Trading">
-    <meta name="twitter:description" content="GCC leader since 1994, specializing in chemicals, automotive, manufacturing, and trading solutions.">
-    
-    <title>Nashco Global - Excellence in Chemicals, Automotive, Manufacturing & Trading</title>
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Stylesheet -->
+    <meta name="description" content="Nashco Global - Leading GCC industrial solutions provider since 1994. Chemicals, automotive, manufacturing, and trading excellence.">
+    <meta name="keywords" content="Nashco Global, GCC chemicals, automotive, manufacturing, trading, Dubai, UAE, Oman">
+    <title>Nashco Global - Industrial Excellence Since 1994</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Language Toggle -->
-    <div class="language-toggle">
-        <button id="langBtn" class="lang-btn" aria-label="Toggle Language">
-            <i class="fas fa-language"></i>
-            <span id="langText">العربية</span>
-        </button>
-    </div>
-
-    <!-- Navigation -->
-    <nav class="navbar" role="navigation" aria-label="Main navigation">
-        <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo">
-                    <img src="https://raw.githubusercontent.com/sweji96-create/website-nashcoglobal/main/nashco-global-logo.png" alt="Nashco Global Logo" class="logo-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                    <div class="logo-fallback" style="display: none;">
-                        <h1>Nashco Global</h1>
-                        <p class="tagline" data-en="Excellence Since 1994" data-ar="التميز منذ 1994">Excellence Since 1994</p>
-                    </div>
-                </div>
-                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="#home" data-en="Home" data-ar="الرئيسية">Home</a></li>
-                    <li><a href="#about" data-en="About Us" data-ar="من نحن">About Us</a></li>
-                    <li><a href="#zahy" data-en="Zahy al Khaleej" data-ar="زاهي الخليج">Zahy al Khaleej</a></li>
-                    <li><a href="#automotive" data-en="Automotive" data-ar="السيارات">Automotive</a></li>
-                    <li><a href="#manufacturing" data-en="Manufacturing" data-ar="التصنيع">Manufacturing</a></li>
-                    <li><a href="#trading" data-en="Trading" data-ar="التجارة">Trading</a></li>
-                    <li><a href="#contact" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</a></li>
-                </ul>
+    <!-- Header with Logo and Navigation -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="https://github.com/user-attachments/assets/3bb45701-20dd-43be-8b03-462604f7f894" alt="Nashco Global Logo" class="logo-img">
+                </a>
             </div>
+            
+            <nav class="nav" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link active" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                    <li><a href="about.html" class="nav-link" data-en="About Us" data-ar="من نحن">About Us</a></li>
+                    <li><a href="zahyalkhaleej.html" class="nav-link" data-en="Zahy Al Khaleej" data-ar="زاهي الخليج">Zahy Al Khaleej</a></li>
+                    <li><a href="automotive.html" class="nav-link" data-en="Automotive" data-ar="السيارات">Automotive</a></li>
+                    <li><a href="manufacturing.html" class="nav-link" data-en="Manufacturing" data-ar="التصنيع">Manufacturing</a></li>
+                    <li><a href="trading.html" class="nav-link" data-en="Trading" data-ar="التجارة">Trading</a></li>
+                    <li><a href="contact.html" class="nav-link" data-en="Contact" data-ar="اتصل بنا">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <button class="language-toggle" id="language-toggle" aria-label="Toggle Language">
+                <span class="lang-text">عربي</span>
+            </button>
+            
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-    </nav>
+    </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-background" style="background-image: url('https://media.istockphoto.com/id/1309800198/photo/aerial-skyline-of-downtown-dubai-filled-with-modern-skyscrapers-in-the-uae.jpg?s=612x612&w=0&k=20&c=qxZNym6gIJCOA-b79PrCjBP0HynAvdQzlcl699e77Qg=');"></div>
-        <div class="container">
-            <div class="hero-content">
-                <h2 class="hero-title animate-slide-up" data-en="Leading the GCC with Innovation" data-ar="نقود دول مجلس التعاون الخليجي بالابتكار">
-                    Leading the GCC with Innovation
-                </h2>
-                <p class="hero-subtitle animate-slide-up delay-1" data-en="Empowering industries and communities since 1994 through excellence in chemicals, automotive, manufacturing, and trading." data-ar="تمكين الصناعات والمجتمعات منذ 1994 من خلال التميز في المواد الكيميائية والسيارات والتصنيع والتجارة.">
-                    Empowering industries and communities since 1994 through excellence in chemicals, automotive, manufacturing, and trading.
-                </p>
-                <div class="hero-buttons animate-slide-up delay-2">
-                    <a href="#automotive" class="btn btn-primary" data-en="Our Divisions" data-ar="أقسامنا">Our Divisions</a>
-                    <a href="#contact" class="btn btn-secondary" data-en="Get in Touch" data-ar="اتصل بنا">Get in Touch</a>
-                </div>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <i class="fas fa-chevron-down"></i>
+    <section class="hero home-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title" data-en="Welcome to Nashco Global" data-ar="مرحبا بكم في ناشكو العالمية">Welcome to Nashco Global</h1>
+            <p class="hero-subtitle" data-en="Industrial Excellence Since 1994" data-ar="التميز الصناعي منذ عام 1994">Industrial Excellence Since 1994</p>
+            <p class="hero-description" data-en="Your trusted partner for chemicals, automotive, manufacturing, and trading solutions across the GCC region" data-ar="شريكك الموثوق للحلول الكيميائية والسيارات والتصنيع والتجارة في منطقة دول مجلس التعاون الخليجي">Your trusted partner for chemicals, automotive, manufacturing, and trading solutions across the GCC region</p>
+            <a href="contact.html" class="cta-button" data-en="Get In Touch" data-ar="تواصل معنا">Get In Touch</a>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+    <!-- Company Overview Section -->
+    <section class="section overview-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title" data-en="About Nashco Global" data-ar="عن ناشكو العالمية">About Nashco Global</h2>
-                <div class="title-underline"></div>
+                <h2 class="section-title" data-en="Nashco Global - A Legacy of Excellence" data-ar="ناشكو العالمية - إرث من التميز">Nashco Global - A Legacy of Excellence</h2>
+                <div class="title-divider"></div>
             </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p class="lead" data-en="Since 1994, Nashco Global has been at the forefront of industrial excellence in the GCC region." data-ar="منذ عام 1994، كانت ناشكو العالمية في طليعة التميز الصناعي في منطقة دول مجلس التعاون الخليجي.">
-                        Since 1994, Nashco Global has been at the forefront of industrial excellence in the GCC region.
-                    </p>
-                    <p data-en="We are a diversified leader specializing in chemicals, automotive solutions, manufacturing, and trading. Our commitment to innovation, professionalism, and cultural inclusivity has made us a trusted partner for industries and communities across the region." data-ar="نحن شركة رائدة متنوعة متخصصة في المواد الكيميائية وحلول السيارات والتصنيع والتجارة. إن التزامنا بالابتكار والاحترافية والشمولية الثقافية جعلنا شريكًا موثوقًا للصناعات والمجتمعات في جميع أنحاء المنطقة.">
-                        We are a diversified leader specializing in chemicals, automotive solutions, manufacturing, and trading. Our commitment to innovation, professionalism, and cultural inclusivity has made us a trusted partner for industries and communities across the region.
-                    </p>
-                    <div class="stats">
-                        <div class="stat-item">
-                            <h3 class="stat-number" data-count="30">30+</h3>
+            
+            <div class="overview-content">
+                <div class="overview-text">
+                    <p class="intro-text" data-en="Since 1994, Nashco Global has been at the forefront of industrial innovation and excellence in the GCC region. We are a diversified conglomerate with a proven track record of delivering world-class solutions across multiple industries, including chemicals, automotive, manufacturing, and international trading." data-ar="منذ عام 1994، كانت ناشكو العالمية في طليعة الابتكار والتميز الصناعي في منطقة دول مجلس التعاون الخليجي. نحن تكتل متنوع مع سجل حافل في تقديم حلول عالمية المستوى عبر صناعات متعددة، بما في ذلك المواد الكيميائية والسيارات والتصنيع والتجارة الدولية.">Since 1994, Nashco Global has been at the forefront of industrial innovation and excellence in the GCC region. We are a diversified conglomerate with a proven track record of delivering world-class solutions across multiple industries, including chemicals, automotive, manufacturing, and international trading.</p>
+                    
+                    <p class="intro-text" data-en="Operating under the prestigious Zahy Al Khaleej Group, Nashco Global has established itself as a trusted partner for businesses seeking excellence, reliability, and innovation. Our commitment to quality, customer satisfaction, and sustainable growth has made us a leader in the regional industrial landscape." data-ar="تعمل ناشكو العالمية تحت مظلة مجموعة زاهي الخليج المرموقة، وقد أثبتت نفسها كشريك موثوق للشركات التي تسعى للتميز والموثوقية والابتكار. التزامنا بالجودة ورضا العملاء والنمو المستدام جعلنا رواد في المشهد الصناعي الإقليمي.">Operating under the prestigious Zahy Al Khaleej Group, Nashco Global has established itself as a trusted partner for businesses seeking excellence, reliability, and innovation. Our commitment to quality, customer satisfaction, and sustainable growth has made us a leader in the regional industrial landscape.</p>
+                    
+                    <div class="key-stats">
+                        <div class="stat-card">
+                            <h3 class="stat-number">30+</h3>
                             <p class="stat-label" data-en="Years of Excellence" data-ar="سنوات من التميز">Years of Excellence</p>
                         </div>
-                        <div class="stat-item">
-                            <h3 class="stat-number" data-count="1000">1000+</h3>
-                            <p class="stat-label" data-en="Satisfied Clients" data-ar="العملاء الراضون">Satisfied Clients</p>
+                        <div class="stat-card">
+                            <h3 class="stat-number">6</h3>
+                            <p class="stat-label" data-en="Business Divisions" data-ar="أقسام الأعمال">Business Divisions</p>
                         </div>
-                        <div class="stat-item">
-                            <h3 class="stat-number" data-count="50">50+</h3>
-                            <p class="stat-label" data-en="Countries Served" data-ar="الدول التي نخدمها">Countries Served</p>
+                        <div class="stat-card">
+                            <h3 class="stat-number">GCC</h3>
+                            <p class="stat-label" data-en="Regional Coverage" data-ar="تغطية إقليمية">Regional Coverage</p>
                         </div>
                     </div>
+                </div>
+                
+                <div class="overview-image">
+                    <img src="https://economymiddleeast.com/wp-content/uploads/2025/10/Middle-East-chemicals-1200x675.jpg" alt="Nashco Global Operations" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Zahy al Khaleej Section -->
-    <section id="zahy" class="zahy-section">
+    <!-- Business Divisions Section -->
+    <section class="section divisions-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title" data-en="Zahy al Khaleej" data-ar="زاهي الخليج">Zahy al Khaleej</h2>
-                <div class="title-underline"></div>
-                <p class="section-subtitle" data-en="Our Parent Group - A Legacy of Excellence" data-ar="مجموعتنا الأم - إرث من التميز">
-                    Our Parent Group - A Legacy of Excellence
-                </p>
+                <h2 class="section-title" data-en="Our Business Divisions" data-ar="أقسام أعمالنا">Our Business Divisions</h2>
+                <div class="title-divider"></div>
             </div>
-            <div class="zahy-content">
-                <div class="zahy-logo-container">
-                    <img src="https://raw.githubusercontent.com/sweji96-create/website-nashcoglobal/main/zahy-group-logo.png" alt="Zahy Group Logo" class="zahy-logo" onerror="this.style.display='none';">
-                </div>
-                <div class="zahy-text">
-                    <p class="lead" data-en="Zahy Group stands as a cornerstone of excellence in the GCC region, representing decades of unwavering commitment to quality and innovation." data-ar="تقف مجموعة زاهي كركيزة للتميز في منطقة دول مجلس التعاون الخليجي، وتمثل عقودًا من الالتزام الثابت بالجودة والابتكار.">
-                        Zahy Group stands as a cornerstone of excellence in the GCC region, representing decades of unwavering commitment to quality and innovation.
-                    </p>
-                    <p data-en="As the parent company of Nashco Global, Zahy Group has been instrumental in shaping the industrial landscape across the Middle East. Our heritage of trust, reliability, and forward-thinking strategies has enabled us to build lasting partnerships and drive sustainable growth across multiple sectors." data-ar="بصفتها الشركة الأم لشركة ناشكو العالمية، لعبت مجموعة زاهي دورًا أساسيًا في تشكيل المشهد الصناعي في جميع أنحاء الشرق الأوسط. لقد مكننا إرثنا من الثقة والموثوقية والاستراتيجيات المستقبلية من بناء شراكات دائمة ودفع النمو المستدام عبر قطاعات متعددة.">
-                        As the parent company of Nashco Global, Zahy Group has been instrumental in shaping the industrial landscape across the Middle East. Our heritage of trust, reliability, and forward-thinking strategies has enabled us to build lasting partnerships and drive sustainable growth across multiple sectors.
-                    </p>
-                    <p data-en="Through Nashco Global and our diverse portfolio of businesses, Zahy Group continues to lead with integrity, innovation, and a deep commitment to the communities we serve." data-ar="من خلال ناشكو العالمية ومحفظتنا المتنوعة من الأعمال، تواصل مجموعة زاهي القيادة بنزاهة وابتكار والتزام عميق تجاه المجتمعات التي نخدمها.">
-                        Through Nashco Global and our diverse portfolio of businesses, Zahy Group continues to lead with integrity, innovation, and a deep commitment to the communities we serve.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Automotive Division Section -->
-    <section id="automotive" class="division-section automotive-section">
-        <div class="division-hero" style="background-image: url('https://plus.unsplash.com/premium_photo-1682144908294-73a3bda41961?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');" role="img" aria-label="Automotive Division">
-            <div class="division-hero-overlay">
-                <h2 data-en="Automotive Division" data-ar="قسم السيارات">Automotive Division</h2>
-            </div>
-        </div>
-        <div class="container">
-            <div class="division-content">
-                <div class="division-icon">
-                    <i class="fas fa-car"></i>
-                </div>
-                <h3 data-en="Driving Excellence on Every Road" data-ar="قيادة التميز على كل طريق">Driving Excellence on Every Road</h3>
-                <p class="division-description" data-en="Our Automotive Division delivers comprehensive solutions for the modern automotive industry. From high-quality parts and accessories to cutting-edge maintenance services, we ensure your fleet operates at peak performance." data-ar="يقدم قسم السيارات لدينا حلولاً شاملة لصناعة السيارات الحديثة. من قطع الغيار والإكسسوارات عالية الجودة إلى خدمات الصيانة المتطورة، نضمن أن أسطولك يعمل بأقصى أداء.">
-                    Our Automotive Division delivers comprehensive solutions for the modern automotive industry. From high-quality parts and accessories to cutting-edge maintenance services, we ensure your fleet operates at peak performance.
-                </p>
-                <div class="division-features">
-                    <div class="feature-box">
-                        <i class="fas fa-tools"></i>
-                        <h4 data-en="Premium Parts & Accessories" data-ar="قطع غيار وإكسسوارات متميزة">Premium Parts & Accessories</h4>
-                        <p data-en="Genuine OEM and aftermarket parts for all vehicle types" data-ar="قطع غيار أصلية وما بعد البيع لجميع أنواع المركبات">Genuine OEM and aftermarket parts for all vehicle types</p>
+            
+            <div class="divisions-grid">
+                <div class="division-card">
+                    <div class="division-icon">
+                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                            <path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                        </svg>
                     </div>
-                    <div class="feature-box">
-                        <i class="fas fa-wrench"></i>
-                        <h4 data-en="Expert Maintenance Services" data-ar="خدمات صيانة متخصصة">Expert Maintenance Services</h4>
-                        <p data-en="Professional servicing by certified technicians" data-ar="خدمة احترافية من قبل فنيين معتمدين">Professional servicing by certified technicians</p>
+                    <h3 class="division-title" data-en="Automotive Division" data-ar="قسم السيارات">Automotive Division</h3>
+                    <p class="division-description" data-en="Leading automotive trading and spare parts solutions through Nashco Max Car FZE and Zahy Auto Spare." data-ar="حلول تجارة السيارات وقطع الغيار الرائدة من خلال Nashco Max Car FZE و Zahy Auto Spare.">Leading automotive trading and spare parts solutions through Nashco Max Car FZE and Zahy Auto Spare.</p>
+                    <a href="automotive.html" class="division-link" data-en="Learn More →" data-ar="اعرف المزيد ←">Learn More →</a>
+                </div>
+                
+                <div class="division-card">
+                    <div class="division-icon">
+                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
                     </div>
-                    <div class="feature-box">
-                        <i class="fas fa-shipping-fast"></i>
-                        <h4 data-en="Fleet Management Solutions" data-ar="حلول إدارة الأساطيل">Fleet Management Solutions</h4>
-                        <p data-en="Advanced technologies for optimal fleet efficiency" data-ar="تقنيات متقدمة لتحقيق الكفاءة المثلى للأسطول">Advanced technologies for optimal fleet efficiency</p>
+                    <h3 class="division-title" data-en="Manufacturing Division" data-ar="قسم التصنيع">Manufacturing Division</h3>
+                    <p class="division-description" data-en="State-of-the-art plastic manufacturing facilities in Riyadh delivering precision-engineered products." data-ar="منشآت تصنيع بلاستيك متطورة في الرياض توفر منتجات مصممة بدقة.">State-of-the-art plastic manufacturing facilities in Riyadh delivering precision-engineered products.</p>
+                    <a href="manufacturing.html" class="division-link" data-en="Learn More →" data-ar="اعرف المزيد ←">Learn More →</a>
+                </div>
+                
+                <div class="division-card">
+                    <div class="division-icon">
+                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
                     </div>
+                    <h3 class="division-title" data-en="Trading Division" data-ar="قسم التجارة">Trading Division</h3>
+                    <p class="division-description" data-en="International trading excellence through Nashco General Trading LLC, Ajman and Nashco International Trade Links, India." data-ar="التميز في التجارة الدولية من خلال شركة ناشكو للتجارة العامة ذ.م.م، عجمان وروابط التجارة الدولية ناشكو، الهند.">International trading excellence through Nashco General Trading LLC, Ajman and Nashco International Trade Links, India.</p>
+                    <a href="trading.html" class="division-link" data-en="Learn More →" data-ar="اعرف المزيد ←">Learn More →</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Manufacturing Division Section -->
-    <section id="manufacturing" class="division-section manufacturing-section">
-        <div class="division-hero" style="background-image: url('https://www.automationalley.com/wp-content/uploads/674dfe4f1942a81dba287acb_robotic-arm-modern-industrial-technology-automate-2023-11-27-05-18-54-utc.jpg');" role="img" aria-label="Manufacturing Division">
-            <div class="division-hero-overlay">
-                <h2 data-en="Manufacturing Division" data-ar="قسم التصنيع">Manufacturing Division</h2>
-            </div>
-        </div>
-        <div class="container">
-            <div class="division-content">
-                <div class="division-icon">
-                    <i class="fas fa-industry"></i>
-                </div>
-                <h3 data-en="Precision Engineering, World-Class Quality" data-ar="هندسة دقيقة، جودة عالمية">Precision Engineering, World-Class Quality</h3>
-                <p class="division-description" data-en="Our Manufacturing Division operates state-of-the-art facilities equipped with the latest technology. We specialize in precision-engineered products that meet international quality standards, serving diverse industries with reliable, innovative manufacturing solutions." data-ar="يدير قسم التصنيع لدينا منشآت حديثة مجهزة بأحدث التقنيات. نحن متخصصون في المنتجات المصممة بدقة والتي تلبي معايير الجودة الدولية، ونخدم صناعات متنوعة بحلول تصنيع موثوقة ومبتكرة.">
-                    Our Manufacturing Division operates state-of-the-art facilities equipped with the latest technology. We specialize in precision-engineered products that meet international quality standards, serving diverse industries with reliable, innovative manufacturing solutions.
-                </p>
-                <div class="division-features">
-                    <div class="feature-box">
-                        <i class="fas fa-cogs"></i>
-                        <h4 data-en="Advanced Automation" data-ar="أتمتة متقدمة">Advanced Automation</h4>
-                        <p data-en="Cutting-edge robotic systems for precision manufacturing" data-ar="أنظمة روبوتية متطورة للتصنيع الدقيق">Cutting-edge robotic systems for precision manufacturing</p>
-                    </div>
-                    <div class="feature-box">
-                        <i class="fas fa-certificate"></i>
-                        <h4 data-en="Quality Assurance" data-ar="ضمان الجودة">Quality Assurance</h4>
-                        <p data-en="ISO-certified processes ensuring excellence" data-ar="عمليات معتمدة من ISO تضمن التميز">ISO-certified processes ensuring excellence</p>
-                    </div>
-                    <div class="feature-box">
-                        <i class="fas fa-leaf"></i>
-                        <h4 data-en="Sustainable Practices" data-ar="ممارسات مستدامة">Sustainable Practices</h4>
-                        <p data-en="Eco-friendly manufacturing with reduced carbon footprint" data-ar="تصنيع صديق للبيئة مع تقليل البصمة الكربونية">Eco-friendly manufacturing with reduced carbon footprint</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Trading Division Section -->
-    <section id="trading" class="division-section trading-section">
-        <div class="division-hero" style="background-image: url('https://thumbs.dreamstime.com/b/aerial-view-busy-shipping-port-cargo-containers-sunset-global-trade-fill-bustling-ready-international-419474181.jpg');" role="img" aria-label="Trading Division">
-            <div class="division-hero-overlay">
-                <h2 data-en="Trading Division" data-ar="قسم التجارة">Trading Division</h2>
-            </div>
-        </div>
-        <div class="container">
-            <div class="division-content">
-                <div class="division-icon">
-                    <i class="fas fa-handshake"></i>
-                </div>
-                <h3 data-en="Connecting Markets, Building Partnerships" data-ar="ربط الأسواق، بناء الشراكات">Connecting Markets, Building Partnerships</h3>
-                <p class="division-description" data-en="Our Trading Division facilitates seamless international commerce, connecting businesses across continents. With deep market knowledge and a vast network of trusted partners, we enable efficient trade operations, import-export services, and strategic business collaborations." data-ar="يسهل قسم التجارة لدينا التجارة الدولية السلسة، ويربط الشركات عبر القارات. من خلال معرفة عميقة بالسوق وشبكة واسعة من الشركاء الموثوقين، نمكّن عمليات تجارية فعالة وخدمات الاستيراد والتصدير والتعاون التجاري الاستراتيجي.">
-                    Our Trading Division facilitates seamless international commerce, connecting businesses across continents. With deep market knowledge and a vast network of trusted partners, we enable efficient trade operations, import-export services, and strategic business collaborations.
-                </p>
-                <div class="division-features">
-                    <div class="feature-box">
-                        <i class="fas fa-globe-americas"></i>
-                        <h4 data-en="Global Network" data-ar="شبكة عالمية">Global Network</h4>
-                        <p data-en="Established partnerships across 50+ countries" data-ar="شراكات راسخة في أكثر من 50 دولة">Established partnerships across 50+ countries</p>
-                    </div>
-                    <div class="feature-box">
-                        <i class="fas fa-shield-alt"></i>
-                        <h4 data-en="Secure Transactions" data-ar="معاملات آمنة">Secure Transactions</h4>
-                        <p data-en="Reliable, compliant international trade operations" data-ar="عمليات تجارية دولية موثوقة ومتوافقة">Reliable, compliant international trade operations</p>
-                    </div>
-                    <div class="feature-box">
-                        <i class="fas fa-chart-line"></i>
-                        <h4 data-en="Market Intelligence" data-ar="معلومات السوق">Market Intelligence</h4>
-                        <p data-en="Expert insights for strategic business decisions" data-ar="رؤى خبراء للقرارات التجارية الاستراتيجية">Expert insights for strategic business decisions</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <!-- Why Choose Us Section -->
+    <section class="section why-choose-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title" data-en="Get in Touch" data-ar="اتصل بنا">Get in Touch</h2>
-                <div class="title-underline"></div>
-                <p class="section-subtitle" data-en="Let's discuss how we can empower your business" data-ar="دعنا نناقش كيف يمكننا تمكين عملك">
-                    Let's discuss how we can empower your business
-                </p>
+                <h2 class="section-title light" data-en="Why Choose Nashco Global" data-ar="لماذا تختار ناشكو العالمية">Why Choose Nashco Global</h2>
+                <div class="title-divider light"></div>
             </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4 data-en="Address" data-ar="العنوان">Address</h4>
-                            <p data-en="GCC Region, Middle East" data-ar="منطقة دول مجلس التعاون الخليجي، الشرق الأوسط">GCC Region, Middle East</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4 data-en="Phone" data-ar="الهاتف">Phone</h4>
-                            <p>+966 XX XXX XXXX</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4 data-en="Email" data-ar="البريد الإلكتروني">Email</h4>
-                            <p>info@nashcoglobal.com</p>
-                        </div>
-                    </div>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">✓</div>
+                    <h3 class="feature-title" data-en="30+ Years Experience" data-ar="أكثر من 30 عاماً من الخبرة">30+ Years Experience</h3>
+                    <p class="feature-description" data-en="Established in 1994, we bring decades of industry expertise and proven success." data-ar="تأسست في عام 1994، نقدم عقوداً من الخبرة الصناعية والنجاح المثبت.">Established in 1994, we bring decades of industry expertise and proven success.</p>
                 </div>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" required placeholder=" ">
-                            <label for="name" data-en="Your Name" data-ar="اسمك">Your Name</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" required placeholder=" ">
-                            <label for="email" data-en="Your Email" data-ar="بريدك الإلكتروني">Your Email</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="subject" name="subject" required placeholder=" ">
-                            <label for="subject" data-en="Subject" data-ar="الموضوع">Subject</label>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
-                            <label for="message" data-en="Message" data-ar="الرسالة">Message</label>
-                        </div>
-                        <button type="submit" class="btn btn-primary" data-en="Send Message" data-ar="إرسال رسالة">Send Message</button>
-                    </form>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">✓</div>
+                    <h3 class="feature-title" data-en="Regional Leadership" data-ar="القيادة الإقليمية">Regional Leadership</h3>
+                    <p class="feature-description" data-en="Strong presence across the GCC with deep understanding of regional markets." data-ar="حضور قوي في جميع أنحاء دول مجلس التعاون الخليجي مع فهم عميق للأسواق الإقليمية.">Strong presence across the GCC with deep understanding of regional markets.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">✓</div>
+                    <h3 class="feature-title" data-en="Quality Commitment" data-ar="الالتزام بالجودة">Quality Commitment</h3>
+                    <p class="feature-description" data-en="ISO-certified operations ensuring world-class standards in all our divisions." data-ar="عمليات معتمدة من ISO تضمن معايير عالمية في جميع أقسامنا.">ISO-certified operations ensuring world-class standards in all our divisions.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">✓</div>
+                    <h3 class="feature-title" data-en="Customer Focus" data-ar="التركيز على العملاء">Customer Focus</h3>
+                    <p class="feature-description" data-en="Dedicated support and customized solutions to meet your unique needs." data-ar="دعم مخصص وحلول مخصصة لتلبية احتياجاتك الفريدة.">Dedicated support and customized solutions to meet your unique needs.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">✓</div>
+                    <h3 class="feature-title" data-en="Innovation Driven" data-ar="مدفوع بالابتكار">Innovation Driven</h3>
+                    <p class="feature-description" data-en="Constantly evolving with latest technologies and industry best practices." data-ar="التطور المستمر مع أحدث التقنيات وأفضل ممارسات الصناعة.">Constantly evolving with latest technologies and industry best practices.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">✓</div>
+                    <h3 class="feature-title" data-en="Zahy Group Strength" data-ar="قوة مجموعة زاهي">Zahy Group Strength</h3>
+                    <p class="feature-description" data-en="Backed by the resources and expertise of the prestigious Zahy Al Khaleej Group." data-ar="مدعومة بموارد وخبرة مجموعة زاهي الخليج المرموقة.">Backed by the resources and expertise of the prestigious Zahy Al Khaleej Group.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title" data-en="Ready to Partner with Excellence?" data-ar="هل أنت مستعد للشراكة مع التميز؟">Ready to Partner with Excellence?</h2>
+                <p class="cta-description" data-en="Contact us today to discover how Nashco Global can support your business growth." data-ar="اتصل بنا اليوم لاكتشاف كيف يمكن لناشكو العالمية دعم نمو أعمالك.">Contact us today to discover how Nashco Global can support your business growth.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="cta-button primary" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</a>
+                    <a href="about.html" class="cta-button secondary" data-en="Learn More" data-ar="اعرف المزيد">Learn More</a>
                 </div>
             </div>
         </div>
@@ -336,50 +206,53 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <div class="footer-logo-container">
-                        <img src="https://raw.githubusercontent.com/sweji96-create/website-nashcoglobal/main/zahy-group-logo.png" alt="Zahy Group Logo" class="footer-zahy-logo" onerror="this.style.display='none';">
-                    </div>
-                    <h3>Nashco Global</h3>
-                    <p data-en="A proud member of Zahy Group - Excellence in Chemicals, Automotive, Manufacturing & Trading since 1994" data-ar="عضو فخور في مجموعة زاهي - التميز في المواد الكيميائية والسيارات والتصنيع والتجارة منذ 1994">
-                        A proud member of Zahy Group - Excellence in Chemicals, Automotive, Manufacturing & Trading since 1994
-                    </p>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    </div>
+                    <img src="https://github.com/user-attachments/assets/3bb45701-20dd-43be-8b03-462604f7f894" alt="Nashco Global Logo" class="footer-logo">
+                    <p class="footer-description" data-en="Leading GCC industrial solutions provider since 1994" data-ar="المزود الرائد للحلول الصناعية في دول مجلس التعاون الخليجي منذ عام 1994">Leading GCC industrial solutions provider since 1994</p>
                 </div>
+                
                 <div class="footer-section">
-                    <h4 data-en="Quick Links" data-ar="روابط سريعة">Quick Links</h4>
-                    <ul>
-                        <li><a href="#home" data-en="Home" data-ar="الرئيسية">Home</a></li>
-                        <li><a href="#about" data-en="About Us" data-ar="من نحن">About Us</a></li>
-                        <li><a href="#zahy" data-en="Zahy al Khaleej" data-ar="زاهي الخليج">Zahy al Khaleej</a></li>
-                        <li><a href="#contact" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</a></li>
+                    <h4 class="footer-title" data-en="Quick Links" data-ar="روابط سريعة">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                        <li><a href="about.html" data-en="About Us" data-ar="من نحن">About Us</a></li>
+                        <li><a href="zahyalkhaleej.html" data-en="Zahy Al Khaleej" data-ar="زاهي الخليج">Zahy Al Khaleej</a></li>
+                        <li><a href="automotive.html" data-en="Automotive" data-ar="السيارات">Automotive</a></li>
+                        <li><a href="manufacturing.html" data-en="Manufacturing" data-ar="التصنيع">Manufacturing</a></li>
+                        <li><a href="trading.html" data-en="Trading" data-ar="التجارة">Trading</a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-section">
-                    <h4 data-en="Our Divisions" data-ar="أقسامنا">Our Divisions</h4>
-                    <ul>
-                        <li><a href="#automotive" data-en="Automotive" data-ar="السيارات">Automotive</a></li>
-                        <li><a href="#manufacturing" data-en="Manufacturing" data-ar="التصنيع">Manufacturing</a></li>
-                        <li><a href="#trading" data-en="Trading" data-ar="التجارة">Trading</a></li>
-                    </ul>
+                    <h4 class="footer-title" data-en="Our Group" data-ar="مجموعتنا">Our Group</h4>
+                    <img src="https://github.com/user-attachments/assets/94e66ea6-5709-4fc7-8280-9a6e8c1150b2" alt="Zahy Group Logo" class="footer-zahy-logo">
+                    <p class="footer-group-text" data-en="Zahy Al Khaleej Group" data-ar="مجموعة زاهي الخليج">Zahy Al Khaleej Group</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title" data-en="Contact" data-ar="اتصل">Contact</h4>
+                    <p><strong data-en="Oman:" data-ar="عمان:">Oman:</strong> +968 94535053</p>
+                    <p><strong data-en="UAE:" data-ar="الإمارات:">UAE:</strong> +971 508536542</p>
+                    <p>info@nashcoglobal.com</p>
                 </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>&copy; <span id="currentYear">2024</span> Nashco Global. <span data-en="All rights reserved." data-ar="كل الحقوق محفوظة.">All rights reserved.</span></p>
+                <p data-en="© 2024 Nashco Global. All rights reserved. Part of Zahy Al Khaleej Group." data-ar="© 2024 ناشكو العالمية. جميع الحقوق محفوظة. جزء من مجموعة زاهي الخليج.">© 2024 Nashco Global. All rights reserved. Part of Zahy Al Khaleej Group.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top" aria-label="Back to top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/971508536542?text=Hello,%20I'm%20interested%20in%20Nashco%20Global%20services" 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Contact us on WhatsApp">
+        <svg class="whatsapp-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#fff" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+    </a>
 
-    <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
