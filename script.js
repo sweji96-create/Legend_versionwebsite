@@ -203,11 +203,7 @@ function setupStatCounters() {
 function animateCounter(element) {
     if (element.classList.contains('counted')) return;
     
-    const targetText = element.getAttribute('data-count') || element.textContent;
-    const target = parseInt(targetText.replace(/\+/g, ''));
-    
-    if (isNaN(target)) return;
-    
+    const target = parseInt(element.getAttribute('data-count') || element.textContent);
     const duration = 2000;
     const increment = target / (duration / 16);
     let current = 0;
@@ -316,7 +312,7 @@ function showNotification(message, type) {
         borderRadius: '10px',
         boxShadow: '0 5px 20px rgba(0,0,0,0.2)',
         zIndex: '10000',
-        animation: 'slideIn 0.3s ease',
+        animation: currentLang === 'ar' ? 'slideInRTL 0.3s ease' : 'slideIn 0.3s ease',
         maxWidth: '300px',
         fontSize: '16px',
         fontWeight: '500'
@@ -327,61 +323,12 @@ function showNotification(message, type) {
     
     // Remove after 4 seconds
     setTimeout(() => {
-        notification.style.animation = 'slideOut 0.3s ease';
+        notification.style.animation = currentLang === 'ar' ? 'slideOutRTL 0.3s ease' : 'slideOut 0.3s ease';
         setTimeout(() => {
             notification.remove();
         }, 300);
     }, 4000);
 }
-
-// Add notification animations to CSS dynamically
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes slideIn {
-        from {
-            transform: translateX(400px);
-            opacity: 0;
-        }
-        to {
-            transform: translateX(0);
-            opacity: 1;
-        }
-    }
-    
-    @keyframes slideOut {
-        from {
-            transform: translateX(0);
-            opacity: 1;
-        }
-        to {
-            transform: translateX(400px);
-            opacity: 0;
-        }
-    }
-    
-    [dir="rtl"] @keyframes slideIn {
-        from {
-            transform: translateX(-400px);
-            opacity: 0;
-        }
-        to {
-            transform: translateX(0);
-            opacity: 1;
-        }
-    }
-    
-    [dir="rtl"] @keyframes slideOut {
-        from {
-            transform: translateX(0);
-            opacity: 1;
-        }
-        to {
-            transform: translateX(-400px);
-            opacity: 0;
-        }
-    }
-`;
-document.head.appendChild(style);
 
 // ================================================
 // Back to Top Button
@@ -444,26 +391,6 @@ document.addEventListener('keydown', (e) => {
 // Performance Optimization
 // ================================================
 
-// Debounce function for scroll events
-function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
-}
-
-// Apply debounce to scroll handlers
-const debouncedScrollHandler = debounce(() => {
-    // Any scroll-based operations can go here
-}, 100);
-
-window.addEventListener('scroll', debouncedScrollHandler);
-
 // ================================================
 // Lazy Loading Images (if any are added)
 // ================================================
@@ -492,15 +419,3 @@ if ('IntersectionObserver' in window) {
 console.log('%cNashco Global', 'font-size: 24px; font-weight: bold; color: #1a5490;');
 console.log('%cExcellence Since 1994', 'font-size: 14px; color: #666;');
 console.log('%cWebsite by Nashco Global | Built with modern web technologies', 'font-size: 12px; color: #999;');
-
-// ================================================
-// Export for potential module use
-// ================================================
-
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = {
-        initializeWebsite,
-        toggleLanguage,
-        showNotification
-    };
-}
