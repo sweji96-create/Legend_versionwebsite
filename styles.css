@@ -897,16 +897,24 @@ section {
 /* Responsive Design */
 @media (max-width: 768px) {
     /* Navigation */
+    .nav-wrapper {
+        padding: 10px 0;
+    }
+    
+    .logo-img {
+        max-height: 40px;
+    }
+    
     .menu-toggle {
         display: flex;
     }
     
     .nav-menu {
         position: fixed;
-        top: 70px;
+        top: 78px;
         left: -100%;
         width: 100%;
-        height: calc(100vh - 70px);
+        height: calc(100vh - 78px);
         background: var(--white);
         flex-direction: column;
         padding: 50px 20px;
@@ -930,6 +938,10 @@ section {
     }
     
     /* Hero */
+    .hero {
+        margin-top: 100px;
+    }
+    
     .hero-title {
         font-size: 2rem;
     }
@@ -970,9 +982,34 @@ section {
     .stat-number {
         font-size: 2.5rem;
     }
+    
+    /* Language Toggle - Mobile */
+    .language-toggle {
+        top: 12px;
+        right: 70px;
+    }
+    
+    [dir="rtl"] .language-toggle {
+        right: auto;
+        left: 70px;
+    }
+    
+    .lang-btn {
+        padding: 6px 10px;
+        font-size: 11px;
+        gap: 4px;
+    }
+    
+    .lang-btn i {
+        font-size: 13px;
+    }
 }
 
 @media (max-width: 480px) {
+    .hero {
+        margin-top: 90px;
+    }
+    
     .hero-title {
         font-size: 1.5rem;
     }

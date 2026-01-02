@@ -10,8 +10,8 @@ This directory contains references to the official Nashco Global brand images us
   - Alt Text (AR): "شعار ناشكو جلوبال"
 
 ### Hero Section
-- **Background**: https://www.uaefreezones.com/assets/img/dubai-industrial-city-min.png
-  - Description: Dubai Industrial City - representing GCC industrial excellence
+- **Background**: assets/images/Index-hero-earth.JPG
+  - Description: Earth view - representing global excellence and worldwide reach
 
 ### About Section
 - **Background**: https://cdn.shortpixel.ai/spai/q_lossless+ret_img+to_webp/thecondorgroup.com/wp-content/uploads/2022/03/Untitled-design-33.jpg
