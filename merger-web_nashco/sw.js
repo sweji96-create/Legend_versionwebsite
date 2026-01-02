@@ -1,6 +1,32 @@
 
 const CACHE_NAME = 'nashco-global-v1';
-const urlsToCache = ["index.html", "about.html", "chemical.html", "automotive.html", "manufacturing.html", "trading.html", "contact.html", "offline.html", "manifest.json", "css/styles.css", "js/script.js", "images/logo-nashco.jpg", "images/logo-zahy.jpg", "images/automotive-hero.jpg", "images/chemical-hero.jpg", "images/trading-hero.jpg", "images/manufacturing-hero.jpg", "images/contact-hero.jpg", "images/assembly-line.jpg", "images/ev-car.jpg", "images/headquarters.jpg", "images/icon-192.png", "images/icon-512.png"];
+const urlsToCache = [
+  "index.html",
+  "about.html",
+  "automotive.html",
+  "manufacturing.html",
+  "trading.html",
+  "contact.html",
+  "offline.html",
+  "manifest.json",
+  "Assets/css/styles.css",
+  "Assets/js/script.js",
+  "Assets/vendor/bootstrap/bootstrap.min.css",
+  "Assets/vendor/bootstrap/bootstrap.bundle.min.js",
+  "Assets/vendor/aos/aos.css",
+  "Assets/vendor/aos/aos.js",
+  "Assets/vendor/swiper/swiper-bundle.min.css",
+  "Assets/vendor/swiper/swiper-bundle.min.js",
+  "Assets/vendor/gsap/gsap.min.js",
+  "Assets/vendor/gsap/ScrollTrigger.min.js",
+  "Assets/images/icon-192.png",
+  "Assets/images/Index-hero.jpeg",
+  "Assets/images/trading-hero.jpeg",
+  "Assets/images/manufacturing-hero.jpg",
+  "Assets/images/automotive-industry-hero.jpeg",
+  "Assets/images/contact-hero.jpg",
+  "Assets/images/logo-nashco.png"
+];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(urlsToCache)));
 });
