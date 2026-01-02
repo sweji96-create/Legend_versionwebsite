@@ -1,0 +1,21 @@
+Backup created: web_nashglo-backup-20260102.zip
+
+To clear site caches and unregister service workers (do this in your browser):
+
+Option A — Quick (browser console):
+1. Open the site in your browser.
+2. Open Developer Tools (F12).
+3. Go to the Console and paste the contents of `Assets/js/unregister-sw.js` and press Enter.
+   This will unregister any service workers for the site and delete cache storage.
+
+Option B — DevTools Application tab (Chrome/Edge):
+1. Open DevTools > Application.
+2. Under "Service Workers" click "Unregister" for any listed worker.
+3. Under "Clear storage" select all and click "Clear site data".
+
+Option C — Manual (if the site registers sw.js on load):
+1. Temporarily remove or rename `sw.js` in the repo and redeploy, then refresh in browser.
+
+Notes:
+- I cannot clear your browser cache from this environment; the helper above gives a safe, local method.
+- If reduced performance persists after clearing caches, let me know exact symptoms (slow load, 304/304 responses, heavy JS). I can then advise further.
