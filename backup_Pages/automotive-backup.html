@@ -22,68 +22,37 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper@9/swiper-bundle.min.css">
   <link href="Assets/css/styles.css" rel="stylesheet">
   <link rel="icon" type="image/png" href="Assets/images/icon-192.png">
-  <style>
-    /* Automotive page color adjustments for visibility */
-    .automotive-page {
-      color: #222;
-    }
-
-    .automotive-page .lead {
-      color: #333 !important;
-    }
-
-    .automotive-page .bg-light,
-    .automotive-page .bg-white,
-    .automotive-page .card,
-    .automotive-page .shadow-sm {
-      color: #222 !important;
-    }
-
-    .automotive-page .text-muted {
-      color: #6c757d !important;
-    }
-
-    .automotive-page .hero-section .container,
-    .automotive-page .hero-section h1,
-    .automotive-page .hero-section p {
-      color: #fff !important;
-      text-shadow: none !important;
-    }
-  </style>
 </head>
 
-<body data-bs-theme="light" class="automotive-page">
+<body data-bs-theme="light">
   <!-- Header/Navbar -->
   <header class="main-header">
-    <nav class="navbar container">
+    <nav class="navbar" id="nashco-navbar">
       <a class="navbar-brand" href="index.html">
-        <img src="Assets/images/logo-nashco2.png" alt="Nashco Global"
-          style="height:56px;max-height:72px;object-fit:contain;">
+        <video class="logo-nashco-navbar-giant" style="max-width:320px;width:260px;height:110px;" autoplay loop muted
+          playsinline poster="Assets/images/logo-nashco-removebg-preview.png">
+          <source src="Assets/images/logo-nashco.webm" type="video/webm">
+          <img src="Assets/images/logo-nashco-removebg-preview.png" alt="Nashco Global Logo" />
+        </video>
       </a>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="zahy-alkhaleej.html">Zahy Al Khaleej LLC</a></li>
-        <li><a href="automotive.html" class="active">Automotive</a></li>
-        <li><a href="manufacturing.html">Manufacturing</a></li>
-        <li><a href="trading.html">Trading</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="automotive.html" class="active">Automotive Industry</a></li>
+        <li><a href="manufacturing.html">Industrial Manufacturing</a></li>
+        <li><a href="trading.html">Trading Division</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
       </ul>
     </nav>
   </header>
   <!-- Hero Section -->
   <section class="hero-section d-flex align-items-center justify-content-center position-relative min-vh-50"
+    class="hero-section d-flex align-items-center justify-content-center position-relative min-vh-60"
     style="background-image:url('Assets/images/automotive-maxcar.jpg'); background-size:cover; background-position:center;">
-    <div
-      class="hero-section d-flex align-items-center justify-content-center position-relative min-vh-50 hero-automotive">
-      <div class="hero-overlay hero-overlay-dark position-absolute top-0 start-0 w-100 h-100"></div>
-    </div>
-  </section>
-
-  <!-- Intro text moved below hero -->
-  <section class="py-4">
-    <div class="container text-center">
-      <h1 class="display-5 fw-bold mb-2">Automotive Division</h1>
+    <div class="hero-animated-gradient"></div>
+    <div class="container position-relative z-2 text-center text-white" data-aos="fade-up">
+      <h1 class="display-4 fw-bold mb-3">Automotive Division</h1>
       <p class="lead mb-0">Driving quality and innovation across the GCC</p>
     </div>
   </section>
@@ -134,48 +103,6 @@
     </div>
   </section>
   <!-- Testimonials -->
-  <!-- Integrated Automotive Solutions -->
-  <section class="py-5">
-    <div class="container">
-      <div class="row mb-4" data-aos="fade-up">
-        <div class="col text-center">
-          <h2 class="fw-bold mb-3">Integrated Automotive Solutions</h2>
-          <p class="text-muted mb-0">Through a strategic network of companies, Nashco Global offers a comprehensive
-            suite of automotive services:</p>
-        </div>
-      </div>
-
-      <div class="row g-4 mt-4" data-aos="fade-up">
-        <div class="col-md-6">
-          <div class="p-4 bg-white rounded shadow-sm h-100">
-            <h5 class="fw-semibold">Zahy Al Khaleej LLC – Sohar, Oman</h5>
-            <p class="text-muted">A trusted name in industrial and automotive trading, Zahy Al Khaleej LLC specializes
-              in:</p>
-            <ul>
-              <li><strong>Refrigerants &amp; Chemicals:</strong> HFCs, HCFCs, HFOs, and Natural Refrigerants for
-                automotive and industrial applications.</li>
-              <li><strong>Automotive Spare Parts:</strong> OEM and aftermarket components for 4-wheelers, ensuring
-                performance and compatibility.</li>
-              <li><strong>Vehicle Trading:</strong> Import and export of new and used vehicles, with a focus on quality
-                and compliance.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="col-md-6">
-          <div class="p-4 bg-white rounded shadow-sm h-100">
-            <h5 class="fw-semibold">Free Test Garage LLC – Ajman, UAE</h5>
-            <p class="text-muted">A service-oriented facility offering diagnostics, maintenance, and technical support
-              for a wide range of vehicles. Known for its precision and customer-centric approach.</p>
-            <hr>
-            <h5 class="fw-semibold mt-3">Zahy Auto Spare Parts Trading LLC – Ajman, UAE</h5>
-            <p class="text-muted mb-0">A dynamic trading hub for automotive parts, catering to both retail and wholesale
-              clients. Ensures availability of genuine and high-performance components for various vehicle brands.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
   <section class="py-5">
     <div class="container">
       <div class="row mb-4" data-aos="fade-up">
@@ -207,7 +134,6 @@
   <!-- Footer (shared) -->
   <footer class="bg-dark text-white py-4">
     <div class="container text-center">
-      <!-- licensed-by image removed -->
       <p>&copy; 2025 Nashco Global. All Rights Reserved.</p>
     </div>
   </footer>

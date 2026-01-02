@@ -1,0 +1,787 @@
+/* Zahy logo image in header - revert to previous size */
+.zahy-logo-img-header {
+    max-width: 220px;
+    width: 180px;
+    height: 80px;
+    object-fit: contain;
+}
+
+/* Industry Focus section items */
+.industry-focus-item {
+    font-size: 1rem;
+    color: #444;
+    background: none;
+    padding: 0.2em 0;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+/* Industry Focus division headings styling */
+.industry-focus-title {
+    font-family: 'Montserrat', 'Copperplate Gothic Light', Arial, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #0e4761;
+    background: #f5f7fa;
+    border-radius: 8px;
+    padding: 0.5em 1em;
+    margin-bottom: 0.5em;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(14, 71, 97, 0.06);
+    letter-spacing: 0.5px;
+}
+
+/* Footer layout: single deep blue row, no white box */
+.footer-content-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: none;
+    padding: 0 2vw;
+}
+
+.footer-col {
+    flex: 1 1 0;
+    min-width: 220px;
+    padding: 0.5rem 0.5vw;
+    background: none;
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+/* Unified footer: match navbar height */
+.footer-section {
+    min-height: 72px;
+    height: 72px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #0e4761;
+}
+
+.footer-unified {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    color: #fff;
+    font-size: 0.85rem;
+}
+
+.footer-contact-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.5em;
+}
+
+.footer-copyright {
+    text-align: center;
+    color: #fff;
+    font-size: 0.75rem;
+    margin-top: 0.5em;
+}
+
+/* 3D continuous rotation for Nashco logo */
+.logo-nashco-3d {
+    width: 180px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    animation: logo3DRotate 3.5s linear infinite;
+    transform-style: preserve-3d;
+    will-change: transform;
+}
+
+@keyframes logo3DRotate {
+    0% {
+        transform: perspective(600px) rotateY(0deg) rotateX(0deg);
+    }
+
+    100% {
+        transform: perspective(600px) rotateY(360deg) rotateX(10deg);
+    }
+}
+
+/* Nashco animated logo styles */
+.logo-nashco {
+    width: 180px;
+    /* Adjust as needed */
+    height: auto;
+    opacity: 0;
+    animation: logoFadeIn 1.2s ease-in-out forwards;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    display: block;
+    margin: 0 auto;
+}
+
+.logo-nashco:hover {
+    transform: rotate(360deg) scale(1.08);
+}
+
+@keyframes logoFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.92);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Logo Video in Navbar */
+.logo-video-navbar,
+.logo,
+.logo-nashco-navbar-giant {
+    height: 72px !important;
+    max-height: 80px !important;
+    max-width: 220px !important;
+    width: auto !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    margin-bottom: 0 !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+    border: none !important;
+    outline: none !important;
+    object-fit: contain !important;
+    padding: 0 !important;
+}
+
+/* Hero Section Backgrounds */
+.hero-automotive {
+    background: url('Assets/images/automotive-hero.webp') center/cover no-repeat;
+}
+
+.hero-manufacturing {
+    background: url('Assets/images/manufacturing-hero.webp') center/cover no-repeat;
+}
+
+.hero-trading {
+    background: url('Assets/images/trading-hero.webp') center/cover no-repeat;
+}
+
+/* Hero Overlay */
+.hero-overlay-dark {
+    background: rgba(0, 0, 0, 0.45) !important;
+}
+
+/* Licensed By Image in Footer */
+.licensed-by-img {
+    max-width: 420px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+    margin-bottom: 0.5rem;
+}
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Open+Sans:wght@400;600&family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Copperplate:wght@300&display=swap');
+
+:root {
+    --bg-900: #0B0E17;
+    /* primary deep */
+    --bg-800: #0F1626;
+    /* secondary deep */
+    --surface-500: #4A5568;
+    /* mid-tone cards */
+    --accent: #00A3AD;
+    /* teal-cyan */
+    --white: #FFFFFF;
+    --muted: #B7C9CC;
+    /* subtle mid text */
+    --shadow-accent: rgba(0, 163, 173, 0.08);
+    --card-border: rgba(74, 85, 104, 0.12);
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background: linear-gradient(180deg, var(--bg-900), var(--bg-800));
+    color: var(--white);
+    font-family: 'Montserrat', 'Open Sans', 'Poppins', Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Header/Navbar */
+.main-header {
+    /* background is now controlled by JS for translucency effect */
+    padding: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(6px);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    min-height: 72px;
+}
+
+.navbar-brand .logo {
+    max-height: 56px;
+    width: auto;
+    vertical-align: middle;
+    border-radius: 8px;
+    background: transparent !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: #F5F5F5;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    transition: color 0.2s;
+    position: relative;
+    padding: 0.25rem 0;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+.nav-links a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: width 0.2s;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero,
+.hero-section {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0 60px;
+    text-align: center;
+    position: relative;
+    color: var(--white);
+}
+
+.hero.parallax {
+    background-size: cover;
+    background-position: center;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(11, 14, 23, 0.55), rgba(15, 22, 38, 0.55));
+    pointer-events: none;
+}
+
+.hero h1,
+.hero-title {
+    font-size: clamp(1.6rem, 6vw, 3.6rem);
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+.hero p,
+.hero-subtitle {
+    font-size: 1.05rem;
+    color: var(--muted);
+}
+
+.cta-btn {
+    background: linear-gradient(90deg, var(--accent), #00D1D6);
+    color: var(--white);
+    border: none;
+    border-radius: 10px;
+    padding: 0.75rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 8px 30px var(--shadow-accent);
+    transition: transform 0.12s, box-shadow 0.2s, opacity 0.2s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.cta-btn:hover,
+.cta-btn:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 40px var(--shadow-accent);
+    opacity: 0.98;
+}
+
+/* Visual Tiles */
+.visual-tiles {
+    background: transparent;
+    padding: 40px 0 20px 0;
+}
+
+.tiles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.tile {
+    position: relative;
+    min-height: 220px;
+    border-radius: 16px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.36);
+    transition: transform 0.22s, box-shadow 0.22s;
+}
+
+.tile:hover {
+    transform: scale(1.03);
+    box-shadow: 0 18px 48px var(--shadow-accent);
+}
+
+.tile-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(11, 14, 23, 0.18) 40%, rgba(0, 163, 173, 0.04) 100%);
+    display: flex;
+    align-items: flex-end;
+    padding: 1.5rem;
+}
+
+.tile-overlay h3 {
+    color: var(--white);
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+/* Service Cards */
+.services {
+    background: transparent;
+    padding: 60px 0 40px 0;
+}
+
+.service-card {
+    background: linear-gradient(135deg, rgba(15, 22, 38, 0.6), rgba(11, 14, 23, 0.6));
+    border-radius: 14px;
+    border: 1px solid var(--card-border);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.36);
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    margin-bottom: 2rem;
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: box-shadow 0.22s, transform 0.22s;
+}
+
+.service-card:hover {
+    box-shadow: 0 18px 48px var(--shadow-accent);
+    transform: translateY(-6px) scale(1.02);
+}
+
+.service-card h4 {
+    color: #F5F5F5;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.7rem;
+    letter-spacing: 0.5px;
+}
+
+.service-card p {
+    color: #B0B0B0;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 1.2rem;
+}
+
+.learn-more {
+    color: var(--accent);
+    text-decoration: underline;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.2s;
+}
+
+.learn-more:hover,
+.learn-more:focus {
+    color: #8FF5F7;
+    text-decoration: underline;
+}
+
+/* Footer */
+
+.main-footer {
+    background: linear-gradient(180deg, var(--bg-800), rgba(11, 14, 23, 0.86));
+    color: var(--muted);
+    font-size: 0.95rem;
+    padding: 32px 0 18px 0;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+/* Footer: match navbar font, logo size, and vertical alignment */
+.main-footer.zahy-footer {
+    min-height: 110px;
+    height: 110px;
+    padding-top: 0;
+    padding-bottom: 0;
+    display: flex;
+    align-items: flex-end;
+    background: #0e4761 !important;
+}
+
+.footer-content-row {
+    align-items: flex-end;
+    min-height: 110px;
+    height: 110px;
+    padding-top: 0;
+    padding-bottom: 0;
+    gap: 0;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 0.5vw;
+    min-width: 180px;
+}
+
+.footer-contact-info {
+    font-nizeze0.82r0m82rem;
+    in-ehheeghi: 1.1;
+    1olor: #fff !importa1;
+    color: #fff !im0.08m: 0.08rem;
+
+    font-weight: 400;
+
+    .footer-contact-info:last-child {
+        margin-bottom: 0;
+    }
+
+    :lt-child gbottom: 0 .footer-contact-icon {
+        width: 18px;
+        height: 18px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 4px;
+    }
+
+    4 .powered-by-nashco {
+        font-size: 0.82rem;
+        color: #fff;
+        margin-bottom: 0.1rem;
+        font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .footer-copyright p {
+        font-size: 0.82rem;
+        color: #fff;
+        height: 80px;
+        object-fit: contain;
+        margin: 0 auto 0.08rem auto;
+        display: block;
+    }
+
+    /* Stock Gallery (if used) */
+    .stock-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1.2rem8 margin-8op: 1.5rem;
+    }
+
+    80px;
+    objec-fit: cntain: 0 au auto display: block;
+
+    .stock-gallery img {
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .stock-gallery img:hover {
+        transform: scale(1.04);
+        box-shadow: 0 14px 40px var(--shadow-accent);
+    }
+
+    /* Typography */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        color: var(--white);
+        margin-top: 0;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+    }
+
+    p,
+    li,
+    a,
+    span,
+    label {
+        font-family: 'Open Sans', 'Montserrat', Arial, sans-serif;
+        font-size: 1rem;
+        color: var(--muted);
+        font-weight: 400;
+    }
+
+    /* Copperplate Light Font Classes */
+    .copperplate-light {
+        font-family: 'Copperplate', 'Copperplate Gothic Light', 'Arial', sans-serif;
+        font-weight: 300;
+        text-transform: capitalize;
+        font-size: 4rem;
+    }
+
+    .section-heading.copperplate-small,
+    .copperplate-small {
+        font-size: 2.4rem;
+    }
+
+    .copperplate-light span.first-letter {
+        font-size: 1.3em;
+        vertical-align: baseline;
+        font-weight: 400;
+    }
+
+    .section-heading {
+        font-family: 'Montserrat', 'Open Sans', Arial, sans-serif;
+        font-size: 4rem;
+        font-weight: 700;
+        color: #0e4761;
+        letter-spacing: 0.5px;
+        margin-top: 1.5rem;
+        margin-bottom: 1.2rem;
+        line-height: 1.2;
+    }
+
+    .section-heading.text-center {
+        text-align: center;
+    }
+
+    .rfq-form-reduced .form-control {
+        width: 50%;
+        min-width: 180px;
+        font-family: 'Copperplate', 'Copperplate Gothic Light', 'Arial', sans-serif;
+        font-size: 1.2rem;
+    }
+
+    @media (max-width: 600px) {
+        .rfq-form-reduced .form-control {
+            width: 90%;
+            min-width: 120px;
+        }
+    }
+
+    /* Responsive */
+    @media (max-width: 1200px) {
+        .tiles-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .navbar {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 0 1rem;
+        }
+
+        .nav-links {
+            gap: 1rem;
+        }
+
+        .tiles-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .hero-title {
+            font-size: 2.1rem;
+        }
+
+        .hero-section {
+            padding: 40px 0 20px 0;
+        }
+
+        .services {
+            padding: 40px 0 20px 0;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .navbar {
+            padding: 0 0.5rem;
+        }
+
+        .hero-title {
+            font-size: 1.4rem;
+        }
+
+        .main-footer {
+            font-size: 0.85rem;
+        }
+    }
+
+    /* Accessibility */
+    a:focus,
+    button:focus,
+    .cta-btn:focus {
+        outline: 2px solid var(--accent);
+        outline-offset: 2px;
+    }
+
+    /* Nashco logo in footer: 4x larger than previous (now 40px) */
+    .zahy-logo-img-footer {
+        /* Acc ssmb:li4yx*/
+        a: idcus,
+            buht0;
+        : focu,
+            .ct-bt:focu heigoutlaueo;
+        solidvar(--accent) margnutli-eoofftmt: 2px;
+    }
+
+    /*Nashcologoinoer 4xlargrthpevous (now 40px) */
+    .zhy-ogo-imgfoot {
+        max-width: 40px;
+        with4px
+        /* height:Fauto;
+ootemargin-b:ttcmmp0.08remM
+}
+ontserrat and Open Sans for contact info */
+        /*eFooter:rcompare-Moncsorrat cndoOpmn Sans oor contacn info */
+    }
+
+    o.mntserrat ter-contafamtlynf'Montsereat',
+    'Segon UI',
+    rial,
+    san-erf;
+}
+
+.oter-onac-io.penfn-famiy'OenSan',
+Ail,
+sasrif
+
+/* Copperplate Gothic Light, font size 15px, all caps for headings */
+.copperplate-heading {
+    font-family: 'Copperplate', 'Copperplate Gothic Light', 'Arial', sans-serif !important;
+    font-size: 10px !important;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #0e4761;
+    margin-top: 1.5rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.2;
+}
+
+/* Ideal heading style for all main content headings */
+.ideal-heading {
+    font-family: 'Copperplate', 'Copperplate Gothic Light', 'Montserrat', Arial, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #0e4761;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 1.5rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.2;
+}
+
+/* Smaller powered-by Nashco Global text in footer */
+.powered-by-nashco-small {
+    font-size: 0.72rem;
+    color: #fff;
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 0.1em;
+}

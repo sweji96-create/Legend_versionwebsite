@@ -1,0 +1,42 @@
+List of manufacturing-related image paths found in the workspace (created 2026-01-02):
+
+Assets/images/Manufacturing-machines1.jpg
+Assets/images/Manufacturing-machines2.jpg
+Assets/images/Manufacturing-machines3.jpg
+Assets/images/Manufacturing-machines4.jpg
+Assets/images/Manufacturing-machines5.jpg
+Assets/images/Manufacturing-machines6.jpg
+Assets/images/Manufacturing-machines7.jpg
+Assets/images/Manufacturing-machines8.jpg
+Assets/images/Manufacturing-machines9.jpg
+Assets/images/Manufacturing-machines10.jpg
+Assets/images/Manufacturing-machines11.jpg
+Assets/images/Manufacturing-machines12.jpg
+
+Assets/images/Manufacturing-products-Biohazard1.jpg
+Assets/images/Manufacturing-products-Biohazard2.jpg
+Assets/images/Manufacturing-products-Biohazard3.jpg
+Assets/images/Manufacturing-products-Biohazard4.jpg
+Assets/images/Manufacturing-products-Biohazard6.jpg
+Assets/images/Manufacturing-products-Biohazard7.jpg
+Assets/images/Manufacturing-products-Biohazard8.jpg
+Assets/images/Manufacturing-products-Biohazard9.jpg
+Assets/images/Manufacturing-products-Biohazard10.jpg
+Assets/images/Manufacturing-products-Biohazard11.jpg
+
+Assets/images/Manufacturing-products-container1.JPG
+Assets/images/Manufacturing-products-container2.JPG
+Assets/images/Manufacturing-products-container3.JPG
+Assets/images/Manufacturing-products-container4.JPG
+Assets/images/Manufacturing-products-container5.JPG
+Assets/images/Manufacturing-products-container6.JPG
+Assets/images/Manufacturing-products-container7.JPG
+Assets/images/Manufacturing-products-container8.JPG
+Assets/images/Manufacturing-products-container9.JPG
+Assets/images/Manufacturing-products-container10.JPG
+
+Assets/Manufacturing Images/* (additional image files listed in workspace under this folder)
+
+Notes:
+- The backup contains full copies of the three HTML files: manufacturing.html, backup_Pages/manufacturing.html, and backup_Pages/Manufacturing_backup.html.
+- Image files are large/binary; this manifest lists them so you can copy or archive them as needed.

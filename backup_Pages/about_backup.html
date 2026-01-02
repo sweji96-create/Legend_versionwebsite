@@ -125,46 +125,19 @@
       vertical-align: middle;
     }
   </style>
-  /* About page: typography and layout tweaks */
-  .about-page h2.fw-bold {
-  font-size: 2.4rem;
-  line-height: 1.1;
-  letter-spacing: -0.5px;
-  }
-
-  .about-page .about-lead {
-  max-width: 1100px;
-  margin: 0 auto;
-  color: rgba(241,243,247,0.85);
-  font-size: 1.125rem;
-  }
-
-  .about-page .list-unstyled {
-  text-align: center;
-  padding-left: 0;
-  }
-
-  .about-page .list-unstyled li {
-  margin-bottom: .5rem;
-  }
-
-  .about-page .glass-card {
-  background: rgba(255,255,255,0.02);
-  padding: 1.25rem;
-  border-radius: .5rem;
-  }
-
-  /* keep section headings default-aligned; specific blocks may align left */
-
-  </style>
-
 </head>
 
-<body data-bs-theme="dark" class="about-page">
+<body data-bs-theme="dark">
   <!-- Navbar (shared) -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Nashco Global</a>
+      <a class="navbar-brand" href="index.html">
+        <video class="logo-nashco-navbar-giant" autoplay loop muted playsinline poster="Assets/images/logo-nashco.png"
+          style="max-width:320px;width:260px;height:110px;">
+          <source src="Assets/images/logo-nashco.webm" type="video/webm">
+          <img src="Assets/images/logo-nashco.png" alt="Nashco Global Logo" />
+        </video>
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -203,28 +176,24 @@
             precision, reliability, and innovation in every partnership.</p>
         </div>
       </div>
-      <div class="row mb-4" data-aos="fade-up">
-        <div class="col-12">
-          <div class="row g-4">
-            <div class="col-md-6">
-              <div class="p-4 glass-card h-100">
-                <h3 class="fw-bold mb-3 text-start">Our Achievements &amp; Goals</h3>
-                <ul class="list-unstyled fs-6 mb-0 text-start">
-                  <li>30+ years of operational excellence</li>
-                  <li>Trusted by leading brands and governments</li>
-                  <li>Commitment to sustainability and innovation</li>
-                  <li>Comprehensive solutions for every sector</li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="p-4 glass-card h-100">
-                <h3 class="fw-bold mb-3 text-start">CSR &amp; Sustainability</h3>
-                <p class="mb-0 text-start">Committed to net-zero by 2030, emission reductions, and community programs in
-                  GCC regions.</p>
-              </div>
-            </div>
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6">
+          <ul class="fs-6">
+            <li>30+ years of operational excellence</li>
+            <li>Trusted by leading brands and governments</li>
+            <li>Commitment to sustainability and innovation</li>
+            <li>Comprehensive solutions for every sector</li>
+          </ul>
+          <div class="glass-card mt-4">
+            <h3>CSR &amp; Sustainability</h3>
+            <p>Committed to net-zero by 2030, emission reductions, and community programs in GCC regions.</p>
           </div>
+        </div>
+        <div class="col-lg-6">
+          <img src="Assets/images/manufacturing-factory-inside-page.jpg" alt="Foundation"
+            class="img-fluid rounded shadow-sm mb-3" loading="lazy">
+          <img src="Assets/images/automotive-industry-hero.jpeg" alt="Expansion"
+            class="img-fluid rounded shadow-sm mb-3" loading="lazy">
         </div>
       </div>
     </div>
@@ -315,36 +284,46 @@
         </div>
       </div>
       <div class="row g-4 justify-content-center">
-        <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
           <div class="card border-0 shadow-sm text-center">
-            <img src="Assets/images/leader1.webp" alt="Chairman - K M Nazar"
-              class="card-img-top rounded-circle mx-auto mt-3" style="width:100px;height:100px;object-fit:cover;"
-              loading="lazy">
+            <img src="Assets/images/leader1.webp" alt="CEO - John Doe" class="card-img-top rounded-circle mx-auto mt-3"
+              style="width:100px;height:100px;object-fit:cover;" loading="lazy">
             <div class="card-body">
-              <h6 class="fw-bold mb-1">Chairman</h6>
-              <p class="text-muted mb-0">K M Nazar</p>
+              <h6 class="fw-bold mb-1">John Doe</h6>
+              <p class="text-muted mb-0">Chief Executive Officer</p>
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
           <div class="card border-0 shadow-sm text-center">
-            <img src="Assets/images/leader2.webp" alt="Director - Shaheeda Nazar"
+            <img src="Assets/images/leader2.webp" alt="COO - Jane Smith"
               class="card-img-top rounded-circle mx-auto mt-3" style="width:100px;height:100px;object-fit:cover;"
               loading="lazy">
             <div class="card-body">
-              <h6 class="fw-bold mb-1">Director</h6>
-              <p class="text-muted mb-0">Shaheeda Nazar</p>
+              <h6 class="fw-bold mb-1">Jane Smith</h6>
+              <p class="text-muted mb-0">Chief Operating Officer</p>
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
           <div class="card border-0 shadow-sm text-center">
-            <img src="Assets/images/leader3.webp" alt="Chief of Operations - Swetha Suresh"
+            <img src="Assets/images/leader3.webp" alt="CFO - Ahmed Al-Farsi"
               class="card-img-top rounded-circle mx-auto mt-3" style="width:100px;height:100px;object-fit:cover;"
               loading="lazy">
             <div class="card-body">
-              <h6 class="fw-bold mb-1">Chief of Operations</h6>
-              <p class="text-muted mb-0">Swetha Suresh</p>
+              <h6 class="fw-bold mb-1">Ahmed Al-Farsi</h6>
+              <p class="text-muted mb-0">Chief Financial Officer</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="400">
+          <div class="card border-0 shadow-sm text-center">
+            <img src="Assets/images/leader4.webp" alt="CTO - Fatima Al-Zahra"
+              class="card-img-top rounded-circle mx-auto mt-3" style="width:100px;height:100px;object-fit:cover;"
+              loading="lazy">
+            <div class="card-body">
+              <h6 class="fw-bold mb-1">Fatima Al-Zahra</h6>
+              <p class="text-muted mb-0">Chief Technology Officer</p>
             </div>
           </div>
         </div>

@@ -1,46 +1,470 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trading Division - Nashco General Trading & International Trade Links</title>
-    <meta name="description" content="Nashco Global Trading - Nashco General Trading LLC in Ajman and Nashco International Trade Links in India with world-class quality standards.">
-    <link rel="icon" type="image/svg+xml" href="assets/images/favicon-placeholder.svg">
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trading Division | Nashco Global</title>
+  <meta name="description" content="Trading Division: Global trade, product categories, and GCC reach.">
+  <meta property="og:title" content="Trading Division | Nashco Global">
+  <meta property="og:description" content="Trading Division: Global trade, product categories, and GCC reach.">
+  <meta property="og:image" content="Assets/images/trading-hero.webp">
+  <meta property="og:url" content="https://nashcoglobal.com/trading.html">
+  <meta name="theme-color" content="#0B0E17">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="Assets/images/icon-192.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@9/swiper-bundle.min.css">
+  <link href="Assets/css/styles.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="Assets/images/icon-192.png">
+  <style>
+    /* Trading page: ensure text is readable on light/dark backgrounds without changing layout */
+    .trading-page .bg-light h1,
+    .trading-page .bg-light h2,
+    .trading-page .bg-light h3,
+    .trading-page .bg-light h4,
+    .trading-page .bg-light h5,
+    .trading-page .bg-light p,
+    .trading-page .bg-light .lead,
+    .trading-page .gallery-section h2,
+    .trading-page .gallery-section p {
+      color: #222 !important;
+    }
+
+    .trading-page .bg-light {
+      color: #222 !important;
+    }
+
+    /* Ensure white cards/text inside the white sections are readable */
+    .trading-page .bg-white h1,
+    .trading-page .bg-white h2,
+    .trading-page .bg-white h3,
+    .trading-page .bg-white h4,
+    .trading-page .bg-white h5,
+    .trading-page .bg-white h6,
+    .trading-page .bg-white p,
+    .trading-page .bg-white .lead,
+    .trading-page .bg-white .fw-bold,
+    .trading-page .bg-white .text-muted {
+      color: #222 !important;
+    }
+
+    /* For dark hero/overlays ensure text remains visible */
+    .trading-page .hero-section .text-white,
+    .trading-page .hero-section .hero-overlay-dark+.text-white {
+      color: #fff !important;
+    }
+
+    /* Small-display variant for reduced thumbnail galleries */
+    .trading-page .myGallerySwiper.small-display .swiper-slide {
+      width: auto !important;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .trading-page .myGallerySwiper.small-display .swiper-wrapper {
+      justify-content: flex-start !important;
+      align-items: center;
+    }
+
+    .trading-page .myGallerySwiper.small-display .swiper-slide img {
+      max-height: 140px;
+      width: auto;
+      object-fit: contain;
+    }
+  </style>
 </head>
-<body>
-    <div class="language-toggle"><button id="langBtn" class="lang-btn" aria-label="Toggle Language"><i class="fas fa-language"></i><span id="langText">العربية</span></button></div>
-    <nav class="navbar" role="navigation"><div class="container"><div class="nav-wrapper"><a href="index.html" class="logo"><img src="assets/images/logo-nashco.png" alt="Nashco Global Logo" class="logo-img" onerror="this.onerror=null; this.src='assets/images/favicon-placeholder.svg';"><div class="logo-text"><h1 class="logo-fallback">Nashco Global</h1><p class="tagline" data-en="Excellence Since 1994" data-ar="التميز منذ 1994">Excellence Since 1994</p></div></a><button class="menu-toggle" id="menuToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button><ul class="nav-menu" id="navMenu"><li><a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a></li><li><a href="about.html" data-en="About" data-ar="من نحن">About</a></li><li><a href="zahyalkhaleej.html" data-en="Zahy Al Khaleej" data-ar="زاهي الخليج">Zahy Al Khaleej</a></li><li><a href="automotive.html" data-en="Automotive" data-ar="السيارات">Automotive</a></li><li><a href="manufacturing.html" data-en="Manufacturing" data-ar="التصنيع">Manufacturing</a></li><li><a href="trading.html" class="active" data-en="Trading" data-ar="التجارة">Trading</a></li><li><a href="contact.html" data-en="Contact" data-ar="اتصل بنا">Contact</a></li></ul></div></div></nav>
-    <section class="page-header" style="background: url('assets/images/trading-hero.jpeg'); background-size: cover; background-position: center; padding: 140px 0 100px; color: white; text-align: center; position: relative;"><div class="container" style="position: relative; z-index: 2;"><h1 style="font-size: 3.5rem; margin-bottom: 25px; font-weight: 700; text-shadow: 0 4px 20px rgba(0,0,0,0.3);" data-en="Global Trading Network" data-ar="شبكة التجارة العالمية">Global Trading Network</h1><p style="font-size: 1.5rem; opacity: 0.95; max-width: 800px; margin: 0 auto; line-height: 1.6;" data-en="Connecting Markets Globally - Ajman & India" data-ar="ربط الأسواق عالميًا - عجمان والهند">Connecting Markets Globally - Ajman & India</p></div></section>
-    <section class="about" style="padding: 100px 0;"><div class="container"><div class="section-header"><h2 class="section-title" data-en="Global Trading Excellence" data-ar="التميز التجاري العالمي">Global Trading Excellence</h2><div class="title-underline"></div></div><div class="about-text"><p style="font-size: 1.15rem; line-height: 1.9; margin-bottom: 25px; text-align: center; max-width: 900px; margin-left: auto; margin-right: auto;" data-en="Nashco Global's Trading Division operates through two strategic entities - Nashco General Trading LLC in Ajman, UAE, and Nashco International Trade Links in India. Together, we facilitate seamless international commerce, connecting markets and businesses across continents with reliability and professionalism." data-ar="يعمل قسم التجارة في ناشكو العالمية من خلال كيانين استراتيجيين - Nashco General Trading LLC في عجمان، الإمارات العربية المتحدة، و Nashco International Trade Links في الهند. معًا، نسهل التجارة الدولية السلسة، ونربط الأسواق والشركات عبر القارات بموثوقية واحترافية.">Nashco Global's Trading Division operates through two strategic entities - Nashco General Trading LLC in Ajman, UAE, and Nashco International Trade Links in India. Together, we facilitate seamless international commerce, connecting markets and businesses across continents with reliability and professionalism.</p></div></div></section>
-    <section class="services" style="padding: 100px 0; background: #f8f9fa;"><div class="container"><div class="section-header"><h2 class="section-title" data-en="Our Trading Divisions" data-ar="أقسامنا التجارية">Our Trading Divisions</h2><div class="title-underline"></div></div><div class="services-grid"><div class="service-card"><div class="service-icon" style="font-size: 3rem; color: #1a5490; margin-bottom: 20px;"><i class="fas fa-building"></i></div><h3 data-en="Nashco General Trading LLC" data-ar="ناشكو للتجارة العامة">Nashco General Trading LLC</h3><p data-en="Based in Ajman, UAE, our trading company serves as a vital hub for GCC markets, specializing in import-export operations, distribution, and supply chain management for diverse product categories." data-ar="يقع مقرنا في عجمان، الإمارات العربية المتحدة، وتعمل شركتنا التجارية كمركز حيوي لأسواق دول مجلس التعاون الخليجي، متخصصة في عمليات الاستيراد والتصدير والتوزيع وإدارة سلسلة التوريد لفئات المنتجات المتنوعة.">Based in Ajman, UAE, our trading company serves as a vital hub for GCC markets, specializing in import-export operations, distribution, and supply chain management for diverse product categories.</p></div><div class="service-card"><div class="service-icon" style="font-size: 3rem; color: #1a5490; margin-bottom: 20px;"><i class="fas fa-globe-asia"></i></div><h3 data-en="Nashco International Trade Links" data-ar="روابط التجارة الدولية">Nashco International Trade Links</h3><p data-en="Our India-based operations provide strategic access to South Asian markets and manufacturing capabilities, enabling cost-effective sourcing and efficient distribution across international markets." data-ar="توفر عملياتنا في الهند وصولاً استراتيجيًا إلى أسواق جنوب آسيا وقدرات التصنيع، مما يتيح الشراء الفعال من حيث التكلفة والتوزيع الفعال عبر الأسواق الدولية.">Our India-based operations provide strategic access to South Asian markets and manufacturing capabilities, enabling cost-effective sourcing and efficient distribution across international markets.</p></div><div class="service-card"><div class="service-icon" style="font-size: 3rem; color: #1a5490; margin-bottom: 20px;"><i class="fas fa-shipping-fast"></i></div><h3 data-en="Logistics Excellence" data-ar="التميز اللوجستي">Logistics Excellence</h3><p data-en="We offer comprehensive logistics solutions including freight forwarding, customs clearance, warehousing, and last-mile delivery, ensuring your goods reach their destination efficiently and securely." data-ar="نقدم حلول لوجستية شاملة بما في ذلك الشحن والتخليص الجمركي والتخزين والتوصيل إلى الميل الأخير، مما يضمن وصول بضائعك إلى وجهتها بكفاءة وأمان.">We offer comprehensive logistics solutions including freight forwarding, customs clearance, warehousing, and last-mile delivery, ensuring your goods reach their destination efficiently and securely.</p></div><div class="service-card"><div class="service-icon" style="font-size: 3rem; color: #1a5490; margin-bottom: 20px;"><i class="fas fa-handshake"></i></div><h3 data-en="Strategic Partnerships" data-ar="الشراكات الاستراتيجية">Strategic Partnerships</h3><p data-en="We build long-term relationships with manufacturers, distributors, and clients worldwide, creating a network of trust that drives mutual growth and success in international trade." data-ar="نبني علاقات طويلة الأمد مع الشركات المصنعة والموزعين والعملاء في جميع أنحاء العالم، مما يخلق شبكة من الثقة تدفع النمو والنجاح المتبادل في التجارة الدولية.">We build long-term relationships with manufacturers, distributors, and clients worldwide, creating a network of trust that drives mutual growth and success in international trade.</p></div></div></div></section>
-    
-    <!-- Trading Operations Section -->
-    <section style="padding: 100px 0; background: white;">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title" data-en="Our Operations" data-ar="عملياتنا">Our Operations</h2>
-                <div class="title-underline"></div>
-                <p class="section-subtitle" data-en="Seamless global trade operations powered by expertise and technology" data-ar="عمليات تجارية عالمية سلسة مدعومة بالخبرة والتكنولوجيا">
-                    Seamless global trade operations powered by expertise and technology
-                </p>
-            </div>
-            <div style="max-width: 1000px; margin: 50px auto;">
-                <img src="assets/images/trading-shipping-container.jpeg" alt="Trading Operations" style="width: 100%; border-radius: 15px; box-shadow: 0 10px 40px rgba(0,0,0,0.15); margin-bottom: 30px;">
-                <p style="font-size: 1.15rem; line-height: 1.9; text-align: center; color: #666;" data-en="From container shipping to final delivery, our integrated trading operations ensure your products move efficiently across borders. We handle all aspects of international trade, providing you with peace of mind and reliable service." data-ar="من شحن الحاويات إلى التسليم النهائي، تضمن عمليات التداول المتكاملة لدينا تحرك منتجاتك بكفاءة عبر الحدود. نتعامل مع جميع جوانب التجارة الدولية، ونوفر لك راحة البال والخدمة الموثوقة.">
-                    From container shipping to final delivery, our integrated trading operations ensure your products move efficiently across borders. We handle all aspects of international trade, providing you with peace of mind and reliable service.
-                </p>
-            </div>
+
+<body data-bs-theme="light" class="trading-page">
+  <!-- Header/Navbar -->
+  <header class="main-header">
+    <nav class="navbar container">
+      <a class="navbar-brand" href="index.html">Nashco Global</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="zahy-alkhaleej.html">Zahy Al Khaleej LLC</a></li>
+        <li><a href="automotive.html">Automotive</a></li>
+        <li><a href="manufacturing.html">Manufacturing</a></li>
+        <li><a href="trading.html" class="active">Trading</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Hero Section -->
+  <section
+    class="hero-section d-flex align-items-center justify-content-center position-relative min-vh-50 hero-trading"
+    style="background-image:url('Assets/images/trading-hero.jpeg'); background-size:cover; background-position:center;">
+    <div class="hero-overlay hero-overlay-dark position-absolute top-0 start-0 w-100 h-100"></div>
+    <div class="container position-relative z-2 text-center text-white" data-aos="fade-up">
+      <h1 class="display-4 fw-bold mb-3">Trading Division</h1>
+      <p class="lead mb-0">Global trade, local expertise</p>
+    </div>
+  </section>
+  <!-- Overview -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row mb-5" data-aos="fade-up">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="fw-bold mb-3">Our Trading Services</h2>
+          <p class="text-muted">Nashco Global facilitates global trade with a focus on reliability, efficiency, and
+            customer satisfaction. Our reach spans the GCC and beyond.</p>
         </div>
-    </section>
-    <section class="vision" style="padding: 100px 0; background: #f8f9fa;"><div class="container"><div class="section-header" style="text-align: center; margin-bottom: 60px;"><h2 class="section-title" data-en="Our Trading Impact" data-ar="تأثيرنا التجاري">Our Trading Impact</h2><div class="title-underline" style="margin: 0 auto;"></div></div><div class="stats"><div class="stat-item"><h3 class="stat-number" data-count="30">30+</h3><p class="stat-label" data-en="Countries Served" data-ar="الدول التي نخدمها">Countries Served</p></div><div class="stat-item"><h3 class="stat-number" data-count="500">500+</h3><p class="stat-label" data-en="Active Partners" data-ar="الشركاء النشطون">Active Partners</p></div><div class="stat-item"><h3 class="stat-number" data-count="10000">10,000+</h3><p class="stat-label" data-en="Shipments Annually" data-ar="الشحنات سنويًا">Shipments Annually</p></div><div class="stat-item"><h3 class="stat-number" data-count="15">15+</h3><p class="stat-label" data-en="Years in Trading" data-ar="سنوات في التجارة">Years in Trading</p></div></div></div></section>
-    <section class="cta-section" style="background: linear-gradient(135deg, #1a5490 0%, #2980b9 100%); padding: 80px 0; color: white; text-align: center;"><div class="container"><h2 style="font-size: 2.5rem; margin-bottom: 20px;" data-en="Partner with Global Trading Network" data-ar="شراكة مع التميز في التصنيع">Partner with Global Trading Network</h2><p style="font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9;" data-en="Discover how our manufacturing capabilities can meet your plastic product needs with precision and quality." data-ar="اكتشف كيف يمكن لقدراتنا التصنيعية تلبية احتياجاتك من منتجات البلاستيك بدقة وجودة.">Discover how our manufacturing capabilities can meet your plastic product needs with precision and quality.</p><a href="contact.html" class="btn btn-secondary" style="background: white; color: #1a5490;" data-en="Contact Trading Division" data-ar="اتصل بقسم التصنيع">Contact Trading Division</a></div></section>
-    <footer class="footer"><div class="container"><div class="footer-content"><div class="footer-section"><img src="assets/images/logo-nashco.png" alt="Nashco Global" style="max-width: 120px; margin-bottom: 20px;" onerror="this.onerror=null; this.style.display='none';"><h3>Nashco Global</h3><p data-en="Excellence in Automotive, Manufacturing & Trading since 1994" data-ar="التميز في السيارات والتصنيع والتجارة منذ 1994">Excellence in Automotive, Manufacturing & Trading since 1994</p><div class="social-links"><a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a><a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a><a href="https://wa.me/96894535053" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></div></div><div class="footer-section"><h4 data-en="Quick Links" data-ar="روابط سريعة">Quick Links</h4><ul><li><a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a></li><li><a href="about.html" data-en="About" data-ar="من نحن">About</a></li><li><a href="zahyalkhaleej.html" data-en="Zahy Al Khaleej" data-ar="زاهي الخليج">Zahy Al Khaleej</a></li><li><a href="contact.html" data-en="Contact" data-ar="اتصل بنا">Contact</a></li></ul></div><div class="footer-section"><h4 data-en="Our Divisions" data-ar="أقسامنا">Our Divisions</h4><ul><li><a href="automotive.html" data-en="Automotive" data-ar="السيارات">Automotive</a></li><li><a href="manufacturing.html" data-en="Manufacturing" data-ar="التصنيع">Manufacturing</a></li><li><a href="trading.html" class="active" data-en="Trading" data-ar="التجارة">Trading</a></li></ul></div><div class="footer-section"><h4 data-en="Contact Us" data-ar="اتصل بنا">Contact Us</h4><ul><li><i class="fas fa-phone"></i> Oman: +968 94535053</li><li><i class="fas fa-phone"></i> UAE: +971 508536542</li><li><i class="fas fa-envelope"></i> info@nashcoglobal.com</li></ul></div></div><div class="footer-bottom"><p>&copy; <span id="currentYear">2026</span> Nashco Global. <span data-en="All rights reserved." data-ar="كل الحقوق محفوظة.">All rights reserved.</span></p></div></div></footer>
-    <button id="backToTop" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
-    <a href="https://wa.me/96894535053" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp"><img src="assets/images/whatsapp.svg" alt="WhatsApp" class="whatsapp-icon"></a>
-    <script src="script.js"></script>
+      </div>
+      <div class="row g-4 text-center" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-md-4">
+          <div class="p-4 bg-white rounded shadow-sm h-100">
+            <svg width="40" height="40" fill="none" viewBox="0 0 48 48" aria-hidden="true" class="mb-2">
+              <rect x="8" y="8" width="32" height="32" rx="8" fill="#0dcaf0" />
+              <path d="M24 16v16M16 24h16" stroke="#fff" stroke-width="3" stroke-linecap="round" />
+            </svg>
+            <h6 class="fw-bold">Product Sourcing</h6>
+            <p class="mb-0">Connecting clients with quality products worldwide.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 bg-white rounded shadow-sm h-100">
+            <svg width="40" height="40" fill="none" viewBox="0 0 48 48" aria-hidden="true" class="mb-2">
+              <rect x="8" y="8" width="32" height="32" rx="8" fill="#198754" />
+              <path d="M16 32l8-16 8 16" stroke="#fff" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+            <h6 class="fw-bold">Distribution</h6>
+            <p class="mb-0">Efficient distribution networks across the GCC.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 bg-white rounded shadow-sm h-100">
+            <svg width="40" height="40" fill="none" viewBox="0 0 48 48" aria-hidden="true" class="mb-2">
+              <rect x="8" y="8" width="32" height="32" rx="8" fill="#fd7e14" />
+              <path d="M18 30h12M18 26h12M18 22h12" stroke="#fff" stroke-width="2.5" stroke-linecap="round" />
+            </svg>
+            <h6 class="fw-bold">Market Access</h6>
+            <p class="mb-0">Opening doors to new markets and opportunities.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Product Categories -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row mb-4" data-aos="fade-up">
+        <div class="col text-center">
+          <h2 class="fw-bold mb-3">Product Categories</h2>
+        </div>
+      </div>
+      <div class="row g-4 justify-content-center align-items-center">
+        <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="bg-white rounded shadow-sm p-4 h-100 text-center">
+            <h6 class="fw-bold mb-2">Raw Materials</h6>
+            <p class="mb-0">Sourcing and trading of essential raw materials.</p>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="bg-white rounded shadow-sm p-4 h-100 text-center">
+            <h6 class="fw-bold mb-2">Industrial Equipment</h6>
+            <p class="mb-0">Supplying advanced equipment for diverse industries.</p>
+          </div>
+        </div>
+        <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+          <div class="bg-white rounded shadow-sm p-4 h-100 text-center">
+            <h6 class="fw-bold mb-2">Consumer Goods</h6>
+            <p class="mb-0">Connecting global brands with GCC consumers.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col text-center">
+          <a href="contact.html" class="btn btn-primary btn-lg mt-3">Contact Our Trading Team</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer (shared) -->
+  <!-- ...footer code as in index.html... -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 900, offset: 60 });
+    gsap.from('.hero-section h1', { opacity: 0, y: 60, duration: 1, delay: 0.2 });
+    gsap.from('.hero-section p', { opacity: 0, y: 40, duration: 1, delay: 0.5 });
+  </script>
+  <!-- Gallery: initialize Swiper and modal behavior (multi-instance) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      try {
+        const swiperOptions = {
+          slidesPerView: 3,
+          spaceBetween: 20,
+          grabCursor: true,
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          breakpoints: {
+            0: { slidesPerView: 1 },
+            600: { slidesPerView: 2 },
+            992: { slidesPerView: 3 }
+          }
+        };
+
+        const swiperInstances = [];
+        document.querySelectorAll('.myGallerySwiper').forEach((el) => {
+          const baseOpts = el.classList.contains('small-display') ? Object.assign({}, swiperOptions, { slidesPerView: 'auto', spaceBetween: 12 }) : Object.assign({}, swiperOptions);
+          baseOpts.navigation = {
+            nextEl: el.querySelector('.swiper-button-next'),
+            prevEl: el.querySelector('.swiper-button-prev')
+          };
+          baseOpts.pagination = {
+            el: el.querySelector('.swiper-pagination'),
+            clickable: true
+          };
+          const instance = new Swiper(el, baseOpts);
+          swiperInstances.push(instance);
+
+          (function attachCustomGalleryNav(swiperEl, swiperInstance) {
+            const leftBtn = swiperEl.querySelector('.custom-nav-prev');
+            const rightBtn = swiperEl.querySelector('.custom-nav-next');
+            if (!leftBtn || !rightBtn) return;
+
+            function positionButtons() {
+              const slides = swiperEl.querySelectorAll('.swiper-slide');
+              if (!slides.length) return;
+              const first = slides[0];
+              const third = slides[2] || slides[slides.length - 1];
+              const sRect = swiperEl.getBoundingClientRect();
+              const fRect = first.getBoundingClientRect();
+              const tRect = third.getBoundingClientRect();
+              const btnW = leftBtn.offsetWidth || 56;
+              const btnH = leftBtn.offsetHeight || 56;
+
+              leftBtn.style.position = 'absolute';
+              leftBtn.style.top = (fRect.top - sRect.top + fRect.height / 2 - btnH / 2) + 'px';
+              leftBtn.style.left = Math.max(8, (fRect.left - sRect.left - btnW - 8)) + 'px';
+
+              rightBtn.style.position = 'absolute';
+              rightBtn.style.top = (tRect.top - sRect.top + tRect.height / 2 - btnH / 2) + 'px';
+              rightBtn.style.left = Math.min(sRect.width - btnW - 8, (tRect.right - sRect.left + 8)) + 'px';
+            }
+
+            leftBtn.addEventListener('click', function (e) { e.stopPropagation(); swiperInstance.slidePrev(); });
+            rightBtn.addEventListener('click', function (e) { e.stopPropagation(); swiperInstance.slideNext(); });
+
+            window.addEventListener('resize', positionButtons, { passive: true });
+            swiperInstance.on && swiperInstance.on('resize', positionButtons);
+            swiperInstance.on && swiperInstance.on('update', positionButtons);
+
+            setTimeout(positionButtons, 250);
+          })(el, instance);
+        });
+
+        document.querySelectorAll('.gallery-thumb').forEach(img => {
+          img.addEventListener('click', function (e) {
+            const modalImg = document.getElementById('galleryModalImg');
+            modalImg.src = this.src;
+            const bsModal = new bootstrap.Modal(document.getElementById('galleryModal'));
+            bsModal.show();
+          });
+        });
+      } catch (err) {
+        console.warn('Gallery init failed', err);
+      }
+    });
+  </script>
+  <section class="py-5">
+    <div class="container">
+      <div class="row mb-4" data-aos="fade-up">
+        <div class="col text-center">
+          <h2 class="fw-bold mb-3">Featured Products</h2>
+          <p class="fs-5 text-muted mb-3">Our featured trading product categories.</p>
+          <ul class="list-group list-group-horizontal justify-content-center">
+            <li class="list-group-item">Building Materials</li>
+            <li class="list-group-item">Bulk Goods</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-5 bg-light gallery-section">
+    <div class="container">
+      <div class="row mb-4" data-aos="fade-up">
+        <div class="col text-center">
+          <h2 class="fw-bold mb-3">Gallery</h2>
+          <p class="fs-5 text-muted mb-0">A visual journey through Nashco Global’s impact, people, and projects.</p>
+        </div>
+      </div>
+      <div class="row" data-aos="fade-up" data-aos-delay="100">
+        <div class="col-12">
+          <!-- Swiper Gallery -->
+          <div class="d-flex justify-content-center mb-3">
+            <span class="badge rounded-pill bg-white text-dark px-3 py-2 shadow-sm">Swipe to see more →</span>
+          </div>
+          <div class="swiper myGallerySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="Assets/images/refrigerant2.jpg" alt="Refrigerant 2"
+                  class="img-fluid gallery-thumb" loading="lazy"></div>
+              <div class="swiper-slide"><img src="Assets/images/automotive-industry-hero.jpeg" alt="Automotive Industry"
+                  class="img-fluid gallery-thumb" loading="lazy"></div>
+              <div class="swiper-slide"><img src="Assets/images/automotive-maxcar.jpg" alt="Automotive MaxCar"
+                  class="img-fluid gallery-thumb" loading="lazy"></div>
+              <div class="swiper-slide"><img src="Assets/images/automotive-stock-image.jpeg" alt="Automotive Stock"
+                  class="img-fluid gallery-thumb" loading="lazy"></div>
+              <div class="swiper-slide"><img src="Assets/images/manufacturing-floor.jpeg" alt="Manufacturing Floor"
+                  class="img-fluid gallery-thumb" loading="lazy"></div>
+              <div class="swiper-slide"><img src="Assets/images/manufacturing-hero.jpg" alt="Manufacturing Hero"
+                  class="img-fluid gallery-thumb" loading="lazy"></div>
+              <div class="swiper-slide"><img src="Assets/images/refrigerant-production-plant.jpeg"
+                  alt="Refrigerant Production Plant" class="img-fluid gallery-thumb" loading="lazy"></div>
+              <div class="swiper-slide"><img src="Assets/images/refrigerant1.jpg" alt="Refrigerant 1"
+                  class="img-fluid gallery-thumb" loading="lazy"></div>
+              <div class="swiper-slide"><img src="Assets/images/trading-shipping-container.jpeg"
+                  alt="Trading Shipping Container" class="img-fluid gallery-thumb" loading="lazy"></div>
+              <div class="swiper-slide"><img src="Assets/images/contact-hero.jpg" alt="Contact Hero"
+                  class="img-fluid gallery-thumb" loading="lazy"></div>
+              <div class="swiper-slide"><img src="Assets/images/IMG_5597.jpeg" alt="Team/People"
+                  class="img-fluid gallery-thumb" loading="lazy"></div>
+            </div>
+            <!-- navigation -->
+            <div class="swiper-button-prev" aria-label="Previous slide">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="swiper-button-next" aria-label="Next slide">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="swiper-pagination"></div>
+            <button class="custom-gallery-nav custom-nav-prev" aria-label="Gallery previous">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+            <button class="custom-gallery-nav custom-nav-next" aria-label="Gallery next">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- Footer (shared) -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+      <!-- licensed-by image removed from footer -->
+      <p>&copy; 2025 Nashco Global. All Rights Reserved.</p>
+    </div>
+  </footer>
+  <!-- Gallery Modal (Bootstrap) -->
+  <div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-transparent border-0">
+        <div class="modal-body p-0 text-center">
+          <img id="galleryModalImg" src="" alt="" class="img-fluid rounded">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
+  <!-- Gallery: initialize Swiper and modal behavior -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      try {
+        const gallerySwiper = new Swiper('.myGallerySwiper', {
+          slidesPerView: 3,
+          spaceBetween: 20,
+          grabCursor: true,
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          breakpoints: {
+            0: { slidesPerView: 1 },
+            600: { slidesPerView: 2 },
+            992: { slidesPerView: 3 }
+          }
+        });
+
+        document.querySelectorAll('.gallery-thumb').forEach(img => {
+          img.addEventListener('click', function (e) {
+            const modalImg = document.getElementById('galleryModalImg');
+            modalImg.src = this.src;
+            const bsModal = new bootstrap.Modal(document.getElementById('galleryModal'));
+            bsModal.show();
+          });
+        });
+
+        (function attachCustomGalleryNav() {
+          const swiperEl = document.querySelector('.myGallerySwiper');
+          const leftBtn = swiperEl.querySelector('.custom-nav-prev');
+          const rightBtn = swiperEl.querySelector('.custom-nav-next');
+          if (!leftBtn || !rightBtn) return;
+
+          function positionButtons() {
+            const slides = swiperEl.querySelectorAll('.swiper-slide');
+            if (!slides.length) return;
+            const first = slides[0];
+            const third = slides[2] || slides[slides.length - 1];
+            const sRect = swiperEl.getBoundingClientRect();
+            const fRect = first.getBoundingClientRect();
+            const tRect = third.getBoundingClientRect();
+            const btnW = leftBtn.offsetWidth || 56;
+            const btnH = leftBtn.offsetHeight || 56;
+
+            leftBtn.style.position = 'absolute';
+            leftBtn.style.top = (fRect.top - sRect.top + fRect.height / 2 - btnH / 2) + 'px';
+            leftBtn.style.left = Math.max(8, (fRect.left - sRect.left - btnW - 8)) + 'px';
+
+            rightBtn.style.position = 'absolute';
+            rightBtn.style.top = (tRect.top - sRect.top + tRect.height / 2 - btnH / 2) + 'px';
+            rightBtn.style.left = Math.min(sRect.width - btnW - 8, (tRect.right - sRect.left + 8)) + 'px';
+          }
+
+          leftBtn.addEventListener('click', function (e) { e.stopPropagation(); gallerySwiper.slidePrev(); });
+          rightBtn.addEventListener('click', function (e) { e.stopPropagation(); gallerySwiper.slideNext(); });
+
+          window.addEventListener('resize', positionButtons, { passive: true });
+          gallerySwiper.on && gallerySwiper.on('resize', positionButtons);
+          gallerySwiper.on && gallerySwiper.on('update', positionButtons);
+
+          setTimeout(positionButtons, 250);
+        })();
+      } catch (err) {
+        console.warn('Gallery init failed', err);
+      }
+    });
+  </script>
+  <script src="js/script.js"></script>
 </body>
+
 </html>
