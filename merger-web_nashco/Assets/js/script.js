@@ -501,7 +501,6 @@ console.log('%cWebsite by Nashco Global | Built with modern web technologies', '
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
         initializeWebsite,
-        toggleLanguage,
         showNotification
     };
 }
