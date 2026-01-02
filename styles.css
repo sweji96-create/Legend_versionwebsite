@@ -957,6 +957,27 @@ section {
     .stat-number {
         font-size: 2.5rem;
     }
+    
+    /* Language Toggle - Mobile */
+    .language-toggle {
+        top: 12px;
+        right: 70px;
+    }
+    
+    [dir="rtl"] .language-toggle {
+        right: auto;
+        left: 70px;
+    }
+    
+    .lang-btn {
+        padding: 6px 10px;
+        font-size: 11px;
+        gap: 4px;
+    }
+    
+    .lang-btn i {
+        font-size: 13px;
+    }
 }
 
 @media (max-width: 480px) {
