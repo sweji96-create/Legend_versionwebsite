@@ -1,310 +1,476 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Nashco Global - Our Story & Values</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Learn about Nashco Global's 30-year journey of excellence in the GCC region. Our vision, mission, and commitment to innovation and quality since 1994.">
-    <meta name="keywords" content="Nashco Global history, GCC leader, corporate values, company mission, industrial excellence">
+    <title>About Nashco Global - Our Story and Journey Since 1994 | عن ناشكو جلوبال - قصتنا ورحلتنا منذ 1994</title>
+    <meta name="description" content="Discover the 30-year journey of Nashco Global, a pioneering multi-sector leader in the GCC delivering excellence in chemicals, automotive, manufacturing, and trading. | اكتشف رحلة ناشكو جلوبال التي امتدت 30 عاماً كرائد متعدد القطاعات في دول مجلس التعاون الخليجي.">
+    <meta name="keywords" content="Nashco Global history, GCC business leader, multi-sector excellence, corporate values, sustainability, innovation, تاريخ ناشكو جلوبال">
+    <meta name="author" content="Nashco Global">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.nashcoglobal.com/about.html">
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="assets/images/favicon-placeholder.svg">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="About Nashco Global - Our Story Since 1994">
+    <meta property="og:description" content="30 years of excellence delivering multi-sector solutions across the GCC region.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.nashcoglobal.com/about.html">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": "About Nashco Global",
+        "description": "Learn about Nashco Global's 30-year journey of excellence in the GCC region",
+        "url": "https://www.nashcoglobal.com/about.html",
+        "mainEntity": {
+            "@type": "Organization",
+            "name": "Nashco Global",
+            "foundingDate": "1994",
+            "founder": {
+                "@type": "Person",
+                "name": "Nashco Global Founders"
+            }
+        }
+    }
+    </script>
 </head>
 <body>
-    <!-- Language Toggle -->
-    <div class="language-toggle">
-        <button id="langBtn" class="lang-btn" aria-label="Toggle Language">
-            <i class="fas fa-language"></i>
-            <span id="langText">العربية</span>
-        </button>
-    </div>
-
-    <!-- Navigation -->
-    <nav class="navbar" role="navigation" aria-label="Main navigation">
-        <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo">
-                    <img src="https://github.com/user-attachments/assets/3cc9f941-919c-46db-99af-dafcbd3a75ff" 
-                         alt="Nashco Global Logo" 
-                         class="logo-img"
-                         onerror="this.onerror=null; this.src='assets/images/favicon-placeholder.svg';"
-                         data-en="Nashco Global Logo" 
-                         data-ar="شعار ناشكو جلوبال">
-                    <div class="logo-text">
-                        <h1 class="logo-fallback">Nashco Global</h1>
-                        <p class="tagline" data-en="Excellence Since 1994" data-ar="التميز منذ 1994">Excellence Since 1994</p>
-                    </div>
-                </div>
-                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a></li>
-                    <li><a href="about.html" class="active" data-en="About" data-ar="من نحن">About</a></li>
-                    <li><a href="zahyalkhaleej.html" data-en="Zahy Al Khaleej" data-ar="زاهي الخليج">Zahy Al Khaleej</a></li>
-                    <li><a href="automotive.html" data-en="Automotive" data-ar="السيارات">Automotive</a></li>
-                    <li><a href="manufacturing.html" data-en="Manufacturing" data-ar="التصنيع">Manufacturing</a></li>
-                    <li><a href="trading.html" data-en="Trading" data-ar="التجارة">Trading</a></li>
-                    <li><a href="contact.html" data-en="Contact" data-ar="اتصل بنا">Contact</a></li>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="50" cy="50" rx="35" ry="35" fill="#003087"/>
+                    <circle cx="50" cy="50" r="28" fill="#00A1D6"/>
+                    <ellipse cx="50" cy="50" rx="40" ry="15" fill="none" stroke="#00FF00" stroke-width="3"/>
+                    <text x="50" y="55" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#C8102E" text-anchor="middle">NASHCO</text>
+                </svg>
+                <span class="en">NASHCO GLOBAL</span>
+                <span class="ar">ناشكو جلوبال</span>
+            </a>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="en">Home</a><a href="index.html" class="ar">الرئيسية</a></li>
+                    <li><a href="about.html" class="en">About Us</a><a href="about.html" class="ar">من نحن</a></li>
+                    <li><a href="zahy-al-khaleej.html" class="en">Chemicals</a><a href="zahy-al-khaleej.html" class="ar">الكيميائيات</a></li>
+                    <li><a href="automotive.html" class="en">Automotive</a><a href="automotive.html" class="ar">السيارات</a></li>
+                    <li><a href="manufacturing.html" class="en">Manufacturing</a><a href="manufacturing.html" class="ar">التصنيع</a></li>
+                    <li><a href="trading.html" class="en">Trading</a><a href="trading.html" class="ar">التجارة</a></li>
+                    <li><a href="contact.html" class="en">Contact</a><a href="contact.html" class="ar">اتصل بنا</a></li>
+                    <li><button id="languageToggle" class="language-toggle">عربي</button></li>
                 </ul>
-            </div>
+            </nav>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-    </nav>
+    </header>
 
-    <!-- Page Header -->
-    <section class="page-header" style="background: linear-gradient(135deg, rgba(26, 84, 144, 0.93) 0%, rgba(41, 128, 185, 0.89) 100%), url('assets/images/home-page-dubai.jpeg'); background-size: cover; background-position: center; padding: 140px 0 100px; color: white; text-align: center; position: relative;"><div class="container" style="position: relative; z-index: 2;"><h1 style="font-size: 3.5rem; margin-bottom: 25px; font-weight: 700; text-shadow: 0 4px 20px rgba(0,0,0,0.3);" data-en="About Nashco Global" data-ar="عن ناشكو العالمية">About Nashco Global</h1><p style="font-size: 1.5rem; opacity: 0.95; max-width: 800px; margin: 0 auto; line-height: 1.6;" data-en="Three Decades of Excellence, Innovation, and Growth" data-ar="ثلاثة عقود من التميز والابتكار والنمو">Three Decades of Excellence, Innovation, and Growth</p></div></section>
-
-    <!-- Our Story Section -->
-    <section class="about-section" style="padding: 100px 0;">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title" data-en="Our Story" data-ar="قصتنا">Our Story</h2>
-                <div class="title-underline"></div>
-            </div>
-            <div class="content-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
-                <div>
-                    <img src="https://www.uaefreezones.com/assets/images/dubai-industrial-city-min.png" 
-                         alt="Nashco Global History" 
-                         style="width: 100%; border-radius: 10px; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
-                </div>
-                <div>
-                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 20px;" data-en="Founded in 1994, Nashco Global began with a simple yet powerful vision: to become the most trusted and innovative industrial conglomerate in the GCC region. What started as a focused enterprise has evolved into a diversified group of companies serving multiple industries across the Middle East and beyond." data-ar="تأسست ناشكو العالمية في عام 1994 برؤية بسيطة ولكنها قوية: أن تصبح التكتل الصناعي الأكثر موثوقية وابتكارًا في منطقة دول مجلس التعاون الخليجي. ما بدأ كمؤسسة مركزة تطور إلى مجموعة متنوعة من الشركات تخدم صناعات متعددة في جميع أنحاء الشرق الأوسط وخارجها.">
-                        Founded in 1994, Nashco Global began with a simple yet powerful vision: to become the most trusted and innovative industrial conglomerate in the GCC region. What started as a focused enterprise has evolved into a diversified group of companies serving multiple industries across the Middle East and beyond.
-                    </p>
-                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 20px;" data-en="Through three decades of operation, we have consistently demonstrated our ability to adapt, innovate, and excel. Our growth has been driven by a commitment to quality, customer satisfaction, and a deep understanding of the regional market dynamics." data-ar="من خلال ثلاثة عقود من العمل، أظهرنا باستمرار قدرتنا على التكيف والابتكار والتميز. نمونا مدفوعًا بالتزام بالجودة ورضا العملاء وفهم عميق لديناميكيات السوق الإقليمية.">
-                        Through three decades of operation, we have consistently demonstrated our ability to adapt, innovate, and excel. Our growth has been driven by a commitment to quality, customer satisfaction, and a deep understanding of the regional market dynamics.
-                    </p>
-                    <p style="font-size: 1.1rem; line-height: 1.8;" data-en="Today, Nashco Global stands as a testament to the power of vision, perseverance, and strategic thinking. We operate multiple business divisions, each a leader in its respective field, united by our core values and commitment to excellence." data-ar="اليوم، تقف ناشكو العالمية كشاهد على قوة الرؤية والمثابرة والتفكير الاستراتيجي. نحن نعمل على أقسام أعمال متعددة، كل منها رائد في مجاله، متحدين بقيمنا الأساسية والتزامنا بالتميز.">
-                        Today, Nashco Global stands as a testament to the power of vision, perseverance, and strategic thinking. We operate multiple business divisions, each a leader in its respective field, united by our core values and commitment to excellence.
-                    </p>
-                </div>
-            </div>
+    <!-- Hero Section -->
+    <section class="hero parallax" style="background-image: url('https://gulfbusiness.com/wp-content/uploads/2025/11/workplace.jpg');">
+        <div class="hero-content">
+            <h1 class="en">Our Story of Excellence</h1>
+            <h1 class="ar">قصة تميزنا</h1>
+            
+            <p class="en">Three Decades of Innovation, Integrity, and Impact</p>
+            <p class="ar">ثلاثة عقود من الابتكار والنزاهة والتأثير</p>
         </div>
     </section>
 
-    <!-- Mission & Vision Section -->
-    <section class="vision" style="padding: 100px 0;">
+    <!-- Company History -->
+    <section class="section">
         <div class="container">
-            <div class="vision-content">
-                <div style="text-align: center; margin-bottom: 60px;">
-                    <h2 style="font-size: 2.5rem; margin-bottom: 20px;" data-en="Our Mission & Vision" data-ar="مهمتنا ورؤيتنا">Our Mission & Vision</h2>
-                    <div class="title-underline" style="margin: 0 auto;"></div>
-                </div>
-                
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-bottom: 60px;">
-                    <div style="background: #f8f9fa; padding: 40px; border-radius: 10px;">
-                        <h3 style="color: #1a5490; font-size: 1.8rem; margin-bottom: 20px;" data-en="Our Mission" data-ar="مهمتنا">Our Mission</h3>
-                        <p style="font-size: 1.1rem; line-height: 1.8;" data-en="To deliver exceptional value to our customers, stakeholders, and communities by providing innovative, high-quality products and services across our diverse business portfolio. We strive to be the preferred partner for businesses seeking reliability, excellence, and sustainable growth in the GCC region." data-ar="تقديم قيمة استثنائية لعملائنا وأصحاب المصلحة والمجتمعات من خلال توفير منتجات وخدمات مبتكرة وعالية الجودة عبر محفظة أعمالنا المتنوعة. نسعى جاهدين لنكون الشريك المفضل للشركات التي تبحث عن الموثوقية والتميز والنمو المستدام في منطقة دول مجلس التعاون الخليجي.">
-                            To deliver exceptional value to our customers, stakeholders, and communities by providing innovative, high-quality products and services across our diverse business portfolio. We strive to be the preferred partner for businesses seeking reliability, excellence, and sustainable growth in the GCC region.
-                        </p>
-                    </div>
-                    <div style="background: #f8f9fa; padding: 40px; border-radius: 10px;">
-                        <h3 style="color: #1a5490; font-size: 1.8rem; margin-bottom: 20px;" data-en="Our Vision" data-ar="رؤيتنا">Our Vision</h3>
-                        <p style="font-size: 1.1rem; line-height: 1.8;" data-en="To be the leading diversified industrial conglomerate in the GCC, recognized for our innovation, integrity, and positive impact on the industries and communities we serve. We envision a future where Nashco Global continues to set benchmarks for excellence while contributing to the economic development and prosperity of the region." data-ar="أن نكون التكتل الصناعي المتنوع الرائد في دول مجلس التعاون الخليجي، معترف بنا من أجل ابتكارنا ونزاهتنا وتأثيرنا الإيجابي على الصناعات والمجتمعات التي نخدمها. نتصور مستقبلًا حيث تستمر ناشكو العالمية في وضع معايير التميز مع المساهمة في التنمية الاقتصادية وازدهار المنطقة.">
-                            To be the leading diversified industrial conglomerate in the GCC, recognized for our innovation, integrity, and positive impact on the industries and communities we serve. We envision a future where Nashco Global continues to set benchmarks for excellence while contributing to the economic development and prosperity of the region.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="vision-features">
-                    <div class="feature-item">
-                        <i class="fas fa-handshake"></i>
-                        <h4 data-en="Integrity" data-ar="النزاهة">Integrity</h4>
-                        <p data-en="Ethical business practices" data-ar="ممارسات تجارية أخلاقية">Ethical business practices</p>
-                    </div>
-                    <div class="feature-item">
-                        <i class="fas fa-star"></i>
-                        <h4 data-en="Excellence" data-ar="التميز">Excellence</h4>
-                        <p data-en="Uncompromising quality" data-ar="جودة لا تتزعزع">Uncompromising quality</p>
-                    </div>
-                    <div class="feature-item">
-                        <i class="fas fa-lightbulb"></i>
-                        <h4 data-en="Innovation" data-ar="الابتكار">Innovation</h4>
-                        <p data-en="Forward-thinking solutions" data-ar="حلول مستقبلية">Forward-thinking solutions</p>
-                    </div>
-                    <div class="feature-item">
-                        <i class="fas fa-users"></i>
-                        <h4 data-en="Customer Focus" data-ar="التركيز على العملاء">Customer Focus</h4>
-                        <p data-en="Your success is our priority" data-ar="نجاحك أولويتنا">Your success is our priority</p>
-                    </div>
-                    <div class="feature-item">
-                        <i class="fas fa-leaf"></i>
-                        <h4 data-en="Sustainability" data-ar="الاستدامة">Sustainability</h4>
-                        <p data-en="Responsible growth" data-ar="نمو مسؤول">Responsible growth</p>
-                    </div>
-                    <div class="feature-item">
-                        <i class="fas fa-globe"></i>
-                        <h4 data-en="Community" data-ar="المجتمع">Community</h4>
-                        <p data-en="Regional development" data-ar="التنمية الإقليمية">Regional development</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Nashco Section -->
-    <section class="about" style="padding: 100px 0; background: #f8f9fa;">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title" data-en="Why Choose Nashco Global" data-ar="لماذا تختار ناشكو العالمية">Why Choose Nashco Global</h2>
-                <div class="title-underline"></div>
-            </div>
-            <div class="stats" style="margin-bottom: 60px;">
-                <div class="stat-item">
-                    <h3 class="stat-number" data-count="30">30+</h3>
-                    <p class="stat-label" data-en="Years of Experience" data-ar="سنوات من الخبرة">Years of Experience</p>
-                </div>
-                <div class="stat-item">
-                    <h3 class="stat-number" data-count="1000">1000+</h3>
-                    <p class="stat-label" data-en="Happy Clients" data-ar="العملاء السعداء">Happy Clients</p>
-                </div>
-                <div class="stat-item">
-                    <h3 class="stat-number" data-count="50">50+</h3>
-                    <p class="stat-label" data-en="Countries Served" data-ar="الدول المخدومة">Countries Served</p>
-                </div>
-                <div class="stat-item">
-                    <h3 class="stat-number" data-count="5">5+</h3>
-                    <p class="stat-label" data-en="Business Divisions" data-ar="أقسام الأعمال">Business Divisions</p>
-                </div>
+            <div class="section-title">
+                <h2 class="en">The Nashco Global Journey</h2>
+                <h2 class="ar">رحلة ناشكو جلوبال</h2>
             </div>
             
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon" style="font-size: 3rem; color: #1a5490; margin-bottom: 20px;">
-                        <i class="fas fa-award"></i>
-                    </div>
-                    <h3 data-en="Proven Track Record" data-ar="سجل حافل بالإنجازات">Proven Track Record</h3>
-                    <p data-en="Three decades of consistent excellence and growth across multiple industries, delivering value to stakeholders and communities." data-ar="ثلاثة عقود من التميز والنمو المستمر عبر صناعات متعددة، تقديم القيمة لأصحاب المصلحة والمجتمعات.">
-                        Three decades of consistent excellence and growth across multiple industries, delivering value to stakeholders and communities.
+            <div class="grid grid-2">
+                <div data-aos="fade-right">
+                    <p class="en">
+                        Founded in 1994, Nashco Global emerged from a vision to transform the industrial landscape of the Gulf Cooperation Council (GCC) region. What began as a modest enterprise focused on chemical solutions has evolved into a diversified powerhouse serving four critical sectors: chemicals and refrigerants, automotive solutions, precision manufacturing, and global trading.
+                    </p>
+                    <p class="ar">
+                        تأسست ناشكو جلوبال عام 1994 من رؤية لتحويل المشهد الصناعي في منطقة مجلس التعاون الخليجي. ما بدأ كمؤسسة متواضعة تركز على الحلول الكيميائية تطور إلى قوة متنوعة تخدم أربعة قطاعات حرجة: الكيميائيات والمبردات، وحلول السيارات، والتصنيع الدقيق، والتجارة العالمية.
+                    </p>
+                    
+                    <p class="en">
+                        Our journey has been marked by unwavering commitment to excellence, sustainability, and innovation. Through strategic partnerships, cutting-edge technology adoption, and a deep understanding of regional markets, we have consistently delivered solutions that not only meet but exceed international standards. Every milestone in our three-decade history reflects our dedication to empowering industries, communities, and partners across the dynamic global marketplace.
+                    </p>
+                    <p class="ar">
+                        اتسمت رحلتنا بالتزام ثابت بالتميز والاستدامة والابتكار. من خلال الشراكات الاستراتيجية واعتماد التكنولوجيا المتطورة والفهم العميق للأسواق الإقليمية، قدمنا باستمرار حلولاً لا تلبي المعايير الدولية فحسب بل تتجاوزها. كل معلم في تاريخنا الممتد ثلاثة عقود يعكس تفانينا في تمكين الصناعات والمجتمعات والشركاء عبر السوق العالمية الديناميكية.
                     </p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon" style="font-size: 3rem; color: #1a5490; margin-bottom: 20px;">
-                        <i class="fas fa-cogs"></i>
+                
+                <div data-aos="fade-left">
+                    <img src="https://gccbusinesswatch.com/wp-content/uploads/2025/04/gCr6L9N9VohDsm6qJPDz3SVISxCEHmGQ46dI4VwA-1-e1745584401678.webp" 
+                         alt="GCC Business Leadership / قيادة أعمال مجلس التعاون الخليجي"
+                         loading="lazy"
+                         style="border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.15);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="en">Our Journey Through Time</h2>
+                <h2 class="ar">رحلتنا عبر الزمن</h2>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-content">
+                        <div class="timeline-year en">1994</div>
+                        <div class="timeline-year ar">1994</div>
+                        <h3 class="en">Foundation & Vision</h3>
+                        <h3 class="ar">التأسيس والرؤية</h3>
+                        <p class="en">Nashco Global was established with a clear mission: to deliver world-class industrial solutions to the GCC region. Our initial focus on chemical solutions laid the foundation for future diversification.</p>
+                        <p class="ar">تأسست ناشكو جلوبال بمهمة واضحة: تقديم حلول صناعية عالمية المستوى لمنطقة مجلس التعاون الخليجي. ركزنا الأولي على الحلول الكيميائية وضع الأساس للتنويع المستقبلي.</p>
                     </div>
-                    <h3 data-en="Integrated Solutions" data-ar="حلول متكاملة">Integrated Solutions</h3>
-                    <p data-en="Our diverse business portfolio allows us to provide comprehensive, integrated solutions that address complex business challenges." data-ar="تسمح لنا محفظة أعمالنا المتنوعة بتوفير حلول شاملة ومتكاملة تعالج التحديات التجارية المعقدة.">
-                        Our diverse business portfolio allows us to provide comprehensive, integrated solutions that address complex business challenges.
+                    <div class="timeline-dot"></div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="timeline-content">
+                        <div class="timeline-year en">2000</div>
+                        <div class="timeline-year ar">2000</div>
+                        <h3 class="en">Launch of Zahy Al Khaleej</h3>
+                        <h3 class="ar">إطلاق زاهي الخليج</h3>
+                        <p class="en">Established Zahy Al Khaleej LLC, our specialized chemicals and refrigerants division, bringing eco-friendly solutions to industrial HVAC and manufacturing sectors across the Gulf.</p>
+                        <p class="ar">أنشأنا شركة زاهي الخليج ذ.م.م، قسمنا المتخصص في الكيميائيات والمبردات، لتقديم حلول صديقة للبيئة لقطاعات التدفئة والتهوية وتكييف الهواء الصناعية والتصنيع عبر الخليج.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="timeline-content">
+                        <div class="timeline-year en">2008</div>
+                        <div class="timeline-year ar">2008</div>
+                        <h3 class="en">Automotive Expansion</h3>
+                        <h3 class="ar">التوسع في قطاع السيارات</h3>
+                        <p class="en">Entered the automotive sector with innovative parts, assembly solutions, and advanced technologies, positioning ourselves as a key player in the Middle East automotive industry.</p>
+                        <p class="ar">دخلنا قطاع السيارات بقطع غيار مبتكرة وحلول تجميع وتقنيات متقدمة، لنضع أنفسنا كلاعب رئيسي في صناعة السيارات في الشرق الأوسط.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="timeline-content">
+                        <div class="timeline-year en">2014</div>
+                        <div class="timeline-year ar">2014</div>
+                        <h3 class="en">Manufacturing Excellence</h3>
+                        <h3 class="ar">التميز في التصنيع</h3>
+                        <p class="en">Launched our precision manufacturing division with state-of-the-art machinery and international quality standards, serving diverse industrial needs across the region.</p>
+                        <p class="ar">أطلقنا قسم التصنيع الدقيق بآلات حديثة ومعايير جودة دولية، لخدمة احتياجات صناعية متنوعة عبر المنطقة.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="timeline-content">
+                        <div class="timeline-year en">2020</div>
+                        <div class="timeline-year ar">2020</div>
+                        <h3 class="en">Global Trading Network</h3>
+                        <h3 class="ar">شبكة التجارة العالمية</h3>
+                        <p class="en">Expanded into global trading with comprehensive logistics and supply chain solutions, connecting GCC markets with international suppliers and partners worldwide.</p>
+                        <p class="ar">توسعنا في التجارة العالمية بحلول لوجستية وسلسلة توريد شاملة، لربط أسواق دول مجلس التعاون الخليجي بالموردين والشركاء الدوليين في جميع أنحاء العالم.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="500">
+                    <div class="timeline-content">
+                        <div class="timeline-year en">2024</div>
+                        <div class="timeline-year ar">2024</div>
+                        <h3 class="en">Sustainability Leadership</h3>
+                        <h3 class="ar">قيادة الاستدامة</h3>
+                        <p class="en">Celebrating 30 years of excellence while leading sustainability initiatives across all divisions, setting new benchmarks for environmental responsibility in the GCC industrial sector.</p>
+                        <p class="ar">نحتفل بـ 30 عاماً من التميز بينما نقود مبادرات الاستدامة عبر جميع الأقسام، ونضع معايير جديدة للمسؤولية البيئية في القطاع الصناعي لدول مجلس التعاون الخليجي.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="grid grid-2">
+                <div data-aos="fade-right">
+                    <h2 class="en" style="color: white;">Our Mission</h2>
+                    <h2 class="ar" style="color: white;">مهمتنا</h2>
+                    
+                    <p class="en" style="color: white;">
+                        To empower industries, communities, and partners across the GCC and beyond through innovative, sustainable, and world-class solutions in chemicals, automotive, manufacturing, and trading. We are committed to operational excellence, environmental stewardship, and creating lasting value for all stakeholders while maintaining the highest standards of integrity and compliance.
+                    </p>
+                    <p class="ar" style="color: white;">
+                        تمكين الصناعات والمجتمعات والشركاء عبر دول مجلس التعاون الخليجي وخارجها من خلال حلول مبتكرة ومستدامة وعالمية المستوى في الكيميائيات والسيارات والتصنيع والتجارة. نحن ملتزمون بالتميز التشغيلي والإشراف البيئي وخلق قيمة دائمة لجميع أصحاب المصلحة مع الحفاظ على أعلى معايير النزاهة والامتثال.
                     </p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon" style="font-size: 3rem; color: #1a5490; margin-bottom: 20px;">
-                        <i class="fas fa-map-marked-alt"></i>
-                    </div>
-                    <h3 data-en="Regional Expertise" data-ar="الخبرة الإقليمية">Regional Expertise</h3>
-                    <p data-en="Deep understanding of GCC markets, regulations, and business culture, combined with international best practices and standards." data-ar="فهم عميق لأسواق دول مجلس التعاون الخليجي واللوائح والثقافة التجارية، جنبًا إلى جنب مع أفضل الممارسات والمعايير الدولية.">
-                        Deep understanding of GCC markets, regulations, and business culture, combined with international best practices and standards.
+                
+                <div data-aos="fade-left">
+                    <h2 class="en" style="color: white;">Our Vision</h2>
+                    <h2 class="ar" style="color: white;">رؤيتنا</h2>
+                    
+                    <p class="en" style="color: white;">
+                        To be the most trusted and diversified multi-sector leader in the Middle East, recognized globally for excellence, innovation, and sustainability. We envision a future where Nashco Global sets industry benchmarks, drives technological advancement, and contributes significantly to the economic prosperity and environmental well-being of the regions we serve.
                     </p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon" style="font-size: 3rem; color: #1a5490; margin-bottom: 20px;">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h3 data-en="Customer-Centric Approach" data-ar="نهج يركز على العملاء">Customer-Centric Approach</h3>
-                    <p data-en="We prioritize our clients' success, offering personalized service, responsive support, and solutions tailored to their unique needs." data-ar="نعطي الأولوية لنجاح عملائنا، ونقدم خدمة شخصية ودعمًا سريع الاستجابة وحلولًا مصممة خصيصًا لاحتياجاتهم الفريدة.">
-                        We prioritize our clients' success, offering personalized service, responsive support, and solutions tailored to their unique needs.
+                    <p class="ar" style="color: white;">
+                        أن نكون الرائد الأكثر ثقة وتنوعاً متعدد القطاعات في الشرق الأوسط، معترف به عالمياً للتميز والابتكار والاستدامة. نتصور مستقبلاً حيث تضع ناشكو جلوبال معايير الصناعة، وتدفع التقدم التكنولوجي، وتساهم بشكل كبير في الازدهار الاقتصادي والرفاهية البيئية للمناطق التي نخدمها.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section" style="background: linear-gradient(135deg, #1a5490 0%, #2980b9 100%); padding: 80px 0; color: white; text-align: center;">
+    <!-- Core Values -->
+    <section class="section">
         <div class="container">
-            <h2 style="font-size: 2.5rem; margin-bottom: 20px;" data-en="Partner with a Trusted Leader" data-ar="شارك مع قائد موثوق">Partner with a Trusted Leader</h2>
-            <p style="font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9;" data-en="Discover how Nashco Global can help drive your business forward with our expertise and comprehensive solutions." data-ar="اكتشف كيف يمكن لناشكو العالمية أن تساعد في دفع عملك إلى الأمام بخبرتنا وحلولنا الشاملة.">
-                Discover how Nashco Global can help drive your business forward with our expertise and comprehensive solutions.
-            </p>
-            <div style="display: flex; gap: 20px; justify-content: center;">
-                <a href="contact.html" class="btn btn-secondary" style="background: white; color: #1a5490;" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</a>
-                <a href="index.html" class="btn" style="background: transparent; border: 2px solid white; color: white;" data-en="Back to Home" data-ar="العودة إلى الصفحة الرئيسية">Back to Home</a>
+            <div class="section-title">
+                <h2 class="en">Our Core Values</h2>
+                <h2 class="ar">قيمنا الأساسية</h2>
             </div>
+            
+            <div class="grid grid-3">
+                <div class="feature-box" data-aos="zoom-in">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="#003087" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="en">Excellence</h3>
+                    <h3 class="ar">التميز</h3>
+                    <p class="en">Striving for the highest quality in everything we do, exceeding expectations and setting industry benchmarks.</p>
+                    <p class="ar">السعي لتحقيق أعلى جودة في كل ما نقوم به، وتجاوز التوقعات ووضع معايير الصناعة.</p>
+                </div>
+                
+                <div class="feature-box" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="#003087" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1ZM10 17L6 13L7.41 11.59L10 14.17L16.59 7.58L18 9L10 17Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="en">Integrity</h3>
+                    <h3 class="ar">النزاهة</h3>
+                    <p class="en">Conducting business with honesty, transparency, and ethical practices in all our relationships and operations.</p>
+                    <p class="ar">إجراء الأعمال بصدق وشفافية وممارسات أخلاقية في جميع علاقاتنا وعملياتنا.</p>
+                </div>
+                
+                <div class="feature-box" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="#003087" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 3H5C3.89 3 3 3.9 3 5V19C3 20.1 3.89 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM14 17H7V15H14V17ZM17 13H7V11H17V13ZM17 9H7V7H17V9Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="en">Innovation</h3>
+                    <h3 class="ar">الابتكار</h3>
+                    <p class="en">Embracing cutting-edge technologies and creative solutions to drive progress and transformation.</p>
+                    <p class="ar">تبني التقنيات المتطورة والحلول الإبداعية لدفع التقدم والتحول.</p>
+                </div>
+                
+                <div class="feature-box" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="#003087" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22L6.66 19.7C7.14 19.87 7.64 20 8 20C19 20 22 3 22 3C21 5 14 5.25 9 6.25C4 7.25 2 11.5 2 13.5C2 15.5 3.75 17.25 3.75 17.25C7 8 17 8 17 8Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="en">Sustainability</h3>
+                    <h3 class="ar">الاستدامة</h3>
+                    <p class="en">Committed to environmental responsibility and sustainable practices for a better future.</p>
+                    <p class="ar">ملتزمون بالمسؤولية البيئية والممارسات المستدامة لمستقبل أفضل.</p>
+                </div>
+                
+                <div class="feature-box" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="#003087" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 11C17.66 11 18.99 9.66 18.99 8C18.99 6.34 17.66 5 16 5C14.34 5 13 6.34 13 8C13 9.66 14.34 11 16 11ZM8 11C9.66 11 10.99 9.66 10.99 8C10.99 6.34 9.66 5 8 5C6.34 5 5 6.34 5 8C5 9.66 6.34 11 8 11ZM8 13C5.67 13 1 14.17 1 16.5V19H15V16.5C15 14.17 10.33 13 8 13ZM16 13C15.71 13 15.38 13.02 15.03 13.05C16.19 13.89 17 15.02 17 16.5V19H23V16.5C23 14.17 18.33 13 16 13Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="en">Collaboration</h3>
+                    <h3 class="ar">التعاون</h3>
+                    <p class="en">Building strong partnerships and fostering teamwork to achieve shared success.</p>
+                    <p class="ar">بناء شراكات قوية وتعزيز العمل الجماعي لتحقيق النجاح المشترك.</p>
+                </div>
+                
+                <div class="feature-box" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="#003087" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM13 17H11V11H13V17ZM13 9H11V7H13V9Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="en">Customer Focus</h3>
+                    <h3 class="ar">التركيز على العملاء</h3>
+                    <p class="en">Placing our clients' needs at the heart of everything we do, delivering exceptional value and service.</p>
+                    <p class="ar">وضع احتياجات عملائنا في قلب كل ما نقوم به، وتقديم قيمة وخدمة استثنائية.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="en">Our Leadership Team</h2>
+                <h2 class="ar">فريق القيادة لدينا</h2>
+                
+                <p class="en">Expert professionals driving our vision forward</p>
+                <p class="ar">محترفون خبراء يدفعون رؤيتنا إلى الأمام</p>
+            </div>
+            
+            <div class="grid grid-3">
+                <div class="card" data-aos="flip-left">
+                    <div class="card-image">
+                        <img src="https://sustaingulf.org/wp-content/uploads/2025/10/Sustainability-Strategy-for-GCC-Businesses.jpg" 
+                             alt="Leadership Team / فريق القيادة"
+                             loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title en">Visionary Leadership</h3>
+                        <h3 class="card-title ar">قيادة صاحبة رؤية</h3>
+                        <p class="card-text en">Our leadership team brings decades of combined experience in chemicals, automotive, manufacturing, and global trade.</p>
+                        <p class="card-text ar">يجلب فريق القيادة لدينا عقوداً من الخبرة المجمعة في الكيميائيات والسيارات والتصنيع والتجارة العالمية.</p>
+                    </div>
+                </div>
+                
+                <div class="card" data-aos="flip-left" data-aos-delay="100">
+                    <div class="card-image">
+                        <img src="https://gccbusinesswatch.com/wp-content/uploads/2025/04/gCr6L9N9VohDsm6qJPDz3SVISxCEHmGQ46dI4VwA-1-e1745584401678.webp" 
+                             alt="Technical Experts / خبراء تقنيون"
+                             loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title en">Technical Excellence</h3>
+                        <h3 class="card-title ar">التميز التقني</h3>
+                        <p class="card-text en">World-class engineers and specialists ensuring the highest standards in every project we undertake.</p>
+                        <p class="card-text ar">مهندسون وأخصائيون عالميون يضمنون أعلى المعايير في كل مشروع نقوم به.</p>
+                    </div>
+                </div>
+                
+                <div class="card" data-aos="flip-left" data-aos-delay="200">
+                    <div class="card-image">
+                        <img src="https://gulfbusiness.com/wp-content/uploads/2025/11/workplace.jpg" 
+                             alt="Operations Team / فريق العمليات"
+                             loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title en">Operational Excellence</h3>
+                        <h3 class="card-title ar">التميز التشغيلي</h3>
+                        <p class="card-text en">Dedicated professionals committed to operational efficiency, quality control, and customer satisfaction.</p>
+                        <p class="card-text ar">محترفون مخلصون ملتزمون بالكفاءة التشغيلية ومراقبة الجودة ورضا العملاء.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section section-dark">
+        <div class="container text-center">
+            <h2 class="en" style="color: white;" data-aos="fade-up">Join Our Journey</h2>
+            <h2 class="ar" style="color: white;" data-aos="fade-up">انضم إلى رحلتنا</h2>
+            
+            <p class="en" style="color: white; font-size: 1.25rem; max-width: 800px; margin: 0 auto 2rem;" data-aos="fade-up" data-aos-delay="100">
+                Be part of our continued success story. Partner with Nashco Global for innovative solutions and sustainable growth.
+            </p>
+            <p class="ar" style="color: white; font-size: 1.25rem; max-width: 800px; margin: 0 auto 2rem;" data-aos="fade-up" data-aos-delay="100">
+                كن جزءاً من قصة نجاحنا المستمرة. شارك مع ناشكو جلوبال للحصول على حلول مبتكرة ونمو مستدام.
+            </p>
+            
+            <a href="contact.html" class="cta-button" data-aos="zoom-in" data-aos-delay="200">
+                <span class="en">Get in Touch</span>
+                <span class="ar">تواصل معنا</span>
+            </a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <img src="https://github.com/user-attachments/assets/3cc9f941-919c-46db-99af-dafcbd3a75ff" 
-                         alt="Nashco Global" 
-                         style="max-width: 120px; margin-bottom: 20px;"
-                         onerror="this.onerror=null; this.style.display='none';">
-                    <h3>Nashco Global</h3>
-                    <p data-en="Excellence in Automotive, Manufacturing & Trading since 1994" data-ar="التميز في السيارات والتصنيع والتجارة منذ 1994">
-                        Excellence in Automotive, Manufacturing & Trading since 1994
-                    </p>
+                    <h3 class="en">About Nashco Global</h3>
+                    <h3 class="ar">عن ناشكو جلوبال</h3>
+                    
+                    <p class="en">Leading multi-sector solutions provider in the GCC since 1994, delivering excellence in chemicals, automotive, manufacturing, and trading.</p>
+                    <p class="ar">مزود رائد للحلول متعددة القطاعات في دول مجلس التعاون الخليجي منذ عام 1994، نقدم التميز في الكيميائيات والسيارات والتصنيع والتجارة.</p>
+                    
                     <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="white"><path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z"/></svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" fill="white"><path d="M22.46 6C21.69 6.35 20.86 6.58 20 6.69C20.88 6.16 21.56 5.32 21.88 4.31C21.05 4.81 20.13 5.16 19.16 5.36C18.37 4.5 17.26 4 16 4C13.65 4 11.73 5.92 11.73 8.29C11.73 8.63 11.77 8.96 11.84 9.27C8.28 9.09 5.11 7.38 3 4.79C2.63 5.42 2.42 6.16 2.42 6.94C2.42 8.43 3.17 9.75 4.33 10.5C3.62 10.5 2.96 10.3 2.38 10V10.03C2.38 12.11 3.86 13.85 5.82 14.24C5.46 14.34 5.08 14.39 4.69 14.39C4.42 14.39 4.15 14.36 3.89 14.31C4.43 16 6 17.26 7.89 17.29C6.43 18.45 4.58 19.13 2.56 19.13C2.22 19.13 1.88 19.11 1.54 19.07C3.44 20.29 5.70 21 8.12 21C16 21 20.33 14.46 20.33 8.79C20.33 8.6 20.33 8.42 20.32 8.23C21.16 7.63 21.88 6.87 22.46 6Z"/></svg>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="white"><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z"/></svg>
+                        </a>
                     </div>
                 </div>
+                
                 <div class="footer-section">
-                    <h4 data-en="Quick Links" data-ar="روابط سريعة">Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a></li>
-                        <li><a href="about.html" data-en="About" data-ar="من نحن">About</a></li>
-                        <li><a href="zahyalkhaleej.html" data-en="Zahy Al Khaleej" data-ar="زاهي الخليج">Zahy Al Khaleej</a></li>
-                        <li><a href="contact.html" data-en="Contact" data-ar="اتصل بنا">Contact</a></li>
+                    <h3 class="en">Quick Links</h3>
+                    <h3 class="ar">روابط سريعة</h3>
+                    
+                    <ul class="footer-links">
+                        <li><a href="index.html"><span class="en">Home</span><span class="ar">الرئيسية</span></a></li>
+                        <li><a href="about.html"><span class="en">About Us</span><span class="ar">من نحن</span></a></li>
+                        <li><a href="zahy-al-khaleej.html"><span class="en">Chemicals</span><span class="ar">الكيميائيات</span></a></li>
+                        <li><a href="automotive.html"><span class="en">Automotive</span><span class="ar">السيارات</span></a></li>
+                        <li><a href="manufacturing.html"><span class="en">Manufacturing</span><span class="ar">التصنيع</span></a></li>
+                        <li><a href="trading.html"><span class="en">Trading</span><span class="ar">التجارة</span></a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-section">
-                    <h4 data-en="Our Divisions" data-ar="أقسامنا">Our Divisions</h4>
-                    <ul>
-                        <li><a href="automotive.html" data-en="Automotive" data-ar="السيارات">Automotive</a></li>
-                        <li><a href="manufacturing.html" data-en="Manufacturing" data-ar="التصنيع">Manufacturing</a></li>
-                        <li><a href="trading.html" data-en="Trading" data-ar="التجارة">Trading</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4 data-en="Contact Us" data-ar="اتصل بنا">Contact Us</h4>
-                    <ul>
-                        <li><i class="fas fa-phone"></i> Oman: +968 94535053</li>
-                        <li><i class="fas fa-phone"></i> UAE: +971 508536542</li>
-                        <li><i class="fas fa-envelope"></i> info@nashcoglobal.com</li>
-                    </ul>
+                    <h3 class="en">Contact Info</h3>
+                    <h3 class="ar">معلومات الاتصال</h3>
+                    
+                    <p class="en"><strong>Email:</strong> info@nashcoglobal.com</p>
+                    <p class="ar"><strong>البريد الإلكتروني:</strong> info@nashcoglobal.com</p>
+                    
+                    <p class="en"><strong>Phone:</strong> +971 XXX XXXX</p>
+                    <p class="ar"><strong>الهاتف:</strong> +971 XXX XXXX</p>
+                    
+                    <p class="en"><strong>Location:</strong> GCC Region</p>
+                    <p class="ar"><strong>الموقع:</strong> منطقة مجلس التعاون الخليجي</p>
                 </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>&copy; <span id="currentYear">2026</span> Nashco Global. <span data-en="All rights reserved." data-ar="كل الحقوق محفوظة.">All rights reserved.</span></p>
+                <p class="en">&copy; 2024 Nashco Global. All Rights Reserved. | Established 1994</p>
+                <p class="ar">&copy; 2024 ناشكو جلوبال. جميع الحقوق محفوظة. | تأسست عام 1994</p>
             </div>
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top" aria-label="Back to top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/968945350 53" 
-       class="whatsapp-float" 
-       target="_blank" 
-       rel="noopener noreferrer"
-       aria-label="Contact us on WhatsApp">
-        <img src="assets/images/whatsapp.svg" alt="WhatsApp" class="whatsapp-icon">
-    </a>
-
-    <!-- JavaScript -->
-    <script src="script.js"></script>
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 800, once: true });</script>
+    <script src="js/main.js"></script>
 </body>
 </html>
