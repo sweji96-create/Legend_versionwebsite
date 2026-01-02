@@ -3,123 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Nashco Global - Get in touch with us">
-    <title>Contact Us - Nashco Global</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Contact Nashco Global - Get in touch with our team for chemicals, automotive, manufacturing, and trading solutions across the GCC region.">
+    <meta name="keywords" content="Contact Nashco Global, GCC Industrial Contact, Business Inquiries, Nashco Customer Service">
+    <meta name="author" content="Nashco Global">
+    <meta name="robots" content="index, follow">
+    
+    <title>Contact Us | Nashco Global</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header" id="header">
-        <div class="header-container">
-            <div class="logo-container">
-                <a href="index.html">
-                    <img src="https://github.com/user-attachments/assets/3bb45701-20dd-43be-8b03-462604f7f894" alt="Nashco Global Logo" class="logo-img">
-                </a>
-            </div>
-            <nav class="nav" id="nav-menu">
-                <ul class="nav-list">
-                    <li><a href="index.html" class="nav-link" data-en="Home" data-ar="الرئيسية">Home</a></li>
-                    <li><a href="about.html" class="nav-link" data-en="About Us" data-ar="من نحن">About Us</a></li>
-                    <li><a href="zahyalkhaleej.html" class="nav-link" data-en="Zahy Al Khaleej" data-ar="زاهي الخليج">Zahy Al Khaleej</a></li>
-                    <li><a href="automotive.html" class="nav-link" data-en="Automotive" data-ar="السيارات">Automotive</a></li>
-                    <li><a href="manufacturing.html" class="nav-link" data-en="Manufacturing" data-ar="التصنيع">Manufacturing</a></li>
-                    <li><a href="trading.html" class="nav-link" data-en="Trading" data-ar="التجارة">Trading</a></li>
-                    <li><a href="contact.html" class="nav-link active" data-en="Contact" data-ar="اتصل بنا">Contact</a></li>
-                </ul>
-            </nav>
-            <button class="language-toggle" id="language-toggle" aria-label="Toggle Language">
-                <span class="lang-text">عربي</span>
-            </button>
-            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle Menu">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </header>
+    <div class="language-toggle">
+        <button id="langBtn" class="lang-btn" aria-label="Toggle Language">
+            <i class="fas fa-language"></i>
+            <span id="langText">العربية</span>
+        </button>
+    </div>
 
-    <section class="page-hero contact-hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1 class="hero-title" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</h1>
-            <p class="hero-subtitle" data-en="Get In Touch With Nashco Global" data-ar="تواصل مع ناشكو العالمية">Get In Touch With Nashco Global</p>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="https://github.com/user-attachments/assets/9ac29a62-112a-4e0e-b2bf-96051be57756" 
+                             alt="Nashco Global Logo" class="logo-img">
+                    </a>
+                </div>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                    <li><a href="about.html" data-en="About" data-ar="من نحن">About</a></li>
+                    <li class="dropdown">
+                        <a href="#" data-en="Divisions" data-ar="الأقسام">Divisions</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="zahyalkhaleej.html" data-en="Zahy Al Khaleej" data-ar="زاهي الخليج">Zahy Al Khaleej</a></li>
+                            <li><a href="automotive.html" data-en="Automotive" data-ar="السيارات">Automotive</a></li>
+                            <li><a href="manufacturing.html" data-en="Manufacturing" data-ar="التصنيع">Manufacturing</a></li>
+                            <li><a href="trading.html" data-en="Trading" data-ar="التجارة">Trading</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html" class="active" data-en="Contact" data-ar="اتصل بنا">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1 data-en="Get in Touch" data-ar="اتصل بنا">Get in Touch</h1>
+            <p data-en="We're here to help and answer any questions you might have" data-ar="نحن هنا للمساعدة والإجابة على أي أسئلة قد تكون لديك">We're here to help and answer any questions you might have</p>
         </div>
     </section>
 
-    <section class="section contact-section">
+    <section class="contact-page">
         <div class="container">
             <div class="contact-content">
-                <div class="contact-info">
-                    <h2 class="subsection-title" data-en="Contact Information" data-ar="معلومات الاتصال">Contact Information</h2>
-                    <p class="text-content" data-en="We're here to help and answer any questions you might have. We look forward to hearing from you." data-ar="نحن هنا للمساعدة والإجابة على أي أسئلة قد تكون لديك. نتطلع إلى الاستماع منك.">We're here to help and answer any questions you might have. We look forward to hearing from you.</p>
-                    
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <svg class="contact-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                            </svg>
-                            <div>
-                                <h4 data-en="Oman" data-ar="عمان">Oman</h4>
-                                <p>+968 94535053</p>
+                <div class="contact-info-section">
+                    <h2 data-en="Contact Information" data-ar="معلومات الاتصال">Contact Information</h2>
+                    <div class="info-cards">
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-envelope"></i>
                             </div>
+                            <h4 data-en="Email" data-ar="البريد الإلكتروني">Email</h4>
+                            <p>info@nashcoglobal.com</p>
                         </div>
-                        
-                        <div class="contact-item">
-                            <svg class="contact-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                            </svg>
-                            <div>
-                                <h4 data-en="UAE" data-ar="الإمارات العربية المتحدة">UAE</h4>
-                                <p>+971 508536542</p>
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-phone"></i>
                             </div>
+                            <h4 data-en="Phone - Oman" data-ar="الهاتف - عمان">Phone - Oman</h4>
+                            <p>+968 94535053</p>
                         </div>
-                        
-                        <div class="contact-item">
-                            <svg class="contact-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                                <polyline points="22,6 12,13 2,6"></polyline>
-                            </svg>
-                            <div>
-                                <h4 data-en="Email" data-ar="البريد الإلكتروني">Email</h4>
-                                <p>info@nashcoglobal.com</p>
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-mobile-alt"></i>
                             </div>
+                            <h4 data-en="Phone - UAE" data-ar="الهاتف - الإمارات">Phone - UAE</h4>
+                            <p>+971 508536542</p>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h4 data-en="Location" data-ar="الموقع">Location</h4>
+                            <p data-en="GCC Region, Middle East" data-ar="منطقة دول مجلس التعاون الخليجي، الشرق الأوسط">GCC Region, Middle East</p>
                         </div>
                     </div>
                 </div>
-                
-                <div class="contact-form-container">
-                    <h3 class="form-title" data-en="Send Us a Message" data-ar="أرسل لنا رسالة">Send Us a Message</h3>
-                    <form class="contact-form" id="contact-form" action="https://formspree.io/f/xanyzvqk" method="POST">
+
+                <div class="contact-form-section">
+                    <h2 data-en="Send Us a Message" data-ar="أرسل لنا رسالة">Send Us a Message</h2>
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/xanygjyk" method="POST">
                         <div class="form-group">
-                            <input type="text" id="name" name="name" required placeholder=" ">
-                            <label for="name" data-en="Your Name *" data-ar="اسمك *">Your Name *</label>
+                            <label class="floating-label">
+                                <input type="text" name="name" required placeholder=" ">
+                                <span data-en="Your Name" data-ar="اسمك">Your Name</span>
+                            </label>
                         </div>
-                        
                         <div class="form-group">
-                            <input type="email" id="email" name="email" required placeholder=" ">
-                            <label for="email" data-en="Your Email *" data-ar="بريدك الإلكتروني *">Your Email *</label>
+                            <label class="floating-label">
+                                <input type="email" name="email" required placeholder=" ">
+                                <span data-en="Your Email" data-ar="بريدك الإلكتروني">Your Email</span>
+                            </label>
                         </div>
-                        
                         <div class="form-group">
-                            <input type="tel" id="phone" name="phone" placeholder=" ">
-                            <label for="phone" data-en="Phone Number" data-ar="رقم الهاتف">Phone Number</label>
+                            <label class="floating-label">
+                                <input type="text" name="subject" required placeholder=" ">
+                                <span data-en="Subject" data-ar="الموضوع">Subject</span>
+                            </label>
                         </div>
-                        
                         <div class="form-group">
-                            <select id="subject" name="subject" required>
-                                <option value="" data-en="Select a topic..." data-ar="اختر موضوع...">Select a topic...</option>
-                                <option value="General Inquiry" data-en="General Inquiry" data-ar="استفسار عام">General Inquiry</option>
-                                <option value="Automotive" data-en="Automotive Division" data-ar="قسم السيارات">Automotive Division</option>
-                                <option value="Manufacturing" data-en="Manufacturing Division" data-ar="قسم التصنيع">Manufacturing Division</option>
-                                <option value="Trading" data-en="Trading Division" data-ar="قسم التجارة">Trading Division</option>
-                                <option value="Partnership" data-en="Partnership Opportunity" data-ar="فرصة الشراكة">Partnership Opportunity</option>
-                            </select>
-                            <label for="subject" data-en="Subject *" data-ar="الموضوع *">Subject *</label>
+                            <label class="floating-label">
+                                <textarea name="message" required placeholder=" " rows="5"></textarea>
+                                <span data-en="Message" data-ar="الرسالة">Message</span>
+                            </label>
                         </div>
-                        
-                        <div class="form-group">
-                            <textarea id="message" name="message" rows="6" required placeholder=" "></textarea>
-                            <label for="message" data-en="Your Message *" data-ar="رسالتك *">Your Message *</label>
-                        </div>
-                        
-                        <button type="submit" class="submit-button" data-en="Send Message" data-ar="إرسال الرسالة">Send Message</button>
+                        <input type="hidden" name="_replyto" value="info@nashcoglobal.com">
+                        <input type="hidden" name="_subject" value="New Contact Form Submission from Nashco Global Website">
+                        <input type="hidden" name="_next" value="https://nashcoglobal.com/index.html">
+                        <button type="submit" class="btn btn-primary btn-submit" data-en="Send Message" data-ar="إرسال رسالة">
+                            Send Message
+                        </button>
                     </form>
                 </div>
             </div>
@@ -130,43 +142,27 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMDAgODAiIHdpZHRoPSIzMDAiIGhlaWdodD0iODAiPgogIDxkZWZzPgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJnbG9iZUdyYWRpZW50IiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzRDQUY1MDtzdG9wLW9wYWNpdHk6MSIgLz4KICAgICAgPHN0b3Agb2Zmc2V0PSI1MCUiIHN0eWxlPSJzdG9wLWNvbG9yOiMxOTc2RDI7c3RvcC1vcGFjaXR5OjEiIC8+CiAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6IzIxOTZGMztzdG9wLW9wYWNpdHk6MSIgLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIAogIDwhLS0gR2xvYmUgLS0+CiAgPGNpcmNsZSBjeD0iNDAiIGN5PSI0MCIgcj0iMzUiIGZpbGw9InVybCgjZ2xvYmVHcmFkaWVudCkiIC8+CiAgCiAgPCEtLSBHbG9iZSBsaW5lcyAtLT4KICA8ZWxsaXBzZSBjeD0iNDAiIGN5PSI0MCIgcng9IjM1IiByeT0iMTUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzgxQzc4NCIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8ZWxsaXBzZSBjeD0iNDAiIGN5PSI0MCIgcng9IjE1IiByeT0iMzUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzgxQzc4NCIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8bGluZSB4MT0iNDAiIHkxPSI1IiB4Mj0iNDAiIHkyPSI3NSIgc3Ryb2tlPSIjODFDNzg0IiBzdHJva2Utd2lkdGg9IjEuNSIvPgogIDxsaW5lIHgxPSI1IiB5MT0iNDAiIHgyPSI3NSIgeTI9IjQwIiBzdHJva2U9IiM4MUM3ODQiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgCiAgPCEtLSBOQVNIQ08gdGV4dCAtLT4KICA8dGV4dCB4PSI5MCIgeT0iNDUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzMiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiNEMzJGMkYiPk5BU0hDTzwvdGV4dD4KICAKICA8IS0tIEdMT0JBTCB0ZXh0IC0tPgogIDx0ZXh0IHg9IjkwIiB5PSI2OCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE4IiBmb250LXdlaWdodD0iNjAwIiBmaWxsPSIjMTk3NkQyIj5HTE9CQUw8L3RleHQ+CiAgCiAgPCEtLSBHcmVlbiBzd29vc2ggLS0+CiAgPHBhdGggZD0iTSA3NSA0MCBRIDg1IDMwLCA5NSAzNSBUIDExNSAzOCIgc3Ryb2tlPSIjNENBRjUwIiBzdHJva2Utd2lkdGg9IjMiIGZpbGw9Im5vbmUiIG9wYWNpdHk9IjAuNyIvPgogIDxwYXRoIGQ9Ik0gNzUgNDUgUSA5MCAzOCwgMTA1IDQyIFQgMTI1IDQ0IiBzdHJva2U9IiM0Q0FGNTAiIHN0cm9rZS13aWR0aD0iMyIgZmlsbD0ibm9uZSIgb3BhY2l0eT0iMC43Ii8+Cjwvc3ZnPg==" alt="Nashco Global Logo" class="footer-logo">
-                    <p class="footer-description" data-en="Leading GCC industrial solutions provider since 1994" data-ar="المزود الرائد للحلول الصناعية في دول مجلس التعاون الخليجي منذ عام 1994">Leading GCC industrial solutions provider since 1994</p>
+                    <h3>Nashco Global</h3>
+                    <p data-en="Excellence in Chemicals, Automotive, Manufacturing & Trading since 1994" data-ar="التميز في المواد الكيميائية والسيارات والتصنيع والتجارة منذ 1994">Excellence in Chemicals, Automotive, Manufacturing & Trading since 1994</p>
                 </div>
                 <div class="footer-section">
-                    <h4 class="footer-title" data-en="Quick Links" data-ar="روابط سريعة">Quick Links</h4>
-                    <ul class="footer-links">
+                    <h4 data-en="Quick Links" data-ar="روابط سريعة">Quick Links</h4>
+                    <ul>
                         <li><a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a></li>
-                        <li><a href="about.html" data-en="About Us" data-ar="من نحن">About Us</a></li>
-                        <li><a href="zahyalkhaleej.html" data-en="Zahy Al Khaleej" data-ar="زاهي الخليج">Zahy Al Khaleej</a></li>
-                        <li><a href="automotive.html" data-en="Automotive" data-ar="السيارات">Automotive</a></li>
-                        <li><a href="manufacturing.html" data-en="Manufacturing" data-ar="التصنيع">Manufacturing</a></li>
-                        <li><a href="trading.html" data-en="Trading" data-ar="التجارة">Trading</a></li>
+                        <li><a href="about.html" data-en="About" data-ar="من نحن">About</a></li>
+                        <li><a href="contact.html" data-en="Contact" data-ar="اتصل بنا">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4 class="footer-title" data-en="Our Group" data-ar="مجموعتنا">Our Group</h4>
-                    <img src="https://github.com/user-attachments/assets/94e66ea6-5709-4fc7-8280-9a6e8c1150b2" alt="Zahy Group Logo" class="footer-zahy-logo">
-                    <p class="footer-group-text" data-en="Zahy Al Khaleej Group" data-ar="مجموعة زاهي الخليج">Zahy Al Khaleej Group</p>
-                </div>
-                <div class="footer-section">
-                    <h4 class="footer-title" data-en="Contact" data-ar="اتصل">Contact</h4>
-                    <p><strong data-en="Oman:" data-ar="عمان:">Oman:</strong> +968 94535053</p>
-                    <p><strong data-en="UAE:" data-ar="الإمارات:">UAE:</strong> +971 508536542</p>
-                    <p>info@nashcoglobal.com</p>
+                    <h4 data-en="Contact Info" data-ar="معلومات الاتصال">Contact Info</h4>
+                    <p>Email: info@nashcoglobal.com</p>
+                    <p>Oman: +968 94535053</p>
+                    <p>UAE: +971 508536542</p>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p data-en="© 2024 Nashco Global. All rights reserved. Part of Zahy Al Khaleej Group." data-ar="© 2024 ناشكو العالمية. جميع الحقوق محفوظة. جزء من مجموعة زاهي الخليج.">© 2024 Nashco Global. All rights reserved. Part of Zahy Al Khaleej Group.</p>
-            </div>
+            <p class="copyright">© 2026 Nashco Global. All rights reserved.</p>
         </div>
     </footer>
-
-    <a href="https://wa.me/971508536542?text=Hello,%20I'm%20interested%20in%20Nashco%20Global%20services" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
-        <svg class="whatsapp-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path fill="#fff" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-        </svg>
-    </a>
 
     <script src="script.js"></script>
 </body>
