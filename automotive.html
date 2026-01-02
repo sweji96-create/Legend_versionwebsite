@@ -1,163 +1,240 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Automotive Solutions by Nashco Global | حلول السيارات من ناشكو جلوبال</title>
-    <meta name="description" content="Innovative automotive parts, assembly solutions, and advanced technologies for the Middle East automotive industry. | قطع غيار وحلول تجميع مبتكرة لصناعة السيارات في الشرق الأوسط.">
-    <meta name="keywords" content="automotive solutions, car assembly, automotive parts, GCC automotive, حلول السيارات">
-    <link rel="canonical" href="https://www.nashcoglobal.com/automotive.html">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <meta name="description" content="Nashco Global Automotive Division - Nashco Max Car FZE and Zahy Auto Spare Parts Trading">
+    <title>Automotive Division - Nashco Global</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <!-- Header with Logo and Navigation -->
+    <header class="header" id="header">
         <div class="header-container">
-            <a href="index.html" class="logo">
-                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <ellipse cx="50" cy="50" rx="35" ry="35" fill="#003087"/>
-                    <circle cx="50" cy="50" r="28" fill="#00A1D6"/>
-                    <ellipse cx="50" cy="50" rx="40" ry="15" fill="none" stroke="#00FF00" stroke-width="3"/>
-                    <text x="50" y="55" font-family="Arial" font-size="10" font-weight="bold" fill="#C8102E" text-anchor="middle">NASHCO</text>
-                </svg>
-                <span class="en">NASHCO GLOBAL</span>
-                <span class="ar">ناشكو جلوبال</span>
-            </a>
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="en">Home</a><a href="index.html" class="ar">الرئيسية</a></li>
-                    <li><a href="about.html" class="en">About Us</a><a href="about.html" class="ar">من نحن</a></li>
-                    <li><a href="zahy-al-khaleej.html" class="en">Chemicals</a><a href="zahy-al-khaleej.html" class="ar">الكيميائيات</a></li>
-                    <li><a href="automotive.html" class="en">Automotive</a><a href="automotive.html" class="ar">السيارات</a></li>
-                    <li><a href="manufacturing.html" class="en">Manufacturing</a><a href="manufacturing.html" class="ar">التصنيع</a></li>
-                    <li><a href="trading.html" class="en">Trading</a><a href="trading.html" class="ar">التجارة</a></li>
-                    <li><a href="contact.html" class="en">Contact</a><a href="contact.html" class="ar">اتصل بنا</a></li>
-                    <li><button id="languageToggle" class="language-toggle">عربي</button></li>
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="images/nashco-logo.svg" alt="Nashco Global Logo" class="logo-img">
+                </a>
+            </div>
+            
+            <nav class="nav" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                    <li><a href="about.html" class="nav-link" data-en="About Us" data-ar="من نحن">About Us</a></li>
+                    <li><a href="zahyalkhaleej.html" class="nav-link" data-en="Zahy Al Khaleej" data-ar="زاهي الخليج">Zahy Al Khaleej</a></li>
+                    <li><a href="automotive.html" class="nav-link active" data-en="Automotive" data-ar="السيارات">Automotive</a></li>
+                    <li><a href="manufacturing.html" class="nav-link" data-en="Manufacturing" data-ar="التصنيع">Manufacturing</a></li>
+                    <li><a href="trading.html" class="nav-link" data-en="Trading" data-ar="التجارة">Trading</a></li>
+                    <li><a href="contact.html" class="nav-link" data-en="Contact" data-ar="اتصل بنا">Contact</a></li>
                 </ul>
             </nav>
-            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
-                <span></span><span></span><span></span>
+            
+            <button class="language-toggle" id="language-toggle" aria-label="Toggle Language">
+                <span class="lang-text">عربي</span>
+            </button>
+            
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
         </div>
     </header>
 
-    <section class="hero parallax" style="background-image: url('https://plus.unsplash.com/premium_photo-1682144912030-99d4fee5e9b6?fm=jpg&q=60&w=3000');">
+    <!-- Page Hero -->
+    <section class="page-hero automotive-hero">
+        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1 class="en">Automotive Excellence</h1>
-            <h1 class="ar">التميز في السيارات</h1>
-            <p class="en">Powering the Future of Mobility in the Middle East</p>
-            <p class="ar">تشغيل مستقبل التنقل في الشرق الأوسط</p>
+            <h1 class="hero-title" data-en="Automotive Division" data-ar="قسم السيارات">Automotive Division</h1>
+            <p class="hero-subtitle" data-en="Leading Automotive Solutions Across the GCC" data-ar="الحلول الرائدة للسيارات عبر دول مجلس التعاون الخليجي">Leading Automotive Solutions Across the GCC</p>
         </div>
     </section>
 
-    <section class="section">
+    <!-- Division Overview -->
+    <section class="section automotive-overview-section">
         <div class="container">
-            <div class="grid grid-2">
-                <div data-aos="fade-right">
-                    <h2 class="en">Innovative Automotive Solutions</h2>
-                    <h2 class="ar">حلول سيارات مبتكرة</h2>
-                    <p class="en">Since entering the automotive sector in 2008, Nashco Global has established itself as a trusted provider of high-quality automotive parts, advanced assembly solutions, and cutting-edge technologies that drive the Middle East automotive industry forward. Our comprehensive portfolio includes precision-engineered components, state-of-the-art assembly systems, and innovative aftermarket solutions designed to meet the rigorous demands of modern vehicles.</p>
-                    <p class="ar">منذ دخول قطاع السيارات في عام 2008، أثبتت ناشكو جلوبال نفسها كمزود موثوق لقطع غيار السيارات عالية الجودة وحلول التجميع المتقدمة والتقنيات المتطورة التي تدفع صناعة السيارات في الشرق الأوسط إلى الأمام.</p>
+            <div class="section-header">
+                <h2 class="section-title" data-en="Automotive Excellence" data-ar="التميز في السيارات">Automotive Excellence</h2>
+                <div class="title-divider"></div>
+            </div>
+            
+            <div class="overview-content">
+                <div class="overview-text">
+                    <p class="intro-text" data-en="Nashco Global's Automotive Division delivers comprehensive automotive solutions through two specialized business units: Nashco Max Car FZE for car trading and Zahy Auto Spare for spare parts trading. Together, these divisions provide end-to-end automotive services to businesses and consumers across the GCC region." data-ar="يقدم قسم السيارات في ناشكو العالمية حلول سيارات شاملة من خلال وحدتي أعمال متخصصتين: Nashco Max Car FZE لتجارة السيارات و Zahy Auto Spare لتجارة قطع الغيار. معاً، توفر هذه الأقسام خدمات سيارات شاملة للشركات والمستهلكين عبر منطقة دول مجلس التعاون الخليجي.">Nashco Global's Automotive Division delivers comprehensive automotive solutions through two specialized business units: Nashco Max Car FZE for car trading and Zahy Auto Spare for spare parts trading. Together, these divisions provide end-to-end automotive services to businesses and consumers across the GCC region.</p>
                 </div>
-                <div data-aos="fade-left">
-                    <img src="https://plus.unsplash.com/premium_photo-1682144905331-6d73d9d6ccc3?fm=jpg&q=60&w=3000" alt="Automotive Assembly / تجميع السيارات" loading="lazy" style="border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.15);">
+                
+                <div class="overview-image">
+                    <img src="https://s3.mordorintelligence.com/gcc-automtoive-logistics-market/gcc-automtoive-logistics-market-1757084155068-major-players.webp" alt="Automotive Division" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section section-light">
+    <!-- Business Units Section -->
+    <section class="section business-units-section">
         <div class="container">
-            <div class="section-title">
-                <h2 class="en">Our Automotive Services</h2>
-                <h2 class="ar">خدمات السيارات لدينا</h2>
+            <div class="section-header">
+                <h2 class="section-title" data-en="Our Business Units" data-ar="وحدات أعمالنا">Our Business Units</h2>
+                <div class="title-divider"></div>
             </div>
-            <div class="grid grid-3">
-                <div class="card" data-aos="zoom-in">
-                    <div class="card-image">
-                        <img src="https://plus.unsplash.com/premium_photo-1682144912030-99d4fee5e9b6?fm=jpg&q=60&w=3000" alt="OEM Parts / قطع OEM" loading="lazy">
+            
+            <div class="units-grid">
+                <div class="unit-card featured">
+                    <div class="unit-header">
+                        <h3 class="unit-title" data-en="Nashco Max Car FZE" data-ar="Nashco Max Car FZE">Nashco Max Car FZE</h3>
+                        <p class="unit-subtitle" data-en="Car Trading Division" data-ar="قسم تجارة السيارات">Car Trading Division</p>
                     </div>
-                    <div class="card-content">
-                        <h3 class="card-title en">OEM & Aftermarket Parts</h3>
-                        <h3 class="card-title ar">قطع OEM وما بعد البيع</h3>
-                        <p class="card-text en">Premium quality original equipment and aftermarket parts for diverse vehicle makes and models.</p>
-                        <p class="card-text ar">قطع غيار أصلية وما بعد البيع عالية الجودة لمختلف ماركات ونماذج المركبات.</p>
-                    </div>
-                </div>
-                <div class="card" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="card-image">
-                        <img src="https://t3.ftcdn.net/jpg/04/68/73/96/360_F_468739675_tDIJPQtjxOanMtXIcyenAbqKQhNQVq6m.jpg" alt="Assembly Solutions / حلول التجميع" loading="lazy">
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title en">Assembly Solutions</h3>
-                        <h3 class="card-title ar">حلول التجميع</h3>
-                        <p class="card-text en">Advanced assembly line systems and automated processes for efficient vehicle production.</p>
-                        <p class="card-text ar">أنظمة خطوط تجميع متقدمة وعمليات آلية لإنتاج فعال للمركبات.</p>
+                    <div class="unit-content">
+                        <p class="unit-description" data-en="Nashco Max Car FZE is our premier car trading division, offering a comprehensive range of new and pre-owned vehicles from leading global manufacturers. Based in a free zone, we provide efficient import-export services and competitive pricing for individual and corporate clients." data-ar="Nashco Max Car FZE هو قسم تجارة السيارات الرائد لدينا، ويقدم مجموعة شاملة من المركبات الجديدة والمستعملة من كبار الشركات المصنعة العالمية. مقرنا في منطقة حرة، نقدم خدمات استيراد وتصدير فعالة وأسعار تنافسية للعملاء الأفراد والشركات.">Nashco Max Car FZE is our premier car trading division, offering a comprehensive range of new and pre-owned vehicles from leading global manufacturers. Based in a free zone, we provide efficient import-export services and competitive pricing for individual and corporate clients.</p>
+                        
+                        <h4 class="services-title" data-en="Key Services:" data-ar="الخدمات الرئيسية:">Key Services:</h4>
+                        <ul class="services-list">
+                            <li data-en="New and certified pre-owned vehicles" data-ar="مركبات جديدة ومستعملة معتمدة">New and certified pre-owned vehicles</li>
+                            <li data-en="Fleet solutions for corporate clients" data-ar="حلول الأساطيل للعملاء من الشركات">Fleet solutions for corporate clients</li>
+                            <li data-en="Import and export facilitation" data-ar="تسهيل الاستيراد والتصدير">Import and export facilitation</li>
+                            <li data-en="Vehicle financing assistance" data-ar="المساعدة في تمويل المركبات">Vehicle financing assistance</li>
+                            <li data-en="After-sales service coordination" data-ar="تنسيق خدمة ما بعد البيع">After-sales service coordination</li>
+                            <li data-en="Comprehensive vehicle inspection and certification" data-ar="فحص شامل للمركبات والشهادات">Comprehensive vehicle inspection and certification</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="card" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="card-image">
-                        <img src="https://plus.unsplash.com/premium_photo-1682144905331-6d73d9d6ccc3?fm=jpg&q=60&w=3000" alt="Technical Support / الدعم الفني" loading="lazy">
+                
+                <div class="unit-card featured">
+                    <div class="unit-header">
+                        <h3 class="unit-title" data-en="Zahy Auto Spare" data-ar="Zahy Auto Spare">Zahy Auto Spare</h3>
+                        <p class="unit-subtitle" data-en="Spare Parts Trading Division" data-ar="قسم تجارة قطع الغيار">Spare Parts Trading Division</p>
                     </div>
-                    <div class="card-content">
-                        <h3 class="card-title en">Technical Support</h3>
-                        <h3 class="card-title ar">الدعم الفني</h3>
-                        <p class="card-text en">Expert technical consultation, training, and ongoing support for automotive operations.</p>
-                        <p class="card-text ar">استشارات فنية متخصصة وتدريب ودعم مستمر لعمليات السيارات.</p>
+                    <div class="unit-content">
+                        <p class="unit-description" data-en="Zahy Auto Spare specializes in the trading of genuine and aftermarket automotive spare parts. With an extensive inventory and strong relationships with manufacturers and distributors, we ensure prompt delivery of high-quality parts for all vehicle makes and models." data-ar="تخصص Zahy Auto Spare في تجارة قطع غيار السيارات الأصلية وما بعد البيع. مع مخزون واسع وعلاقات قوية مع الشركات المصنعة والموزعين، نضمن التسليم الفوري لقطع الغيار عالية الجودة لجميع ماركات وموديلات المركبات.">Zahy Auto Spare specializes in the trading of genuine and aftermarket automotive spare parts. With an extensive inventory and strong relationships with manufacturers and distributors, we ensure prompt delivery of high-quality parts for all vehicle makes and models.</p>
+                        
+                        <h4 class="services-title" data-en="Key Services:" data-ar="الخدمات الرئيسية:">Key Services:</h4>
+                        <ul class="services-list">
+                            <li data-en="Genuine OEM parts from authorized distributors" data-ar="قطع OEM أصلية من موزعين معتمدين">Genuine OEM parts from authorized distributors</li>
+                            <li data-en="High-quality aftermarket parts" data-ar="قطع ما بعد البيع عالية الجودة">High-quality aftermarket parts</li>
+                            <li data-en="Bulk ordering for workshops and dealers" data-ar="طلب بالجملة لورش العمل والوكلاء">Bulk ordering for workshops and dealers</li>
+                            <li data-en="Fast delivery and logistics support" data-ar="التسليم السريع ودعم الخدمات اللوجستية">Fast delivery and logistics support</li>
+                            <li data-en="Technical consultation and parts identification" data-ar="الاستشارات الفنية وتحديد القطع">Technical consultation and parts identification</li>
+                            <li data-en="Warranty and quality assurance" data-ar="الضمان وضمان الجودة">Warranty and quality assurance</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section section-dark">
-        <div class="container text-center">
-            <h2 class="en" style="color: white;" data-aos="fade-up">Drive Your Business Forward</h2>
-            <h2 class="ar" style="color: white;" data-aos="fade-up">ادفع عملك إلى الأمام</h2>
-            <p class="en" style="color: white; font-size: 1.25rem; max-width: 800px; margin: 0 auto 2rem;" data-aos="fade-up" data-aos-delay="100">Partner with Nashco Global for reliable automotive solutions that meet international standards.</p>
-            <p class="ar" style="color: white; font-size: 1.25rem; max-width: 800px; margin: 0 auto 2rem;" data-aos="fade-up" data-aos-delay="100">شارك مع ناشكو جلوبال للحصول على حلول سيارات موثوقة تلبي المعايير الدولية.</p>
-            <a href="contact.html" class="cta-button" data-aos="zoom-in" data-aos-delay="200">
-                <span class="en">Contact Us</span>
-                <span class="ar">اتصل بنا</span>
-            </a>
+    <!-- Competitive Advantages -->
+    <section class="section advantages-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title light" data-en="Why Choose Our Automotive Division" data-ar="لماذا تختار قسم السيارات لدينا">Why Choose Our Automotive Division</h2>
+                <div class="title-divider light"></div>
+            </div>
+            
+            <div class="advantages-grid">
+                <div class="advantage-item">
+                    <div class="advantage-icon">🚗</div>
+                    <h3 data-en="Wide Selection" data-ar="اختيار واسع">Wide Selection</h3>
+                    <p data-en="Comprehensive range of vehicles and parts from leading global brands" data-ar="مجموعة شاملة من المركبات والقطع من العلامات التجارية العالمية الرائدة">Comprehensive range of vehicles and parts from leading global brands</p>
+                </div>
+                
+                <div class="advantage-item">
+                    <div class="advantage-icon">💎</div>
+                    <h3 data-en="Quality Assured" data-ar="جودة مضمونة">Quality Assured</h3>
+                    <p data-en="Only certified vehicles and genuine parts with full warranties" data-ar="فقط المركبات المعتمدة والقطع الأصلية مع ضمانات كاملة">Only certified vehicles and parts with full warranties</p>
+                </div>
+                
+                <div class="advantage-item">
+                    <div class="advantage-icon">💰</div>
+                    <h3 data-en="Competitive Pricing" data-ar="أسعار تنافسية">Competitive Pricing</h3>
+                    <p data-en="Best value through direct manufacturer relationships and bulk purchasing" data-ar="أفضل قيمة من خلال العلاقات المباشرة مع الشركات المصنعة والشراء بالجملة">Best value through direct manufacturer relationships and bulk purchasing</p>
+                </div>
+                
+                <div class="advantage-item">
+                    <div class="advantage-icon">⚡</div>
+                    <h3 data-en="Fast Service" data-ar="خدمة سريعة">Fast Service</h3>
+                    <p data-en="Quick turnaround times for orders and efficient logistics" data-ar="أوقات تسليم سريعة للطلبات وخدمات لوجستية فعالة">Quick turnaround times for orders and efficient logistics</p>
+                </div>
+                
+                <div class="advantage-item">
+                    <div class="advantage-icon">🔧</div>
+                    <h3 data-en="Expert Support" data-ar="دعم الخبراء">Expert Support</h3>
+                    <p data-en="Knowledgeable team providing technical consultation and guidance" data-ar="فريق خبير يقدم الاستشارات الفنية والتوجيه">Knowledgeable team providing technical consultation and guidance</p>
+                </div>
+                
+                <div class="advantage-item">
+                    <div class="advantage-icon">🌍</div>
+                    <h3 data-en="Regional Presence" data-ar="الحضور الإقليمي">Regional Presence</h3>
+                    <p data-en="Established network across the GCC for comprehensive service coverage" data-ar="شبكة راسخة في جميع أنحاء دول مجلس التعاون الخليجي لتغطية خدمة شاملة">Established network across the GCC for comprehensive service coverage</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer>
+    <!-- CTA Section -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title" data-en="Looking for Automotive Solutions?" data-ar="هل تبحث عن حلول سيارات؟">Looking for Automotive Solutions?</h2>
+                <p class="cta-description" data-en="Contact our automotive division today for competitive pricing and expert service." data-ar="اتصل بقسم السيارات لدينا اليوم للحصول على أسعار تنافسية وخدمة خبراء.">Contact our automotive division today for competitive pricing and expert service.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="cta-button primary" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3 class="en">About Nashco Global</h3>
-                    <h3 class="ar">عن ناشكو جلوبال</h3>
-                    <p class="en">Leading multi-sector solutions provider in the GCC since 1994.</p>
-                    <p class="ar">مزود رائد للحلول متعددة القطاعات في دول مجلس التعاون الخليجي منذ عام 1994.</p>
+                    <img src="images/nashco-logo.svg" alt="Nashco Global Logo" class="footer-logo">
+                    <p class="footer-description" data-en="Leading GCC industrial solutions provider since 1994" data-ar="المزود الرائد للحلول الصناعية في دول مجلس التعاون الخليجي منذ عام 1994">Leading GCC industrial solutions provider since 1994</p>
                 </div>
+                
                 <div class="footer-section">
-                    <h3 class="en">Quick Links</h3>
-                    <h3 class="ar">روابط سريعة</h3>
+                    <h4 class="footer-title" data-en="Quick Links" data-ar="روابط سريعة">Quick Links</h4>
                     <ul class="footer-links">
-                        <li><a href="index.html"><span class="en">Home</span><span class="ar">الرئيسية</span></a></li>
-                        <li><a href="about.html"><span class="en">About</span><span class="ar">من نحن</span></a></li>
-                        <li><a href="contact.html"><span class="en">Contact</span><span class="ar">اتصل بنا</span></a></li>
+                        <li><a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                        <li><a href="about.html" data-en="About Us" data-ar="من نحن">About Us</a></li>
+                        <li><a href="zahyalkhaleej.html" data-en="Zahy Al Khaleej" data-ar="زاهي الخليج">Zahy Al Khaleej</a></li>
+                        <li><a href="automotive.html" data-en="Automotive" data-ar="السيارات">Automotive</a></li>
+                        <li><a href="manufacturing.html" data-en="Manufacturing" data-ar="التصنيع">Manufacturing</a></li>
+                        <li><a href="trading.html" data-en="Trading" data-ar="التجارة">Trading</a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-section">
-                    <h3 class="en">Contact Info</h3>
-                    <h3 class="ar">معلومات الاتصال</h3>
-                    <p class="en"><strong>Email:</strong> info@nashcoglobal.com</p>
-                    <p class="ar"><strong>البريد الإلكتروني:</strong> info@nashcoglobal.com</p>
+                    <h4 class="footer-title" data-en="Our Group" data-ar="مجموعتنا">Our Group</h4>
+                    <img src="images/zahy-logo.svg" alt="Zahy Group Logo" class="footer-zahy-logo">
+                    <p class="footer-group-text" data-en="Zahy Al Khaleej Group" data-ar="مجموعة زاهي الخليج">Zahy Al Khaleej Group</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title" data-en="Contact" data-ar="اتصل">Contact</h4>
+                    <p><strong data-en="Oman:" data-ar="عمان:">Oman:</strong> +968 94535053</p>
+                    <p><strong data-en="UAE:" data-ar="الإمارات:">UAE:</strong> +971 508536542</p>
+                    <p>info@nashcoglobal.com</p>
                 </div>
             </div>
+            
             <div class="footer-bottom">
-                <p class="en">&copy; 2024 Nashco Global. All Rights Reserved.</p>
-                <p class="ar">&copy; 2024 ناشكو جلوبال. جميع الحقوق محفوظة.</p>
+                <p data-en="© 2024 Nashco Global. All rights reserved. Part of Zahy Al Khaleej Group." data-ar="© 2024 ناشكو العالمية. جميع الحقوق محفوظة. جزء من مجموعة زاهي الخليج.">© 2024 Nashco Global. All rights reserved. Part of Zahy Al Khaleej Group.</p>
             </div>
         </div>
     </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init({ duration: 800, once: true });</script>
-    <script src="js/main.js"></script>
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/971508536542?text=Hello,%20I'm%20interested%20in%20Nashco%20Global%20services" 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Contact us on WhatsApp">
+        <svg class="whatsapp-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#fff" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+    </a>
+
+    <script src="script.js"></script>
 </body>
 </html>

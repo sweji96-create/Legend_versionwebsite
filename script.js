@@ -1,421 +1,395 @@
-// ================================================
-// Nashco Global - Interactive Website JavaScript
-// ================================================
+/**
+ * NASHCO GLOBAL - PRODUCTION JAVASCRIPT
+ * Bilingual Language Switching & Interactive Features
+ */
 
-// Global state
-let currentLang = 'en';
+// ============================================
+// STATE MANAGEMENT
+// ============================================
+let currentLanguage = 'en';
 
-// Wait for DOM to load
-document.addEventListener('DOMContentLoaded', function() {
-    initializeWebsite();
-});
-
-// Initialize all website functionality
-function initializeWebsite() {
-    setupNavigation();
-    setupLanguageToggle();
-    setupScrollEffects();
-    setupAnimations();
-    setupFormHandler();
-    setupBackToTop();
-    updateCurrentYear();
-    setupStatCounters();
-}
-
-// ================================================
-// Navigation
-// ================================================
-
-function setupNavigation() {
-    const menuToggle = document.getElementById('menuToggle');
-    const navMenu = document.getElementById('navMenu');
-    const navLinks = document.querySelectorAll('.nav-menu a');
-    
-    // Mobile menu toggle
-    if (menuToggle) {
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            menuToggle.classList.toggle('active');
-        });
+// ============================================
+// LANGUAGE TRANSLATIONS
+// ============================================
+const translations = {
+    en: {
+        langButtonText: 'عربي'
+    },
+    ar: {
+        langButtonText: 'English'
     }
+};
+
+// ============================================
+// DOM ELEMENTS
+// ============================================
+const languageToggle = document.getElementById('language-toggle');
+const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+const navMenu = document.getElementById('nav-menu');
+const contactForm = document.getElementById('contact-form');
+
+// ============================================
+// LANGUAGE SWITCHING
+// ============================================
+function switchLanguage() {
+    currentLanguage = currentLanguage === 'en' ? 'ar' : 'en';
     
-    // Close menu when clicking on links
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            navMenu.classList.remove('active');
-            if (menuToggle) {
-                menuToggle.classList.remove('active');
-            }
-        });
-    });
+    // Update HTML attributes
+    document.documentElement.lang = currentLanguage;
+    document.documentElement.dir = currentLanguage === 'ar' ? 'rtl' : 'ltr';
+    document.body.dir = currentLanguage === 'ar' ? 'rtl' : 'ltr';
     
-    // Smooth scrolling for navigation links
-    navLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetId = link.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            
-            if (targetSection) {
-                const offsetTop = targetSection.offsetTop - 70;
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-    
-    // Add scrolled class to navbar
-    window.addEventListener('scroll', () => {
-        const navbar = document.querySelector('.navbar');
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
+    // Update all elements with data attributes
+    const elements = document.querySelectorAll('[data-en][data-ar]');
+    elements.forEach(element => {
+        const enText = element.getAttribute('data-en');
+        const arText = element.getAttribute('data-ar');
+        
+        if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+            element.placeholder = currentLanguage === 'en' ? enText : arText;
         } else {
-            navbar.classList.remove('scrolled');
+            element.textContent = currentLanguage === 'en' ? enText : arText;
         }
     });
+    
+    // Update language toggle button
+    const langText = languageToggle.querySelector('.lang-text');
+    langText.textContent = translations[currentLanguage].langButtonText;
+    
+    // Close mobile menu if open
+    closeMobileMenu();
+    
+    // Store preference
+    localStorage.setItem('preferredLanguage', currentLanguage);
+    
+    // Smooth scroll to top
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// ================================================
-// Language Toggle (English/Arabic)
-// ================================================
+// ============================================
+// MOBILE MENU
+// ============================================
+function toggleMobileMenu() {
+    navMenu.classList.toggle('active');
+    mobileMenuToggle.classList.toggle('active');
+    
+    // Prevent body scroll when menu is open
+    if (navMenu.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+    } else {
+        document.body.style.overflow = '';
+    }
+}
 
-function setupLanguageToggle() {
-    const langBtn = document.getElementById('langBtn');
-    const langText = document.getElementById('langText');
-    const html = document.documentElement;
+function closeMobileMenu() {
+    navMenu.classList.remove('active');
+    mobileMenuToggle.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+// ============================================
+// SMOOTH SCROLLING
+// ============================================
+function initSmoothScrolling() {
+    const navLinks = document.querySelectorAll('.nav-link, a[href^="#"]');
     
-    if (langBtn) {
-        langBtn.addEventListener('click', () => {
-            toggleLanguage();
-        });
-    }
-    
-    function toggleLanguage() {
-        if (currentLang === 'en') {
-            // Switch to Arabic
-            currentLang = 'ar';
-            html.setAttribute('lang', 'ar');
-            html.setAttribute('dir', 'rtl');
-            langText.textContent = 'English';
-            updateContent('ar');
-        } else {
-            // Switch to English
-            currentLang = 'en';
-            html.setAttribute('lang', 'en');
-            html.setAttribute('dir', 'ltr');
-            langText.textContent = 'العربية';
-            updateContent('en');
-        }
-        
-        // Add smooth transition effect
-        document.body.style.opacity = '0.8';
-        setTimeout(() => {
-            document.body.style.opacity = '1';
-        }, 150);
-    }
-    
-    function updateContent(lang) {
-        const elements = document.querySelectorAll('[data-en][data-ar]');
-        
-        elements.forEach(element => {
-            const enText = element.getAttribute('data-en');
-            const arText = element.getAttribute('data-ar');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
             
-            if (lang === 'ar' && arText) {
-                element.textContent = arText;
-            } else if (lang === 'en' && enText) {
-                element.textContent = enText;
-            }
-        });
-    }
-}
-
-// ================================================
-// Scroll Effects
-// ================================================
-
-function setupScrollEffects() {
-    // Intersection Observer for fade-in animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -100px 0px'
-    };
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
+            // Check if it's an anchor link
+            if (href.startsWith('#')) {
+                e.preventDefault();
                 
-                // Trigger counter animation for stats
-                if (entry.target.classList.contains('stat-number')) {
-                    animateCounter(entry.target);
+                const targetId = href.substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    // Close mobile menu if open
+                    closeMobileMenu();
+                    
+                    // Calculate offset for fixed header
+                    const headerHeight = document.querySelector('.header').offsetHeight;
+                    const targetPosition = targetElement.offsetTop - headerHeight;
+                    
+                    // Smooth scroll to target
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Update active link
+                    updateActiveLink(this);
                 }
             }
         });
-    }, observerOptions);
-    
-    // Observe elements
-    const elementsToObserve = document.querySelectorAll(
-        '.service-card, .stat-item, .feature-item, .info-item'
-    );
-    
-    elementsToObserve.forEach(el => {
-        observer.observe(el);
     });
 }
 
-// ================================================
-// Animations
-// ================================================
-
-function setupAnimations() {
-    // Add stagger animation to service cards
-    const serviceCards = document.querySelectorAll('.service-card');
-    serviceCards.forEach((card, index) => {
-        card.style.animationDelay = `${index * 0.1}s`;
-    });
+// ============================================
+// ACTIVE LINK HIGHLIGHTING
+// ============================================
+function updateActiveLink(clickedLink) {
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => link.classList.remove('active'));
     
-    // Add parallax effect to hero section
-    window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-        const heroBackground = document.querySelector('.hero-background');
-        
-        if (heroBackground && scrolled < window.innerHeight) {
-            heroBackground.style.transform = `translateY(${scrolled * 0.5}px)`;
-        }
-    });
-}
-
-// ================================================
-// Stat Counters
-// ================================================
-
-function setupStatCounters() {
-    const statNumbers = document.querySelectorAll('.stat-number');
-    
-    statNumbers.forEach(stat => {
-        stat.classList.add('counter-ready');
-    });
-}
-
-function animateCounter(element) {
-    if (element.classList.contains('counted')) return;
-    
-    const target = parseInt(element.getAttribute('data-count') || element.textContent);
-    const duration = 2000;
-    const increment = target / (duration / 16);
-    let current = 0;
-    
-    const updateCounter = () => {
-        current += increment;
-        if (current < target) {
-            element.textContent = Math.floor(current) + '+';
-            requestAnimationFrame(updateCounter);
-        } else {
-            element.textContent = target + '+';
-            element.classList.add('counted');
-        }
-    };
-    
-    updateCounter();
-}
-
-// ================================================
-// Form Handler
-// ================================================
-
-function setupFormHandler() {
-    const contactForm = document.getElementById('contactForm');
-    
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            handleFormSubmit(contactForm);
-        });
+    if (clickedLink) {
+        clickedLink.classList.add('active');
     }
 }
 
-function handleFormSubmit(form) {
+function highlightActiveSection() {
+    const sections = document.querySelectorAll('.section, .hero');
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    let currentSection = '';
+    const scrollPosition = window.scrollY + 200;
+    
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            currentSection = section.getAttribute('id');
+        }
+    });
+    
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        const href = link.getAttribute('href');
+        
+        if (href === `#${currentSection}`) {
+            link.classList.add('active');
+        }
+    });
+}
+
+// ============================================
+// HEADER SCROLL EFFECT
+// ============================================
+function handleHeaderScroll() {
+    const header = document.querySelector('.header');
+    
+    if (window.scrollY > 100) {
+        header.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.15)';
+        header.style.padding = '0.8rem 0';
+    } else {
+        header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+        header.style.padding = '0';
+    }
+}
+
+// ============================================
+// CONTACT FORM HANDLING
+// ============================================
+function handleContactForm(e) {
+    e.preventDefault();
+    
     // Get form data
-    const formData = new FormData(form);
-    const data = {
-        name: formData.get('name'),
-        email: formData.get('email'),
-        subject: formData.get('subject'),
-        message: formData.get('message')
+    const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        message: document.getElementById('message').value
     };
     
-    // Validate form
-    if (!validateForm(data)) {
-        return;
-    }
+    // Simulate form submission
+    const submitButton = contactForm.querySelector('.submit-button');
+    const originalText = submitButton.textContent;
     
-    // Show success message
-    showNotification(
-        currentLang === 'en' 
-            ? 'Thank you for your message! We will get back to you soon.' 
-            : 'شكراً لرسالتك! سنتواصل معك قريباً.',
-        'success'
-    );
+    submitButton.textContent = currentLanguage === 'en' ? 'Sending...' : 'جاري الإرسال...';
+    submitButton.disabled = true;
     
-    // Reset form
-    form.reset();
-    
-    // In a real application, you would send this data to a server
-    console.log('Form submitted:', data);
-}
-
-function validateForm(data) {
-    // Simple validation
-    if (!data.name || !data.email || !data.subject || !data.message) {
-        showNotification(
-            currentLang === 'en' 
-                ? 'Please fill in all fields.' 
-                : 'يرجى ملء جميع الحقول.',
-            'error'
-        );
-        return false;
-    }
-    
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(data.email)) {
-        showNotification(
-            currentLang === 'en' 
-                ? 'Please enter a valid email address.' 
-                : 'يرجى إدخال عنوان بريد إلكتروني صالح.',
-            'error'
-        );
-        return false;
-    }
-    
-    return true;
-}
-
-function showNotification(message, type) {
-    // Create notification element
-    const notification = document.createElement('div');
-    notification.className = `notification ${type}`;
-    notification.textContent = message;
-    
-    // Add styles
-    Object.assign(notification.style, {
-        position: 'fixed',
-        top: '100px',
-        right: currentLang === 'ar' ? 'auto' : '20px',
-        left: currentLang === 'ar' ? '20px' : 'auto',
-        padding: '20px 30px',
-        background: type === 'success' ? '#27ae60' : '#e74c3c',
-        color: '#fff',
-        borderRadius: '10px',
-        boxShadow: '0 5px 20px rgba(0,0,0,0.2)',
-        zIndex: '10000',
-        animation: currentLang === 'ar' ? 'slideInRTL 0.3s ease' : 'slideIn 0.3s ease',
-        maxWidth: '300px',
-        fontSize: '16px',
-        fontWeight: '500'
-    });
-    
-    // Add to body
-    document.body.appendChild(notification);
-    
-    // Remove after 4 seconds
+    // Simulate API call
     setTimeout(() => {
-        notification.style.animation = currentLang === 'ar' ? 'slideOutRTL 0.3s ease' : 'slideOut 0.3s ease';
-        setTimeout(() => {
-            notification.remove();
-        }, 300);
-    }, 4000);
+        // Show success message
+        alert(currentLanguage === 'en' 
+            ? 'Thank you for your message! We will get back to you soon.' 
+            : 'شكراً لرسالتك! سنتواصل معك قريباً.');
+        
+        // Reset form
+        contactForm.reset();
+        submitButton.textContent = originalText;
+        submitButton.disabled = false;
+    }, 1500);
 }
 
-// ================================================
-// Back to Top Button
-// ================================================
-
-function setupBackToTop() {
-    const backToTopBtn = document.getElementById('backToTop');
+// ============================================
+// LAZY LOADING IMAGES
+// ============================================
+function initLazyLoading() {
+    const images = document.querySelectorAll('img[loading="lazy"]');
     
-    if (backToTopBtn) {
-        // Show/hide button based on scroll position
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopBtn.classList.add('show');
-            } else {
-                backToTopBtn.classList.remove('show');
-            }
-        });
-        
-        // Scroll to top when clicked
-        backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.src; // Trigger load
+                    img.classList.add('loaded');
+                    observer.unobserve(img);
+                }
             });
         });
-    }
-}
-
-// ================================================
-// Utility Functions
-// ================================================
-
-function updateCurrentYear() {
-    const yearElement = document.getElementById('currentYear');
-    if (yearElement) {
-        yearElement.textContent = new Date().getFullYear();
-    }
-}
-
-// ================================================
-// Keyboard Navigation
-// ================================================
-
-document.addEventListener('keydown', (e) => {
-    // ESC to close mobile menu
-    if (e.key === 'Escape') {
-        const navMenu = document.getElementById('navMenu');
-        const menuToggle = document.getElementById('menuToggle');
         
-        if (navMenu && navMenu.classList.contains('active')) {
-            navMenu.classList.remove('active');
-            if (menuToggle) {
-                menuToggle.classList.remove('active');
-            }
-        }
+        images.forEach(img => imageObserver.observe(img));
     }
-});
+}
 
-// ================================================
-// Performance Optimization
-// ================================================
-
-// ================================================
-// Lazy Loading Images (if any are added)
-// ================================================
-
-if ('IntersectionObserver' in window) {
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.dataset.src;
-                img.classList.add('loaded');
-                observer.unobserve(img);
-            }
+// ============================================
+// SCROLL ANIMATIONS
+// ============================================
+function initScrollAnimations() {
+    const animatedElements = document.querySelectorAll('.section');
+    
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, {
+            threshold: 0.1
         });
+        
+        animatedElements.forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(20px)';
+            element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(element);
+        });
+    } else {
+        // Fallback for browsers without IntersectionObserver
+        animatedElements.forEach(element => {
+            element.style.opacity = '1';
+            element.style.transform = 'translateY(0)';
+        });
+    }
+}
+
+// ============================================
+// WHATSAPP BUTTON ANALYTICS (Optional)
+// ============================================
+function trackWhatsAppClick() {
+    const whatsappButton = document.querySelector('.whatsapp-float');
+    
+    if (whatsappButton) {
+        whatsappButton.addEventListener('click', () => {
+            // Track analytics (if implemented)
+            console.log('WhatsApp button clicked');
+        });
+    }
+}
+
+// ============================================
+// KEYBOARD NAVIGATION
+// ============================================
+function initKeyboardNavigation() {
+    document.addEventListener('keydown', (e) => {
+        // Close mobile menu with Escape key
+        if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+            closeMobileMenu();
+        }
+        
+        // Toggle language with Alt+L
+        if (e.altKey && e.key === 'l') {
+            e.preventDefault();
+            switchLanguage();
+        }
+    });
+}
+
+// ============================================
+// LOAD SAVED PREFERENCES
+// ============================================
+function loadPreferences() {
+    const savedLanguage = localStorage.getItem('preferredLanguage');
+    
+    if (savedLanguage && savedLanguage !== currentLanguage) {
+        switchLanguage();
+    }
+}
+
+// ============================================
+// INITIALIZE ALL FEATURES
+// ============================================
+function init() {
+    // Load user preferences
+    loadPreferences();
+    
+    // Set up event listeners
+    languageToggle.addEventListener('click', switchLanguage);
+    mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+    
+    // Contact form listener (only on contact page)
+    if (contactForm) {
+        contactForm.addEventListener('submit', handleContactForm);
+    }
+    
+    // Initialize features
+    initSmoothScrolling();
+    initLazyLoading();
+    initScrollAnimations();
+    initKeyboardNavigation();
+    trackWhatsAppClick();
+    
+    // Scroll event listeners
+    let scrollTimeout;
+    window.addEventListener('scroll', () => {
+        handleHeaderScroll();
+        
+        // Debounce active section highlighting
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(highlightActiveSection, 100);
     });
     
-    document.querySelectorAll('img[data-src]').forEach(img => {
-        imageObserver.observe(img);
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (navMenu.classList.contains('active') && 
+            !navMenu.contains(e.target) && 
+            !mobileMenuToggle.contains(e.target)) {
+            closeMobileMenu();
+        }
     });
+    
+    // Handle window resize
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            // Close mobile menu on large screens
+            if (window.innerWidth > 992) {
+                closeMobileMenu();
+            }
+        }, 250);
+    });
+    
+    // Initial active section highlight
+    highlightActiveSection();
+    
+    console.log('Nashco Global website initialized successfully');
 }
 
-// ================================================
-// Console Welcome Message
-// ================================================
+// ============================================
+// START APPLICATION
+// ============================================
+// Wait for DOM to be fully loaded
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+} else {
+    init();
+}
 
-console.log('%cNashco Global', 'font-size: 24px; font-weight: bold; color: #1a5490;');
-console.log('%cExcellence Since 1994', 'font-size: 14px; color: #666;');
-console.log('%cWebsite by Nashco Global | Built with modern web technologies', 'font-size: 12px; color: #999;');
+// ============================================
+// EXPORT FOR TESTING (if needed)
+// ============================================
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = {
+        switchLanguage,
+        toggleMobileMenu,
+        closeMobileMenu,
+        currentLanguage
+    };
+}

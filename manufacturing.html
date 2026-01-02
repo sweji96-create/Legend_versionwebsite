@@ -1,152 +1,175 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Industrial Manufacturing Expertise | الخبرة في التصنيع الصناعي</title>
-    <meta name="description" content="Precision manufacturing services with state-of-the-art machinery and quality control. | خدمات تصنيع دقيقة بآلات حديثة ومراقبة جودة.">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <meta name="description" content="Nashco Plastic Manufacturing Factory, Riyadh - ISO-certified manufacturing excellence">
+    <title>Manufacturing Division - Nashco Global</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <header class="header" id="header">
         <div class="header-container">
-            <a href="index.html" class="logo">
-                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <ellipse cx="50" cy="50" rx="35" ry="35" fill="#003087"/>
-                    <circle cx="50" cy="50" r="28" fill="#00A1D6"/>
-                    <ellipse cx="50" cy="50" rx="40" ry="15" fill="none" stroke="#00FF00" stroke-width="3"/>
-                    <text x="50" y="55" font-family="Arial" font-size="10" font-weight="bold" fill="#C8102E" text-anchor="middle">NASHCO</text>
-                </svg>
-                <span class="en">NASHCO GLOBAL</span>
-                <span class="ar">ناشكو جلوبال</span>
-            </a>
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="en">Home</a><a href="index.html" class="ar">الرئيسية</a></li>
-                    <li><a href="about.html" class="en">About Us</a><a href="about.html" class="ar">من نحن</a></li>
-                    <li><a href="zahy-al-khaleej.html" class="en">Chemicals</a><a href="zahy-al-khaleej.html" class="ar">الكيميائيات</a></li>
-                    <li><a href="automotive.html" class="en">Automotive</a><a href="automotive.html" class="ar">السيارات</a></li>
-                    <li><a href="manufacturing.html" class="en">Manufacturing</a><a href="manufacturing.html" class="ar">التصنيع</a></li>
-                    <li><a href="trading.html" class="en">Trading</a><a href="trading.html" class="ar">التجارة</a></li>
-                    <li><a href="contact.html" class="en">Contact</a><a href="contact.html" class="ar">اتصل بنا</a></li>
-                    <li><button id="languageToggle" class="language-toggle">عربي</button></li>
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="images/nashco-logo.svg" alt="Nashco Global Logo" class="logo-img">
+                </a>
+            </div>
+            <nav class="nav" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                    <li><a href="about.html" class="nav-link" data-en="About Us" data-ar="من نحن">About Us</a></li>
+                    <li><a href="zahyalkhaleej.html" class="nav-link" data-en="Zahy Al Khaleej" data-ar="زاهي الخليج">Zahy Al Khaleej</a></li>
+                    <li><a href="automotive.html" class="nav-link" data-en="Automotive" data-ar="السيارات">Automotive</a></li>
+                    <li><a href="manufacturing.html" class="nav-link active" data-en="Manufacturing" data-ar="التصنيع">Manufacturing</a></li>
+                    <li><a href="trading.html" class="nav-link" data-en="Trading" data-ar="التجارة">Trading</a></li>
+                    <li><a href="contact.html" class="nav-link" data-en="Contact" data-ar="اتصل بنا">Contact</a></li>
                 </ul>
             </nav>
-            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+            <button class="language-toggle" id="language-toggle" aria-label="Toggle Language">
+                <span class="lang-text">عربي</span>
+            </button>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle Menu">
                 <span></span><span></span><span></span>
             </button>
         </div>
     </header>
 
-    <section class="hero parallax" style="background-image: url('https://www.bakerindustriesinc.com/heavy-equipment-industrial-machinery/wp-content/uploads/sites/8/2023/02/Installation-Content-Card-600x400.jpg');">
+    <section class="page-hero manufacturing-hero">
+        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1 class="en">Industrial Manufacturing</h1>
-            <h1 class="ar">التصنيع الصناعي</h1>
-            <p class="en">Precision Engineering for Industrial Excellence</p>
-            <p class="ar">هندسة دقيقة للتميز الصناعي</p>
+            <h1 class="hero-title" data-en="Manufacturing Division" data-ar="قسم التصنيع">Manufacturing Division</h1>
+            <p class="hero-subtitle" data-en="Precision Manufacturing Excellence in Riyadh" data-ar="التميز في التصنيع الدقيق في الرياض">Precision Manufacturing Excellence in Riyadh</p>
         </div>
     </section>
 
-    <section class="section">
+    <section class="section manufacturing-overview-section">
         <div class="container">
-            <div class="grid grid-2">
-                <div data-aos="fade-right">
-                    <h2 class="en">Precision Manufacturing Solutions</h2>
-                    <h2 class="ar">حلول التصنيع الدقيق</h2>
-                    <p class="en">Since launching our manufacturing division in 2014, Nashco Global has become a leader in precision industrial manufacturing across the GCC region. Our state-of-the-art facilities, advanced machinery, and rigorous quality control processes enable us to deliver components and products that meet the most demanding specifications. From custom fabrication to large-scale production runs, we provide comprehensive manufacturing solutions that drive efficiency, reduce costs, and ensure exceptional quality.</p>
-                    <p class="ar">منذ إطلاق قسم التصنيع في عام 2014، أصبحت ناشكو جلوبال رائدة في التصنيع الصناعي الدقيق عبر منطقة مجلس التعاون الخليجي. منشآتنا الحديثة وآلاتنا المتقدمة وعمليات مراقبة الجودة الصارمة تمكننا من تقديم مكونات ومنتجات تلبي أكثر المواصفات تطلباً.</p>
+            <div class="section-header">
+                <h2 class="section-title" data-en="Nashco Plastic Manufacturing Factory, Riyadh" data-ar="مصنع ناشكو للبلاستيك، الرياض">Nashco Plastic Manufacturing Factory, Riyadh</h2>
+                <div class="title-divider"></div>
+            </div>
+            <div class="overview-content">
+                <div class="overview-text">
+                    <p class="intro-text" data-en="Our state-of-the-art plastic manufacturing facility in Riyadh represents Nashco Global's commitment to industrial excellence. With advanced machinery, ISO-certified processes, and a skilled workforce, we deliver precision-engineered plastic products for diverse industrial applications across Saudi Arabia and the wider GCC region." data-ar="يمثل مصنعنا المتطور للبلاستيك في الرياض التزام ناشكو العالمية بالتميز الصناعي. مع الآلات المتقدمة والعمليات المعتمدة من ISO والقوى العاملة الماهرة، نقدم منتجات بلاستيكية مصممة بدقة لتطبيقات صناعية متنوعة في جميع أنحاء المملكة العربية السعودية ومنطقة دول مجلس التعاون الخليجي الأوسع.">Our state-of-the-art plastic manufacturing facility in Riyadh represents Nashco Global's commitment to industrial excellence. With advanced machinery, ISO-certified processes, and a skilled workforce, we deliver precision-engineered plastic products for diverse industrial applications across Saudi Arabia and the wider GCC region.</p>
                 </div>
-                <div data-aos="fade-left">
-                    <img src="https://i.ytimg.com/vi/wjJXShVEF8Y/maxresdefault.jpg" alt="Industrial Machinery / آلات صناعية" loading="lazy" style="border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.15);">
+                <div class="overview-image">
+                    <img src="https://cdn.jafza.ae/wp-content/uploads/2021/12/aquachemie-banner-00w-650x365.jpg" alt="Manufacturing Facility" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section section-light">
+    <section class="section capabilities-section">
         <div class="container">
-            <div class="section-title">
-                <h2 class="en">Our Manufacturing Capabilities</h2>
-                <h2 class="ar">قدراتنا التصنيعية</h2>
+            <div class="section-header">
+                <h2 class="section-title" data-en="Manufacturing Capabilities" data-ar="قدرات التصنيع">Manufacturing Capabilities</h2>
+                <div class="title-divider"></div>
             </div>
-            <div class="grid grid-3">
-                <div class="feature-box" data-aos="zoom-in">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="#003087"><path d="M20 8H4V6H20M20 14H4V12H20M20 20H4V18H20V20Z"/></svg>
-                    </div>
-                    <h3 class="en">CNC Machining</h3>
-                    <h3 class="ar">التصنيع باستخدام الحاسب الآلي</h3>
-                    <p class="en">Advanced CNC machining centers for precision metal and plastic components.</p>
-                    <p class="ar">مراكز تصنيع متقدمة بالتحكم الرقمي للمكونات المعدنية والبلاستيكية الدقيقة.</p>
+            <div class="capabilities-grid">
+                <div class="capability-card">
+                    <h3 data-en="Injection Molding" data-ar="قولبة الحقن">Injection Molding</h3>
+                    <p data-en="High-precision injection molding for complex plastic components with tight tolerances." data-ar="قولبة حقن عالية الدقة لمكونات بلاستيكية معقدة بتفاوتات ضيقة.">High-precision injection molding for complex plastic components with tight tolerances.</p>
                 </div>
-                <div class="feature-box" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="#003087"><path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM12 12C13.1 12 14 12.9 14 14C14 15.1 13.1 16 12 16C10.9 16 10 15.1 10 14C10 12.9 10.9 12 12 12Z"/></svg>
-                    </div>
-                    <h3 class="en">Fabrication</h3>
-                    <h3 class="ar">التصنيع</h3>
-                    <p class="en">Custom metal fabrication including welding, cutting, and assembly services.</p>
-                    <p class="ar">تصنيع معادن مخصص بما في ذلك اللحام والقطع وخدمات التجميع.</p>
+                <div class="capability-card">
+                    <h3 data-en="Extrusion" data-ar="البثق">Extrusion</h3>
+                    <p data-en="Continuous extrusion processes for pipes, profiles, and specialized plastic products." data-ar="عمليات بثق مستمرة للأنابيب والمظهر الجانبي والمنتجات البلاستيكية المتخصصة.">Continuous extrusion processes for pipes, profiles, and specialized plastic products.</p>
                 </div>
-                <div class="feature-box" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="feature-icon">
-                        <svg viewBox="0 0 24 24" fill="#003087"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
-                    </div>
-                    <h3 class="en">Quality Control</h3>
-                    <h3 class="ar">مراقبة الجودة</h3>
-                    <p class="en">ISO-certified quality management with comprehensive testing and inspection.</p>
-                    <p class="ar">إدارة جودة معتمدة من ISO مع اختبار وتفتيش شامل.</p>
+                <div class="capability-card">
+                    <h3 data-en="Blow Molding" data-ar="قولبة النفخ">Blow Molding</h3>
+                    <p data-en="Production of hollow plastic products including containers and bottles." data-ar="إنتاج المنتجات البلاستيكية المجوفة بما في ذلك الحاويات والزجاجات.">Production of hollow plastic products including containers and bottles.</p>
+                </div>
+                <div class="capability-card">
+                    <h3 data-en="Custom Manufacturing" data-ar="التصنيع المخصص">Custom Manufacturing</h3>
+                    <p data-en="Tailored solutions and custom product development to meet specific client requirements." data-ar="حلول مخصصة وتطوير منتجات مخصصة لتلبية متطلبات العملاء المحددة.">Tailored solutions and custom product development to meet specific client requirements.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section section-dark">
-        <div class="container text-center">
-            <h2 class="en" style="color: white;" data-aos="fade-up">Need Manufacturing Solutions?</h2>
-            <h2 class="ar" style="color: white;" data-aos="fade-up">هل تحتاج إلى حلول تصنيع؟</h2>
-            <p class="en" style="color: white; font-size: 1.25rem; max-width: 800px; margin: 0 auto 2rem;">Partner with Nashco Global for precision manufacturing that meets international standards.</p>
-            <p class="ar" style="color: white; font-size: 1.25rem; max-width: 800px; margin: 0 auto 2rem;">شارك مع ناشكو جلوبال للتصنيع الدقيق الذي يلبي المعايير الدولية.</p>
-            <a href="contact.html" class="cta-button" data-aos="zoom-in" data-aos-delay="200"><span class="en">Get Started</span><span class="ar">ابدأ الآن</span></a>
+    <section class="section quality-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title light" data-en="Quality & Certifications" data-ar="الجودة والشهادات">Quality & Certifications</h2>
+                <div class="title-divider light"></div>
+            </div>
+            <div class="quality-content">
+                <div class="quality-grid">
+                    <div class="quality-item">
+                        <h3 data-en="ISO 9001:2015 Certified" data-ar="معتمد ISO 9001:2015">ISO 9001:2015 Certified</h3>
+                        <p data-en="International quality management standards ensuring consistent product excellence." data-ar="معايير إدارة الجودة الدولية تضمن تميز المنتج المتسق.">International quality management standards ensuring consistent product excellence.</p>
+                    </div>
+                    <div class="quality-item">
+                        <h3 data-en="Advanced Quality Control" data-ar="مراقبة جودة متقدمة">Advanced Quality Control</h3>
+                        <p data-en="Comprehensive testing and inspection at every stage of production." data-ar="اختبار شامل وفحص في كل مرحلة من مراحل الإنتاج.">Comprehensive testing and inspection at every stage of production.</p>
+                    </div>
+                    <div class="quality-item">
+                        <h3 data-en="Material Traceability" data-ar="إمكانية تتبع المواد">Material Traceability</h3>
+                        <p data-en="Complete documentation and traceability of raw materials and finished products." data-ar="وثائق كاملة وإمكانية تتبع المواد الخام والمنتجات النهائية.">Complete documentation and traceability of raw materials and finished products.</p>
+                    </div>
+                    <div class="quality-item">
+                        <h3 data-en="Continuous Improvement" data-ar="التحسين المستمر">Continuous Improvement</h3>
+                        <p data-en="Ongoing process optimization and technology upgrades for enhanced efficiency." data-ar="تحسين العمليات المستمر وترقيات التكنولوجيا لتعزيز الكفاءة.">Ongoing process optimization and technology upgrades for enhanced efficiency.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer>
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title" data-en="Need Manufacturing Solutions?" data-ar="هل تحتاج إلى حلول تصنيع؟">Need Manufacturing Solutions?</h2>
+                <p class="cta-description" data-en="Contact our manufacturing division for custom plastic solutions." data-ar="اتصل بقسم التصنيع لدينا للحصول على حلول بلاستيكية مخصصة.">Contact our manufacturing division for custom plastic solutions.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="cta-button primary" data-en="Contact Us" data-ar="اتصل بنا">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3 class="en">About Nashco Global</h3>
-                    <h3 class="ar">عن ناشكو جلوبال</h3>
-                    <p class="en">Leading multi-sector solutions provider in the GCC since 1994.</p>
-                    <p class="ar">مزود رائد للحلول متعددة القطاعات في دول مجلس التعاون الخليجي منذ عام 1994.</p>
+                    <img src="images/nashco-logo.svg" alt="Nashco Global Logo" class="footer-logo">
+                    <p class="footer-description" data-en="Leading GCC industrial solutions provider since 1994" data-ar="المزود الرائد للحلول الصناعية في دول مجلس التعاون الخليجي منذ عام 1994">Leading GCC industrial solutions provider since 1994</p>
                 </div>
                 <div class="footer-section">
-                    <h3 class="en">Quick Links</h3>
-                    <h3 class="ar">روابط سريعة</h3>
+                    <h4 class="footer-title" data-en="Quick Links" data-ar="روابط سريعة">Quick Links</h4>
                     <ul class="footer-links">
-                        <li><a href="index.html"><span class="en">Home</span><span class="ar">الرئيسية</span></a></li>
-                        <li><a href="about.html"><span class="en">About</span><span class="ar">من نحن</span></a></li>
-                        <li><a href="contact.html"><span class="en">Contact</span><span class="ar">اتصل بنا</span></a></li>
+                        <li><a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                        <li><a href="about.html" data-en="About Us" data-ar="من نحن">About Us</a></li>
+                        <li><a href="zahyalkhaleej.html" data-en="Zahy Al Khaleej" data-ar="زاهي الخليج">Zahy Al Khaleej</a></li>
+                        <li><a href="automotive.html" data-en="Automotive" data-ar="السيارات">Automotive</a></li>
+                        <li><a href="manufacturing.html" data-en="Manufacturing" data-ar="التصنيع">Manufacturing</a></li>
+                        <li><a href="trading.html" data-en="Trading" data-ar="التجارة">Trading</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3 class="en">Contact Info</h3>
-                    <h3 class="ar">معلومات الاتصال</h3>
-                    <p class="en"><strong>Email:</strong> info@nashcoglobal.com</p>
-                    <p class="ar"><strong>البريد الإلكتروني:</strong> info@nashcoglobal.com</p>
+                    <h4 class="footer-title" data-en="Our Group" data-ar="مجموعتنا">Our Group</h4>
+                    <img src="images/zahy-logo.svg" alt="Zahy Group Logo" class="footer-zahy-logo">
+                    <p class="footer-group-text" data-en="Zahy Al Khaleej Group" data-ar="مجموعة زاهي الخليج">Zahy Al Khaleej Group</p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title" data-en="Contact" data-ar="اتصل">Contact</h4>
+                    <p><strong data-en="Oman:" data-ar="عمان:">Oman:</strong> +968 94535053</p>
+                    <p><strong data-en="UAE:" data-ar="الإمارات:">UAE:</strong> +971 508536542</p>
+                    <p>info@nashcoglobal.com</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p class="en">&copy; 2024 Nashco Global. All Rights Reserved.</p>
-                <p class="ar">&copy; 2024 ناشكو جلوبال. جميع الحقوق محفوظة.</p>
+                <p data-en="© 2024 Nashco Global. All rights reserved. Part of Zahy Al Khaleej Group." data-ar="© 2024 ناشكو العالمية. جميع الحقوق محفوظة. جزء من مجموعة زاهي الخليج.">© 2024 Nashco Global. All rights reserved. Part of Zahy Al Khaleej Group.</p>
             </div>
         </div>
     </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init({ duration: 800, once: true });</script>
-    <script src="js/main.js"></script>
+    <a href="https://wa.me/971508536542?text=Hello,%20I'm%20interested%20in%20Nashco%20Global%20services" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
+        <svg class="whatsapp-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#fff" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+    </a>
+
+    <script src="script.js"></script>
 </body>
 </html>

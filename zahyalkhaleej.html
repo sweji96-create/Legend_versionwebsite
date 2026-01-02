@@ -3,194 +3,262 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zahy Al Khaleej - Premium Services | Nashco Global</title>
-    <meta name="description" content="Zahy Al Khaleej - Our flagship brand offering premium services across the GCC under Nashco Global.">
-    <link rel="icon" type="image/svg+xml" href="assets/images/favicon-placeholder.svg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="description" content="Zahy Al Khaleej Group - Prestigious conglomerate behind Nashco Global's industrial excellence.">
+    <title>Zahy Al Khaleej Group - Nashco Global</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="language-toggle">
-        <button id="langBtn" class="lang-btn" aria-label="Toggle Language">
-            <i class="fas fa-language"></i>
-            <span id="langText">العربية</span>
-        </button>
-    </div>
-    <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <!-- Header with Logo and Navigation -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="images/nashco-logo.svg" alt="Nashco Global Logo" class="logo-img">
+                </a>
+            </div>
+            
+            <nav class="nav" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link" data-en="Home" data-ar="الرئيسية">Home</a></li>
+                    <li><a href="about.html" class="nav-link" data-en="About Us" data-ar="من نحن">About Us</a></li>
+                    <li><a href="zahyalkhaleej.html" class="nav-link active" data-en="Zahy Al Khaleej" data-ar="زاهي الخليج">Zahy Al Khaleej</a></li>
+                    <li><a href="automotive.html" class="nav-link" data-en="Automotive" data-ar="السيارات">Automotive</a></li>
+                    <li><a href="manufacturing.html" class="nav-link" data-en="Manufacturing" data-ar="التصنيع">Manufacturing</a></li>
+                    <li><a href="trading.html" class="nav-link" data-en="Trading" data-ar="التجارة">Trading</a></li>
+                    <li><a href="contact.html" class="nav-link" data-en="Contact" data-ar="اتصل بنا">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <button class="language-toggle" id="language-toggle" aria-label="Toggle Language">
+                <span class="lang-text">عربي</span>
+            </button>
+            
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero zahy-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <img src="images/zahy-logo.svg" alt="Zahy Group Logo" class="hero-logo">
+            <h1 class="hero-title" data-en="Zahy Al Khaleej Group" data-ar="مجموعة زاهي الخليج">Zahy Al Khaleej Group</h1>
+            <p class="hero-subtitle" data-en="Powering Nashco Global's Success" data-ar="تدعم نجاح ناشكو العالمية">Powering Nashco Global's Success</p>
+        </div>
+    </section>
+
+    <!-- Group Overview Section -->
+    <section class="section group-overview-section">
         <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo">
-                    <img src="https://github.com/user-attachments/assets/3cc9f941-919c-46db-99af-dafcbd3a75ff" 
-                         alt="Nashco Global Logo" class="logo-img"
-                         onerror="this.onerror=null; this.src='assets/images/favicon-placeholder.svg';">
-                    <div class="logo-text">
-                        <h1 class="logo-fallback">Nashco Global</h1>
-                        <p class="tagline" data-en="Excellence Since 1994" data-ar="التميز منذ 1994">Excellence Since 1994</p>
+            <div class="section-header">
+                <h2 class="section-title" data-en="About Zahy Al Khaleej Group" data-ar="حول مجموعة زاهي الخليج">About Zahy Al Khaleej Group</h2>
+                <div class="title-divider"></div>
+            </div>
+            
+            <div class="overview-content">
+                <div class="overview-text">
+                    <p class="intro-text" data-en="Zahy Al Khaleej Group is a prestigious conglomerate with a diversified portfolio spanning multiple sectors across the GCC region. Known for its commitment to excellence, innovation, and sustainable growth, the Group has established itself as a leader in regional business development and industrial advancement." data-ar="مجموعة زاهي الخليج هي تكتل مرموق مع محفظة متنوعة تمتد عبر قطاعات متعددة في منطقة دول مجلس التعاون الخليجي. معروفة بالتزامها بالتميز والابتكار والنمو المستدام، أثبتت المجموعة نفسها كرائدة في تطوير الأعمال الإقليمية والتقدم الصناعي.">Zahy Al Khaleej Group is a prestigious conglomerate with a diversified portfolio spanning multiple sectors across the GCC region. Known for its commitment to excellence, innovation, and sustainable growth, the Group has established itself as a leader in regional business development and industrial advancement.</p>
+                    
+                    <p class="intro-text" data-en="Nashco Global operates proudly under the Zahy Al Khaleej umbrella, benefiting from the Group's extensive resources, regional expertise, and strategic vision. This affiliation enables Nashco Global to deliver world-class solutions across chemicals, automotive, manufacturing, and trading sectors with unparalleled support and capabilities." data-ar="تعمل ناشكو العالمية بفخر تحت مظلة زاهي الخليج، مستفيدة من الموارد الواسعة للمجموعة والخبرة الإقليمية والرؤية الاستراتيجية. هذا الانتماء يمكّن ناشكو العالمية من تقديم حلول عالمية المستوى عبر قطاعات المواد الكيميائية والسيارات والتصنيع والتجارة بدعم وقدرات لا مثيل لها.">Nashco Global operates proudly under the Zahy Al Khaleej umbrella, benefiting from the Group's extensive resources, regional expertise, and strategic vision. This affiliation enables Nashco Global to deliver world-class solutions across chemicals, automotive, manufacturing, and trading sectors with unparalleled support and capabilities.</p>
+                </div>
+                
+                <div class="overview-image">
+                    <img src="https://economymiddleeast.com/wp-content/uploads/2025/10/Middle-East-chemicals-1200x675.jpg" alt="Zahy Group Operations" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Group Strengths Section -->
+    <section class="section strengths-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-en="Group Strengths & Resources" data-ar="نقاط القوة والموارد الجماعية">Group Strengths & Resources</h2>
+                <div class="title-divider"></div>
+            </div>
+            
+            <div class="strengths-grid">
+                <div class="strength-card">
+                    <div class="strength-icon">💼</div>
+                    <h3 class="strength-title" data-en="Diversified Portfolio" data-ar="محفظة متنوعة">Diversified Portfolio</h3>
+                    <p class="strength-description" data-en="Multi-sector presence across industries including chemicals, automotive, manufacturing, trading, real estate, and services, providing stability and growth opportunities." data-ar="حضور متعدد القطاعات عبر الصناعات بما في ذلك المواد الكيميائية والسيارات والتصنيع والتجارة والعقارات والخدمات، مما يوفر الاستقرار وفرص النمو.">Multi-sector presence across industries including chemicals, automotive, manufacturing, trading, real estate, and services, providing stability and growth opportunities.</p>
+                </div>
+                
+                <div class="strength-card">
+                    <div class="strength-icon">🌍</div>
+                    <h3 class="strength-title" data-en="Regional Expertise" data-ar="الخبرة الإقليمية">Regional Expertise</h3>
+                    <p class="strength-description" data-en="Deep understanding of GCC markets, business culture, and regulatory environment, enabling effective operations and strategic expansion across the region." data-ar="فهم عميق لأسواق دول مجلس التعاون الخليجي وثقافة الأعمال والبيئة التنظيمية، مما يمكّن العمليات الفعالة والتوسع الاستراتيجي عبر المنطقة.">Deep understanding of GCC markets, business culture, and regulatory environment, enabling effective operations and strategic expansion across the region.</p>
+                </div>
+                
+                <div class="strength-card">
+                    <div class="strength-icon">🤝</div>
+                    <h3 class="strength-title" data-en="Strategic Partnerships" data-ar="الشراكات الاستراتيجية">Strategic Partnerships</h3>
+                    <p class="strength-description" data-en="Extensive network of partnerships with leading international and regional businesses, facilitating collaboration and access to global best practices." data-ar="شبكة واسعة من الشراكات مع الشركات الدولية والإقليمية الرائدة، مما يسهل التعاون والوصول إلى أفضل الممارسات العالمية.">Extensive network of partnerships with leading international and regional businesses, facilitating collaboration and access to global best practices.</p>
+                </div>
+                
+                <div class="strength-card">
+                    <div class="strength-icon">💡</div>
+                    <h3 class="strength-title" data-en="Innovation Focus" data-ar="التركيز على الابتكار">Innovation Focus</h3>
+                    <p class="strength-description" data-en="Commitment to adopting cutting-edge technologies and innovative solutions across all business divisions, ensuring competitive advantage and operational excellence." data-ar="الالتزام باعتماد التقنيات المتطورة والحلول المبتكرة عبر جميع أقسام الأعمال، مما يضمن الميزة التنافسية والتميز التشغيلي.">Commitment to adopting cutting-edge technologies and innovative solutions across all business divisions, ensuring competitive advantage and operational excellence.</p>
+                </div>
+                
+                <div class="strength-card">
+                    <div class="strength-icon">💰</div>
+                    <h3 class="strength-title" data-en="Financial Strength" data-ar="القوة المالية">Financial Strength</h3>
+                    <p class="strength-description" data-en="Solid financial foundation supporting major investments, business expansion, and sustained growth initiatives across all Group companies including Nashco Global." data-ar="أساس مالي قوي يدعم الاستثمارات الكبرى وتوسع الأعمال ومبادرات النمو المستدام عبر جميع شركات المجموعة بما في ذلك ناشكو العالمية.">Solid financial foundation supporting major investments, business expansion, and sustained growth initiatives across all Group companies including Nashco Global.</p>
+                </div>
+                
+                <div class="strength-card">
+                    <div class="strength-icon">👥</div>
+                    <h3 class="strength-title" data-en="Talent & Expertise" data-ar="المواهب والخبرة">Talent & Expertise</h3>
+                    <p class="strength-description" data-en="Access to a pool of highly skilled professionals and industry experts, providing knowledge transfer and specialized capabilities to support Nashco Global's operations." data-ar="الوصول إلى مجموعة من المهنيين ذوي المهارات العالية وخبراء الصناعة، وتوفير نقل المعرفة والقدرات المتخصصة لدعم عمليات ناشكو العالمية.">Access to a pool of highly skilled professionals and industry experts, providing knowledge transfer and specialized capabilities to support Nashco Global's operations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Synergy Section -->
+    <section class="section synergy-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title light" data-en="Synergy with Nashco Global" data-ar="التآزر مع ناشكو العالمية">Synergy with Nashco Global</h2>
+                <div class="title-divider light"></div>
+            </div>
+            
+            <div class="synergy-content">
+                <div class="synergy-grid">
+                    <div class="synergy-item">
+                        <h3 class="synergy-title" data-en="Shared Vision" data-ar="رؤية مشتركة">Shared Vision</h3>
+                        <p class="synergy-text" data-en="Both Zahy Al Khaleej Group and Nashco Global are united by a common vision of regional leadership, industrial excellence, and sustainable growth. This alignment ensures strategic coherence and unified objectives across all operations." data-ar="مجموعة زاهي الخليج وناشكو العالمية متحدتان برؤية مشتركة للقيادة الإقليمية والتميز الصناعي والنمو المستدام. هذا التوافق يضمن التماسك الاستراتيجي والأهداف الموحدة عبر جميع العمليات.">Both Zahy Al Khaleej Group and Nashco Global are united by a common vision of regional leadership, industrial excellence, and sustainable growth. This alignment ensures strategic coherence and unified objectives across all operations.</p>
+                    </div>
+                    
+                    <div class="synergy-item">
+                        <h3 class="synergy-title" data-en="Resource Optimization" data-ar="تحسين الموارد">Resource Optimization</h3>
+                        <p class="synergy-text" data-en="Through the Group's affiliation, Nashco Global leverages shared resources, infrastructure, and logistics networks, enabling cost efficiencies and enhanced service delivery across all business divisions." data-ar="من خلال انتماء المجموعة، تستفيد ناشكو العالمية من الموارد المشتركة والبنية التحتية وشبكات الخدمات اللوجستية، مما يمكّن كفاءات التكلفة وتحسين تقديم الخدمات عبر جميع أقسام الأعمال.">Through the Group's affiliation, Nashco Global leverages shared resources, infrastructure, and logistics networks, enabling cost efficiencies and enhanced service delivery across all business divisions.</p>
+                    </div>
+                    
+                    <div class="synergy-item">
+                        <h3 class="synergy-title" data-en="Knowledge Transfer" data-ar="نقل المعرفة">Knowledge Transfer</h3>
+                        <p class="synergy-text" data-en="Nashco Global benefits from the collective expertise and best practices across the Group's diverse portfolio, fostering continuous learning and operational improvement in chemicals, automotive, manufacturing, and trading." data-ar="تستفيد ناشكو العالمية من الخبرة الجماعية وأفضل الممارسات عبر محفظة المجموعة المتنوعة، مما يعزز التعلم المستمر والتحسين التشغيلي في المواد الكيميائية والسيارات والتصنيع والتجارة.">Nashco Global benefits from the collective expertise and best practices across the Group's diverse portfolio, fostering continuous learning and operational improvement in chemicals, automotive, manufacturing, and trading.</p>
+                    </div>
+                    
+                    <div class="synergy-item">
+                        <h3 class="synergy-title" data-en="Market Access" data-ar="الوصول إلى السوق">Market Access</h3>
+                        <p class="synergy-text" data-en="The Group's established presence and reputation throughout the GCC provide Nashco Global with enhanced market access, credibility, and opportunities for business development and expansion." data-ar="يوفر حضور المجموعة الراسخ وسمعتها في جميع أنحاء دول مجلس التعاون الخليجي لناشكو العالمية وصولاً محسناً إلى السوق والمصداقية وفرص تطوير الأعمال والتوسع.">The Group's established presence and reputation throughout the GCC provide Nashco Global with enhanced market access, credibility, and opportunities for business development and expansion.</p>
                     </div>
                 </div>
-                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-                    <span></span><span></span><span></span>
-                </button>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a></li>
-                    <li><a href="about.html" data-en="About" data-ar="من نحن">About</a></li>
-                    <li><a href="zahyalkhaleej.html" class="active" data-en="Zahy Al Khaleej" data-ar="زاهي الخليج">Zahy Al Khaleej</a></li>
-                    <li><a href="automotive.html" data-en="Automotive" data-ar="السيارات">Automotive</a></li>
-                    <li><a href="manufacturing.html" data-en="Manufacturing" data-ar="التصنيع">Manufacturing</a></li>
-                    <li><a href="trading.html" data-en="Trading" data-ar="التجارة">Trading</a></li>
-                    <li><a href="contact.html" data-en="Contact" data-ar="اتصل بنا">Contact</a></li>
-                </ul>
             </div>
         </div>
-    </nav>
-    <section class="page-header" style="background: linear-gradient(135deg, rgba(26, 84, 144, 0.89) 0%, rgba(41, 128, 185, 0.85) 100%), url('assets/images/zahy-hero.png'); background-size: cover; background-position: center; padding: 140px 0 100px; color: white; text-align: center; position: relative;"><div class="container" style="position: relative; z-index: 2;"><div style="margin-bottom: 40px;"><img src="assets/images/Logo-Zahy.png" alt="Zahy Group Logo" style="max-width: 220px; height: auto; background: white; padding: 25px; border-radius: 50%; box-shadow: 0 15px 50px rgba(0,0,0,0.3); margin: 0 auto; display: block; animation: fadeIn 1s ease-in;" onerror="this.onerror=null; this.src='https://github.com/user-attachments/assets/7fed4843-5a73-4f86-b337-c0d2af1fba0f';"></div><h1 style="font-size: 3.8rem; margin-bottom: 25px; font-weight: 700; text-shadow: 0 4px 20px rgba(0,0,0,0.3);" data-en="Zahy Al Khaleej" data-ar="زاهي الخليج">Zahy Al Khaleej</h1><p style="font-size: 1.6rem; opacity: 0.95; max-width: 800px; margin: 0 auto; line-height: 1.6;" data-en="Premium Services & Solutions Under Nashco Global" data-ar="خدمات وحلول متميزة تحت ناشكو العالمية">Premium Services & Solutions Under Nashco Global</p></div></section>
-    <section class="about" style="padding: 100px 0;">
+    </section>
+
+    <!-- Group Values Section -->
+    <section class="section group-values-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title" data-en="About Zahy Al Khaleej" data-ar="عن زاهي الخليج">About Zahy Al Khaleej</h2>
-                <div class="title-underline"></div>
+                <h2 class="section-title" data-en="Group Philosophy & Values" data-ar="فلسفة وقيم المجموعة">Group Philosophy & Values</h2>
+                <div class="title-divider"></div>
             </div>
-            <div class="content-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
-                <div>
-                    <p style="font-size: 1.15rem; line-height: 1.9; margin-bottom: 25px;" data-en="Zahy Al Khaleej represents the pinnacle of premium service delivery within the Nashco Global family. As our flagship brand, it embodies our commitment to excellence, innovation, and customer satisfaction across the GCC region." data-ar="يمثل زاهي الخليج قمة تقديم الخدمات المتميزة داخل عائلة ناشكو العالمية. كعلامتنا التجارية الرائدة، تجسد التزامنا بالتميز والابتكار ورضا العملاء في جميع أنحاء منطقة دول مجلس التعاون الخليجي.">
-                        Zahy Al Khaleej represents the pinnacle of premium service delivery within the Nashco Global family. As our flagship brand, it embodies our commitment to excellence, innovation, and customer satisfaction across the GCC region.
-                    </p>
-                    <p style="font-size: 1.15rem; line-height: 1.9; margin-bottom: 25px;" data-en="Built on a foundation of trust and reliability, Zahy Al Khaleej has become synonymous with quality and professionalism. We serve a diverse clientele, from government entities to private enterprises, delivering solutions that drive success and sustainable growth." data-ar="بناءً على أساس من الثقة والموثوقية، أصبح زاهي الخليج مرادفًا للجودة والاحترافية. نخدم عملاء متنوعين، من الكيانات الحكومية إلى المؤسسات الخاصة، ونقدم حلولًا تدفع النجاح والنمو المستدام.">
-                        Built on a foundation of trust and reliability, Zahy Al Khaleej has become synonymous with quality and professionalism. We serve a diverse clientele, from government entities to private enterprises, delivering solutions that drive success and sustainable growth.
-                    </p>
-                    <p style="font-size: 1.15rem; line-height: 1.9;" data-en="Our integrated approach combines deep industry expertise with cutting-edge technology and international best practices, ensuring that every project we undertake meets the highest standards of quality and efficiency." data-ar="يجمع نهجنا المتكامل بين الخبرة الصناعية العميقة والتكنولوجيا المتطورة وأفضل الممارسات الدولية، مما يضمن أن كل مشروع نقوم به يلبي أعلى معايير الجودة والكفاءة.">
-                        Our integrated approach combines deep industry expertise with cutting-edge technology and international best practices, ensuring that every project we undertake meets the highest standards of quality and efficiency.
-                    </p>
-                </div>
-                <div>
-                    <img src="https://cdn.shortpixel.ai/spai/q_lossless+ret_img+to_webp/thecondorgroup.com/wp-content/uploads/2022/03/Untitled-design-33.jpg" 
-                         alt="Zahy Al Khaleej Operations" 
-                         style="width: 100%; border-radius: 10px; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
+            
+            <div class="philosophy-content">
+                <p class="text-content center" data-en="Zahy Al Khaleej Group's philosophy is built on the principles of excellence, integrity, and sustainable development. These values permeate every aspect of the Group's operations and are reflected in Nashco Global's commitment to delivering world-class industrial solutions." data-ar="فلسفة مجموعة زاهي الخليج مبنية على مبادئ التميز والنزاهة والتنمية المستدامة. هذه القيم تتخلل كل جانب من جوانب عمليات المجموعة وتنعكس في التزام ناشكو العالمية بتقديم حلول صناعية عالمية المستوى.">Zahy Al Khaleej Group's philosophy is built on the principles of excellence, integrity, and sustainable development. These values permeate every aspect of the Group's operations and are reflected in Nashco Global's commitment to delivering world-class industrial solutions.</p>
+                
+                <div class="values-cards">
+                    <div class="value-card-inline">
+                        <h4 data-en="Excellence in All Endeavors" data-ar="التميز في جميع المساعي">Excellence in All Endeavors</h4>
+                        <p data-en="Striving for the highest standards in every project and interaction." data-ar="السعي لتحقيق أعلى المعايير في كل مشروع وتفاعل.">Striving for the highest standards in every project and interaction.</p>
+                    </div>
+                    
+                    <div class="value-card-inline">
+                        <h4 data-en="Integrity & Transparency" data-ar="النزاهة والشفافية">Integrity & Transparency</h4>
+                        <p data-en="Conducting business with honesty, ethics, and openness." data-ar="إدارة الأعمال بصدق وأخلاق وانفتاح.">Conducting business with honesty, ethics, and openness.</p>
+                    </div>
+                    
+                    <div class="value-card-inline">
+                        <h4 data-en="Sustainable Growth" data-ar="النمو المستدام">Sustainable Growth</h4>
+                        <p data-en="Building for the long term with environmental and social responsibility." data-ar="البناء على المدى الطويل مع المسؤولية البيئية والاجتماعية.">Building for the long term with environmental and social responsibility.</p>
+                    </div>
+                    
+                    <div class="value-card-inline">
+                        <h4 data-en="Customer Centricity" data-ar="التركيز على العملاء">Customer Centricity</h4>
+                        <p data-en="Putting customer needs and satisfaction at the heart of everything we do." data-ar="وضع احتياجات ورضا العملاء في قلب كل ما نقوم به.">Putting customer needs and satisfaction at the heart of everything we do.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="services" style="padding: 100px 0; background: #f8f9fa;">
+
+    <!-- Future Vision Section -->
+    <section class="section future-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title" data-en="Our Service Excellence" data-ar="تميز خدماتنا">Our Service Excellence</h2>
-                <div class="title-underline"></div>
+                <h2 class="section-title light" data-en="Future Vision" data-ar="الرؤية المستقبلية">Future Vision</h2>
+                <div class="title-divider light"></div>
             </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon" style="font-size: 3.5rem; color: #f39c12; margin-bottom: 20px;"><i class="fas fa-trophy"></i></div>
-                    <h3 data-en="Premium Quality" data-ar="جودة متميزة">Premium Quality</h3>
-                    <p data-en="We deliver nothing but the finest products and services, rigorously tested and certified to meet international standards." data-ar="نقدم فقط أجود المنتجات والخدمات، تم اختبارها بدقة واعتمادها لتلبية المعايير الدولية.">
-                        We deliver nothing but the finest products and services, rigorously tested and certified to meet international standards.
-                    </p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon" style="font-size: 3.5rem; color: #f39c12; margin-bottom: 20px;"><i class="fas fa-users-cog"></i></div>
-                    <h3 data-en="Expert Team" data-ar="فريق خبراء">Expert Team</h3>
-                    <p data-en="Our professionals bring decades of combined experience, ensuring expert guidance and flawless execution on every project." data-ar="يجلب محترفونا عقودًا من الخبرة المشتركة، مما يضمن التوجيه الخبير والتنفيذ الخالي من العيوب في كل مشروع.">
-                        Our professionals bring decades of combined experience, ensuring expert guidance and flawless execution on every project.
-                    </p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon" style="font-size: 3.5rem; color: #f39c12; margin-bottom: 20px;"><i class="fas fa-headset"></i></div>
-                    <h3 data-en="24/7 Support" data-ar="دعم على مدار الساعة">24/7 Support</h3>
-                    <p data-en="Round-the-clock customer support ensures your operations never face downtime. We're always here when you need us." data-ar="يضمن دعم العملاء على مدار الساعة عدم توقف عملياتك أبدًا. نحن دائمًا هنا عندما تحتاجنا.">
-                        Round-the-clock customer support ensures your operations never face downtime. We're always here when you need us.
-                    </p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon" style="font-size: 3.5rem; color: #f39c12; margin-bottom: 20px;"><i class="fas fa-rocket"></i></div>
-                    <h3 data-en="Innovation Driven" data-ar="مدفوعة بالابتكار">Innovation Driven</h3>
-                    <p data-en="We continuously invest in R&D and emerging technologies to provide you with cutting-edge solutions that give you a competitive advantage." data-ar="نستثمر باستمرار في البحث والتطوير والتقنيات الناشئة لنوفر لك حلولًا متطورة تمنحك ميزة تنافسية.">
-                        We continuously invest in R&D and emerging technologies to provide you with cutting-edge solutions that give you a competitive advantage.
-                    </p>
-                </div>
+            
+            <div class="future-content">
+                <p class="text-content light center" data-en="Looking ahead, Zahy Al Khaleej Group envisions continued expansion and diversification across the GCC region. With Nashco Global as a cornerstone of its industrial portfolio, the Group is positioned to capitalize on emerging opportunities in chemicals, automotive, manufacturing, and international trading." data-ar="بالنظر إلى المستقبل، تتصور مجموعة زاهي الخليج التوسع والتنويع المستمر عبر منطقة دول مجلس التعاون الخليجي. مع ناشكو العالمية كحجر الزاوية في محفظتها الصناعية، تتموضع المجموعة للاستفادة من الفرص الناشئة في المواد الكيميائية والسيارات والتصنيع والتجارة الدولية.">Looking ahead, Zahy Al Khaleej Group envisions continued expansion and diversification across the GCC region. With Nashco Global as a cornerstone of its industrial portfolio, the Group is positioned to capitalize on emerging opportunities in chemicals, automotive, manufacturing, and international trading.</p>
+                
+                <p class="text-content light center" data-en="Through strategic investments, innovation, and a commitment to excellence, the Group aims to strengthen its regional leadership while contributing to the economic development and prosperity of the communities it serves." data-ar="من خلال الاستثمارات الاستراتيجية والابتكار والالتزام بالتميز، تهدف المجموعة إلى تعزيز قيادتها الإقليمية مع المساهمة في التنمية الاقتصادية وازدهار المجتمعات التي تخدمها.">Through strategic investments, innovation, and a commitment to excellence, the Group aims to strengthen its regional leadership while contributing to the economic development and prosperity of the communities it serves.</p>
             </div>
         </div>
     </section>
-    <section class="vision" style="padding: 100px 0;">
-        <div class="container">
-            <div class="stats">
-                <div class="stat-item">
-                    <h3 class="stat-number" data-count="500">500+</h3>
-                    <p class="stat-label" data-en="Projects Completed" data-ar="المشاريع المكتملة">Projects Completed</p>
-                </div>
-                <div class="stat-item">
-                    <h3 class="stat-number" data-count="98">98%</h3>
-                    <p class="stat-label" data-en="Client Satisfaction" data-ar="رضا العملاء">Client Satisfaction</p>
-                </div>
-                <div class="stat-item">
-                    <h3 class="stat-number" data-count="20">20+</h3>
-                    <p class="stat-label" data-en="Industry Awards" data-ar="جوائز الصناعة">Industry Awards</p>
-                </div>
-                <div class="stat-item">
-                    <h3 class="stat-number" data-count="15">15+</h3>
-                    <p class="stat-label" data-en="Years of Service" data-ar="سنوات الخدمة">Years of Service</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="cta-section" style="background: linear-gradient(135deg, #1a5490 0%, #2980b9 100%); padding: 80px 0; color: white; text-align: center;">
-        <div class="container">
-            <h2 style="font-size: 2.5rem; margin-bottom: 20px;" data-en="Experience Premium Service" data-ar="تجربة الخدمة المتميزة">Experience Premium Service</h2>
-            <p style="font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9;" data-en="Discover how Zahy Al Khaleej can elevate your business with our unparalleled expertise and dedication." data-ar="اكتشف كيف يمكن لزاهي الخليج رفع مستوى عملك بخبرتنا وتفانينا الذي لا مثيل له.">
-                Discover how Zahy Al Khaleej can elevate your business with our unparalleled expertise and dedication.
-            </p>
-            <a href="contact.html" class="btn btn-secondary" style="background: white; color: #1a5490;" data-en="Get Started" data-ar="ابدأ">Get Started</a>
-        </div>
-    </section>
+
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <img src="https://github.com/user-attachments/assets/3cc9f941-919c-46db-99af-dafcbd3a75ff" alt="Nashco Global" style="max-width: 120px; margin-bottom: 20px;" onerror="this.onerror=null; this.style.display='none';">
-                    <h3>Nashco Global</h3>
-                    <p data-en="Excellence in Automotive, Manufacturing & Trading since 1994" data-ar="التميز في السيارات والتصنيع والتجارة منذ 1994">Excellence in Automotive, Manufacturing & Trading since 1994</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    </div>
+                    <img src="images/nashco-logo.svg" alt="Nashco Global Logo" class="footer-logo">
+                    <p class="footer-description" data-en="Leading GCC industrial solutions provider since 1994" data-ar="المزود الرائد للحلول الصناعية في دول مجلس التعاون الخليجي منذ عام 1994">Leading GCC industrial solutions provider since 1994</p>
                 </div>
+                
                 <div class="footer-section">
-                    <h4 data-en="Quick Links" data-ar="روابط سريعة">Quick Links</h4>
-                    <ul>
+                    <h4 class="footer-title" data-en="Quick Links" data-ar="روابط سريعة">Quick Links</h4>
+                    <ul class="footer-links">
                         <li><a href="index.html" data-en="Home" data-ar="الرئيسية">Home</a></li>
-                        <li><a href="about.html" data-en="About" data-ar="من نحن">About</a></li>
+                        <li><a href="about.html" data-en="About Us" data-ar="من نحن">About Us</a></li>
                         <li><a href="zahyalkhaleej.html" data-en="Zahy Al Khaleej" data-ar="زاهي الخليج">Zahy Al Khaleej</a></li>
-                        <li><a href="contact.html" data-en="Contact" data-ar="اتصل بنا">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4 data-en="Our Divisions" data-ar="أقسامنا">Our Divisions</h4>
-                    <ul>
                         <li><a href="automotive.html" data-en="Automotive" data-ar="السيارات">Automotive</a></li>
                         <li><a href="manufacturing.html" data-en="Manufacturing" data-ar="التصنيع">Manufacturing</a></li>
                         <li><a href="trading.html" data-en="Trading" data-ar="التجارة">Trading</a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-section">
-                    <h4 data-en="Contact Us" data-ar="اتصل بنا">Contact Us</h4>
-                    <ul>
-                        <li><i class="fas fa-phone"></i> Oman: +968 94535053</li>
-                        <li><i class="fas fa-phone"></i> UAE: +971 508536542</li>
-                        <li><i class="fas fa-envelope"></i> info@nashcoglobal.com</li>
-                    </ul>
+                    <h4 class="footer-title" data-en="Our Group" data-ar="مجموعتنا">Our Group</h4>
+                    <img src="images/zahy-logo.svg" alt="Zahy Group Logo" class="footer-zahy-logo">
+                    <p class="footer-group-text" data-en="Zahy Al Khaleej Group" data-ar="مجموعة زاهي الخليج">Zahy Al Khaleej Group</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title" data-en="Contact" data-ar="اتصل">Contact</h4>
+                    <p><strong data-en="Oman:" data-ar="عمان:">Oman:</strong> +968 94535053</p>
+                    <p><strong data-en="UAE:" data-ar="الإمارات:">UAE:</strong> +971 508536542</p>
+                    <p>info@nashcoglobal.com</p>
                 </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>&copy; <span id="currentYear">2026</span> Nashco Global. <span data-en="All rights reserved." data-ar="كل الحقوق محفوظة.">All rights reserved.</span></p>
+                <p data-en="© 2024 Nashco Global. All rights reserved. Part of Zahy Al Khaleej Group." data-ar="© 2024 ناشكو العالمية. جميع الحقوق محفوظة. جزء من مجموعة زاهي الخليج.">© 2024 Nashco Global. All rights reserved. Part of Zahy Al Khaleej Group.</p>
             </div>
         </div>
     </footer>
-    <button id="backToTop" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
-    <a href="https://wa.me/968945350 53" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp">
-        <img src="assets/images/whatsapp.svg" alt="WhatsApp" class="whatsapp-icon">
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/971508536542?text=Hello,%20I'm%20interested%20in%20Nashco%20Global%20services" 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Contact us on WhatsApp">
+        <svg class="whatsapp-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#fff" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
     </a>
+
     <script src="script.js"></script>
 </body>
 </html>

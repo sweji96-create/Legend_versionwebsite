@@ -1,0 +1,38 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Globe -->
+  <ellipse cx="200" cy="150" rx="120" ry="110" fill="#4A90E2" stroke="#2E5C8A" stroke-width="2"/>
+  
+  <!-- Green continents overlay -->
+  <g fill="#7CB342">
+    <!-- Americas simplified -->
+    <path d="M 140,100 Q 135,120 140,140 L 145,145 Q 150,130 148,110 Z"/>
+    <path d="M 145,160 Q 140,180 145,200 L 150,195 Q 155,175 152,160 Z"/>
+    
+    <!-- Europe/Africa -->
+    <path d="M 185,90 Q 195,95 200,105 L 210,110 Q 215,95 205,85 Z"/>
+    <path d="M 200,120 Q 210,135 205,150 L 215,160 Q 225,145 220,125 Z"/>
+    
+    <!-- Asia -->
+    <path d="M 230,100 Q 245,110 250,125 L 255,120 Q 260,105 250,95 Z"/>
+    <path d="M 245,135 Q 255,150 250,165 L 260,170 Q 265,155 260,140 Z"/>
+  </g>
+  
+  <!-- Green swooshes -->
+  <g fill="none" stroke="#7CB342" stroke-width="6">
+    <path d="M 280,120 Q 320,130 340,160" stroke-linecap="round"/>
+    <path d="M 285,140 Q 325,150 345,180" stroke-linecap="round"/>
+    <path d="M 290,160 Q 330,170 350,200" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Text "NASHCO" -->
+  <text x="200" y="155" font-family="Arial, sans-serif" font-size="48" font-weight="bold" 
+        fill="#D32F2F" text-anchor="middle" stroke="#8B1A1A" stroke-width="1">
+    NASHCO
+  </text>
+  
+  <!-- Text "GLOBAL" -->
+  <text x="200" y="190" font-family="Arial, sans-serif" font-size="36" font-weight="bold" 
+        fill="#F57C00" text-anchor="middle" stroke="#B35A00" stroke-width="1">
+    GLOBAL
+  </text>
+</svg>
