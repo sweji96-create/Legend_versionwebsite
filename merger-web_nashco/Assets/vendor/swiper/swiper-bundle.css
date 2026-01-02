@@ -1,0 +1,29 @@
+/* Minimal swiper-like styles */
+.swiper { position: relative; overflow: hidden; width: 100%; }
+.swiper-wrapper { display: flex; transition: transform 0.35s ease; }
+.swiper-slide { flex: 0 0 auto; }
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.4);
+  background: rgba(0,0,0,0.35);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 5;
+}
+.swiper-button-prev { left: 12px; }
+.swiper-button-next { right: 12px; }
+.swiper-pagination { display: flex; gap: 6px; justify-content: center; margin-top: 12px; }
+.swiper-pagination-bullet {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: rgba(255,255,255,0.4); cursor: pointer;
+}
+.swiper-pagination-bullet-active { background: #00A3AD; }
