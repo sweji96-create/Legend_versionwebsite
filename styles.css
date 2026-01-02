@@ -884,16 +884,24 @@ section {
 /* Responsive Design */
 @media (max-width: 768px) {
     /* Navigation */
+    .nav-wrapper {
+        padding: 10px 0;
+    }
+    
+    .logo-img {
+        max-height: 40px;
+    }
+    
     .menu-toggle {
         display: flex;
     }
     
     .nav-menu {
         position: fixed;
-        top: 70px;
+        top: 78px;
         left: -100%;
         width: 100%;
-        height: calc(100vh - 70px);
+        height: calc(100vh - 78px);
         background: var(--white);
         flex-direction: column;
         padding: 50px 20px;
@@ -917,6 +925,10 @@ section {
     }
     
     /* Hero */
+    .hero {
+        margin-top: 100px;
+    }
+    
     .hero-title {
         font-size: 2rem;
     }
@@ -960,6 +972,10 @@ section {
 }
 
 @media (max-width: 480px) {
+    .hero {
+        margin-top: 90px;
+    }
+    
     .hero-title {
         font-size: 1.5rem;
     }
