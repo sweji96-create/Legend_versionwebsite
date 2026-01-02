@@ -2,7 +2,7 @@
 
 **Production-ready bilingual (English/Arabic) multi-page corporate website**
 
-[![Deployment Status](https://img.shields.io/badge/deployment-ready-brightgreen)]()
+[![Deployment Status](https://img.shields.io/badge/deployment-nearly%20ready-yellow)]()
 [![License](https://img.shields.io/badge/license-proprietary-blue)]()
 [![HTML5](https://img.shields.io/badge/HTML-5-orange)]()
 [![CSS3](https://img.shields.io/badge/CSS-3-blue)]()
@@ -95,7 +95,7 @@ Legend_versionwebsite/
 
 ### Deployment
 
-**The site is ready to deploy!** Minor post-deployment configuration needed (contact form backend and WhatsApp number). See [DEPLOYMENT.md](DEPLOYMENT.md) or [QUICK-START.md](QUICK-START.md) for detailed instructions.
+**The site is nearly ready to deploy!** Minor post-deployment configuration needed (contact form backend and WhatsApp number). See [DEPLOYMENT.md](DEPLOYMENT.md) or [QUICK-START.md](QUICK-START.md) for detailed instructions.
 
 **Quick deploy to Cloudflare Pages:**
 1. Push to GitHub
@@ -330,7 +330,7 @@ Restructured from single-page to 7 distinct pages with professional hero section
 Each hero features high-resolution backgrounds, gradient overlays, enhanced typography, and full responsive design.
 
 ### Complete Documentation
-Extensive comprehensive documentation covering deployment, technical review, and multi-page architecture.
+Comprehensive documentation covering deployment, technical review, and multi-page architecture.
 
 ---
 
