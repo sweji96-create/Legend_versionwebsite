@@ -1,395 +1,243 @@
-/**
- * NASHCO GLOBAL - PRODUCTION JAVASCRIPT
- * Bilingual Language Switching & Interactive Features
- */
+// ===================================
+// LANGUAGE TOGGLE FUNCTIONALITY
+// ===================================
+let currentLang = 'en';
 
-// ============================================
-// STATE MANAGEMENT
-// ============================================
-let currentLanguage = 'en';
+const langToggle = document.getElementById('langToggle');
 
-// ============================================
-// LANGUAGE TRANSLATIONS
-// ============================================
-const translations = {
-    en: {
-        langButtonText: 'عربي'
-    },
-    ar: {
-        langButtonText: 'English'
-    }
-};
-
-// ============================================
-// DOM ELEMENTS
-// ============================================
-const languageToggle = document.getElementById('language-toggle');
-const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-const navMenu = document.getElementById('nav-menu');
-const contactForm = document.getElementById('contact-form');
-
-// ============================================
-// LANGUAGE SWITCHING
-// ============================================
-function switchLanguage() {
-    currentLanguage = currentLanguage === 'en' ? 'ar' : 'en';
+// Language toggle handler
+langToggle.addEventListener('click', () => {
+    currentLang = currentLang === 'en' ? 'ar' : 'en';
     
-    // Update HTML attributes
-    document.documentElement.lang = currentLanguage;
-    document.documentElement.dir = currentLanguage === 'ar' ? 'rtl' : 'ltr';
-    document.body.dir = currentLanguage === 'ar' ? 'rtl' : 'ltr';
+    // Update HTML direction and lang
+    const html = document.documentElement;
+    html.setAttribute('dir', currentLang === 'ar' ? 'rtl' : 'ltr');
+    html.setAttribute('lang', currentLang);
     
-    // Update all elements with data attributes
+    // Update all translatable elements
+    updateTranslations();
+    
+    // Update button text
+    langToggle.querySelector('.lang-text').textContent = currentLang === 'en' ? 'العربية' : 'English';
+});
+
+// Update all elements with data-en and data-ar attributes
+function updateTranslations() {
     const elements = document.querySelectorAll('[data-en][data-ar]');
+    
     elements.forEach(element => {
-        const enText = element.getAttribute('data-en');
-        const arText = element.getAttribute('data-ar');
-        
-        if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-            element.placeholder = currentLanguage === 'en' ? enText : arText;
-        } else {
-            element.textContent = currentLanguage === 'en' ? enText : arText;
+        const text = element.getAttribute(`data-${currentLang}`);
+        if (text) {
+            // Update text content or alt/title attributes
+            if (element.tagName === 'IMG') {
+                element.setAttribute('alt', text);
+            } else {
+                element.textContent = text;
+            }
         }
     });
-    
-    // Update language toggle button
-    const langText = languageToggle.querySelector('.lang-text');
-    langText.textContent = translations[currentLanguage].langButtonText;
-    
-    // Close mobile menu if open
-    closeMobileMenu();
-    
-    // Store preference
-    localStorage.setItem('preferredLanguage', currentLanguage);
-    
-    // Smooth scroll to top
-    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// ============================================
-// MOBILE MENU
-// ============================================
-function toggleMobileMenu() {
-    navMenu.classList.toggle('active');
-    mobileMenuToggle.classList.toggle('active');
+// ===================================
+// STATS COUNTER ANIMATION
+// ===================================
+function animateCounter(element, target, duration = 2000) {
+    const start = 0;
+    const increment = target / (duration / 16); // 60 FPS
+    let current = start;
     
-    // Prevent body scroll when menu is open
-    if (navMenu.classList.contains('active')) {
-        document.body.style.overflow = 'hidden';
-    } else {
-        document.body.style.overflow = '';
-    }
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+            current = target;
+            clearInterval(timer);
+        }
+        element.textContent = Math.floor(current);
+    }, 16);
 }
 
-function closeMobileMenu() {
-    navMenu.classList.remove('active');
-    mobileMenuToggle.classList.remove('active');
-    document.body.style.overflow = '';
-}
+// Intersection Observer for stats animation
+const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
+            const target = parseInt(entry.target.getAttribute('data-count'));
+            animateCounter(entry.target, target);
+            entry.target.classList.add('animated');
+        }
+    });
+}, {
+    threshold: 0.5
+});
 
-// ============================================
+// Observe all stat numbers
+document.addEventListener('DOMContentLoaded', () => {
+    const statNumbers = document.querySelectorAll('.stat-number');
+    statNumbers.forEach(stat => {
+        statsObserver.observe(stat);
+    });
+});
+
+// ===================================
 // SMOOTH SCROLLING
-// ============================================
-function initSmoothScrolling() {
-    const navLinks = document.querySelectorAll('.nav-link, a[href^="#"]');
-    
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            
-            // Check if it's an anchor link
-            if (href.startsWith('#')) {
-                e.preventDefault();
-                
-                const targetId = href.substring(1);
-                const targetElement = document.getElementById(targetId);
-                
-                if (targetElement) {
-                    // Close mobile menu if open
-                    closeMobileMenu();
-                    
-                    // Calculate offset for fixed header
-                    const headerHeight = document.querySelector('.header').offsetHeight;
-                    const targetPosition = targetElement.offsetTop - headerHeight;
-                    
-                    // Smooth scroll to target
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Update active link
-                    updateActiveLink(this);
-                }
-            }
-        });
-    });
-}
-
-// ============================================
-// ACTIVE LINK HIGHLIGHTING
-// ============================================
-function updateActiveLink(clickedLink) {
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(link => link.classList.remove('active'));
-    
-    if (clickedLink) {
-        clickedLink.classList.add('active');
-    }
-}
-
-function highlightActiveSection() {
-    const sections = document.querySelectorAll('.section, .hero');
-    const navLinks = document.querySelectorAll('.nav-link');
-    
-    let currentSection = '';
-    const scrollPosition = window.scrollY + 200;
-    
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
-        
-        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-            currentSection = section.getAttribute('id');
+// ===================================
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
         }
     });
-    
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        const href = link.getAttribute('href');
-        
-        if (href === `#${currentSection}`) {
-            link.classList.add('active');
-        }
-    });
-}
+});
 
-// ============================================
+// ===================================
 // HEADER SCROLL EFFECT
-// ============================================
-function handleHeaderScroll() {
-    const header = document.querySelector('.header');
+// ===================================
+let lastScroll = 0;
+const header = document.querySelector('.header');
+
+window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
     
-    if (window.scrollY > 100) {
-        header.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.15)';
-        header.style.padding = '0.8rem 0';
+    // Add shadow on scroll
+    if (currentScroll > 50) {
+        header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.15)';
     } else {
-        header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-        header.style.padding = '0';
+        header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
     }
-}
+    
+    lastScroll = currentScroll;
+});
 
-// ============================================
-// CONTACT FORM HANDLING
-// ============================================
-function handleContactForm(e) {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        phone: document.getElementById('phone').value,
-        message: document.getElementById('message').value
-    };
-    
-    // Simulate form submission
-    const submitButton = contactForm.querySelector('.submit-button');
-    const originalText = submitButton.textContent;
-    
-    submitButton.textContent = currentLanguage === 'en' ? 'Sending...' : 'جاري الإرسال...';
-    submitButton.disabled = true;
-    
-    // Simulate API call
-    setTimeout(() => {
-        // Show success message
-        alert(currentLanguage === 'en' 
-            ? 'Thank you for your message! We will get back to you soon.' 
-            : 'شكراً لرسالتك! سنتواصل معك قريباً.');
-        
-        // Reset form
-        contactForm.reset();
-        submitButton.textContent = originalText;
-        submitButton.disabled = false;
-    }, 1500);
-}
-
-// ============================================
-// LAZY LOADING IMAGES
-// ============================================
-function initLazyLoading() {
+// ===================================
+// LAZY LOADING FALLBACK
+// ===================================
+// Modern browsers support native lazy loading, but add fallback for older browsers
+if ('loading' in HTMLImageElement.prototype) {
+    // Native lazy loading is supported
     const images = document.querySelectorAll('img[loading="lazy"]');
-    
-    if ('IntersectionObserver' in window) {
-        const imageObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    img.src = img.src; // Trigger load
-                    img.classList.add('loaded');
-                    observer.unobserve(img);
-                }
-            });
-        });
-        
-        images.forEach(img => imageObserver.observe(img));
-    }
-}
-
-// ============================================
-// SCROLL ANIMATIONS
-// ============================================
-function initScrollAnimations() {
-    const animatedElements = document.querySelectorAll('.section');
-    
-    if ('IntersectionObserver' in window) {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, {
-            threshold: 0.1
-        });
-        
-        animatedElements.forEach(element => {
-            element.style.opacity = '0';
-            element.style.transform = 'translateY(20px)';
-            element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(element);
-        });
-    } else {
-        // Fallback for browsers without IntersectionObserver
-        animatedElements.forEach(element => {
-            element.style.opacity = '1';
-            element.style.transform = 'translateY(0)';
-        });
-    }
-}
-
-// ============================================
-// WHATSAPP BUTTON ANALYTICS (Optional)
-// ============================================
-function trackWhatsAppClick() {
-    const whatsappButton = document.querySelector('.whatsapp-float');
-    
-    if (whatsappButton) {
-        whatsappButton.addEventListener('click', () => {
-            // Track analytics (if implemented)
-            console.log('WhatsApp button clicked');
-        });
-    }
-}
-
-// ============================================
-// KEYBOARD NAVIGATION
-// ============================================
-function initKeyboardNavigation() {
-    document.addEventListener('keydown', (e) => {
-        // Close mobile menu with Escape key
-        if (e.key === 'Escape' && navMenu.classList.contains('active')) {
-            closeMobileMenu();
-        }
-        
-        // Toggle language with Alt+L
-        if (e.altKey && e.key === 'l') {
-            e.preventDefault();
-            switchLanguage();
-        }
+    images.forEach(img => {
+        img.src = img.src;
     });
-}
-
-// ============================================
-// LOAD SAVED PREFERENCES
-// ============================================
-function loadPreferences() {
-    const savedLanguage = localStorage.getItem('preferredLanguage');
-    
-    if (savedLanguage && savedLanguage !== currentLanguage) {
-        switchLanguage();
-    }
-}
-
-// ============================================
-// INITIALIZE ALL FEATURES
-// ============================================
-function init() {
-    // Load user preferences
-    loadPreferences();
-    
-    // Set up event listeners
-    languageToggle.addEventListener('click', switchLanguage);
-    mobileMenuToggle.addEventListener('click', toggleMobileMenu);
-    
-    // Contact form listener (only on contact page)
-    if (contactForm) {
-        contactForm.addEventListener('submit', handleContactForm);
-    }
-    
-    // Initialize features
-    initSmoothScrolling();
-    initLazyLoading();
-    initScrollAnimations();
-    initKeyboardNavigation();
-    trackWhatsAppClick();
-    
-    // Scroll event listeners
-    let scrollTimeout;
-    window.addEventListener('scroll', () => {
-        handleHeaderScroll();
-        
-        // Debounce active section highlighting
-        clearTimeout(scrollTimeout);
-        scrollTimeout = setTimeout(highlightActiveSection, 100);
-    });
-    
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (navMenu.classList.contains('active') && 
-            !navMenu.contains(e.target) && 
-            !mobileMenuToggle.contains(e.target)) {
-            closeMobileMenu();
-        }
-    });
-    
-    // Handle window resize
-    let resizeTimeout;
-    window.addEventListener('resize', () => {
-        clearTimeout(resizeTimeout);
-        resizeTimeout = setTimeout(() => {
-            // Close mobile menu on large screens
-            if (window.innerWidth > 992) {
-                closeMobileMenu();
-            }
-        }, 250);
-    });
-    
-    // Initial active section highlight
-    highlightActiveSection();
-    
-    console.log('Nashco Global website initialized successfully');
-}
-
-// ============================================
-// START APPLICATION
-// ============================================
-// Wait for DOM to be fully loaded
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
 } else {
-    init();
+    // Fallback for older browsers
+    const script = document.createElement('script');
+    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js';
+    document.body.appendChild(script);
 }
 
-// ============================================
-// EXPORT FOR TESTING (if needed)
-// ============================================
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = {
-        switchLanguage,
-        toggleMobileMenu,
-        closeMobileMenu,
-        currentLanguage
+// ===================================
+// IMAGE ERROR HANDLING
+// ===================================
+document.addEventListener('DOMContentLoaded', () => {
+    const images = document.querySelectorAll('img');
+    
+    images.forEach(img => {
+        img.addEventListener('error', function() {
+            // If logo image fails, show text fallback
+            if (this.classList.contains('logo-img')) {
+                this.style.display = 'none';
+                const fallback = this.nextElementSibling;
+                if (fallback && fallback.classList.contains('logo-text-fallback')) {
+                    fallback.style.display = 'block';
+                }
+            }
+            
+            // For service images, show a placeholder color
+            if (this.closest('.service-image')) {
+                this.closest('.service-image').style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+                this.style.display = 'none';
+            }
+        });
+    });
+});
+
+// ===================================
+// PARALLAX EFFECT FOR HERO
+// ===================================
+window.addEventListener('scroll', () => {
+    const hero = document.querySelector('.hero');
+    const scrolled = window.pageYOffset;
+    const rate = scrolled * 0.5;
+    
+    if (hero && scrolled < hero.offsetHeight) {
+        hero.style.backgroundPositionY = `${rate}px`;
+    }
+});
+
+// ===================================
+// SERVICE CARDS REVEAL ANIMATION
+// ===================================
+const cardObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+            setTimeout(() => {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }, index * 100);
+            cardObserver.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.1
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const serviceCards = document.querySelectorAll('.service-card');
+    serviceCards.forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(30px)';
+        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        cardObserver.observe(card);
+    });
+});
+
+// ===================================
+// ACCESSIBILITY ENHANCEMENTS
+// ===================================
+// Add keyboard navigation support
+document.addEventListener('DOMContentLoaded', () => {
+    // Focus trap for mobile menu if needed in future
+    const focusableElements = document.querySelectorAll(
+        'a[href], button, input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    
+    // Ensure all interactive elements are keyboard accessible
+    focusableElements.forEach(element => {
+        if (!element.hasAttribute('tabindex')) {
+            element.setAttribute('tabindex', '0');
+        }
+    });
+});
+
+// ===================================
+// PERFORMANCE OPTIMIZATION
+// ===================================
+// Debounce function for scroll events
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
     };
 }
+
+// Apply debounce to scroll handlers
+const debouncedScroll = debounce(() => {
+    // Scroll handlers here
+}, 10);
+
+window.addEventListener('scroll', debouncedScroll);
+
+// ===================================
+// CONSOLE WELCOME MESSAGE
+// ===================================
+console.log('%c🏭 Nashco Global - Industrial Excellence Since 1994', 'color: #1a4d8f; font-size: 20px; font-weight: bold;');
+console.log('%cWelcome to Nashco Global\'s official website. We are the GCC\'s trusted industrial partner.', 'color: #666; font-size: 14px;');
