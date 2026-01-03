@@ -10,98 +10,269 @@
   <meta property="og:description" content="Trading Division: Global trade, product categories, and GCC reach.">
   <meta property="og:image" content="assets/images/trading-hero.webp">
   <meta property="og:url" content="https://nashcoglobal.com/trading.html">
-  <meta name="theme-color" content="#0B0E17">
+  <meta name="theme-color" content="#003366">
   <link rel="manifest" href="manifest.json">
-  <link rel="apple-touch-icon" href="assets/images/icon-192.png">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="icon" href="assets/images/favicon-placeholder.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper@9/swiper-bundle.min.css">
-  <link href="assets/css/styles.css" rel="stylesheet">
-  <link rel="icon" type="image/png" href="assets/images/icon-192.png">
   <style>
-    /* Trading page: ensure text is readable on light/dark backgrounds without changing layout */
-    .trading-page .bg-light h1,
-    .trading-page .bg-light h2,
-    .trading-page .bg-light h3,
-    .trading-page .bg-light h4,
-    .trading-page .bg-light h5,
-    .trading-page .bg-light p,
-    .trading-page .bg-light .lead,
-    .trading-page .gallery-section h2,
-    .trading-page .gallery-section p {
-      color: #222 !important;
+    :root {
+      --blue: #003366;
+      --blue-dark: #021f43;
+      --gold: #d4af37;
+      --light: #f4f7fb;
+      --text: #0f172a;
+      --muted: #475569;
+      --card: rgba(255, 255, 255, 0.92);
+      --shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
     }
 
-    .trading-page .bg-light {
-      color: #222 !important;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    /* Ensure white cards/text inside the white sections are readable */
-    .trading-page .bg-white h1,
-    .trading-page .bg-white h2,
-    .trading-page .bg-white h3,
-    .trading-page .bg-white h4,
-    .trading-page .bg-white h5,
-    .trading-page .bg-white h6,
-    .trading-page .bg-white p,
-    .trading-page .bg-white .lead,
-    .trading-page .bg-white .fw-bold,
-    .trading-page .bg-white .text-muted {
-      color: #222 !important;
+    body {
+      font-family: 'Poppins', 'Roboto', sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #e8edf6, #f7f9fc);
+      scroll-behavior: smooth;
+      line-height: 1.6;
     }
 
-    /* For dark hero/overlays ensure text remains visible */
-    .trading-page .hero-section .text-white,
-    .trading-page .hero-section .hero-overlay-dark+.text-white {
-      color: #fff !important;
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
-    /* Small-display variant for reduced thumbnail galleries */
-    .trading-page .myGallerySwiper.small-display .swiper-slide {
-      width: auto !important;
-      display: inline-flex;
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      z-index: 999;
+      backdrop-filter: blur(12px);
+    }
+
+    .nav-bar {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      color: var(--blue);
+    }
+
+    .brand img {
+      height: 44px;
+      width: auto;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 18px;
+      align-items: center;
+    }
+
+    nav a {
+      font-weight: 500;
+      color: var(--muted);
+      position: relative;
+      padding: 6px 0;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background: var(--gold);
+      transition: width 0.2s ease;
+    }
+
+    nav a:hover,
+    nav a:focus-visible {
+      color: var(--blue);
+    }
+
+    nav a:hover::after,
+    nav a:focus-visible::after {
+      width: 100%;
+    }
+
+    .lang-btn {
+      border: 1px solid var(--gold);
+      color: var(--blue);
+      background: #fff6d9;
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 26px;
+      cursor: pointer;
+      color: var(--blue);
+    }
+
+    main {
+      margin-top: 90px;
+    }
+
+    @media (max-width: 900px) {
+      nav ul {
+        position: fixed;
+        inset: 0 0 auto 0;
+        top: 72px;
+        background: #fff;
+        flex-direction: column;
+        padding: 20px;
+        gap: 12px;
+        transform: translateY(-120%);
+        transition: transform 0.2s ease;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+      }
+
+      nav ul.open {
+        transform: translateY(0);
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .lang-btn {
+        display: none;
+      }
+    }
+
+    .hero-section {
+      min-height: 60vh;
+      background: linear-gradient(135deg, rgba(0, 51, 102, 0.8), rgba(2, 31, 67, 0.75)), url('assets/images/trading-hero.jpeg') center/cover no-repeat;
+      display: flex;
       align-items: center;
       justify-content: center;
+      color: #fff;
+      position: relative;
     }
 
-    .trading-page .myGallerySwiper.small-display .swiper-wrapper {
-      justify-content: flex-start !important;
-      align-items: center;
+    .hero-section h1 {
+      font-size: clamp(2.2rem, 4vw, 3.4rem);
+      margin-bottom: 16px;
     }
 
-    .trading-page .myGallerySwiper.small-display .swiper-slide img {
-      max-height: 140px;
-      width: auto;
-      object-fit: contain;
+    .hero-section p {
+      font-size: 1.1rem;
+    }
+
+    .section {
+      padding: 80px 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .btn-primary {
+      background: linear-gradient(120deg, var(--gold), #f0d35a);
+      color: #0f172a;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.15s ease;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+    }
+
+    .bg-light {
+      background: var(--light);
+    }
+
+    .bg-white,
+    .card,
+    .shadow-sm {
+      background: #fff;
+    }
+
+    .text-muted {
+      color: var(--muted);
+    }
+
+    .text-primary {
+      color: var(--blue);
+    }
+
+    footer {
+      background: var(--blue-dark);
+      color: #dce6ff;
+      padding: 34px 20px;
+      margin-top: 60px;
     }
   </style>
 </head>
 
-<body data-bs-theme="light" class="trading-page">
-  <!-- Header/Navbar -->
-  <header class="main-header">
-    <nav class="navbar container">
-      <a class="navbar-brand" href="index.html">Nashco Global</a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="zahy-alkhaleej.html">Zahy Al Khaleej LLC</a></li>
-        <li><a href="automotive.html">Automotive</a></li>
-        <li><a href="manufacturing.html">Manufacturing</a></li>
-        <li><a href="trading.html" class="active">Trading</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="#">العربية</a></li>
-      </ul>
-    </nav>
+<body>
+  <header>
+    <div class="nav-bar" aria-label="Primary navigation">
+      <a class="brand" href="index.html" aria-label="Nashco Global">
+        <img src="assets/images/logo-nashco.png" alt="Nashco Global logo" loading="lazy">
+        <span>Nashco Global</span>
+      </a>
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      <nav>
+        <ul id="navLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="zahy-alkhaleej.html">Zahy Al Khaleej</a></li>
+          <li><a href="automotive.html">Automotive</a></li>
+          <li><a href="manufacturing.html">Manufacturing</a></li>
+          <li><a href="trading.html">Trading</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><button class="lang-btn" type="button" aria-label="Arabic version">العربية</button></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-  <!-- Hero Section -->
+
+  <main>
+    <!-- Hero Section -->
   <section
-    class="hero-section d-flex align-items-center justify-content-center position-relative min-vh-50 hero-trading"
-    style="background-image:url('assets/images/trading-hero.jpeg'); background-size:cover; background-position:center;">
-    <div class="hero-overlay hero-overlay-dark position-absolute top-0 start-0 w-100 h-100"></div>
-    <div class="container position-relative z-2 text-center text-white" data-aos="fade-up">
-      <h1 class="display-4 fw-bold mb-3">Trading Division</h1>
-      <p class="lead mb-0">Global trade, local expertise</p>
+    class="hero-section"
+    >
+    <div class="container" style="position: relative; z-index: 1; text-align: center; padding: 40px 20px 60px;">
+      <h1>Trading Division</h1>
+        <p>Global trade, local expertise</p>
     </div>
   </section>
   <!-- Overview -->
@@ -183,289 +354,51 @@
         </div>
       </div>
     </div>
-  </section>
-  <!-- Footer (shared) -->
-  <!-- ...footer code as in index.html... -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
-  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
-  <script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
-  <script>
-    AOS.init({ once: true, duration: 900, offset: 60 });
-    gsap.from('.hero-section h1', { opacity: 0, y: 60, duration: 1, delay: 0.2 });
-    gsap.from('.hero-section p', { opacity: 0, y: 40, duration: 1, delay: 0.5 });
-  </script>
-  <!-- Gallery: initialize Swiper and modal behavior (multi-instance) -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      try {
-        const swiperOptions = {
-          slidesPerView: 3,
-          spaceBetween: 20,
-          grabCursor: true,
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-          breakpoints: {
-            0: { slidesPerView: 1 },
-            600: { slidesPerView: 2 },
-            992: { slidesPerView: 3 }
-          }
-        };
-
-        const swiperInstances = [];
-        document.querySelectorAll('.myGallerySwiper').forEach((el) => {
-          const baseOpts = el.classList.contains('small-display') ? Object.assign({}, swiperOptions, { slidesPerView: 'auto', spaceBetween: 12 }) : Object.assign({}, swiperOptions);
-          baseOpts.navigation = {
-            nextEl: el.querySelector('.swiper-button-next'),
-            prevEl: el.querySelector('.swiper-button-prev')
-          };
-          baseOpts.pagination = {
-            el: el.querySelector('.swiper-pagination'),
-            clickable: true
-          };
-          const instance = new Swiper(el, baseOpts);
-          swiperInstances.push(instance);
-
-          (function attachCustomGalleryNav(swiperEl, swiperInstance) {
-            const leftBtn = swiperEl.querySelector('.custom-nav-prev');
-            const rightBtn = swiperEl.querySelector('.custom-nav-next');
-            if (!leftBtn || !rightBtn) return;
-
-            function positionButtons() {
-              const slides = swiperEl.querySelectorAll('.swiper-slide');
-              if (!slides.length) return;
-              const first = slides[0];
-              const third = slides[2] || slides[slides.length - 1];
-              const sRect = swiperEl.getBoundingClientRect();
-              const fRect = first.getBoundingClientRect();
-              const tRect = third.getBoundingClientRect();
-              const btnW = leftBtn.offsetWidth || 56;
-              const btnH = leftBtn.offsetHeight || 56;
-
-              leftBtn.style.position = 'absolute';
-              leftBtn.style.top = (fRect.top - sRect.top + fRect.height / 2 - btnH / 2) + 'px';
-              leftBtn.style.left = Math.max(8, (fRect.left - sRect.left - btnW - 8)) + 'px';
-
-              rightBtn.style.position = 'absolute';
-              rightBtn.style.top = (tRect.top - sRect.top + tRect.height / 2 - btnH / 2) + 'px';
-              rightBtn.style.left = Math.min(sRect.width - btnW - 8, (tRect.right - sRect.left + 8)) + 'px';
-            }
-
-            leftBtn.addEventListener('click', function (e) { e.stopPropagation(); swiperInstance.slidePrev(); });
-            rightBtn.addEventListener('click', function (e) { e.stopPropagation(); swiperInstance.slideNext(); });
-
-            window.addEventListener('resize', positionButtons, { passive: true });
-            swiperInstance.on && swiperInstance.on('resize', positionButtons);
-            swiperInstance.on && swiperInstance.on('update', positionButtons);
-
-            setTimeout(positionButtons, 250);
-          })(el, instance);
-        });
-
-        document.querySelectorAll('.gallery-thumb').forEach(img => {
-          img.addEventListener('click', function (e) {
-            const modalImg = document.getElementById('galleryModalImg');
-            modalImg.src = this.src;
-            const bsModal = new bootstrap.Modal(document.getElementById('galleryModal'));
-            bsModal.show();
-          });
-        });
-      } catch (err) {
-        console.warn('Gallery init failed', err);
-      }
-    });
-  </script>
-  <section class="py-5">
-    <div class="container">
-      <div class="row mb-4" data-aos="fade-up">
-        <div class="col text-center">
-          <h2 class="fw-bold mb-3">Featured Products</h2>
-          <p class="fs-5 text-muted mb-3">Our featured trading product categories.</p>
-          <ul class="list-group list-group-horizontal justify-content-center">
-            <li class="list-group-item">Building Materials</li>
-            <li class="list-group-item">Bulk Goods</li>
-          </ul>
-        </div>
+  </main>
+  
+  <footer>
+    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; align-items: start;">
+      <div>
+        <strong>Nashco Global</strong>
+        <p>© <span id="currentYear">2025</span> Nashco Global. Reliability across chemicals, industrial refrigerants GCC, automotive, and trading.</p>
       </div>
-    </div>
-  </section>
-  <section class="py-5 bg-light gallery-section">
-    <div class="container">
-      <div class="row mb-4" data-aos="fade-up">
-        <div class="col text-center">
-          <h2 class="fw-bold mb-3">Gallery</h2>
-          <p class="fs-5 text-muted mb-0">A visual journey through Nashco Global’s impact, people, and projects.</p>
-        </div>
+      <div>
+        <strong>Quick Links</strong>
+        <ul style="list-style: none; display: grid; gap: 8px;">
+          <li><a href="index.html" style="color: #e8edff; opacity: 0.86;">Home</a></li>
+          <li><a href="about.html" style="color: #e8edff; opacity: 0.86;">About Us</a></li>
+          <li><a href="zahy-alkhaleej.html" style="color: #e8edff; opacity: 0.86;">Zahy Al Khaleej</a></li>
+          <li><a href="automotive.html" style="color: #e8edff; opacity: 0.86;">Automotive</a></li>
+          <li><a href="manufacturing.html" style="color: #e8edff; opacity: 0.86;">Manufacturing</a></li>
+          <li><a href="trading.html" style="color: #e8edff; opacity: 0.86;">Trading</a></li>
+          <li><a href="contact.html" style="color: #e8edff; opacity: 0.86;">Contact</a></li>
+        </ul>
       </div>
-      <div class="row" data-aos="fade-up" data-aos-delay="100">
-        <div class="col-12">
-          <!-- Swiper Gallery -->
-          <div class="d-flex justify-content-center mb-3">
-            <span class="badge rounded-pill bg-white text-dark px-3 py-2 shadow-sm">Swipe to see more →</span>
-          </div>
-          <div class="swiper myGallerySwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide"><img src="assets/images/refrigerant2.jpg" alt="Refrigerant 2"
-                  class="img-fluid gallery-thumb" loading="lazy"></div>
-              <div class="swiper-slide"><img src="assets/images/automotive-industry-hero.jpeg" alt="Automotive Industry"
-                  class="img-fluid gallery-thumb" loading="lazy"></div>
-              <div class="swiper-slide"><img src="assets/images/automotive-maxcar.jpg" alt="Automotive MaxCar"
-                  class="img-fluid gallery-thumb" loading="lazy"></div>
-              <div class="swiper-slide"><img src="assets/images/automotive-stock-image.jpeg" alt="Automotive Stock"
-                  class="img-fluid gallery-thumb" loading="lazy"></div>
-              <div class="swiper-slide"><img src="assets/images/manufacturing-floor.jpeg" alt="Manufacturing Floor"
-                  class="img-fluid gallery-thumb" loading="lazy"></div>
-              <div class="swiper-slide"><img src="assets/images/manufacturing-hero.jpg" alt="Manufacturing Hero"
-                  class="img-fluid gallery-thumb" loading="lazy"></div>
-              <div class="swiper-slide"><img src="assets/images/refrigerant-production-plant.jpeg"
-                  alt="Refrigerant Production Plant" class="img-fluid gallery-thumb" loading="lazy"></div>
-              <div class="swiper-slide"><img src="assets/images/refrigerant1.jpg" alt="Refrigerant 1"
-                  class="img-fluid gallery-thumb" loading="lazy"></div>
-              <div class="swiper-slide"><img src="assets/images/trading-shipping-container.jpeg"
-                  alt="Trading Shipping Container" class="img-fluid gallery-thumb" loading="lazy"></div>
-              <div class="swiper-slide"><img src="assets/images/contact-hero.jpg" alt="Contact Hero"
-                  class="img-fluid gallery-thumb" loading="lazy"></div>
-              <div class="swiper-slide"><img src="assets/images/IMG_5597.jpeg" alt="Team/People"
-                  class="img-fluid gallery-thumb" loading="lazy"></div>
-            </div>
-            <!-- navigation -->
-            <div class="swiper-button-prev" aria-label="Previous slide">
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true">
-                <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </div>
-            <div class="swiper-button-next" aria-label="Next slide">
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true">
-                <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </div>
-            <div class="swiper-pagination"></div>
-            <button class="custom-gallery-nav custom-nav-prev" aria-label="Gallery previous">
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true">
-                <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </button>
-            <button class="custom-gallery-nav custom-nav-next" aria-label="Gallery next">
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true">
-                <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </button>
-          </div>
-        </div>
+      <div>
+        <strong>Regional Focus</strong>
+        <p>nashco global · gcc chemicals supplier · industrial manufacturing gcc · chemical trading uae · refrigerants supplier middle east.</p>
       </div>
-  </section>
-
-  <!-- Footer (shared) -->
-  <footer class="bg-dark text-white py-4">
-    <div class="container text-center">
-      <!-- licensed-by image removed from footer -->
-      <p>&copy; 2025 Nashco Global. All Rights Reserved.</p>
     </div>
   </footer>
-  <!-- Gallery Modal (Bootstrap) -->
-  <div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content bg-transparent border-0">
-        <div class="modal-body p-0 text-center">
-          <img id="galleryModalImg" src="" alt="" class="img-fluid rounded">
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
-  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
-  <!-- Gallery: initialize Swiper and modal behavior -->
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      try {
-        const gallerySwiper = new Swiper('.myGallerySwiper', {
-          slidesPerView: 3,
-          spaceBetween: 20,
-          grabCursor: true,
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-          breakpoints: {
-            0: { slidesPerView: 1 },
-            600: { slidesPerView: 2 },
-            992: { slidesPerView: 3 }
-          }
-        });
+    const navLinks = document.getElementById('navLinks');
+    const menuToggle = document.querySelector('.menu-toggle');
 
-        document.querySelectorAll('.gallery-thumb').forEach(img => {
-          img.addEventListener('click', function (e) {
-            const modalImg = document.getElementById('galleryModalImg');
-            modalImg.src = this.src;
-            const bsModal = new bootstrap.Modal(document.getElementById('galleryModal'));
-            bsModal.show();
-          });
-        });
-
-        (function attachCustomGalleryNav() {
-          const swiperEl = document.querySelector('.myGallerySwiper');
-          const leftBtn = swiperEl.querySelector('.custom-nav-prev');
-          const rightBtn = swiperEl.querySelector('.custom-nav-next');
-          if (!leftBtn || !rightBtn) return;
-
-          function positionButtons() {
-            const slides = swiperEl.querySelectorAll('.swiper-slide');
-            if (!slides.length) return;
-            const first = slides[0];
-            const third = slides[2] || slides[slides.length - 1];
-            const sRect = swiperEl.getBoundingClientRect();
-            const fRect = first.getBoundingClientRect();
-            const tRect = third.getBoundingClientRect();
-            const btnW = leftBtn.offsetWidth || 56;
-            const btnH = leftBtn.offsetHeight || 56;
-
-            leftBtn.style.position = 'absolute';
-            leftBtn.style.top = (fRect.top - sRect.top + fRect.height / 2 - btnH / 2) + 'px';
-            leftBtn.style.left = Math.max(8, (fRect.left - sRect.left - btnW - 8)) + 'px';
-
-            rightBtn.style.position = 'absolute';
-            rightBtn.style.top = (tRect.top - sRect.top + tRect.height / 2 - btnH / 2) + 'px';
-            rightBtn.style.left = Math.min(sRect.width - btnW - 8, (tRect.right - sRect.left + 8)) + 'px';
-          }
-
-          leftBtn.addEventListener('click', function (e) { e.stopPropagation(); gallerySwiper.slidePrev(); });
-          rightBtn.addEventListener('click', function (e) { e.stopPropagation(); gallerySwiper.slideNext(); });
-
-          window.addEventListener('resize', positionButtons, { passive: true });
-          gallerySwiper.on && gallerySwiper.on('resize', positionButtons);
-          gallerySwiper.on && gallerySwiper.on('update', positionButtons);
-
-          setTimeout(positionButtons, 250);
-        })();
-      } catch (err) {
-        console.warn('Gallery init failed', err);
-      }
+    menuToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', isOpen);
     });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+
+    const yearEl = document.getElementById('currentYear');
+    if (yearEl) {
+      yearEl.textContent = new Date().getFullYear();
+    }
   </script>
-  <script src="js/script.js"></script>
 </body>
 
 </html>
