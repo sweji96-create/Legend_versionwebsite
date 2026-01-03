@@ -173,6 +173,17 @@
       overflow: hidden;
     }
 
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(0, 51, 102, 0.8) 0%, rgba(2, 31, 67, 0.75) 100%);
+      z-index: 0;
+    }
+
     .hero-content {
       position: relative;
       z-index: 1;
@@ -490,6 +501,35 @@
 
       .lang-btn {
         display: none;
+      }
+
+      .hero {
+        min-height: 100vh;
+        padding: 20px 0;
+      }
+
+      .hero-content {
+        padding: 30px 20px 40px;
+      }
+
+      .hero h1 {
+        font-size: clamp(1.8rem, 5vw, 2.5rem);
+        margin-bottom: 14px;
+      }
+
+      .hero p {
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+
+      .cta-group {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .btn {
+        width: 100%;
+        justify-content: center;
       }
     }
   </style>
