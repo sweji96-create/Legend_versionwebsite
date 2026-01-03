@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compliance & Certifications - Nashco Global</title>
+  <meta name="description" content="Nashco Global compliance hub - ISO 9001, REACH, RoHS certifications, SDS documentation, and regulatory compliance across GCC.">
+  <link rel="canonical" href="https://legend-versionwebsite.pages.dev/compliance.html">
+  <link rel="icon" href="assets/images/favicon-placeholder.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue: #003366;
+      --blue-dark: #021f43;
+      --gold: #d4af37;
+      --light: #f4f7fb;
+      --text: #0f172a;
+      --muted: #475569;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Poppins', 'Roboto', sans-serif;
+      line-height: 1.8;
+      color: var(--text);
+      background: linear-gradient(180deg, #e8edf6, #f7f9fc);
+    }
+    
+    .skip-to-content {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--gold);
+      color: var(--blue-dark);
+      padding: 12px 20px;
+      text-decoration: none;
+      font-weight: 700;
+      z-index: 10000;
+    }
+    
+    .skip-to-content:focus {
+      top: 0;
+    }
+    
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+      z-index: 999;
+      backdrop-filter: blur(12px);
+    }
+    
+    .nav-bar {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      color: var(--blue);
+      text-decoration: none;
+    }
+    
+    .brand img {
+      height: 44px;
+      width: auto;
+    }
+    
+    .content {
+      max-width: 1200px;
+      margin: 120px auto 60px;
+      padding: 40px 20px;
+    }
+    
+    h1 {
+      color: var(--blue);
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    
+    h2 {
+      color: var(--blue);
+      margin-top: 40px;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+    }
+    
+    .intro {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin-bottom: 40px;
+      line-height: 1.8;
+    }
+    
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin: 30px 0;
+    }
+    
+    .cert-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    .cert-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+    }
+    
+    .cert-badge {
+      display: inline-block;
+      background: linear-gradient(120deg, var(--gold), #f0d35a);
+      color: var(--blue-dark);
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 15px;
+    }
+    
+    .cert-card h3 {
+      color: var(--blue);
+      margin-bottom: 15px;
+      font-size: 1.4rem;
+    }
+    
+    .cert-card p {
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+    
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: linear-gradient(120deg, var(--gold), #f0d35a);
+      color: var(--blue-dark);
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      margin-top: 15px;
+    }
+    
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+    
+    .info-box {
+      background: #fff;
+      border-left: 4px solid var(--gold);
+      padding: 20px;
+      border-radius: 8px;
+      margin: 30px 0;
+    }
+    
+    .info-box h3 {
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+    
+    ul {
+      margin: 15px 0;
+      padding-left: 25px;
+    }
+    
+    li {
+      margin: 8px 0;
+      color: var(--muted);
+    }
+    
+    footer {
+      background: var(--blue-dark);
+      color: #dce6ff;
+      padding: 20px;
+      text-align: center;
+      margin-top: 60px;
+    }
+    
+    footer a {
+      color: #e8edff;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+  <header role="banner">
+    <div class="nav-bar">
+      <a class="brand" href="index.html">
+        <img src="assets/images/logo-nashco.png" alt="Nashco Global logo" width="200" height="44">
+        <span>Nashco Global</span>
+      </a>
+      <a href="index.html" style="color: var(--blue); text-decoration: none; font-weight: 500;">← Back to Home</a>
+    </div>
+  </header>
+
+  <main id="main-content" role="main" class="content">
+    <h1>Compliance & Certifications</h1>
+    <p class="intro">
+      At Nashco Global, we maintain the highest standards of quality, safety, and environmental compliance. 
+      Our certifications demonstrate our commitment to excellence across all divisions and operations in the GCC region.
+    </p>
+
+    <h2>Our Certifications</h2>
+    
+    <div class="cert-grid">
+      <div class="cert-card">
+        <span class="cert-badge">ISO 9001:2015</span>
+        <h3>Quality Management</h3>
+        <p>Certified quality management system ensuring consistent product and service quality across all operations.</p>
+        <p><strong>Scope:</strong> Manufacturing, trading, and service operations</p>
+        <p><strong>Certificate No:</strong> ISO-9001-XXXX</p>
+        <a href="#" class="btn">Download Certificate (PDF)</a>
+      </div>
+
+      <div class="cert-card">
+        <span class="cert-badge">REACH Compliant</span>
+        <h3>Chemical Safety</h3>
+        <p>Full compliance with EU REACH regulations for chemical substances and mixtures.</p>
+        <p><strong>Scope:</strong> All chemical products and refrigerants</p>
+        <p><strong>Updated:</strong> January 2025</p>
+        <a href="#" class="btn">View REACH Documentation</a>
+      </div>
+
+      <div class="cert-card">
+        <span class="cert-badge">RoHS Certified</span>
+        <h3>Environmental Protection</h3>
+        <p>Restriction of Hazardous Substances compliance for electronic and electrical components.</p>
+        <p><strong>Scope:</strong> Automotive parts and electronic components</p>
+        <p><strong>Certificate No:</strong> RoHS-XXXX-2025</p>
+        <a href="#" class="btn">Download RoHS Certificate</a>
+      </div>
+
+      <div class="cert-card">
+        <span class="cert-badge">ESMA Approved</span>
+        <h3>UAE Compliance</h3>
+        <p>Emirates Authority for Standardization and Metrology certification for products sold in UAE.</p>
+        <p><strong>Scope:</strong> All products distributed in UAE</p>
+        <p><strong>Approval No:</strong> ESMA-XXXX</p>
+        <a href="#" class="btn">View ESMA Documentation</a>
+      </div>
+
+      <div class="cert-card">
+        <span class="cert-badge">SASO Certified</span>
+        <h3>KSA Standards</h3>
+        <p>Saudi Standards, Metrology and Quality Organization certification for KSA market.</p>
+        <p><strong>Scope:</strong> Products for Saudi Arabian market</p>
+        <p><strong>Certificate No:</strong> SASO-XXXX-2025</p>
+        <a href="#" class="btn">Download SASO Certificate</a>
+      </div>
+
+      <div class="cert-card">
+        <span class="cert-badge">SDS Available</span>
+        <h3>Safety Data Sheets</h3>
+        <p>Comprehensive Safety Data Sheets for all chemical products and refrigerants.</p>
+        <p><strong>Coverage:</strong> R134a, R410A, R22, and all chemical products</p>
+        <p><strong>Languages:</strong> English & Arabic</p>
+        <a href="#" class="btn">Request SDS Documentation</a>
+      </div>
+    </div>
+
+    <div class="info-box">
+      <h3>Environmental Stewardship</h3>
+      <p>Nashco Global and our subsidiary Zahy Al Khaleej LLC are committed to environmental protection:</p>
+      <ul>
+        <li><strong>Refrigerant Recovery Programs:</strong> Safe collection and disposal of used refrigerants</li>
+        <li><strong>GWP Monitoring:</strong> Global Warming Potential tracking for all refrigerant products</li>
+        <li><strong>Handling Guidelines:</strong> Comprehensive training and documentation for safe handling</li>
+        <li><strong>Disposal Compliance:</strong> Adherence to local and international disposal regulations</li>
+      </ul>
+    </div>
+
+    <h2>Request Compliance Documentation</h2>
+    <p>Need specific certifications, test reports, or SDS documentation? Contact our compliance team:</p>
+    
+    <div class="info-box" style="margin-top: 20px;">
+      <h3>Compliance Contact</h3>
+      <p><strong>Email:</strong> compliance@nashcoglobal.com</p>
+      <p><strong>Phone:</strong> +971 XX XXX XXXX</p>
+      <p><strong>Available Documents:</strong></p>
+      <ul>
+        <li>Safety Data Sheets (SDS) for all products</li>
+        <li>ISO 9001 certification and audit reports</li>
+        <li>REACH compliance documentation</li>
+        <li>RoHS certificates and test reports</li>
+        <li>Product certifications (ESMA, SASO, etc.)</li>
+        <li>Environmental compliance reports</li>
+        <li>Quality assurance procedures</li>
+      </ul>
+      <a href="contact.html" class="btn">Submit Documentation Request</a>
+    </div>
+
+    <h2>Corporate Governance</h2>
+    <p>Nashco Global operates with transparency and accountability:</p>
+    <ul>
+      <li><strong>Trade License:</strong> Dubai Department of Economic Development License No. XXXX</li>
+      <li><strong>VAT Registration:</strong> TRN XXXXXXXXXXXXXXX</li>
+      <li><strong>Operating Since:</strong> 1994</li>
+      <li><strong>GCC Presence:</strong> UAE (Dubai, Sharjah), Oman (Muscat), KSA (Riyadh), Qatar, Bahrain, Kuwait</li>
+      <li><strong>Annual Audits:</strong> Conducted by certified external auditors</li>
+    </ul>
+
+    <div class="info-box" style="margin-top: 30px;">
+      <h3>Zahy Al Khaleej LLC</h3>
+      <p><strong>Relationship:</strong> Wholly-owned subsidiary of Nashco Global</p>
+      <p><strong>Specialization:</strong> Industrial refrigerants distribution and service across GCC</p>
+      <p><strong>Trade License:</strong> UAE License No. YYYY</p>
+      <p><strong>Certifications:</strong> ISO 9001, REACH, ESMA, SASO</p>
+      <p><strong>Product Range:</strong> R134a, R410A, R22, and specialty refrigerant grades</p>
+    </div>
+  </main>
+
+  <footer role="contentinfo">
+    <p>© <span id="currentYear"></span> Nashco Global. All rights reserved.</p>
+    <p style="margin-top: 10px;">
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="terms.html">Terms of Use</a> |
+      <a href="cookies.html">Cookie Policy</a> |
+      <a href="compliance.html">Compliance Hub</a>
+    </p>
+  </footer>
+
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

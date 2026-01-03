@@ -4,10 +4,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nashco Global - Contact Us</title>
+  <title>Contact Nashco Global | Request Quote, RFQ, Support | UAE, Oman, GCC</title>
+  <meta name="description" content="Contact Nashco Global for industrial refrigerants, automotive parts, manufacturing inquiries across GCC. Request quotes, RFQ submissions, technical support. Available in UAE, Oman, KSA, Qatar, Bahrain, Kuwait.">
+  <link rel="canonical" href="https://legend-versionwebsite.pages.dev/contact.html">
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#0B0E17">
   <link rel="apple-touch-icon" href="Assets/images/icon-192.png">
+  
+  <!-- Schema.org Structured Data for ContactPoint -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Nashco Global",
+    "url": "https://legend-versionwebsite.pages.dev/",
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+968-94535053",
+        "contactType": "Customer Service",
+        "areaServed": ["OM", "AE", "SA", "QA", "BH", "KW"],
+        "availableLanguage": ["English", "Arabic"],
+        "contactOption": "TollFree"
+      },
+      {
+        "@type": "ContactPoint",
+        "telephone": "+971-508536542",
+        "contactType": "Sales",
+        "areaServed": "AE",
+        "availableLanguage": ["English", "Arabic"]
+      }
+    ],
+    "email": "info@nashcoglobal.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "OM",
+      "addressRegion": "Muscat"
+    }
+  }
+  </script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="Assets/css/styles.css" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
@@ -111,8 +146,11 @@
 </head>
 
 <body data-bs-theme="dark">
+  <!-- Skip to content link for accessibility -->
+  <a href="#main-content" class="skip-to-content" style="position: absolute; top: -40px; left: 0; background: #d4af37; color: #021f43; padding: 12px 20px; text-decoration: none; font-weight: 700; z-index: 10000;">Skip to main content</a>
+
   <!-- Navbar (shared) -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" role="navigation" aria-label="Primary navigation">
     <div class="container">
       <a class="navbar-brand" href="index.html" style="padding-right:24px;">Nashco Global</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -133,56 +171,128 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero-section d-flex align-items-center justify-content-center position-relative min-vh-60"
+  <section class="hero-section d-flex align-items-center justify-content-center position-relative min-vh-60" role="banner"
     style="background-image:url('Assets/images/contact-hero.jpg'); background-size:cover; background-position:center;">
     <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100"></div>
     <div class="container position-relative z-2 text-center">
       <h1>Contact Nashco Global</h1>
-      <p class="lead">We're here to help you succeed</p>
+      <p class="lead">Request quotes, technical support, and partnership inquiries across GCC</p>
     </div>
   </section>
 
   <!-- Contact Form & Info (Form first, then info, no map, no repeats) -->
-  <section class="py-5 bg-light">
+  <section class="py-5 bg-light" id="main-content" role="main">
     <div class="container">
       <div class="row g-5">
         <div class="col-lg-7 mx-auto" data-aos="fade-up">
           <h2 class="fw-bold mb-3">Get in Touch</h2>
-          <form action="https://formspree.io/f/mnqewqzv" method="POST" class="needs-validation" novalidate>
+          <p class="mb-4">Select your inquiry type and fill out the form below. Our team will respond within 24 hours during business days.</p>
+          
+          <form action="https://formspree.io/f/mnqewqzv" method="POST" class="needs-validation" novalidate aria-label="Contact form">
             <div class="mb-3">
-              <label for="name" class="form-label">Name</label>
+              <label for="inquiry-type" class="form-label">Inquiry Type *</label>
+              <select class="form-control" id="inquiry-type" name="inquiry-type" required aria-required="true">
+                <option value="">Select inquiry type...</option>
+                <option value="rfq">Request for Quote (RFQ)</option>
+                <option value="refrigerants">Refrigerants - Zahy Al Khaleej</option>
+                <option value="automotive">Automotive Parts</option>
+                <option value="manufacturing">Manufacturing Services</option>
+                <option value="trading">Trading Inquiry</option>
+                <option value="compliance">Compliance & SDS Request</option>
+                <option value="partnership">Partnership Opportunity</option>
+                <option value="support">Technical Support</option>
+                <option value="other">Other</option>
+              </select>
+              <div class="invalid-feedback">Please select an inquiry type.</div>
+            </div>
+            <div class="mb-3">
+              <label for="company" class="form-label">Company Name</label>
+              <input type="text" class="form-control" id="company" name="company" aria-label="Company name">
+            </div>
+            <div class="mb-3">
+              <label for="name" class="form-label">Your Name *</label>
               <input type="text" class="form-control" id="name" name="name" required aria-required="true">
               <div class="invalid-feedback">Please enter your name.</div>
             </div>
             <div class="mb-3">
-              <label for="email" class="form-label">Email</label>
+              <label for="email" class="form-label">Email Address *</label>
               <input type="email" class="form-control" id="email" name="email" required aria-required="true">
               <div class="invalid-feedback">Please enter a valid email address.</div>
             </div>
             <div class="mb-3">
-              <label for="message" class="form-label">Message</label>
+              <label for="phone" class="form-label">Phone Number</label>
+              <input type="tel" class="form-control" id="phone" name="phone" placeholder="+971 XX XXX XXXX" aria-label="Phone number">
+            </div>
+            <div class="mb-3">
+              <label for="country" class="form-label">Country</label>
+              <select class="form-control" id="country" name="country" aria-label="Country">
+                <option value="">Select country...</option>
+                <option value="UAE">United Arab Emirates</option>
+                <option value="OM">Oman</option>
+                <option value="SA">Saudi Arabia</option>
+                <option value="QA">Qatar</option>
+                <option value="BH">Bahrain</option>
+                <option value="KW">Kuwait</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message *</label>
               <textarea class="form-control" id="message" name="message" rows="5" required
-                aria-required="true"></textarea>
+                aria-required="true" placeholder="Please provide details about your inquiry..."></textarea>
               <div class="invalid-feedback">Please enter your message.</div>
             </div>
+            <!-- Honeypot field for spam protection -->
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
             <button type="submit" class="btn btn-primary">Send Message</button>
             <input type="hidden" name="_replyto" value="info@nashcoglobal.com">
+            <input type="hidden" name="_subject" value="New Contact Form Submission - Nashco Global">
           </form>
         </div>
         <div class="col-lg-6 mx-auto mt-5" data-aos="fade-up" data-aos-delay="100">
           <div class="p-4 rounded-4 shadow-sm" style="background:#f5f6fa; border:1px solid #e5e5e5;">
-            <h2 class="fw-bold mb-3">Contact Details</h2>
-            <ul class="list-unstyled mb-4">
-              <li><strong>Address:</strong> 123 GCC Business Park, Muscat, Oman</li>
-              <li><strong>Phone:</strong> <a href="tel:+96894535053" class="text-info">+968 94535053</a></li>
-              <li><strong>Phone (UAE):</strong> <a href="tel:+971508536542" class="text-info">+971 508536542</a></li>
-              <li><strong>Email:</strong> <a href="mailto:info@nashcoglobal.com"
-                  class="text-info">info@nashcoglobal.com</a></li>
-            </ul>
-            <a href="https://wa.me/96894535053" target="_blank" class="btn btn-success mb-3 px-2 py-1"
-              style="display:inline-flex;align-items:center;gap:8px;">
+            <h2 class="fw-bold mb-3">Contact Information</h2>
+            <div class="mb-4">
+              <h3 class="h5 mb-2">Headquarters - Oman</h3>
+              <ul class="list-unstyled">
+                <li><strong>Address:</strong> Muscat, Oman</li>
+                <li><strong>Phone:</strong> <a href="tel:+96894535053" class="text-info">+968 94535053</a></li>
+                <li><strong>Email:</strong> <a href="mailto:info@nashcoglobal.com"
+                    class="text-info">info@nashcoglobal.com</a></li>
+              </ul>
+            </div>
+            
+            <div class="mb-4">
+              <h3 class="h5 mb-2">UAE Office</h3>
+              <ul class="list-unstyled">
+                <li><strong>Phone:</strong> <a href="tel:+971508536542" class="text-info">+971 508536542</a></li>
+                <li><strong>Email:</strong> <a href="mailto:uae@nashcoglobal.com"
+                    class="text-info">uae@nashcoglobal.com</a></li>
+              </ul>
+            </div>
+            
+            <div class="mb-4">
+              <h3 class="h5 mb-2">Business Hours</h3>
+              <ul class="list-unstyled">
+                <li><strong>Sunday - Thursday:</strong> 8:00 AM - 5:00 PM GST</li>
+                <li><strong>Friday - Saturday:</strong> Closed</li>
+                <li><strong>Emergency Support:</strong> Available 24/7</li>
+              </ul>
+            </div>
+            
+            <div class="mb-3">
+              <h3 class="h5 mb-2">Quick Links</h3>
+              <ul class="list-unstyled">
+                <li><a href="compliance.html" class="text-info">Request SDS & Certifications</a></li>
+                <li><a href="partner.html" class="text-info">Supplier Onboarding</a></li>
+                <li><a href="careers.html" class="text-info">Career Opportunities</a></li>
+              </ul>
+            </div>
+            
+            <a href="https://wa.me/96894535053" target="_blank" rel="noopener noreferrer" class="btn btn-success mb-3 px-3 py-2"
+              style="display:inline-flex;align-items:center;gap:8px;" aria-label="Contact us on WhatsApp">
               <span style="display:inline-block;width:32px;height:32px;vertical-align:middle;">
-                <svg viewBox="0 0 32 32" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+                <svg viewBox="0 0 32 32" width="32" height="32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                   <g>
                     <circle fill="#25D366" cx="16" cy="16" r="16" />
                     <path fill="#FFF"
@@ -190,6 +300,7 @@
                   </g>
                 </svg>
               </span>
+              <span>WhatsApp Us</span>
             </a>
           </div>
         </div>
@@ -198,9 +309,15 @@
   </section>
 
   <!-- Footer (shared) -->
-  <footer class="bg-dark text-white py-4">
+  <footer class="bg-dark text-white py-4" role="contentinfo">
     <div class="container text-center">
-      <p class="mt-2 mb-0">&copy; 2025 Nashco Global. All Rights Reserved.</p>
+      <p class="mt-2 mb-2">&copy; <span id="currentYear"></span> Nashco Global. All Rights Reserved.</p>
+      <p style="margin-top: 10px;">
+        <a href="privacy.html" style="color: #e8edff; margin: 0 10px; text-decoration: none;">Privacy Policy</a> |
+        <a href="terms.html" style="color: #e8edff; margin: 0 10px; text-decoration: none;">Terms of Use</a> |
+        <a href="cookies.html" style="color: #e8edff; margin: 0 10px; text-decoration: none;">Cookie Policy</a> |
+        <a href="compliance.html" style="color: #e8edff; margin: 0 10px; text-decoration: none;">Compliance</a>
+      </p>
     </div>
   </footer>
   <!-- Bootstrap JS -->
@@ -230,4 +347,10 @@
     AOS.init({ once: true, duration: 900, offset: 60 });
     gsap.from('.hero-section h1', { opacity: 0, y: 60, duration: 1, delay: 0.2 });
     gsap.from('.hero-section p', { opacity: 0, y: 40, duration: 1, delay: 0.5 });
+    
+    // Update copyright year
+    const yearEl = document.getElementById('currentYear');
+    if (yearEl) {
+      yearEl.textContent = new Date().getFullYear();
+    }
   </script>

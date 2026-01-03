@@ -4,17 +4,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nashco Global - GCC Leader in Chemicals, Refrigerants, Automotive Parts, Manufacturing & Trading</title>
+  <title>Nashco Global | GCC Refrigerants & Industrial Services | ISO 9001 Certified</title>
   <meta name="description"
-    content="Nashco Global: Premier GCC supplier of industrial refrigerants (Zahy Al Khaleej LLC), chemicals, automotive spare parts, manufacturing, and trading solutions since 1994.">
+    content="Nashco Global: ISO 9001 certified GCC supplier since 1994. Zahy Al Khaleej LLC refrigerants, automotive parts, industrial manufacturing across UAE, Oman, KSA, Qatar, Bahrain, Kuwait. 30+ years serving 500+ clients.">
   <meta name="keywords"
-    content="nashco global, gcc chemicals supplier, industrial refrigerants gcc, zahy al khaleej llc, automotive spare parts gcc, chemical trading uae, refrigerants supplier middle east, industrial manufacturing gcc">
+    content="nashco global, gcc chemicals supplier, industrial refrigerants gcc, zahy al khaleej llc, automotive spare parts gcc, chemical trading uae, refrigerants supplier middle east, industrial manufacturing gcc, iso 9001 certified">
+  <link rel="canonical" href="https://legend-versionwebsite.pages.dev/">
+  <link rel="alternate" hreflang="ar" href="https://legend-versionwebsite.pages.dev/about-ar.html">
+  <link rel="alternate" hreflang="en" href="https://legend-versionwebsite.pages.dev/">
+  <link rel="alternate" hreflang="x-default" href="https://legend-versionwebsite.pages.dev/">
   <meta property="og:title"
-    content="Nashco Global - GCC Leader in Chemicals, Refrigerants, Automotive Parts, Manufacturing & Trading">
+    content="Nashco Global | GCC Refrigerants & Industrial Services | ISO 9001 Certified">
   <meta property="og:description"
-    content="Diversified excellence across the GCC since 1994. Chemicals, industrial refrigerants, automotive spare parts, manufacturing, and trading.">
+    content="ISO 9001 certified GCC supplier since 1994. Serving 500+ clients across UAE, Oman, KSA, Qatar, Bahrain, Kuwait with refrigerants, automotive parts, and industrial solutions.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/images/trading-hero.jpeg">
+  <meta property="og:image" content="https://legend-versionwebsite.pages.dev/assets/images/trading-hero.jpeg">
   <meta property="og:url" content="https://legend-versionwebsite.pages.dev/">
   <link rel="icon" href="assets/images/favicon-placeholder.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,6 +26,73 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
     rel="stylesheet">
+  
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Nashco Global",
+    "url": "https://legend-versionwebsite.pages.dev/",
+    "logo": "https://legend-versionwebsite.pages.dev/assets/images/logo-nashco.png",
+    "description": "ISO 9001 certified GCC supplier of industrial refrigerants, automotive parts, and manufacturing services since 1994.",
+    "foundingDate": "1994",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "AE",
+      "addressRegion": "Dubai"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+971-XX-XXX-XXXX",
+      "contactType": "Customer Service",
+      "areaServed": ["AE", "OM", "SA", "QA", "BH", "KW"],
+      "availableLanguage": ["English", "Arabic"]
+    },
+    "sameAs": [
+      "https://legend-versionwebsite.pages.dev/"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Nashco Global Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Industrial Refrigerants",
+            "provider": {
+              "@type": "Organization",
+              "name": "Zahy Al Khaleej LLC"
+            }
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Automotive Spare Parts"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Industrial Manufacturing"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Trading Solutions"
+          }
+        }
+      ]
+    }
+  }
+  </script>
+  
   <style>
     :root {
       --blue: #003366;
@@ -38,6 +109,37 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+
+    /* Skip to content link for accessibility */
+    .skip-to-content {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--gold);
+      color: var(--blue-dark);
+      padding: 12px 20px;
+      text-decoration: none;
+      font-weight: 700;
+      z-index: 10000;
+      border-radius: 0 0 8px 0;
+    }
+
+    .skip-to-content:focus {
+      top: 0;
+    }
+
+    /* Screen reader only text */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
     }
 
     body {
@@ -125,6 +227,86 @@
     nav a:hover::after,
     nav a:focus-visible::after {
       width: 100%;
+    }
+
+    /* Dropdown menu styles */
+    .has-dropdown {
+      position: relative;
+    }
+
+    .dropdown-toggle {
+      background: none;
+      border: none;
+      font-weight: 500;
+      color: var(--muted);
+      padding: 6px 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: inherit;
+      font-family: inherit;
+    }
+
+    .dropdown-toggle:hover,
+    .dropdown-toggle:focus-visible {
+      color: var(--blue);
+      outline: 2px solid var(--gold);
+      outline-offset: 4px;
+    }
+
+    .dropdown-arrow {
+      font-size: 0.7em;
+      transition: transform 0.2s ease;
+    }
+
+    .dropdown-toggle[aria-expanded="true"] .dropdown-arrow {
+      transform: rotate(180deg);
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #fff;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      border-radius: 12px;
+      padding: 10px 0;
+      min-width: 220px;
+      z-index: 1000;
+      margin-top: 8px;
+      list-style: none;
+    }
+
+    .dropdown-menu[aria-hidden="false"] {
+      display: block;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 10px 20px;
+      color: var(--text);
+      transition: background 0.15s ease;
+    }
+
+    .dropdown-menu a:hover,
+    .dropdown-menu a:focus-visible {
+      background: var(--light);
+      color: var(--blue);
+    }
+
+    .dropdown-menu a::after {
+      display: none;
+    }
+
+    /* Improved focus states */
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 2px;
     }
 
     .muted {
@@ -496,11 +678,30 @@
       }
 
       .menu-toggle {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+
+      .has-dropdown {
+        width: 100%;
+      }
+
+      .dropdown-toggle {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        background: var(--light);
+        margin-top: 4px;
       }
 
       .lang-btn {
-        display: none;
+        width: 100%;
+        text-align: center;
       }
 
       .hero {
@@ -536,38 +737,55 @@
 </head>
 
 <body>
-  <header>
-    <div class="nav-bar" aria-label="Primary navigation">
-      <a class="brand" href="index.html" aria-label="Nashco Global">
-        <img src="assets/images/logo-nashco.png" alt="Nashco Global logo" loading="lazy">
+  <!-- Skip to content link for accessibility -->
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+  <header role="banner">
+    <div class="nav-bar">
+      <a class="brand" href="index.html" aria-label="Nashco Global - Home">
+        <img src="assets/images/logo-nashco.png" alt="Nashco Global logo" width="200" height="44">
         <span>Nashco Global</span>
       </a>
-      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
-      <nav>
+      <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
+        <span class="sr-only">Menu</span>
+        <span aria-hidden="true">☰</span>
+      </button>
+      <nav role="navigation" aria-label="Primary navigation">
         <ul id="navLinks">
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="zahy-alkhaleej.html">Zahy Al Khaleej</a></li>
-          <li><a href="automotive.html">Automotive</a></li>
-          <li><a href="manufacturing.html">Manufacturing</a></li>
-          <li><a href="trading.html">Trading</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="has-dropdown">
+            <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              Divisions
+              <span class="dropdown-arrow" aria-hidden="true">▼</span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li role="none"><a href="zahy-alkhaleej.html" role="menuitem">Zahy Al Khaleej LLC</a></li>
+              <li role="none"><a href="automotive.html" role="menuitem">Automotive</a></li>
+              <li role="none"><a href="manufacturing.html" role="menuitem">Manufacturing</a></li>
+              <li role="none"><a href="trading.html" role="menuitem">Trading</a></li>
+            </ul>
+          </li>
           <li><a href="contact.html">Contact</a></li>
-          <li><button class="lang-btn" type="button" aria-label="Arabic version">العربية</button></li>
+          <li>
+            <a href="about-ar.html" class="lang-btn" hreflang="ar" lang="ar" aria-label="Switch to Arabic version">
+              العربية
+            </a>
+          </li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="main-content" role="main">
     <section class="hero section" id="home">
       <div class="hero-content container">
-        <p class="pill">GCC Presence · Since 1994</p>
-        <h1>Nashco Global - Excellence in Chemicals, Automotive, Manufacturing & Trading</h1>
-        <p>Diversified excellence across GCC since 1994 with Zahy Al Khaleej LLC industrial refrigerants, chemical trading
-          in UAE, automotive spare parts GCC supply, and industrial manufacturing leadership.</p>
+        <p class="pill">ISO 9001 Certified · GCC Presence · Since 1994</p>
+        <h1>Nashco Global—GCC Industrial Services & Refrigerants</h1>
+        <p>30+ years delivering certified industrial refrigerants (Zahy Al Khaleej LLC subsidiary), automotive parts, and manufacturing solutions across UAE, Oman, KSA, Qatar, Bahrain, and Kuwait. Serving 500+ clients with ISO 9001 quality assurance.</p>
         <div class="cta-group">
-          <a class="btn primary" href="about.html">Explore Our Story</a>
-          <a class="btn secondary" href="contact.html">Partner with Us</a>
+          <a class="btn primary" href="contact.html">Request a Quote</a>
+          <a class="btn secondary" href="about.html">View Certifications</a>
         </div>
       </div>
     </section>
@@ -578,41 +796,41 @@
         <p class="section-lead">Focused entities delivering specialized expertise across the GCC.</p>
         <div class="grid grid-3">
           <article class="card">
-            <img src="assets/images/zahy-hero.png" alt="Zahy Al Khaleej LLC industrial refrigerants GCC" loading="lazy">
+            <img src="assets/images/zahy-hero.png" alt="Technician inspecting R134a refrigerant cylinder—Zahy Al Khaleej LLC quality control facility" width="400" height="180" loading="lazy">
             <div class="card-body">
-              <span class="pill">Zahy Al Khaleej LLC</span>
-              <h3>Industrial Refrigerants</h3>
-              <p>Leading refrigerants supplier Middle East with strict quality control and environmental stewardship.</p>
-              <a class="btn primary with-margin" href="zahy-alkhaleej.html">Learn More</a>
+              <span class="pill">Subsidiary</span>
+              <h3>Zahy Al Khaleej LLC</h3>
+              <p>Nashco Global subsidiary specializing in industrial refrigerants across GCC. R134a, R410A, R22 grades with full SDS documentation and environmental compliance.</p>
+              <a class="btn primary with-margin" href="zahy-alkhaleej.html">View Refrigerant Catalog</a>
             </div>
           </article>
           <article class="card">
-            <img src="assets/images/Automotive1.jpg" alt="Automotive GCC spare parts distribution" loading="lazy">
+            <img src="assets/images/Automotive1.jpg" alt="Automotive diagnostic equipment and OEM spare parts warehouse" width="400" height="180" loading="lazy">
             <div class="card-body">
-              <span class="pill">Automotive</span>
-              <h3>Automotive Division</h3>
-              <p>Automotive spare parts GCC sourcing, diagnostics, and service support aligned with OEM standards.</p>
-              <a class="btn primary with-margin" href="automotive.html">Learn More</a>
+              <span class="pill">Division</span>
+              <h3>Automotive Parts</h3>
+              <p>OEM-standard automotive spare parts for GCC fleet operators. Diagnostics, service support, and rapid fulfillment with 10,000+ SKUs in stock.</p>
+              <a class="btn primary with-margin" href="automotive.html">Browse Parts Catalog</a>
             </div>
           </article>
           <article class="card">
-            <img src="assets/images/manufacturing-floor.jpeg" alt="Industrial manufacturing GCC floor operations"
-              loading="lazy">
+            <img src="assets/images/manufacturing-floor.jpeg" alt="CNC machining center in ISO-certified manufacturing facility"
+              width="400" height="180" loading="lazy">
             <div class="card-body">
-              <span class="pill">Manufacturing</span>
+              <span class="pill">Division</span>
               <h3>Industrial Manufacturing</h3>
-              <p>Industrial manufacturing GCC network with advanced machinery, safety, and efficiency programs.</p>
-              <a class="btn primary with-margin" href="manufacturing.html">Learn More</a>
+              <p>ISO 9001 certified manufacturing with CNC machining, assembly lines, and quality control. Capacity: 50,000 units/month across UAE and Oman facilities.</p>
+              <a class="btn primary with-margin" href="manufacturing.html">Download Capabilities Deck</a>
             </div>
           </article>
           <article class="card">
             <img src="assets/images/trading-shipping-container.jpeg"
-              alt="Trading division freight and shipping containers" loading="lazy">
+              alt="Freight containers at GCC logistics hub—cross-border trading operations" width="400" height="180" loading="lazy">
             <div class="card-body">
-              <span class="pill">Trading</span>
-              <h3>Trading Division</h3>
-              <p>Cross-border trading solutions covering chemicals, metals, components, and engineered products.</p>
-              <a class="btn primary with-margin" href="trading.html">Learn More</a>
+              <span class="pill">Division</span>
+              <h3>Trading Solutions</h3>
+              <p>Cross-border chemical and component trading with full REACH and RoHS compliance. Customs clearance, logistics, and delivery across GCC within 48-72 hours.</p>
+              <a class="btn primary with-margin" href="trading.html">Submit Trade Inquiry</a>
             </div>
           </article>
         </div>
@@ -622,50 +840,66 @@
     <section class="section" id="gcc">
       <div class="container split">
         <div>
-          <h2 class="section-title">Serving the GCC</h2>
-          <p class="section-lead">Dedicated to Gulf markets with region-ready supply chains, safety compliance, and rapid
-            response teams.</p>
+          <h2 class="section-title">Serving the GCC with Proven Results</h2>
+          <p class="section-lead">30+ years of reliable supply chains, regulatory compliance, and rapid response across six GCC countries.</p>
           <ul class="list">
-            <li>Industrial refrigerants GCC distribution hubs for swift fulfillment</li>
-            <li>Automotive spare parts GCC programs with smart inventory</li>
-            <li>Localized technical teams for chemical trading UAE and beyond</li>
-            <li>Sustainable logistics with optimized routes and reduced emissions</li>
+            <li><strong>500+ active clients</strong> across UAE, Oman, KSA, Qatar, Bahrain, Kuwait</li>
+            <li><strong>10,000+ SKUs</strong> in automotive spare parts with same-day fulfillment</li>
+            <li><strong>ISO 9001 certified</strong> manufacturing with 50,000 units/month capacity</li>
+            <li><strong>48-72 hour delivery</strong> for cross-border trading with full compliance documentation</li>
+            <li><strong>Full SDS and certifications</strong> for all refrigerant grades (R134a, R410A, R22)</li>
           </ul>
-          <a class="btn primary with-margin" href="about.html">About Nashco Global</a>
+          <a class="btn primary with-margin" href="about.html">View Certifications & Case Studies</a>
         </div>
-        <div class="card" aria-hidden="true">
-          <img src="assets/images/contact-hero.jpg" alt="GCC regional network and logistics" loading="lazy">
+        <div class="card">
+          <img src="assets/images/contact-hero.jpg" alt="GCC regional logistics network spanning UAE, Oman, KSA, Qatar, Bahrain, Kuwait" width="500" height="300" loading="lazy">
           <div class="card-body">
             <strong>Regional Readiness</strong>
-            <p class="muted">Multi-country warehousing and on-call technical specialists across GCC corridors.</p>
+            <p class="muted">Multi-country warehousing in Dubai, Muscat, and Riyadh with on-call technical specialists and 24/7 support.</p>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
+  <footer role="contentinfo">
     <div class="footer-grid">
       <div>
         <strong>Nashco Global</strong>
-        <p>© <span id="currentYear">2026</span> Nashco Global. Reliability across chemicals, industrial refrigerants GCC, automotive, and trading.</p>
+        <p>© <span id="currentYear">2026</span> Nashco Global. ISO 9001 certified supplier of industrial refrigerants, automotive parts, and manufacturing services across the GCC since 1994.</p>
+        <p style="margin-top: 12px;">
+          <strong>Contact:</strong><br>
+          Email: info@nashcoglobal.com<br>
+          Phone: +971 XX XXX XXXX
+        </p>
       </div>
       <div>
-        <strong>Quick Links</strong>
+        <strong>Quick Actions</strong>
         <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="zahy-alkhaleej.html">Zahy Al Khaleej</a></li>
-          <li><a href="automotive.html">Automotive</a></li>
-          <li><a href="manufacturing.html">Manufacturing</a></li>
-          <li><a href="trading.html">Trading</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Request a Quote</a></li>
+          <li><a href="compliance.html">Compliance & SDS</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="partner.html">Supplier Onboarding</a></li>
+          <li><a href="about.html">Certifications</a></li>
         </ul>
       </div>
       <div>
-        <strong>Regional Focus</strong>
-        <p>nashco global · gcc chemicals supplier · industrial manufacturing gcc · chemical trading uae · refrigerants
-          supplier middle east.</p>
+        <strong>Legal & Policies</strong>
+        <ul class="footer-links">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+          <li><a href="cookies.html">Cookie Policy</a></li>
+          <li><a href="compliance.html">Compliance Hub</a></li>
+        </ul>
+      </div>
+      <div>
+        <strong>Our Divisions</strong>
+        <ul class="footer-links">
+          <li><a href="zahy-alkhaleej.html">Zahy Al Khaleej LLC (Refrigerants)</a></li>
+          <li><a href="automotive.html">Automotive Parts</a></li>
+          <li><a href="manufacturing.html">Industrial Manufacturing</a></li>
+          <li><a href="trading.html">Trading Solutions</a></li>
+        </ul>
       </div>
     </div>
   </footer>
@@ -677,15 +911,51 @@
     const menuToggle = document.querySelector('.menu-toggle');
     const backToTop = document.querySelector('.back-to-top');
 
+    // Mobile menu toggle
     menuToggle.addEventListener('click', () => {
       const isOpen = navLinks.classList.toggle('open');
       menuToggle.setAttribute('aria-expanded', isOpen);
+      menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Toggle navigation menu');
     });
 
+    // Close menu when clicking links
     navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => navLinks.classList.remove('open'));
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
     });
 
+    // Dropdown menu functionality
+    const dropdownToggle = document.querySelector('.dropdown-toggle');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+    
+    if (dropdownToggle && dropdownMenu) {
+      dropdownToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        const isExpanded = dropdownToggle.getAttribute('aria-expanded') === 'true';
+        dropdownToggle.setAttribute('aria-expanded', !isExpanded);
+        dropdownMenu.setAttribute('aria-hidden', isExpanded);
+      });
+
+      // Close dropdown when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!dropdownToggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
+          dropdownToggle.setAttribute('aria-expanded', 'false');
+          dropdownMenu.setAttribute('aria-hidden', 'true');
+        }
+      });
+
+      // Keyboard navigation for dropdown
+      dropdownToggle.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          dropdownToggle.click();
+        }
+      });
+    }
+
+    // Back to top button
     window.addEventListener('scroll', () => {
       if (window.scrollY > 400) {
         backToTop.classList.add('show');
@@ -698,10 +968,20 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
+    // Update copyright year
     const yearEl = document.getElementById('currentYear');
     if (yearEl) {
       yearEl.textContent = new Date().getFullYear();
     }
+
+    // Close mobile menu on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navLinks.classList.contains('open')) {
+        navLinks.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.focus();
+      }
+    });
   </script>
 </body>
 

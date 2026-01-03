@@ -1,7 +1,8 @@
 User-agent: *
 Allow: /
-Disallow: /images/
-Disallow: /css/
-Disallow: /js/
+Disallow: /backup_Pages/
+Disallow: /backups/
+Disallow: /Pages/
+Disallow: /merger-web_nashco/
 
-Sitemap: https://www.nashcoglobal.com/sitemap.xml
+Sitemap: https://legend-versionwebsite.pages.dev/sitemap.xml
