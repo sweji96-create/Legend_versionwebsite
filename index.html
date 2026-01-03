@@ -79,7 +79,7 @@
         <img src="assets/images/logo-nashco.png" alt="Nashco Global logo" loading="lazy" class="h-11 w-auto">
         <span>Nashco Global</span>
       </a>
-      <button class="hidden max-md:block bg-transparent border-none text-[26px] cursor-pointer text-nashco-blue menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      <button id="menuToggle" class="hidden max-md:block bg-transparent border-none text-[26px] cursor-pointer text-nashco-blue" aria-label="Toggle menu" aria-expanded="false">☰</button>
       <nav>
         <ul id="navLinks" class="list-none flex gap-[18px] items-center max-md:fixed max-md:inset-x-0 max-md:top-[72px] max-md:bg-white max-md:flex-col max-md:p-5 max-md:gap-3 max-md:-translate-y-[120%] max-md:transition-transform max-md:duration-200 max-md:shadow-lg">
           <li><a href="index.html" class="nav-link font-medium text-nashco-muted relative py-1.5 hover:text-nashco-blue focus-visible:text-nashco-blue">Home</a></li>
@@ -207,12 +207,12 @@
     </div>
   </footer>
 
-  <button class="fixed bottom-5 right-5 bg-nashco-gold text-nashco-text border-none rounded-full w-12 h-12 grid place-items-center shadow-[0_10px_40px_rgba(0,0,0,0.12)] cursor-pointer opacity-0 invisible transition-all duration-200 ease-in-out hover:-translate-y-0.5 hover:shadow-[0_10px_30px_rgba(0,0,0,0.15)]" aria-label="Back to top">↑</button>
+  <button id="backToTop" class="fixed bottom-5 right-5 bg-nashco-gold text-nashco-text border-none rounded-full w-12 h-12 grid place-items-center shadow-[0_10px_40px_rgba(0,0,0,0.12)] cursor-pointer opacity-0 invisible transition-all duration-200 ease-in-out hover:-translate-y-0.5 hover:shadow-[0_10px_30px_rgba(0,0,0,0.15)]" aria-label="Back to top">↑</button>
 
   <script>
     const navLinks = document.getElementById('navLinks');
-    const menuToggle = document.querySelector('button[aria-label="Toggle menu"]');
-    const backToTop = document.querySelector('button[aria-label="Back to top"]');
+    const menuToggle = document.getElementById('menuToggle');
+    const backToTop = document.getElementById('backToTop');
 
     menuToggle.addEventListener('click', () => {
       const isOpen = navLinks.classList.toggle('open');
