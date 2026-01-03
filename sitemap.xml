@@ -1,45 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://www.nashcoglobal.com/</loc>
-        <lastmod>2026-01-02</lastmod>
+        <loc>https://legend-versionwebsite.pages.dev/</loc>
+        <lastmod>2025-01-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://www.nashcoglobal.com/about.html</loc>
-        <lastmod>2026-01-02</lastmod>
+        <loc>https://legend-versionwebsite.pages.dev/about.html</loc>
+        <lastmod>2025-01-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://www.nashcoglobal.com/zahy-al-khaleej.html</loc>
-        <lastmod>2026-01-02</lastmod>
+        <loc>https://legend-versionwebsite.pages.dev/zahy-alkhaleej.html</loc>
+        <lastmod>2025-01-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.nashcoglobal.com/automotive.html</loc>
-        <lastmod>2026-01-02</lastmod>
+        <loc>https://legend-versionwebsite.pages.dev/automotive.html</loc>
+        <lastmod>2025-01-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.nashcoglobal.com/manufacturing.html</loc>
-        <lastmod>2026-01-02</lastmod>
+        <loc>https://legend-versionwebsite.pages.dev/manufacturing.html</loc>
+        <lastmod>2025-01-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.nashcoglobal.com/trading.html</loc>
-        <lastmod>2026-01-02</lastmod>
+        <loc>https://legend-versionwebsite.pages.dev/trading.html</loc>
+        <lastmod>2025-01-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.nashcoglobal.com/contact.html</loc>
-        <lastmod>2026-01-02</lastmod>
+        <loc>https://legend-versionwebsite.pages.dev/contact.html</loc>
+        <lastmod>2025-01-03</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://legend-versionwebsite.pages.dev/compliance.html</loc>
+        <lastmod>2025-01-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://legend-versionwebsite.pages.dev/privacy.html</loc>
+        <lastmod>2025-01-03</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://legend-versionwebsite.pages.dev/terms.html</loc>
+        <lastmod>2025-01-03</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://legend-versionwebsite.pages.dev/cookies.html</loc>
+        <lastmod>2025-01-03</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://legend-versionwebsite.pages.dev/careers.html</loc>
+        <lastmod>2025-01-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://legend-versionwebsite.pages.dev/partner.html</loc>
+        <lastmod>2025-01-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://legend-versionwebsite.pages.dev/about-ar.html</loc>
+        <lastmod>2025-01-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
 </urlset>
